@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+        satisfy: ['Satisfy', 'cursive'],
+      },
+      keyframes: {
+        fadeInSlideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-50px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        fadeInSlideDown: 'fadeInSlideDown 1s ease-out',
+      },
+    },
   },
   plugins: [],
 }
