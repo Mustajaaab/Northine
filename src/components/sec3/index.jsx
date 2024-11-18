@@ -68,7 +68,7 @@ function Sec3() {
                         <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] '>Learn More</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black'>🡺</button>
                     </div>
-                    <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white'>How We Work</button>
+                    <button className='font-sans text-base py-5 px-14 border-[2px] border-[#f57b00e0] hover:bg-[#F57C00] rounded-full hover:text-white'>How We Work</button>
                 </div>
                 <div className='flex justify-end w-[40%]'>
                     <img src={Shades2} alt="" className='w-[203px] h-[140px]'/>
