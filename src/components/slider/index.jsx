@@ -54,41 +54,55 @@ const Slider = () => {
 
       {/* Swiper slider */}
       <Swiper
-        slidesPerView={3}
-        spaceBetween={20}
-        navigation={false} // Disable built-in navigation since we use external buttons
-        pagination={false}
-        modules={[Navigation, Pagination]}
-        onSwiper={(swiper) => (swiperRef.current = swiper)} // Attach Swiper instance to the ref
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="mySwiper mt-10"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src={slide.img}
-                alt={slide.title}
-                className="object-cover"
-                style={{ width: "655px", height: "363px" }} // Set image size
-              />
-              <div className="p-4 flex items-center">
-                <div>
-                    <h3 className="font-semibold text-[22px] font-syne leading-[30px] w-[260px]" >{slide.title}</h3>
-                    <p className="text-lg mb-2 font-syne">
-                    by: <span className="text-[#F57C00]">{slide.author}</span>
-                    </p>
-                </div>
-                <p className="text-[15px] font-normal font-syne text-[#121820]/40">{slide.description}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+  slidesPerView={3} // Number of slides visible
+  spaceBetween={20} // Space between slides
+  navigation={false}
+  pagination={false}
+  modules={[Navigation, Pagination]}
+  breakpoints={{
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  }}
+  className="mySwiper mt-10 w-full"
+>
+  {slides.map((slide, index) => (
+    <SwiperSlide
+      key={index}
+      className={`${index === 0 ? "ml-[290px]" : ""} ${index === slides.length - 1 ? "mr-[290px]" : ""}`}
+    >
+      <div className="rounded-lg overflow-hidden">
+        <img
+          src={slide.img}
+          alt={slide.title}
+          className="object-cover w-full" // Full-width images
+        />
+        <div className="p-4">
+          <h3 className="font-semibold text-[22px] font-syne leading-[30px]">
+            {slide.title}
+          </h3>
+          <p className="text-lg mb-2 font-syne">
+            by: <span className="text-[#F57C00]">{slide.author}</span>
+          </p>
+          <p className="text-[15px] font-normal font-syne text-[#121820]/40">
+            {slide.description}
+          </p>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
       </div>
   );
 };
