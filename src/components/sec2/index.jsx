@@ -18,12 +18,12 @@ function Sec2() {
     return (
         <>
         <div className='flex justify-center items-center gap-[88px] py-[92px]'>
-            <img src={Photo1} alt="" className='w-[150px] h-[40px]'/>
-            <img src={Photo2} alt="" className='w-[150px] h-[40px]'/>
-            <img src={Photo3} alt="" className='w-[150px] h-[40px]'/>
-            <img src={Photo4} alt="" className='w-[150px] h-[40px]'/>
-            <img src={Photo5} alt="" className='w-[150px] h-[40px]'/>
-            <img src={Photo6} alt="" className='w-[150px] h-[40px]'/>
+            <img src={Photo1} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            <img src={Photo2} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            <img src={Photo3} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            <img src={Photo4} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            <img src={Photo5} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            <img src={Photo6} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
         </div>
         <div className='w-[69%] flex mx-auto pb-3 gap-1'>
             <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
@@ -163,14 +163,14 @@ function Sec2() {
             <div className='flex justify-between'>
                 <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
                 <div className='flex gap-[30px]'>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50'>🡸    Prev</button>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50'>Next 🡺</button>
+                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110'>🡸    Prev</button>
+                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110'>Next 🡺</button>
                 </div>
             </div>
         </div>
         <div className='flex justify-end gap-[30px] mt-[90px]'>
             <div>
-                <img src={Motion} alt="" className='w-[655px] h-[393px] rounded-lg'/>
+                <img src={Motion} alt="" className='w-[655px] h-[393px] rounded-lg ease-out duration-300 hover:scale-105 grayscale hover:grayscale-0'/>
                 <div className='flex gap-[85px] mt-7'>
                     <div>
                         <h2 className='font-syne font-semibold text-[22px]'>Easy & Most Powerful <br />
@@ -185,7 +185,7 @@ function Sec2() {
             </div>
 
             <div>
-                <img src={Phones} alt="" className='w-[655px] h-[393px] rounded-lg'/>
+                <img src={Phones} alt="" className='w-[655px] h-[393px] rounded-lg ease-out duration-300 hover:scale-105 grayscale hover:grayscale-0'/>
                 <div className='flex gap-[85px] mt-7'>
                     <div>
                         <h2 className='font-syne font-semibold text-[22px]'>Easy & Most Powerful <br />
@@ -206,10 +206,10 @@ function Sec2() {
         </div>
         <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
             <div className='flex gap-[14px] items-center group'>
-                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] '>View All Cases</button>
-                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black'>🡺</button>
+                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
+                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
             </div>
-            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white'>Get Started</button>
+            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
         </div>
         </>
     )

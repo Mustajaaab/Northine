@@ -65,10 +65,10 @@ function Sec3() {
                 </div>
                 <div className='justify-between flex pt-[107px]'>
                     <div className='flex gap-[14px] items-center group'>
-                        <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] '>Learn More</button>
-                        <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black'>🡺</button>
+                        <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>Learn More</button>
+                        <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
                     </div>
-                    <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white'>How We Work</button>
+                    <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110'>How We Work</button>
                 </div>
                 <div className='flex justify-end w-[40%]'>
                     <img src={Shades2} alt="" className='w-[203px] h-[140px]'/>
