@@ -7,7 +7,7 @@ import Phones from '../../assets/images/phones.png';
 import Motion from '../../assets/images/motion.png'
 import { useRef } from "react"; // For controlling Swiper externally
 
-const Slider = () => {
+const Slider1 = () => {
   // Create a reference for the Swiper instance
   const swiperRef = useRef(null);
 
@@ -25,7 +25,7 @@ const Slider = () => {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      img: Phones,
+      img: Motion,
       title: "Easy & Most Powerful Server Platform.",
       author: "Nguta Ithya",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -54,37 +54,43 @@ const Slider = () => {
 
       {/* Swiper slider */}
       <Swiper
-  slidesPerView={3} // Number of slides visible
+  slidesPerView={3} // Number of slides visible at a time
   spaceBetween={20} // Space between slides
-  navigation={false}
-  pagination={false}
+  navigation={false} // Disable built-in navigation
+  pagination={{ clickable: true, el: null }}
   modules={[Navigation, Pagination]}
+  onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
+  slidesOffsetBefore={290} // Add gap before the first slide
+  slidesOffsetAfter={290}  // Add gap after the last slide
   breakpoints={{
     640: {
       slidesPerView: 1,
       spaceBetween: 20,
+      slidesOffsetBefore: 20,
+      slidesOffsetAfter: 20,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
+      slidesOffsetBefore: 40,
+      slidesOffsetAfter: 40,
     },
     1024: {
       slidesPerView: 3,
       spaceBetween: 40,
+      slidesOffsetBefore: 50,
+      slidesOffsetAfter: 50,
     },
   }}
   className="mySwiper mt-10 w-full"
 >
   {slides.map((slide, index) => (
-    <SwiperSlide
-      key={index}
-      className={`${index === 0 ? "ml-[290px]" : ""} ${index === slides.length - 1 ? "mr-[290px]" : ""}`}
-    >
-      <div className="rounded-lg overflow-hidden">
+    <SwiperSlide key={index} >
+      <div className=" overflow-hidden">
         <img
           src={slide.img}
           alt={slide.title}
-          className="object-cover w-full" // Full-width images
+          className="object-cover rounded-lg grayscale hover:grayscale-0 duration-300 w-full" // Full-width images
         />
         <div className="p-4">
           <h3 className="font-semibold text-[22px] font-syne leading-[30px]">
@@ -101,10 +107,16 @@ const Slider = () => {
     </SwiperSlide>
   ))}
 </Swiper>
+        <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
+            <div className='flex gap-[14px] items-center group'>
+                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
+                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
+            </div>
+            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
+        </div>
 
-
-      </div>
+    </div>
   );
 };
 
-export default Slider;
+export default Slider1;

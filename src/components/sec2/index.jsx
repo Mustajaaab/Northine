@@ -11,8 +11,6 @@ import Setting from '../../assets/images/setting.png'
 import File from '../../assets/images/file.png'
 import Spark from '../../assets/images/spark.png'
 import Save from '../../assets/images/save.png'
-import Motion from '../../assets/images/motion.png'
-import Phones from '../../assets/images/phones.png'
 
 function Sec2() {
     return (
@@ -159,58 +157,7 @@ function Sec2() {
         <div className='w-[10%] mx-auto flex justify-end'>
             <img src={Shades} alt="" className='w-[203px] h-[140px]'/>
         </div>
-        <div className='w-[69%] mx-auto'>
-            <div className='flex justify-between'>
-                <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
-                <div className='flex gap-[30px]'>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110'>🡸    Prev</button>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110'>Next 🡺</button>
-                </div>
-            </div>
-        </div>
-        <div className='flex justify-end gap-[30px] mt-[90px]'>
-            <div>
-                <img src={Motion} alt="" className='w-[655px] h-[393px] rounded-lg ease-out duration-300 hover:scale-105 grayscale hover:grayscale-0'/>
-                <div className='flex gap-[85px] mt-7'>
-                    <div>
-                        <h2 className='font-syne font-semibold text-[22px]'>Easy & Most Powerful <br />
-                        Server Platform.</h2>
-                        <p className='font-syne font-semibold mt-[19px] text-base'>by: <span className='text-[#F57C00]'>Jane Meldrum</span></p>
-                    </div>
-                    <p className='font-syne leading-[25px] text-[#121820]/40'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
-                    aliqua.</p>
-                </div>
-            </div>
-
-            <div>
-                <img src={Phones} alt="" className='w-[655px] h-[393px] rounded-lg ease-out duration-300 hover:scale-105 grayscale hover:grayscale-0'/>
-                <div className='flex gap-[85px] mt-7'>
-                    <div>
-                        <h2 className='font-syne font-semibold text-[22px]'>Easy & Most Powerful <br />
-                        Server Platform.</h2>
-                        <p className='font-syne font-semibold mt-[19px] text-base'>by: <span className='text-[#F57C00]'>Nguta Ithya</span></p>
-                    </div>
-                    <p className='font-syne leading-[25px] text-[#121820]/40'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
-                    aliqua.</p>
-                </div>
-            </div>
-            <div className='mt-[420px]'>
-                <h2 className='font-syne font-semibold text-[22px]'>Easy & Most Powerful <br />
-                    Server Platform.</h2>
-                <p className='font-syne font-semibold mt-[19px] text-base'>by: <span className='text-[#F57C00]'>Roy Bricks</span></p>
-            </div>
-        </div>
-        <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
-            <div className='flex gap-[14px] items-center group'>
-                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
-                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
-            </div>
-            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
-        </div>
+        
         </>
     )
 }
