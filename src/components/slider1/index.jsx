@@ -62,24 +62,25 @@ const Slider1 = () => {
   onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
   slidesOffsetBefore={290} // Add gap before the first slide
   slidesOffsetAfter={290}  // Add gap after the last slide
+  speed={1000}
   breakpoints={{
     640: {
       slidesPerView: 1,
       spaceBetween: 20,
-      slidesOffsetBefore: 20,
-      slidesOffsetAfter: 20,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
-      slidesOffsetBefore: 40,
-      slidesOffsetAfter: 40,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
     1024: {
       slidesPerView: 3,
       spaceBetween: 40,
-      slidesOffsetBefore: 50,
-      slidesOffsetAfter: 50,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
   }}
   className="mySwiper mt-10 w-full"
