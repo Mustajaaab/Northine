@@ -19,6 +19,10 @@ export default {
       animation: {
         fadeInSlideDown: 'fadeInSlideDown 1s ease-out',
       },
+      colors: {
+        gradientStart: '#181E26',
+        gradientEnd: '#121820',
+      },
     },
   },
   plugins: [],

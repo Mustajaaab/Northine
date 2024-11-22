@@ -87,7 +87,7 @@ const Slider1 = () => {
 >
   {slides.map((slide, index) => (
     <SwiperSlide key={index} >
-      <div className=" overflow-hidden">
+      <div className=" overflow-hidden z-10">
         <img
           src={slide.img}
           alt={slide.title}

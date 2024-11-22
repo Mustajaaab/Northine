@@ -3,14 +3,14 @@ function Sec1() {
     return (
         <>
         <div className='bg-[#121820]'>
-            <div className="w-[69%] mx-auto flex justify-between items-center pt-10">
+            <div className="w-[100%] mx-auto flex justify-evenly items-center h-[80px] fixed bg-[#121820] z-50">
                 <img src={Northnine} alt="" className='w-[186px] h-[50px]'/>
                 <div className='flex items-center gap-4'>
-                <div className="relative group">
-                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Enterprise
-                    <span className="absolute left-[105px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
-                    </button>
-                        <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block ease-in-out">
+                    <div className="relative group">
+                        <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Enterprise
+                        <span className="absolute left-[105px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                        </button>
+                         <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block ease-in-out">
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home </a>
                             <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
@@ -20,19 +20,19 @@ function Sec1() {
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQs</a>
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Events</a>
                         </div>
-                </div>
-                <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Case Studies</button>
-                <div className="relative group">
-                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Services
-                    <span className="absolute left-[90px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
-                    </button>
-                        <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
-                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 1 </a>
-                            <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  Service 2</a>
-                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 3</a>
-                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 4</a>
-                        </div>
-                </div>
+                    </div>
+                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Case Studies</button>
+                    <div className="relative group">
+                        <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Services
+                        <span className="absolute left-[90px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                        </button>
+                            <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 1 </a>
+                                <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  Service 2</a>
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 3</a>
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 4</a>
+                            </div>
+                    </div>
                 <div className="relative group">
                     <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Solutions
                     <span className="absolute left-[97px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>

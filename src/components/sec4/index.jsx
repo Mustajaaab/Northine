@@ -124,7 +124,7 @@ function Sec4() {
             <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
             <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
             <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
-        </div>
+            </div>
 
 
 
