@@ -1,89 +1,70 @@
-import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import Northnine from '../../assets/images/no9.png'
+import { Link } from 'react-router-dom';
 
-function App() {
-  const sectionRefs = useRef([]); // Store refs for multiple sections
-  const sections = [
-    { id: 1, bg: "bg-gray-200", title: "Section 1", path: "../../" },
-    { id: 2, bg: "bg-gray-100", title: "Section 2", path: "/section2" },
-    { id: 3, bg: "bg-gray-300", title: "Section 3", path: "/section3" },
-  ]; // Section data
-
-  return (
-    <Router>
-      <NavbarWithRoutes sections={sections} />
-      <Routes>
-        {sections.map((section) => (
-          <Route
-            key={section.id}
-            path={section.path}
-            element={<SectionContent sections={sections} sectionRefs={sectionRefs} />}
-          />
-        ))}
-      </Routes>
-    </Router>
-  );
-}
-
-function NavbarWithRoutes({ sections }) {
-  const [activeSection, setActiveSection] = useState(null);
-  const location = useLocation();
-
-  useEffect(() => {
-    // Update active section based on URL path
-    const currentPath = location.pathname;
-    const matchingSection = sections.find((section) => section.path === currentPath);
-    setActiveSection(matchingSection?.id);
-  }, [location.pathname, sections]);
-
-  return (
-    <div
-      className={`fixed w-[100%] flex justify-evenly items-center h-[80px] z-50 transition-all duration-300 ${
-        activeSection === 2 ? "bg-white text-black" : "bg-[#121820] text-white"
-      }`}
-    >
-      <img src="/path-to-logo" alt="" className="w-[186px] h-[50px]" />
-      <div className="flex items-center gap-4">
-        {sections.map((section) => (
-          <Link
-            key={section.id}
-            to={section.path}
-            className="px-4 py-2 font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"
-          >
-            {section.title}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function SectionContent({ sections, sectionRefs }) {
-  useEffect(() => {
-    const currentSection = sections.find(
-      (section) => section.path === window.location.pathname
-    );
-
-    // Scroll to section on page load
-    if (currentSection && sectionRefs.current[currentSection.id - 1]) {
-      sectionRefs.current[currentSection.id - 1].scrollIntoView({ behavior: "smooth" });
-    }
-  }, [sections, sectionRefs]);
-
-  return (
-    <div>
-      {sections.map((section, index) => (
-        <div
-          key={section.id}
-          data-id={section.id}
-          ref={(el) => (sectionRefs.current[index] = el)}
-          className={`h-[100vh] ${section.bg} flex items-center justify-center`}
-        >
-          <h1 className="text-center text-[32px] font-bold">{section.title}</h1>
+function Navbar(){
+    return(
+        <>
+        <div className="w-[100%] mx-auto flex justify-evenly items-center h-[80px] fixed bg-[#121820] z-50">
+                <img src={Northnine} alt="" className='w-[186px] h-[50px]'/>
+                <div className='flex items-center gap-4'>
+                    <div className="relative group">
+                        <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Enterprise
+                        <span className="absolute left-[105px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                        </button>
+                         <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block ease-in-out">
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home </a>
+                            <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+                            <Link to="/team" className="px-4 py-2 text-gray-700 hover:bg-gray-100">
+          Team
+        </Link>
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team Members</a>
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Prices</a>
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQs</a>
+                            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Events</a>
+                        </div>
+                    </div>
+                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Case Studies</button>
+                    <div className="relative group">
+                        <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Services
+                        <span className="absolute left-[90px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                        </button>
+                            <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 1 </a>
+                                <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  Service 2</a>
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 3</a>
+                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Service 4</a>
+                            </div>
+                    </div>
+                <div className="relative group">
+                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Solutions
+                    <span className="absolute left-[97px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                    </button>
+                    <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
+                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 1 </a>
+                        <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  Solution 2</a>
+                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 3</a>
+                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 4</a>
+                    </div>
+                </div>
+            
+                <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Blog</button>
+                <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Contact Us</button>
+                <div className="relative group">
+                    <button className="px-4 py-2 text-white font-semibold font-syne hover:text-[#F57C00] ease-in-out duration-300"> Other
+                    <span className="absolute left-[70px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
+                    </button>
+                    <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
+                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Coming Soon</a>
+                        <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  404</a>
+                    </div>
+                </div>
+                <svg className='ml-4 w-7 h-7 hover:text-[#F57C00] ease-in-out duration-300 text-white ' fill='currentColor' viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg ">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M20.5848 19.7029C20.3908 19.8999 20.1358 19.997 19.8808 19.997C19.6268 19.997 19.3718 19.8999 19.1778 19.7029L15.5118 16.2199C13.9778 17.2549 12.3798 17.997 9.92584 17.997C4.98484 17.997 0.964844 13.959 0.964844 8.99695C0.964844 4.34995 4.98484 0.199951 9.92584 0.199951C14.8668 0.199951 18.8858 4.34995 18.8858 8.99695C18.8858 11.118 18.1468 13.68 16.9188 14.608L20.5848 18.29C20.9738 18.681 20.9738 19.3129 20.5848 19.7029ZM9.92584 1.99695C6.82984 1.99695 2.95684 5.13695 2.95684 8.99695C2.95684 12.857 6.82984 15.998 9.92584 15.998C11.8398 15.998 13.5758 15.217 14.8368 13.957C14.8408 13.952 14.8418 13.945 14.8468 13.941C14.8518 13.936 14.8578 13.935 14.8628 13.93C16.1168 12.663 16.8948 10.92 16.8948 8.99695C16.8948 5.13695 13.7678 1.99695 9.92584 1.99695Z"></path>
+                </svg>
+            </div>
         </div>
-      ))}
-    </div>
-  );
+        </>
+    )
 }
-
-export default App;
+export default Navbar

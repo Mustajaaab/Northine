@@ -51,7 +51,7 @@ function Footer() {
                             </div>
                         </div>
                     </div> 
-                    <button className='mt-[60px] text-base font-normal text-center font-syne py-[25px] px-[580px] rounded-full bg-[#F57C00]'>
+                    <button className='mt-[60px] text-base font-normal text-center font-syne py-[25px] px-[580px] rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105'>
                         Send Message Now
                     </button>
                     <img src={No9} alt="" className='w-[140px] h-[40px] mt-32'/>
@@ -85,8 +85,8 @@ function Footer() {
                             adipiscing elit, sed diam nonummy.</p>
                         </div>
                         <div>
-                            <button className='text-[#121820]/30 bg-white font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#F57C00]'>Your Email Address</button> <br />
-                            <button className='mt-2 bg-[#F57C00] font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#121820]/30'>Subscribe Now</button>
+                            <button className='text-[#121820]/30 bg-white font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105'>Your Email Address</button> <br />
+                            <button className='mt-2 bg-[#F57C00] font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#121820]/30 ease-in-out duration-300 transition-transform hover:scale-105'>Subscribe Now</button>
                         </div>
                     </div>
                     <div className='flex mt-[120px] pb-3 gap-1'>
