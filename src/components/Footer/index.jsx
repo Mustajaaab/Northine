@@ -3,6 +3,7 @@ import Attach from '../../assets/images/attach.png'
 import No9 from '../../assets/images/no9.png'
 import Googleplay from '../../assets/images/googleplay.png'
 import Appstore from '../../assets/images/appstore.png'
+import BGDot from '../../assets/images/dotmap.png'
 
 function Footer() {
     return(
@@ -54,8 +55,14 @@ function Footer() {
                     <button className='mt-[60px] text-base font-normal text-center font-syne py-[25px] px-[580px] rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105'>
                         Send Message Now
                     </button>
-                    <img src={No9} alt="" className='w-[140px] h-[40px] mt-32'/>
-                    <div className='flex justify-between items-center'>
+                    
+                    <div className="relative">
+                        {/* Background image */}
+                            <div style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="absolute inset-0 opacity-30"></div>
+                         {/* Content */}
+                        <div className="relative z-10">
+                        <img src={No9} alt="" className='w-[140px] h-[40px] mt-32'/>
+                        <div className='flex justify-between items-center'>
                         <div>
                             <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
                             elit, sed diam nonummy nibh euismod tincidunt ut <br />
@@ -108,7 +115,9 @@ function Footer() {
                             <li className='font-syne text-[15px] font-normal text-white'>Sitemap</li>
                         </ul>
                     </div>
-                    <div className='flex items-center justify-between mt-[80px] pb-[30px]'>
+                         </div>
+                    </div>
+                    <div className='flex items-center justify-between mt-[40px] pb-[30px]'>
                         <p className='text-white/10 font-syne font-normal text-[13px] '>©Northnine 2024.</p>
                         <p className='text-white/10 font-syne font-normal text-[13px] '>All Right Reserved.</p>
                     </div>

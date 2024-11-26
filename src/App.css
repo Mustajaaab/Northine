@@ -5,7 +5,36 @@
 #root {
   max-width: screen;
   margin: 0 auto;
-  
 }
 
+/* Add this CSS to your stylesheet */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 1s ease-in-out forwards;
+}
 
