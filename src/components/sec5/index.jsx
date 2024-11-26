@@ -8,7 +8,7 @@ function Sec5() {
    
     return (
         <>
-        <div className='w-[69%] mx-auto'>
+        <div className='w-[69%] mx-auto overflow-hidden'>
             <div className='flex justify-end w-[78%]'>
                 <img src={Shades} alt="" className='w-[203px] h-[140px]'/>
             </div>
