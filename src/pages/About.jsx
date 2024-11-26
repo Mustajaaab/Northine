@@ -15,10 +15,7 @@ import Photo5 from '../assets/images/5.png'
 import Photo6 from '../assets/images/6.png'
 import Oldman from '../assets/images/oldman.png'
 import save from '../assets/images/save.png'
-import bell from '../assets/images/bell.png'
-import tic from '../assets/images/tic.png'
-import spark from '../assets/images/spark.png'
-import setting from '../assets/images/setting.png'
+
 
 function About() {
     return(
@@ -212,9 +209,9 @@ function About() {
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
             </div>
-            <div>
-                <div>
-                    <img src={save} alt="" />
+            <div className="flex items-center">
+                <div className="flex items-end">
+                    <img src={save} alt="" className="w-[40px] h-[52px]"/>
                     <h2>Top Expertise</h2>
                 </div>
                 <p>Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
