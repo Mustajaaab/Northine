@@ -7,6 +7,18 @@ import Shades from '../assets/images/white-shades.png'
 import Scope from '../assets/images/scope.png'
 import tickk from '../assets/images/tickk.png'
 import client1 from '../assets/images/client1.jpg'
+import Photo1 from '../assets/images/1.png'
+import Photo2 from '../assets/images/2.png'
+import Photo3 from '../assets/images/3.png'
+import Photo4 from '../assets/images/4.png'
+import Photo5 from '../assets/images/5.png'
+import Photo6 from '../assets/images/6.png'
+import Oldman from '../assets/images/oldman.png'
+import save from '../assets/images/save.png'
+import bell from '../assets/images/bell.png'
+import tic from '../assets/images/tic.png'
+import spark from '../assets/images/spark.png'
+import setting from '../assets/images/setting.png'
 
 function About() {
     return(
@@ -96,10 +108,118 @@ function About() {
             <div className="flex justify-end w-[40%]">
                 <img src={Shades} alt="" className="w-[200px]"/>
             </div>
+            <div className="mx-auto w-[69%] flex justify-between items-center">
+                <div>
+                    <h1 className="text-[64px] font-syne font-semibold">8<span className="text-[#f67c01] ">+</span></h1>
+                    <p className="font-syne text-lg ">Years Experience</p>
+                    <h2 className="text-[44px] font-syne font-semibold mt-[60px]">We Run All Kinds of IT <br />Services That Vow Your <br />Success</h2>
+                </div>
+                <div>
+                    <h2 className="text-[26px] font-syne font-semibold">Accelerate <span className="text-[#f67c01] ">Innovation</span> with world class tech <br />
+                    teams We&apos;ll match you to an entire <span className="text-[#f67c01] ">Remote <br /> Technology</span></h2>
+
+                    <div>
+                        <div className="flex items-center gap-8 mt-[40px]">
+                            <div className="w-full">
+                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">16+</span>Software Development</p>
+                                <div className="flex gap-1 w-full mt-10">
+                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[90%] h-[2px] bg-gray-300"></div>
+                                </div>
+                            </div>
+                            <div className="w-full">
+                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">3+</span>Software Development</p>
+                                <div className="flex gap-1 w-full mt-10">
+                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[90%] h-[2px] bg-gray-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-[40px]">
+                            <div className="w-full">
+                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">360+</span>Software Development</p>
+                                <div className="flex gap-1 w-full mt-10">
+                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[90%] h-[2px] bg-gray-300"></div>
+                                </div>
+                            </div>
+                            <div className="w-full">
+                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">520+</span>Software Development</p>
+                                <div className="flex gap-1 w-full mt-10">
+                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[90%] h-[2px] bg-gray-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[120px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className='flex justify-center items-center gap-[88px] py-[92px]'>
+                <img src={Photo1} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+                <img src={Photo2} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+                <img src={Photo3} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+                <img src={Photo4} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+                <img src={Photo5} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+                <img src={Photo6} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
+            </div>
+            <div className="bg-[#f3f4f2]">
+                <div className="flex justify-end w-[85%]">
+                    <img src={Shades} alt="" className="w-[200px]"/>
+                </div>
+                <div className="flex w-[69%] mx-auto justify-between items-center pb-[90px]">
+                    <div className="w-[50%]">
+                        <img src={Oldman} alt="" className="w-full"/>
+                    </div>
+                    <div>
+                        <div className="flex gap-2 items-center mt-[50px]">
+                            <img src={dot} alt="" className="w-3 h-3"/>
+                            <p className="font-syne text-lg">IT Enterprise</p>
+                        </div>
+                        <h1 className="text-5xl font-syne font-semibold mt-[50px]">Our Mission</h1>
+                        <p className="mt-[50px] font-syne text-black/30">Many desktop publishing packages and web page editors now use Lorem Ipsum as <br />
+                        their default model text, and a search for lorem ipsum will uncover many web sites <br />
+                        still in their infancy. Various versions have evolved over the years, sometimes by <br />
+                        accident, sometimes on purpose. There are many variations of passages majority.</p>
+                        <div className="flex gap-5 items-center mt-[50px]">
+                            <img src={dot} alt="" className="w-3 h-3"/>
+                            <p className="font-syne text-lg">Accelerate innovation.</p>
+                        </div>
+                        <div className="flex gap-5 items-center mt-[20px]">
+                            <img src={dot} alt="" className="w-3 h-3"/>
+                            <p className="font-syne text-lg">With world class tech teams.</p>
+                        </div>
+                        <div className="flex gap-5 items-center mt-[20px]">
+                            <img src={dot} alt="" className="w-3 h-3"/>
+                            <p className="font-syne text-lg">Our all service offerings to enhance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="w-[69%] mx-auto mt-[100px]">
+                <div className="flex gap-5 items-center">
+                    <img src={dot} alt="" className="w-3 h-3"/>
+                    <p className="font-syne text-lg">Our all service offerings to enhance.</p>
+                </div>
+                <h1 className="font-syne font-semibold text-5xl mt-10">Why Work With Us</h1>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[120px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
             <div>
-                <h1 className="text-5xl font-syne font-semibold">8<span className="text-[#f67c01] ">+</span></h1>
-                <p className="font-syne text-lg mt-3">Years Experience</p>
-                <h2 className="text-4xl font-syne font-semibold">We Run All Kinds of IT <br />Services That Vow Your <br />Success</h2>
+                <div>
+                    <img src={save} alt="" />
+                    <h2>Top Expertise</h2>
+                </div>
+                <p>Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
+                feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
         </>
     )
