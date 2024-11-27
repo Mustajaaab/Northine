@@ -19,6 +19,7 @@ import bell from '../assets/images/bell.png'
 import tic from '../assets/images/tic.png'
 import spark from '../assets/images/spark.png'
 import setting from '../assets/images/setting.png'
+import Footer from '../components/Footer'
 
 
 function About() {
@@ -47,13 +48,13 @@ function About() {
                 <div className="w-[67%] mx-auto flex justify-between my-20">
                 <h2 className="font-syne text-2xl font-semibold">Lorem ipsum dolor sit amet, <span className="text-[#f67c01]">consectetur adipisicing elit.</span> <br />Esse id nemo qui veritatis dicta inventore itaquequo </h2>
                 <div className="flex items-center gap-6">
-                    <button className="px-10 py-3 border-[2px] border-[#f67c01] rounded-full font-syne font-medium">Talk To an Expert</button>
-                    <button className="flex items-center gap-5">
-                        <div className="border-[2px] border-[#f67c01] p-[13px] rounded-full flex justify-center items-center">
+                    <button className="px-10 py-3 border-[2px] border-[#f67c01] rounded-full font-syne font-medium hover:border-[4px] duration-200">Talk To an Expert</button>
+                    <button className="flex items-center gap-5 group">
+                        <div className="border-[2px] border-[#f67c01] p-[13px] rounded-full flex justify-center items-center group-hover:border-[4px] duration-200 ">
                         <img src={play} alt="" className="w-[20px] h-[20px] "/>
                         </div>
-                        <p className="font-syne font-medium">Watch Video</p>
-                        </button>
+                        <p className="font-syne font-medium group-hover:text-[#f67c01]">Watch Video</p>
+                    </button>
                 </div>
                 </div>
             </div>
@@ -214,15 +215,135 @@ function About() {
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
             </div>
-            <div className="flex items-center">
-                <div className="flex items-end">
-                    <img src={save} alt="" className="w-[40px] h-[52px]"/>
-                    <h2>Top Expertise</h2>
+            <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
+                <div className="flex items-end gap-[200px]">
+                    <img src={save} alt="" className="w-[40px] h-[48px]"/>
+                    <h2 className="text-2xl font-syne font-semibold">Top Expertise</h2>
                 </div>
-                <p>Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                <p className="font-syne text-black/30">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
                 iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
                 feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
+                <div className="flex items-end gap-[200px]">
+                    <img src={tic} alt="" className="w-[43px] h-[43px]"/>
+                    <h2 className="text-2xl font-syne font-semibold">Quality Management</h2>
+                </div>
+                <p className="font-syne text-black/30">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
+                feugiat nulla facilisis at vero eros et accumsan.</p>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
+                <div className="flex items-end gap-[200px]">
+                    <img src={bell} alt="" className="w-[48px] h-[48px]"/>
+                    <h2 className="text-2xl font-syne font-semibold">Utmost Flexibility</h2>
+                </div>
+                <p className="font-syne text-black/30">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
+                feugiat nulla facilisis at vero eros et accumsan.</p>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
+                <div className="flex items-end gap-[200px]">
+                    <img src={setting} alt="" className="w-[48px] h-[48px]"/>
+                    <h2 className="text-2xl font-syne font-semibold">Agility</h2>
+                </div>
+                <p className="font-syne text-black/30">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
+                feugiat nulla facilisis at vero eros et accumsan.</p>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
+                <div className="flex items-end gap-[200px]">
+                    <img src={spark} alt="" className="w-[40px] h-[48px]"/>
+                    <h2 className="text-2xl font-syne font-semibold">Innovation</h2>
+                </div>
+                <p className="font-syne text-black/30">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
+                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <br />
+                feugiat nulla facilisis at vero eros et accumsan.</p>
+            </div>
+            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px] mb-[120px]'>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
+                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            </div>
+            <div className="bg-[#f3f4f2] pb-[120px] ">
+                <div className="w-[75%] flex justify-end">
+                    <img src={Shades} alt="" className="w-[220px]"/>
+                </div>
+                <div className="w-[69%] mx-auto">
+                    <div className="flex gap-2 items-center">
+                        <img src={dot} alt="" className="w-2 h-2"/>
+                        <p className="font-syne font-semibold">For Enterprise</p>
+                    </div>
+                    <h1 className="text-[42px] font-syne font-semibold mt-[30px]">We Live by <span className="text-[#F57C00]">Powerful</span> Values</h1>
+                    <div className="flex justify-between mt-[120px]">
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-between mt-[70px]">
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                        <div>
+                            <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
+                                <img src={tic} alt="" className="w-[45px] h-[45px]" />
+                            </div>
+                            <h3 className="font-syne font-semibold text-xl mt-9">We Are </h3>
+                            <p className="font-syne text-black/30 mt-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Footer/>
         </>
     )
 }
