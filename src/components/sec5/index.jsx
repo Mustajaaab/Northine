@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Girl from "../../assets/images/Girl.jpg";
 import Shades from "../../assets/images/white-shades.png";
 import Dot from "../../assets/images/dot.png";
-import Gamla from "../../assets/images/gamla2.jpg";
+import Gamla from "../../assets/images/gamla.jpg";
 import Docs from "../../assets/images/docs.jpg.png";
 
 function Sec5() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [animationClass, setAnimationClass] = useState("slide-in");
 
     const slides = [
         {
@@ -25,7 +26,6 @@ function Sec5() {
             sideDesc2:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
-        // Add more slide objects here if needed
         {
             id: 2,
             mainImg: Gamla,
@@ -45,11 +45,19 @@ function Sec5() {
     ];
 
     const handleNext = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setAnimationClass("slide-out");
+        setTimeout(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+            setAnimationClass("slide-in");
+        }, 800); // Match the duration of the slide-out animation
     };
 
     const handlePrev = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        setAnimationClass("slide-out");
+        setTimeout(() => {
+            setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+            setAnimationClass("slide-in");
+        }, 800); // Match the duration of the slide-out animation
     };
 
     const currentContent = slides[currentSlide];
@@ -63,7 +71,7 @@ function Sec5() {
                 <div>
                     <p className="flex gap-2 items-center">
                         <img src={Dot} alt="" className="w-[14px] h-[14px]" />
-                        <a className="font-syne font-medium text-base ">Our Project News</a>
+                        <a className="font-syne font-medium text-base">Our Project News</a>
                     </p>
                     <h1 className="font-syne font-semibold mt-6 text-[42px]">
                         Latest Projects
@@ -84,7 +92,7 @@ function Sec5() {
                     </button>
                 </div>
             </div>
-            <div className="mt-[90px] flex gap-[30px]">
+            <div className={`mt-[90px] flex gap-[30px] ${animationClass}`}>
                 {/* Main content */}
                 <div>
                     <img
@@ -121,7 +129,7 @@ function Sec5() {
                     <img
                         src={currentContent.sideImg1}
                         alt=""
-                        className="w-[315px] h-[315px] rounded-xl mt-[30px] grayscale hover:grayscale-0 ease-in-out duration-500"
+                        className="w-[315px] h-[315px] object-cover rounded-xl mt-[30px] grayscale hover:grayscale-0 ease-in-out duration-500"
                     />
                 </div>
 
@@ -129,7 +137,7 @@ function Sec5() {
                     <img
                         src={currentContent.sideImg2}
                         alt=""
-                        className="w-[315px] h-[315px] rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
+                        className="w-[315px] h-[315px] object-cover rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
                     />
                     <h1 className="font-syne font-semibold text-[22px] leading-[30px] mt-[30px]">
                         {currentContent.sideTitle2}
@@ -141,7 +149,7 @@ function Sec5() {
             </div>
 
             <div className="flex gap-[14px] items-center group mt-[90px] mb-[120px]">
-                <button className="font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 ">
+                <button className="font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110">
                     View More Insights
                 </button>
                 <button className="w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110">

@@ -13,7 +13,7 @@ function Navbar(){
                         </button>
                          <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block ease-in-out">
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home </a>
-                            <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+                            <Link  to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</Link>
                             <Link to="/team" className="px-4 py-2 text-gray-700 hover:bg-gray-100">
           Team
         </Link>
