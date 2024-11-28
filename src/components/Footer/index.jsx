@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Orange from "../../assets/images/orange.png";
-import Attach from "../../assets/images/attach.png";
 import No9 from "../../assets/images/no9.png";
 import Googleplay from "../../assets/images/googleplay.png";
 import Appstore from "../../assets/images/appstore.png";
@@ -24,29 +23,13 @@ function Footer() {
         }));
     };
 
-    const handleFileChange = (e) => {
-        const selectedFile = e.target.files[0];
-        if (selectedFile) {
-            const fileURL = URL.createObjectURL(selectedFile);
-            setFile({
-                name: selectedFile.name,
-                url: fileURL,
-                type: selectedFile.type,
-            });
-        }
-    };
-
-    const handleUnselect = () => {
-        setFile(null);
-        document.getElementById("fileInput").value = "";
-    };
 
     const onSubmit = async (e) => {
         e.preventDefault();
         setResult("Sending...");
 
         const formData = new FormData();
-       formData.append("access_key", process.env.NEXT_PUBLIC_API_ACCESS_KEY);
+       formData.append("access_key","3ab5d2da-c395-40b8-9724-b184c37f573c");
         formData.append("name", form.name);
         formData.append("email", form.email);
         formData.append("phone", form.phone);
@@ -146,64 +129,14 @@ function Footer() {
                             />
 
                             {/* File Upload */}
-                            <div>
-                                <input
-                                    type="file"
-                                    id="fileInput"
-                                    className="hidden"
-                                    accept="image/*,application/pdf"
-                                    onChange={handleFileChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="flex items-center gap-[14px] mt-14"
-                                    onClick={() => document.getElementById("fileInput").click()}
+                            <button
+                                type="submit"
+                                className={`mt-[18px] text-base font-normal text-center font-syne py-[25px] w-full rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                                 }`}
+                                disabled={result === "Sending..."}
                                 >
-                                    <img src={Attach} alt="Attach" className="w-[15px] h-[25px]" />
-                                    <div>
-                                        <p className="font-syne font-normal text-[15px] text-white">
-                                            Attach Your File
-                                        </p>
-                                        <p className="font-syne font-normal text-[13px] text-left text-white/50">
-                                            Up to 20MB
-                                        </p>
-                                    </div>
-                                </button>
-
-                                {file && (
-                                    <div className="mt-4 gap-2 flex">
-                                        <p className="text-white font-syne">Selected File:</p>
-                                        {file.type.startsWith("image/") ? (
-                                            <a
-                                                href={file.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 underline"
-                                            >
-                                                {file.name} (View Image)
-                                            </a>
-                                        ) : file.type === "application/pdf" ? (
-                                            <a
-                                                href={file.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 underline"
-                                            >
-                                                {file.name} (View PDF)
-                                            </a>
-                                        ) : (
-                                            <p className="text-white">Unsupported file type</p>
-                                        )}
-                                        <button
-                                            type="button"
-                                            onClick={handleUnselect}
-                                            className="text-white text-2xl font-bold"
-                                        >
-                                            &times;
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
+                                {result === "Sending..." ? "Sending..." : "Submit"}
+                            </button>
                         </div>
 
                         {/* Right Section */}
@@ -238,15 +171,8 @@ function Footer() {
                                 </label>
                             </div>
                         </div>
+                        
                     </div>
-                    <button
-                        type="submit"
-                        className={`mt-[60px] text-base font-normal text-center font-syne py-[25px] w-full rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
-                            }`}
-                        disabled={result === "Sending..."}
-                    >
-                        {result === "Sending..." ? "Sending..." : "Submit"}
-                    </button>
 
                 </form>
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
