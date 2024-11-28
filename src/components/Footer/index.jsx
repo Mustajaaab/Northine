@@ -131,7 +131,7 @@ function Footer() {
                             {/* File Upload */}
                             <button
                                 type="submit"
-                                className={`mt-[18px] text-base font-normal text-center font-syne py-[25px] w-full rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                                className={`mt-[40px] text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
                                  }`}
                                 disabled={result === "Sending..."}
                                 >
