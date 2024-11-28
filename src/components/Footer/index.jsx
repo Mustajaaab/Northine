@@ -45,8 +45,10 @@ function Footer() {
         e.preventDefault();
         setResult("Sending...");
 
+        const domain = process.env.API_ACCESS_KEY;
+
         const formData = new FormData();
-       formData.append("access_key", process.env.NEXT_PUBLIC_API_ACCESS_KEY);
+        formData.append("access_key", domain);;
         formData.append("name", form.name);
         formData.append("email", form.email);
         formData.append("phone", form.phone);
