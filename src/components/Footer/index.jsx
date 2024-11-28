@@ -28,6 +28,8 @@ function Footer() {
         e.preventDefault();
         setResult("Sending...");
 
+        const domain = process.env.API_ACCESS_KEY;
+
         const formData = new FormData();
        formData.append("access_key","3ab5d2da-c395-40b8-9724-b184c37f573c");
         formData.append("name", form.name);
