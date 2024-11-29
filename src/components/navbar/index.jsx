@@ -41,7 +41,7 @@ function Navbar(){
                     <span className="absolute left-[97px] transform -translate-x-1/2 w-2 h-2 border-[#F57C00] border-[2px] rounded-full"></span>
                     </button>
                     <div className="absolute left-0 mt-2 hidden w-40 bg-white border border-gray-200 rounded-md shadow-lg group-hover:block">
-                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 1 </a>
+                        <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution black </a>
                         <a  href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">  Solution 2</a>
                         <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 3</a>
                         <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100"> Solution 4</a>
