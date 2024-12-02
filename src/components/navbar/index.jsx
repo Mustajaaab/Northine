@@ -15,7 +15,7 @@ function Navbar(){
                             <Link to="/home" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home </Link>
                             <Link  to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</Link>
                             <Link to="/team" className="px-4 py-2 text-gray-700 hover:bg-gray-100">
-          Team
+          Teaaqqsm
         </Link>
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team Members</a>
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
