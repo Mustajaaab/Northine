@@ -5,8 +5,9 @@ function Sec1() {
         <div className='bg-[#121820]'>
             
         </div>
-        <div className="bg-[#121820] flex items-center gap-[103px]">
-            <div className="pt-[290px] pb-[171px] pl-[281px] animate-fadeInSlideDown">
+        <div className="bg-[#121820] ">
+            <div className="container mx-auto flex justify-between items-center gap-[103px] max-w-[1170px]  2xl:max-w-[1370px]">
+            <div className="pt-[290px] pb-[171px]  animate-fadeInSlideDown">
                 <h3 className="text-white font-syne text-lg "><span className="text-[#F57C00]">Northnine</span> Pvt Ltd</h3>
                 <h1 className="text-white text-6xl font-semibold leading-[84px] font-syne mt-12 animate-fadeInSlideDown">Your Partner in Smart <br />
                 Digital Solutions  <span className="font-satisfy text-[#F57C00]">Tech</span></h1>
@@ -15,7 +16,7 @@ function Sec1() {
                     <p className="font-normal text-[15px] leading-[25.5px] pl-[60px] text-white">Create user-friendly websites, attract more customers, <br /> and keep your finances on track with expert-driven services.</p>
                 </div>
             </div>
-            <div className="animate-fadeInSlideDown">
+            <div className="animate-fadeInSlideDown hidden lg:block">
 
             <div className="relative group">
                     <div className="absolute bottom-[60px] left-[20%] transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-6 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -85,6 +86,7 @@ function Sec1() {
                         <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110">Book Keepers</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         </>

@@ -53,11 +53,9 @@ function Sec2() {
                     <div>
                         <div className='flex gap-3'>
                             <div className='text-[#F57C00] font-semibold text-lg font-syne'>01</div>
-                            <h2 className='font-semibold font-syne text-lg'>Dedicated Team</h2>
+                            <h2 className='font-semibold font-syne text-lg'>End-to-End Support</h2>
                         </div>
-                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-                        sed do eiusmod tempor incididunt ut labore et dolore <br />
-                        magna aliqua.</p>
+                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>From design to execution, receive full support in UI/UX designing, <br /> digital marketing, website development, and bookkeeping.	</p>
                     </div>
                 </div>
 
@@ -90,11 +88,9 @@ function Sec2() {
                     <div>
                         <div className='flex gap-3'>
                             <div className='text-[#F57C00] font-semibold text-lg font-syne'>02</div>
-                            <h2 className='font-semibold font-syne text-lg'>QA and Testing</h2>
+                            <h2 className='font-semibold font-syne text-lg'>Digital Learning Solutions</h2>
                         </div>
-                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-                        sed do eiusmod tempor incididunt ut labore et dolore <br />
-                        magna aliqua.</p>
+                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Equip your team with digital learning solutions for efficient <br /> skill-building and better internal processes.</p>
                     </div>
                 </div>
 
@@ -127,11 +123,10 @@ function Sec2() {
                     <div>
                         <div className='flex gap-3'>
                             <div className='text-[#F57C00] font-semibold text-lg font-syne'>03</div>
-                            <h2 className='font-semibold font-syne text-lg'>SaaS</h2>
+                            <h2 className='font-semibold font-syne text-lg'>Streamlined Processes</h2>
                         </div>
-                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-                        sed do eiusmod tempor incididunt ut labore et dolore <br />
-                        magna aliqua.</p>
+                        <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Simplify your financial operations with smart bookkeeping <br /> tools, ensuring accuracy and saving time.
+</p>
                     </div>
                 </div>
 
