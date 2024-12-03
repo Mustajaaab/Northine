@@ -1,7 +1,7 @@
 function Team(){
     return(
         <>
-       <p>coming soon</p>
+
         </>
     )
 }
