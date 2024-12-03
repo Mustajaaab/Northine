@@ -19,8 +19,7 @@ function Home() {
         <Sec4/>
         <Sec5/>
         <Slider2/>
-        <Footer/>
-        
+        <Footer/>  
         </>
     )
 } 
