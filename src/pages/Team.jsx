@@ -1,7 +1,10 @@
-function Team(){
-    return(
+import Navbar from "../components/navbar";
+
+function Team() {
+    return (
         <>
-       <p>coming soon</p>
+            <Navbar />
+            <p>coming soon</p>
         </>
     )
 }
