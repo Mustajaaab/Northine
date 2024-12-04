@@ -179,9 +179,7 @@ function Footer() {
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
                 <div className='flex justify-between items-center'>
                     <div>
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
-                            elit, sed diam nonummy nibh euismod tincidunt ut <br />
-                            laoreet dolore magna aliquam erat volutpat.</p>
+                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'> Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
                         <div className='flex mt-[48px] gap-14'>
                             <div className='flex items-center gap-2'>
                                 <img src={Googleplay} alt="" className='w-8 h-8' />
@@ -203,8 +201,7 @@ function Footer() {
                     <div>
                         <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[30px]'>Join The <span className='text-[#F57C00]'>Northnine</span> <br />
                             Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Lorem ipsum dolor sit amet, consectetuer <br />
-                            adipiscing elit, sed diam nonummy.</p>
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
                     </div>
                     <div>
                         <button className='text-[#121820]/30 bg-white font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105'>Your Email Address</button> <br />
