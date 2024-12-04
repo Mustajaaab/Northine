@@ -1,4 +1,5 @@
 import './App.css';
+import ReactDOM from 'react-dom';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Team from './pages/Team';
