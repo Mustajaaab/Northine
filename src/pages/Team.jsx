@@ -246,7 +246,7 @@ function Team(){
                     <div>
                         <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[30px]'>Join The <span className='text-[#F57C00]'>Northnine</span> <br />
                             Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Lorem ipsum dolor sit amet, consectetuer <br />
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Lorem ispum dolor sit amet, consectetuer <br />
                             adipiscing elit, sed diam nonummy.</p>
                     </div>
                     <div>
