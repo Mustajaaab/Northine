@@ -2,10 +2,12 @@ import Navbar from "../components/navbar";
 
 function Team() {
     return (
-        <>
-            <Navbar />
-            <p>coming soon</p>
-        </>
+        <div>
+            <Navbar/>
+            <div >
+                <h2>hello</h2>
+            </div>
+        </div>
     )
 }
 export default Team;
