@@ -22,6 +22,8 @@ export default {
       colors: {
         gradientStart: '#181E26',
         gradientEnd: '#121820',
+        primaryOrange: '#f57000',
+        yellow: '#fdcb22',
       },
     },
   },

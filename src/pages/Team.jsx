@@ -47,64 +47,41 @@ function Team(){
             <span className="text-[#f57000]"> guiding and towards</span> success.</h1>
 
             <div className="flex justify-center gap-[40px] mt-[80px]">
-                <div className="text-center">
-                    <img src={Client1} alt="" className="w-[400px] h-[400px] rounded-full grayscale hover:grayscale-0 ease-out duration-300"/>
-                    <h1 className="font-syne text-xl font-semibold mt-[24px]">Jane Meldrum</h1>
-                    <p className="font-mono text-black/40 text-base font-semibold mt-[8px]">CEO ITSulu</p>
-                    <div className="flex mt-1 justify-center gap-2">
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={X} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={facebook} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={linked} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={Instagram} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                    </div>
-                </div>
-                <div className="text-center">
-                    <img src={Client2} alt="" className="w-[400px] h-[400px] rounded-full grayscale hover:grayscale-0 ease-out duration-300"/>
-                    <h1 className="font-syne text-xl font-semibold mt-[24px]">Jane Meldrum</h1>
-                    <p className="font-mono text-black/40 text-base font-semibold mt-[8px]">CEO ITSulu</p>
-                    <div className="flex mt-1 justify-center gap-2">
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={X} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={facebook} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={linked} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={Instagram} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                    </div>
-                </div>
-                <div className="text-center">
-                    <img src={Client3} alt="" className="w-[400px] h-[400px] rounded-full grayscale hover:grayscale-0 ease-out duration-300"/>
-                    <h1 className="font-syne text-xl font-semibold mt-[24px]">Jane Meldrum</h1>
-                    <p className="font-mono text-black/40 text-base font-semibold mt-[8px]">CEO ITSulu</p>
-                    <div className="flex mt-1 justify-center gap-2">
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={X} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={facebook} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={linked} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                        <div className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full">
-                            <img src={Instagram} alt="" className="w-[20px] h-[20px]"/>
-                        </div>
-                    </div>
-                </div>
+    {[
+        { img: Client1, name: "Jane Meldrum", title: "CEO ITSulu" },
+        { img: Client2, name: "John Doe", title: "CTO XYZ" },
+        { img: Client3, name: "Emily Smith", title: "COO ABC" },
+    ].map((client, index) => (
+        <div key={index} className="text-center group relative">
+            <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden">
+                <img
+                    src={client.img}
+                    alt={client.name}
+                    className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 ease-out duration-300"
+                />
+                <div className="absolute bottom-[10px] right-[10px] w-12 h-12 bg-primaryOrange rounded-full opacity-0 group-hover:opacity-100 ease-out duration-300 shadow-md">hello</div>
             </div>
+            <h1 className="font-syne text-xl font-semibold mt-[24px] group-hover:text-[#f57000] ease-out duration-300">
+                {client.name}
+            </h1>
+            <p className="font-mono text-black/40 text-base font-semibold mt-[8px] group-hover:text-black ease-out duration-300">
+                {client.title}
+            </p>
+            <div className="flex mt-1 justify-center gap-2">
+                {[X, facebook, linked, Instagram].map((icon, i) => (
+                    <div
+                        key={i}
+                        className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full group-hover:bg-[#e2e4e3] ease-out duration-300"
+                    >
+                        <img src={icon} alt={`Icon ${i}`} className="w-[20px] h-[20px]" />
+                    </div>
+                ))}
+            </div>
+        </div>
+    ))}
+</div>
+
+
 
             <div className="flex justify-center gap-[40px] mt-[80px]">
                 <div className="text-center">
@@ -222,9 +199,7 @@ function Team(){
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
                 <div className='flex justify-between items-center'>
                     <div>
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
-                            elit, sed diam nonummy nibh euismod tincidunt ut <br />
-                            laoreet dolore magna aliquam erat volutpat.</p>
+                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'>Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
                         <div className='flex mt-[48px] gap-14'>
                             <div className='flex items-center gap-2'>
                                 <img src={Googleplay} alt="" className='w-8 h-8' />
@@ -246,8 +221,7 @@ function Team(){
                     <div>
                         <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[30px]'>Join The <span className='text-[#F57C00]'>Northnine</span> <br />
                             Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Lorem ispum dolor sit amet, consectetuer <br />
-                            adipiscing elit, sed diam nonummy.</p>
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
                     </div>
                     <div>
                         <button className='text-[#121820]/30 bg-white font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#F57C00] ease-in-out duration-300 transition-transform hover:scale-105'>Your Email Address</button> <br />
