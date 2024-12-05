@@ -6,7 +6,7 @@ function Navbar() {
     const location = useLocation();
 
     const getActiveClass = (path) => {
-        return location.pathname === path ? 'text-[#f57000] border-b border-[#f57000]' : 'text-white';
+        return location.pathname === path ? 'text-yellow border-b border-yellow' : 'text-white';
     };
 
     return (
@@ -17,37 +17,37 @@ function Navbar() {
                 <div className="flex gap-8">
                     <Link
                         to="/home"
-                        className={`${getActiveClass('/home')} block  font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/home')} block  font-syne font-semibold hover:text-yellow`}
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className={`${getActiveClass('/about')} block  font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/about')} block  font-syne font-semibold hover:text-yellow`}
                     >
                         About Us
                     </Link>
                     <Link
                         to="/team"
-                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-yellow`}
                     >
                         Team
                     </Link>
                     <Link
                         to="/services"
-                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-yellow`}
                     >
                         Services
                     </Link>
                     <Link
                         to="/case-studies"
-                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-yellow`}
                     >
                         Case Studies
                     </Link>
                     <Link
                         to="/contact-us"
-                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-yellow`}
                     >
                         Contact Us
                     </Link>
@@ -56,7 +56,7 @@ function Navbar() {
 
             <div>
                 <svg
-                    className="ml-4 w-7 h-7 hover:text-[#F57C00] ease-in-out duration-300 text-white cursor-pointer"
+                    className="ml-4 w-7 h-7 hover:text-yellow ease-in-out duration-300 text-white cursor-pointer"
                     fill="currentColor"
                     viewBox="0 0 21 20"
                     xmlns="http://www.w3.org/2000/svg"
