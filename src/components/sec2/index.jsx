@@ -24,26 +24,26 @@ function Sec2() {
             <img src={Photo6} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110'/>
         </div>
         <div className='w-[69%] flex mx-auto pb-3 gap-1'>
-            <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
             <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-            <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
         </div>
         <div className='w-[55%] mx-auto flex justify-end'>
         <img src={Shades} alt="" className='w-[203px] h-[140px]'/>
         </div>
         <div className='w-[70%] mx-auto'>
-            <h1 className='font-syne font-semibold text-[42px] leading-[58px]'>How We Can <span className='text-[#F57C00]'>Help You</span></h1>
+            <h1 className='font-syne font-semibold text-[42px] leading-[58px]'>How We Can <span className='text-[#fdcb22]'>Help You</span></h1>
             <div className='flex mt-14'>
                 <p className='font-syne font-semibold text-[22px] leading-8 w-[50%]'>IT Services</p>
                 <p className='font-syne font-semibold text-[22px] leading-8'>IT Solutions</p>
             </div>
             <div className="flex mt-[60px] w-full h-5">
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ function Sec2() {
                     <img src={Cloud} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>01</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>01</div>
                             <h2 className='font-semibold font-syne text-lg'>End-to-End Support</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>From design to execution, receive full support in UI/UX designing, <br /> digital marketing, website development, and bookkeeping.	</p>
@@ -63,7 +63,7 @@ function Sec2() {
                     <img src={Setting} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>01</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>01</div>
                             <h2 className='font-semibold font-syne text-lg'>Blockchain</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
@@ -74,11 +74,11 @@ function Sec2() {
             </div>
             <div className="flex mt-[60px] w-full h-5">
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ function Sec2() {
                     <img src={Bell} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>02</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>02</div>
                             <h2 className='font-semibold font-syne text-lg'>Digital Learning Solutions</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Equip your team with digital learning solutions for efficient <br /> skill-building and better internal processes.</p>
