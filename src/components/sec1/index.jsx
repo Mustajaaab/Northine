@@ -20,13 +20,13 @@ function Sec1() {
 
             <div className="relative group">
                     <div className="absolute bottom-[60px] left-[20%] transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-6 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <h3 className="text-xl font-bold text-gray-900 font-serif">Experts</h3>
+                        <h3 className="text-xl font-bold text-gray-900 font-serif">Web Development: </h3>
                         <div className="flex items-center mt-2">
                             <span className="block w-[20%] h-[2px] bg-[#fdcb22] rounded-sm mr-[2px]"></span>
                             <span className="block w-full h-[2px] bg-gray-300"></span>
                         </div>
                         <p className="text-gray-600 mt-4">
-                         And here&apos;s some amazing content. It&apos;s very engaging. Right?
+                        Building robust, scalable, and responsive websites tailored to your business needs.
                          </p>
                      </div>
                      <div className="flex group items-center gap-4 mt-[58px]">
@@ -37,13 +37,13 @@ function Sec1() {
 
                 <div className="relative group">
                     <div className="absolute bottom-[60px] left-[80%] transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-6 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <h3 className="text-xl font-bold text-gray-900 font-serif">Experts</h3>
+                    <h3 className="text-xl font-bold text-gray-900 font-serif">Digital Marketing:</h3>
                         <div className="flex items-center mt-2">
                             <span className="block w-[20%] h-[2px] bg-[#fdcb22] rounded-sm mr-[2px]"></span>
                             <span className="block w-full h-[2px] bg-gray-300"></span>
                         </div>
                         <p className="text-gray-600 mt-4">
-                         And here&apos;s some amazing content. It&apos;s very engaging. Right?
+                        Driving growth with targeted campaigns, lead generation, and social media strategies.
                          </p>
                      </div>
                      <div className="flex group items-center gap-4 mt-10 ml-[250px]">
@@ -55,13 +55,13 @@ function Sec1() {
 
                 <div className="relative group">
                     <div className="absolute bottom-[60px] left-[20%] transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-6 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <h3 className="text-xl font-bold text-gray-900 font-serif">Experts</h3>
+                        <h3 className="text-xl font-bold text-gray-900 font-serif">UI/UX Designing: </h3>
                             <div className="flex items-center mt-2">
                                 <span className="block w-[20%] h-[2px] bg-[#fdcb22] rounded-sm mr-[2px]"></span>
                                 <span className="block w-full h-[2px] bg-gray-300"></span>
                             </div>
                             <p className="text-gray-600 mt-4">
-                            And here&apos;s some amazing content. It&apos;s very engaging. Right?
+                            Crafting intuitive, visually stunning designs to enhance user experiences.
                             </p>
                     </div>
                      <div className="flex group items-center gap-4 mt-16 ml-[8px]">
@@ -72,13 +72,13 @@ function Sec1() {
 
                 <div className="relative group">
                     <div className="absolute bottom-[60px] left-[80%] transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-6 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <h3 className="text-xl font-bold text-gray-900 font-serif">Experts</h3>
+                        <h3 className="text-xl font-bold text-gray-900 font-serif">Bookkeeping Services:</h3>
                             <div className="flex items-center mt-2">
                                 <span className="block w-[20%] h-[2px] bg-[#fdcb22] rounded-sm mr-[2px]"></span>
                                 <span className="block w-full h-[2px] bg-gray-300"></span>
                             </div>
                             <p className="text-gray-600 mt-4">
-                            And here&apos;s some amazing content. It&apos;s very engaging. Right?
+                            Simplifying finances with accurate reports and seamless expense tracking.
                             </p>
                     </div>
                      <div className="flex group items-center gap-4 mt-14 ml-[255px]">
