@@ -7,7 +7,6 @@
   margin: 0 auto;
 }
 
-/* Add this CSS to your stylesheet */
 @keyframes slideIn {
   from {
       opacity: 0;

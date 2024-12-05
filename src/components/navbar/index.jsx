@@ -14,40 +14,40 @@ function Navbar() {
             <img src={Northnine} alt="Northnine Logo" className="w-[186px] h-[50px]" />
 
             <div className="flex items-center gap-4">
-                <div className="flex">
+                <div className="flex gap-8">
                     <Link
                         to="/home"
-                        className={`${getActiveClass('/home')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/home')} block  font-syne font-semibold hover:text-[#f57000]`}
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className={`${getActiveClass('/about')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/about')} block  font-syne font-semibold hover:text-[#f57000]`}
                     >
                         About Us
                     </Link>
                     <Link
                         to="/team"
-                        className={`${getActiveClass('/team')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-[#f57000]`}
                     >
                         Team
                     </Link>
                     <Link
                         to="/services"
-                        className={`${getActiveClass('/services')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-[#f57000]`}
                     >
                         Services
                     </Link>
                     <Link
                         to="/case-studies"
-                        className={`${getActiveClass('/case-studies')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-[#f57000]`}
                     >
                         Case Studies
                     </Link>
                     <Link
                         to="/contact-us"
-                        className={`${getActiveClass('/contact-us')} block px-4 py-2 font-syne font-semibold hover:text-[#f57000]`}
+                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-[#f57000]`}
                     >
                         Contact Us
                     </Link>
