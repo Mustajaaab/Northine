@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Pseudo from "../../assets/images/pseudo.png";
 import Dot from "../../assets/images/dot.png";
 
 function Sec4() {
@@ -39,7 +38,7 @@ function Sec4() {
     return (
         <div id="sec4">
             <div className="w-[69%] mx-auto flex items-center gap-2 mt-[120px]">
-                <img src={Pseudo} alt="" className="w-2 h-2" />
+                <div className='w-2 h-2 bg-yellow rounded-full'> </div>
                 <p className="font-syne text-base font-medium">Our Skill</p>
             </div>
             <div className="w-[69%] mx-auto flex justify-between mt-7 items-end">

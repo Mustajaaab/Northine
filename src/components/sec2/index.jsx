@@ -98,7 +98,7 @@ function Sec2() {
                     <img src={Spark} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>02</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>02</div>
                             <h2 className='font-semibold font-syne text-lg'>Artificial Intelligence</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
@@ -109,11 +109,11 @@ function Sec2() {
             </div>
             <div className="flex mt-[60px] w-full h-5">
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
                 <div className="flex gap-1 w-full">
-                    <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                    <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                     <div className="w-[96%] h-[2px] bg-gray-300"></div>
                 </div>
             </div>
@@ -122,7 +122,7 @@ function Sec2() {
                     <img src={File} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>03</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>03</div>
                             <h2 className='font-semibold font-syne text-lg'>Streamlined Processes</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Simplify your financial operations with smart bookkeeping <br /> tools, ensuring accuracy and saving time.
@@ -134,7 +134,7 @@ function Sec2() {
                     <img src={Save} alt="" className='w-[45px] h-[45px] ml-[31px]'/>
                     <div>
                         <div className='flex gap-3'>
-                            <div className='text-[#F57C00] font-semibold text-lg font-syne'>03</div>
+                            <div className='text-[#fdcb22] font-semibold text-lg font-syne'>03</div>
                             <h2 className='font-semibold font-syne text-lg'>Internet of Things</h2>
                         </div>
                         <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
@@ -145,9 +145,9 @@ function Sec2() {
             </div>
         </div>
         <div className='w-[69%] flex mx-auto mt-[90px] pb-3 gap-1'>
-            <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
             <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-            <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+            <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
         </div>
         <div className='w-[10%] mx-auto flex justify-end'>
             <img src={Shades} alt="" className='w-[203px] h-[140px]'/>

@@ -14,10 +14,10 @@ function Sec3() {
                     <img src={Shades} alt="" className='w-[203px] h-[140px]' />
                 </div>
                 <div className=' flex items-center gap-2'>
-                    <img src={Pseudo} alt="" className='w-2 h-2' />
+                    <div className='w-2 h-2 bg-yellow rounded-full'> </div>
                     <p className="font-syne font-medium text-base ">Discover Our Company</p>
                 </div>
-                <h1 className='font-syne text-[42px] font-semibold mt-7'>How We <span className='text-[#F57C00]'>Collaborate</span> With You</h1>
+                <h1 className='font-syne text-[42px] font-semibold mt-7'>How We <span className='text-yellow'>Collaborate</span> With You</h1>
                 <div className='mt-[90px] flex justify-between'>
                     <div>
                         <div className='flex items-center gap-4'>
@@ -65,10 +65,10 @@ function Sec3() {
                 </div>
                 <div className='justify-between flex pt-[107px]'>
                     <div className='flex gap-[14px] items-center group'>
-                        <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>Learn More</button>
-                        <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
+                        <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>Learn More</button>
+                        <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
                     </div>
-                    <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110'>How We Work</button>
+                    <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110'>How We Work</button>
                 </div>
                 <div className='flex justify-end w-[40%]'>
                     <img src={Shades2} alt="" className='w-[203px] h-[140px]'/>
