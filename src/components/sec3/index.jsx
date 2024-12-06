@@ -1,4 +1,3 @@
-import Pseudo from '../../assets/images/pseudo.png'
 import Shades from '../../assets/images/white-shades.png'
 import Cloud from '../../assets/images/cloud.png'
 import Save from '../../assets/images/save.png'
@@ -26,7 +25,7 @@ function Sec3() {
                         </div>
                         <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Lorem ipsum dolor sit amet, consectetur <br />
                         adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
+                        incidiasndjkansdjdunt ut labore et dolore magna <br />
                         aliqua.</p>
                     </div>
 
