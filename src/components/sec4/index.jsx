@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import Dot from "../../assets/images/dot.png";
 
 function Sec4() {
     const [isVisible, setIsVisible] = useState(false);
     const [skillPercentages, setSkillPercentages] = useState(
-        new Array(7).fill(0) // Assuming 7 skills in total
+        new Array(7).fill(0)
     );
 
     useEffect(() => {
@@ -43,7 +42,7 @@ function Sec4() {
             </div>
             <div className="w-[69%] mx-auto flex justify-between mt-7 items-end">
                 <h1 className="font-syne font-semibold text-[42px] leading-[58px]">
-                    Business <span className="text-[#F57C00]">Success</span> With <br />
+                    Business <span className="text-yellow">Success</span> With <br />
                     Technology
                 </h1>
                 <p className="text-[#121820]/40 font-syne text-[15px] leading-[25.5px]">
@@ -68,13 +67,13 @@ function Sec4() {
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
-                                        className={`h-[2px] bg-[#F57C00]`}
+                                        className={`h-[2px] bg-yellow`}
                                         style={{
                                             width: `${skillPercentages[skill.index]}%`,
                                             transition: "width 3s ease-in-out",
                                         }}
                                     ></div>
-                                    <img src={Dot} alt="" className="w-[14px] h-[14px]" />
+                                    <div className="w-3 h-3 bg-yellow rounded-full"></div>
                                     <div
                                         className={`h-[2px] bg-[#121820]/40`}
                                         style={{
@@ -103,13 +102,13 @@ function Sec4() {
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
-                                        className={`h-[2px] bg-[#F57C00]`}
+                                        className={`h-[2px] bg-yellow`}
                                         style={{
                                             width: `${skillPercentages[skill.index]}%`,
                                             transition: "width 3s ease-in-out",
                                         }}
                                     ></div>
-                                    <img src={Dot} alt="" className="w-[14px] h-[14px]" />
+                                     <div className="w-3 h-3 bg-yellow rounded-full"></div>
                                     <div
                                         className={`h-[2px] bg-[#121820]/40`}
                                         style={{
@@ -128,10 +127,10 @@ function Sec4() {
                     ))}
                     <div className="w-[20%] flex justify-center items-end">
                         <div className="flex items-center gap-[14px] group">
-                            <button className="font-syne font-semibold text-base group-hover:text-[#F57C00] ease-in-out duration-300 group-hover:scale-110">
+                            <button className="font-syne font-semibold text-base group-hover:text-yellow ease-in-out duration-300 group-hover:scale-110">
                                 More
                             </button>
-                            <button className="bg-[#F57C00] text-base text-white w-[35px] h-[35px] rounded-full group-hover:bg-black ease-in-out duration-300 group-hover:scale-110">
+                            <button className="bg-yellow text-base text-white w-[35px] h-[35px] rounded-full group-hover:bg-black ease-in-out duration-300 group-hover:scale-110">
                                 🡺
                             </button>
                         </div>
@@ -139,9 +138,9 @@ function Sec4() {
                 </div>
             </div>
             <div className="w-[69%] flex mx-auto mt-[152px] pb-3 gap-1">
-                <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                <div className="w-[2%] h-[2px] bg-yellow"></div>
                 <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
-                <div className="w-[2%] h-[2px] bg-[#F57C00]"></div>
+                <div className="w-[2%] h-[2px] bg-yellow"></div>
             </div>
         </div>
     );
