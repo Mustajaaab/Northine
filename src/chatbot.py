@@ -82,3 +82,5 @@ for conversation_index in tqdm(range(df.shape[0])):
             for word in target_text.split():
                 if word not in target_words_set:
                     target_words_set.add(word)
+input_texts
+target_texts

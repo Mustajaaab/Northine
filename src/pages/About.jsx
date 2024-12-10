@@ -107,7 +107,7 @@ function About() {
                             <div className="flex items-center gap-10">
                                 <img src={client1} alt="" className="w-20 rounded-full" />
                                 <div>
-                                    <p className="text-[#f67c01] font-satisfy text-[30px]">Jane Meldrum</p>
+                                    <p className="text-yellow font-satisfy text-[30px]">Jane Meldrum</p>
                                     <p className="text-black/30 font-syne ">CEO & Co-Founder</p>
                                 </div>
                             </div>
@@ -120,44 +120,44 @@ function About() {
             </div>
             <div className="mx-auto w-[69%] flex justify-between items-center">
                 <div>
-                    <h1 className="text-[64px] font-syne font-semibold">8<span className="text-[#f67c01] ">+</span></h1>
+                    <h1 className="text-[64px] font-syne font-semibold">8<span className="text-yellow ">+</span></h1>
                     <p className="font-syne text-lg ">Years Experience</p>
                     <h2 className="text-[44px] font-syne font-semibold mt-[60px]">We Run All Kinds of IT <br />Services That Vow Your <br />Success</h2>
                 </div>
                 <div>
-                    <h2 className="text-[26px] font-syne font-semibold">Accelerate <span className="text-[#f67c01] ">Innovation</span> with world class tech <br />
-                        teams We&apos;ll match you to an entire <span className="text-[#f67c01] ">Remote <br /> Technology</span></h2>
+                    <h2 className="text-[26px] font-syne font-semibold">Accelerate <span className="text-yellow ">Innovation</span> with world class tech <br />
+                        teams We&apos;ll match you to an entire <span className="text-yellow ">Remote <br /> Technology</span></h2>
 
 
                     <div>
                         <div className="flex items-center gap-8 mt-[40px]">
                             <div className="w-full">
-                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">16+</span>Software Development</p>
+                                <p className="text-base font-semibold font-syne"><span className="text-yellow mr-2">16+</span>Software Development</p>
                                 <div className="flex gap-1 w-full mt-10">
-                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[10%] h-[2px] bg-yellow"></div>
                                     <div className="w-[90%] h-[2px] bg-gray-300"></div>
                                 </div>
                             </div>
                             <div className="w-full">
-                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">3+</span>Software Development</p>
+                                <p className="text-base font-semibold font-syne"><span className="text-yellow mr-2">3+</span>Software Development</p>
                                 <div className="flex gap-1 w-full mt-10">
-                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[10%] h-[2px] bg-yellow"></div>
                                     <div className="w-[90%] h-[2px] bg-gray-300"></div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex items-center gap-8 mt-[40px]">
                             <div className="w-full">
-                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">360+</span>Software Development</p>
+                                <p className="text-base font-semibold font-syne"><span className="text-yellow mr-2">360+</span>Software Development</p>
                                 <div className="flex gap-1 w-full mt-10">
-                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[10%] h-[2px] bg-yellow"></div>
                                     <div className="w-[90%] h-[2px] bg-gray-300"></div>
                                 </div>
                             </div>
                             <div className="w-full">
-                                <p className="text-base font-semibold font-syne"><span className="text-[#f67c01] mr-2">520+</span>Software Development</p>
+                                <p className="text-base font-semibold font-syne"><span className="text-yellow mr-2">520+</span>Software Development</p>
                                 <div className="flex gap-1 w-full mt-10">
-                                    <div className="w-[10%] h-[2px] bg-[#F57C00]"></div>
+                                    <div className="w-[10%] h-[2px] bg-yellow"></div>
                                     <div className="w-[90%] h-[2px] bg-gray-300"></div>
                                 </div>
                             </div>
