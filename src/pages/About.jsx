@@ -189,7 +189,7 @@ function About() {
                     </div>
                     <div>
                         <div className="flex gap-2 items-center mt-[50px]">
-                            <img src={dot} alt="" className="w-3 h-3" />
+                            <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">IT Enterprise</p>
                         </div>
                         <h1 className="text-5xl font-syne font-semibold mt-[50px]">Our Mission</h1>
@@ -198,15 +198,15 @@ function About() {
                             still in their infancy. Various versions have evolved over the years, sometimes by <br />
                             accident, sometimes on purpose. There are many variations of passages majority.</p>
                         <div className="flex gap-5 items-center mt-[50px]">
-                            <img src={dot} alt="" className="w-3 h-3" />
+                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">Accelerate innovation.</p>
                         </div>
                         <div className="flex gap-5 items-center mt-[20px]">
-                            <img src={dot} alt="" className="w-3 h-3" />
+                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">With world class tech teams.</p>
                         </div>
                         <div className="flex gap-5 items-center mt-[20px]">
-                            <img src={dot} alt="" className="w-3 h-3" />
+                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">Our all service offerings to enhance.</p>
                         </div>
                     </div>
@@ -214,15 +214,15 @@ function About() {
             </div>
             <div className="w-[69%] mx-auto mt-[100px]">
                 <div className="flex gap-5 items-center">
-                    <img src={dot} alt="" className="w-3 h-3" />
+                <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                     <p className="font-syne text-lg">Our all service offerings to enhance.</p>
                 </div>
                 <h1 className="font-syne font-semibold text-5xl mt-10">Why Work With Us</h1>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[120px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
                 <div className="flex items-end gap-[200px]">
@@ -234,9 +234,9 @@ function About() {
                     feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
                 <div className="flex items-end gap-[200px]">
@@ -248,9 +248,9 @@ function About() {
                     feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
                 <div className="flex items-end gap-[200px]">
@@ -262,9 +262,9 @@ function About() {
                     feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
                 <div className="flex items-end gap-[200px]">
@@ -276,9 +276,9 @@ function About() {
                     feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="flex items-center w-[69%] mx-auto justify-between mt-[70px]">
                 <div className="flex items-end gap-[200px]">
@@ -290,9 +290,9 @@ function About() {
                     feugiat nulla facilisis at vero eros et accumsan.</p>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[70px] mb-[120px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className="bg-[#f3f4f2] pb-[120px] ">
                 <div className="w-[75%] flex justify-end">
@@ -300,10 +300,10 @@ function About() {
                 </div>
                 <div className="w-[69%] mx-auto">
                     <div className="flex gap-2 items-center">
-                        <img src={dot} alt="" className="w-2 h-2" />
+                    <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                         <p className="font-syne font-semibold">For Enterprise</p>
                     </div>
-                    <h1 className="text-[42px] font-syne font-semibold mt-[30px]">We Live by <span className="text-[#F57C00]">Powerful</span> Values</h1>
+                    <h1 className="text-[42px] font-syne font-semibold mt-[30px]">We Live by <span className="text-yellow">Powerful</span> Values</h1>
                     <div className="flex justify-between mt-[120px]">
                         <div>
                             <div className="w-[70px] h-[70px] bg-[#e6e8e7] flex justify-center items-center rounded-full">
