@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import Phones from '../assets/images/phones.png';
 import Motion from '../assets/images/motion.png'
 import { useRef } from "react";
+import Shades from '../assets/images/white-shades.png'
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
@@ -171,8 +172,8 @@ function Services() {
                 </div>
             </div>
 
-            <div className="py-8">
-                <div className="w-[69%] mx-auto">
+            <div className="py-8 bg-[#f3f3f4]">
+                <div className="w-[69%] mx-auto pt-16">
                     <div className='flex justify-between'>
                         <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
                         <div className='flex gap-[30px]'>
@@ -239,7 +240,7 @@ function Services() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
+                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[50px]'>
                     <div className='flex gap-[14px] items-center group'>
                         <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
@@ -248,10 +249,18 @@ function Services() {
                 </div>
             </div>
 
-            <div className="pt-24 container mx-auto pb-24">
-                <div className="flex gap-x-40 2xl:ml-20">
+            <div className="mx-auto w-[69%]">
+                <div className="flex items-center gap-3 mt-24">
+                    <span className="w-2 h-2 bg-yellow rounded-full"></span>
+                    <p className="font-syne">All Devices</p>
+                </div>
+                <h1 className="text-[44px] font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+            </div>
+
+            <div className="pt-24 w-[69%] mx-auto pb-24">
+                <div className="flex justify-between gap-x-40 ">
                     {/* Left Sidebar */}
-                    <div className="w-2/5">
+                    <div >
                         <ul className="relative space-y-8 border-gray-300 pl-6">
                             {steps.map((step, index) => (
                                 <li
@@ -280,7 +289,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-[17px] ${activeStep === index
+                                            className={`font-medium font-syne text-[20px] ${activeStep === index
                                                 ? "text-black"
                                                 : "text-gray-400"
                                                 }`}
@@ -297,14 +306,14 @@ function Services() {
                     <div
                        
                     >
-                        <div className="w-3/5 pt-[20px]">
+                        <div className="pt-[20px]">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
                                     <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
                                     <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
                                 </div>
                             </div>
-                            <p className="text-black/40 font-syne text-base pt-[30px]">{steps[activeStep].content}</p>
+                            <p className="text-black/40 font-syne w-[640px] text-base pt-[30px]">{steps[activeStep].content}</p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
                                 <span className="font-syne">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
@@ -315,8 +324,104 @@ function Services() {
                     </div>
                 </div>
             </div>
+            
+            <div className="w-[69%] mx-auto gap-2 flex items-center mt-8">
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+                <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+            </div>
+            <div className="w-[69%] flex justify-end mx-auto">
+                <img src={Shades} alt="" className="w-[220px]" />
+            </div>  
+            <div className="w-[69%] mx-auto">
+                <h1 className="text-[44px] font-semibold font-syne">Delivering <span className="text-yellow">Industry Specific</span> Mobile
+                <br />App Solutions</h1>
+                <div className="flex justify-between mt-24">
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                    <g clip-path="url(#clip0_790_24)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_790_24">
+<rect width="40" height="45" fill="white"/>
+                        </clipPath>
+                    </defs>
+                        </svg>     
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>  
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>                        
+                    </div>
 
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                    <g clip-path="url(#clip0_790_24)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_790_24">
+<rect width="40" height="45" fill="white"/>
+                        </clipPath>
+                    </defs>
+                        </svg>     
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>  
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>                        
+                    </div>
 
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                    <g clip-path="url(#clip0_790_24)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_790_24">
+<rect width="40" height="45" fill="white"/>
+                        </clipPath>
+                    </defs>
+                        </svg>     
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>  
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>                        
+                    </div>                           
+                </div>                              
+            </div>
+              
+            <div className="w-[69%] mx-auto gap-2 flex items-center mt-28">
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+                <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+            </div>  
+
+            <div className="mx-auto w-[69%] flex justify-between items-end">
+                <div>
+                    <div className="flex items-center gap-3 mt-24">
+                        <span className="w-2 h-2 bg-yellow rounded-full"></span>
+                        <p className="font-syne">Tech, Business and Talents</p>
+                    </div>
+                    <h1 className="text-[44px] font-syne font-semibold mt-14">Next <span className="text-yellow">Gen Tech</span> For Mobile App <br />Development</h1>
+                </div>
+                <button className="font-syne text-base font-medium px-8 rounded-full py-3 border-[2px] border-yellow">Learn More</button>
+            </div>    
+            
+            <div>
+                <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+<g clip-path="url(#clip0_745_2)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39.999 16.1801H35.681V23.4401H39.999C40.552 23.4401 40.999 23.4921 40.999 24.4401C40.999 24.5961 40.552 25.4401 39.999 25.4401H35.681V31.1351C35.681 33.6421 33.642 35.6801 31.135 35.6801H26.818V39.9981C26.818 40.5511 26.371 40.9981 25.818 40.9981C25.265 40.9981 24.818 40.5511 24.818 39.9981V35.6801H16.181V39.9981C16.181 40.5511 15.734 40.9981 15.181 40.9981C14.628 40.9981 14.181 40.5511 14.181 39.9981V35.6801H9.863C7.357 35.6801 5.318 33.6421 5.318 31.1351V25.4401H0.999C0.447 25.4401 0 24.5961 0 24.4401C0 23.4921 0.447 23.4401 0.999 23.4401H5.318V16.1801H0.999C0.447 16.1801 0 15.7331 0 15.1801C0 14.6291 0.447 14.1811 0.999 14.1811H5.318V9.8621C5.318 7.3551 7.357 5.3161 9.863 5.3161H14.181V0.998098C14.181 0.445098 14.628 0.100098 15.181 0.100098C15.734 0.100098 16.181 0.445098 16.181 0.998098V5.3161H24.818V0.998098C24.818 0.445098 25.265 0.100098 25.818 0.100098C26.371 0.100098 26.818 0.445098 26.818 0.998098V5.3161H31.135C33.642 5.3161 35.681 7.3551 35.681 9.8621V14.1811H39.999C40.552 14.1811 40.999 14.6291 40.999 15.1801C40.999 15.7331 40.552 16.1801 39.999 16.1801ZM33.681 9.8621C33.681 8.4581 32.539 7.3161 31.135 7.3161H9.863C8.459 7.3161 7.318 8.4581 7.318 9.8621V31.1351C7.318 32.5381 8.459 33.6801 9.863 33.6801H31.135C32.539 33.6801 33.681 32.5381 33.681 31.1351V9.8621ZM25.818 26.8171H15.181C14.628 26.8171 14.181 26.3691 14.181 25.8171V15.1801C14.181 14.6291 14.628 14.1811 15.181 14.1811H25.818C26.371 14.1811 26.818 14.6291 26.818 15.1801V25.8171C26.818 26.3691 26.371 26.8171 25.818 26.8171ZM24.818 16.1801H16.181V24.8171H24.818V16.1801Z" fill="#121820"/>
+</g>
+<defs>
+<clipPath id="clip0_745_2">
+<rect width="41" height="41" fill="white"/>
+</clipPath>
+</defs>
+                    </svg>
+                </div> 
+                <h3>AI/ML</h3>                               
+            </div>                         
         </>
     );
 }
