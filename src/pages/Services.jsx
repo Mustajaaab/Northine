@@ -1,49 +1,82 @@
+import { useState, useEffect } from "react";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
 import Smartphone from '../assets/images/22.svg'
-
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
-import "swiper/css"; // Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 import Phones from '../assets/images/phones.png';
 import Motion from '../assets/images/motion.png'
-import { useRef } from "react"; // For controlling Swiper externally
+import { useRef } from "react";
 
 function Services() {
-        const swiperRef = useRef(null);
-      
-        const slides = [
-          {
+    const [activeStep, setActiveStep] = useState(0);
+    const swiperRef = useRef(null);
+
+    const steps = [
+        {
+            title: "Discovery & R&D",
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+        {
+            title: "UX/UI Design",
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+        {
+            title: "Development",
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+        {
+            title: "QA",
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+        {
+            title: "Launch",
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+        {
+            title: "Maintenance & Support",
+            content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        },
+    ];
+
+    const slides = [
+        {
             img: Motion,
             title: "Easy & Most Powerful Server Platform.",
             author: "Nguta Ithya",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          },
-          {
+        },
+        {
             img: Phones,
             title: "Easy & Most Powerful Server Platform.",
             author: "Roy Bricks",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          },
-          {
+        },
+        {
             img: Motion,
             title: "Easy & Most Powerful Server Platform.",
             author: "Nguta Ithya",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          },
-          {
+        },
+        {
             img: Phones,
             title: "Easy & Most Powerful Server Platform.",
             author: "Roy Bricks",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          },
-        ];
-      
+            description: "Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+    ];
+
+    useEffect(() => {
+        AOS.init({ duration: 500, offset: 200 });
+    }, []);
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -78,14 +111,14 @@ function Services() {
                     <p className="font-normal font-syne">Our Data Analytics Experties</p>
                 </div>
                 <h1 className="text-[43px] font-syne font-semibold pt-[30px]">Custom <span className="text-yellow">App Solutions</span> For any Mobile Platform</h1>
-                
+
                 <div className="mt-[100px] flex justify-between">
                     <div>
                         <div className="flex justify-center">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
                                     <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <div className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></div>
+                                    <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
                                 </div>
                             </div>
                         </div>
@@ -139,82 +172,151 @@ function Services() {
             </div>
 
             <div className="py-8">
-        <div className="w-[69%] mx-auto">
-            <div className='flex justify-between'>
-                <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
-                <div className='flex gap-[30px]'>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slidePrev()}>🡸    Prev</button>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slideNext()}>Next 🡺</button>
+                <div className="w-[69%] mx-auto">
+                    <div className='flex justify-between'>
+                        <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
+                        <div className='flex gap-[30px]'>
+                            <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slidePrev()}>🡸    Prev</button>
+                            <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slideNext()}>Next 🡺</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                {/* Swiper slider */}
+                <Swiper
+                    slidesPerView={3} // Number of slides visible at a time
+                    spaceBetween={20} // Space between slides
+                    navigation={false} // Disable built-in navigation
+                    pagination={{ clickable: true, el: null }}
+                    modules={[Navigation, Pagination]}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
+                    slidesOffsetBefore={290} // Add gap before the first slide
+                    slidesOffsetAfter={290}  // Add gap after the last slide
+                    speed={1000}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                            slidesOffsetBefore: 290,
+                            slidesOffsetAfter: 290,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                            slidesOffsetBefore: 290,
+                            slidesOffsetAfter: 290,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                            slidesOffsetBefore: 290,
+                            slidesOffsetAfter: 290,
+                        },
+                    }}
+                    className="mySwiper mt-10 w-full"
+                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index} >
+                            <div className=" overflow-hidden z-10">
+                                <img
+                                    src={slide.img}
+                                    alt={slide.title}
+                                    className="object-cover rounded-lg grayscale hover:grayscale-0 duration-300 w-full" // Full-width images
+                                />
+                                <div className="p-4">
+                                    <h3 className="font-semibold text-[22px] font-syne leading-[30px]">
+                                        {slide.title}
+                                    </h3>
+                                    <p className="text-lg mb-2 font-syne">
+                                        by: <span className="text-yellow">{slide.author}</span>
+                                    </p>
+                                    <p className="text-[15px] font-normal font-syne text-[#121820]/40">
+                                        {slide.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
+                    <div className='flex gap-[14px] items-center group'>
+                        <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
+                        <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
+                    </div>
+                    <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
                 </div>
             </div>
-        </div>
-     
 
-      {/* Swiper slider */}
-      <Swiper
-  slidesPerView={3} // Number of slides visible at a time
-  spaceBetween={20} // Space between slides
-  navigation={false} // Disable built-in navigation
-  pagination={{ clickable: true, el: null }}
-  modules={[Navigation, Pagination]}
-  onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-  slidesOffsetBefore={290} // Add gap before the first slide
-  slidesOffsetAfter={290}  // Add gap after the last slide
-  speed={1000}
-  breakpoints={{
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
-    },
-  }}
-  className="mySwiper mt-10 w-full"
->
-  {slides.map((slide, index) => (
-    <SwiperSlide key={index} >
-      <div className=" overflow-hidden z-10">
-        <img
-          src={slide.img}
-          alt={slide.title}
-          className="object-cover rounded-lg grayscale hover:grayscale-0 duration-300 w-full" // Full-width images
-        />
-        <div className="p-4">
-          <h3 className="font-semibold text-[22px] font-syne leading-[30px]">
-            {slide.title}
-          </h3>
-          <p className="text-lg mb-2 font-syne">
-            by: <span className="text-[#F57C00]">{slide.author}</span>
-          </p>
-          <p className="text-[15px] font-normal font-syne text-[#121820]/40">
-            {slide.description}
-          </p>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
-        <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
-            <div className='flex gap-[14px] items-center group'>
-                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
-                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
+            <div className="pt-24 container mx-auto ">
+                <div className="flex gap-x-40 2xl:ml-20">
+                    {/* Left Sidebar */}
+                    <div className="w-2/5">
+                        <ul className="relative space-y-8 border-gray-300 pl-6">
+                            {steps.map((step, index) => (
+                                <li
+                                    key={index}
+                                    onClick={() => setActiveStep(index)}
+                                    className="cursor-pointer relative"
+                                >
+                                    {index < steps.length - 1 && (
+                                        <span
+                                            className={`absolute left-[10px] top-[28px] h-full w-[2px] ${activeStep > index
+                                                ? "bg-gray-300"
+                                                : "bg-gray-300"
+                                                }`}
+                                        ></span>
+                                    )}
+
+                                    <div className="flex items-center space-x-4">
+                                        <span
+                                            className={`w-6 h-6 rounded-full flex items-center justify-center border-4 ${activeStep === index
+                                                ? "bg-yellow border-yellow"
+                                                : "bg-white border-gray-300"
+                                                }`}
+                                        >
+                                            {activeStep === index && (
+                                                <span className="w-3 h-3 bg-white rounded-full"></span>
+                                            )}
+                                        </span>
+                                        <span
+                                            className={`font-medium ${activeStep === index
+                                                ? "text-black"
+                                                : "text-gray-400"
+                                                }`}
+                                        >
+                                            {step.title}
+                                        </span>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Right Content */}
+                    <div
+                       
+                    >
+                        <div className="w-3/5 ">
+                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
+                                <div className="relative mx-auto rounded-full ">
+                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
+                                    <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
+                                </div>
+                            </div>
+                            <p className="text-gray-600">{steps[activeStep].content}</p>
+                            <button className="mt-4 flex text-center justify-center">
+                                <span>See More</span>
+                                <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
+                                    →
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
-        </div>
 
-    </div>
+
         </>
     );
 }
