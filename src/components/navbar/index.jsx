@@ -11,10 +11,10 @@ function Navbar() {
 
     return (
         <div className="w-full mx-auto  items-center h-[80px] fixed bg-[#121820] z-50">
-            <div className='container mx-auto flex items-center justify-between '>
+            <div className='container mx-auto flex items-center justify-between mt-4 '>
             <img src={Northnine} alt="Northnine Logo" className="w-[186px] h-[50px]" />
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
                 <div className="flex gap-8">
                     <Link
                         to="/home"
