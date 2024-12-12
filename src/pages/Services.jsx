@@ -248,7 +248,7 @@ function Services() {
                 </div>
             </div>
 
-            <div className="pt-24 container mx-auto ">
+            <div className="pt-24 container mx-auto pb-24">
                 <div className="flex gap-x-40 2xl:ml-20">
                     {/* Left Sidebar */}
                     <div className="w-2/5">
@@ -280,7 +280,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium ${activeStep === index
+                                            className={`font-medium font-syne text-[17px] ${activeStep === index
                                                 ? "text-black"
                                                 : "text-gray-400"
                                                 }`}
@@ -297,16 +297,16 @@ function Services() {
                     <div
                        
                     >
-                        <div className="w-3/5 ">
+                        <div className="w-3/5 pt-[20px]">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
                                     <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
                                     <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
                                 </div>
                             </div>
-                            <p className="text-gray-600">{steps[activeStep].content}</p>
-                            <button className="mt-4 flex text-center justify-center">
-                                <span>See More</span>
+                            <p className="text-black/40 font-syne text-base pt-[30px]">{steps[activeStep].content}</p>
+                            <button className="mt-4 flex text-center gap-5 items-center justify-center">
+                                <span className="font-syne">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
                                     →
                                 </span>

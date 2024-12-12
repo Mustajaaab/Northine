@@ -166,9 +166,9 @@ function About() {
                 </div>
             </div>
             <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[120px]'>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#F57C00]'></div>
+                <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
             <div className='flex justify-center items-center gap-[88px] py-[92px]'>
                 <img src={Photo1} alt="" className='w-[150px] h-[40px] ease-in-out duration-300 hover:scale-110' />
