@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Docs from "../../assets/images/docs.jpg.png";
 
 function Sliderrr() {

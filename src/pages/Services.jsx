@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import { useState} from "react";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
 import Smartphone from '../assets/images/22.svg'
@@ -71,9 +69,6 @@ function Services() {
         },
     ];
 
-    useEffect(() => {
-        AOS.init({ duration: 500, offset: 200 });
-    }, []);
     return (
         <>
             <Navbar />
@@ -247,11 +242,18 @@ function Services() {
                     <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
                 </div>
             </div>
+            <div className="w-[69%] mx-auto">
+              <div className="flex items-center gap-3">
+                <span className="bg-yellow w-2 h-2 rounded-full"></span>
+                <p className="font-syne">All Devices</p>
+              </div>
+              <h1 className="text-[43px] font-syne font-semibold pt-[30px]"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+            </div>
 
-            <div className="pt-24 container mx-auto pb-24">
-                <div className="flex gap-x-40 2xl:ml-20">
+            <div className="pt-24 w-[71%] mx-auto pb-24">
+                <div className="flex gap-x-40 justify-between">
                     {/* Left Sidebar */}
-                    <div className="w-2/5">
+                    <div className="">
                         <ul className="relative space-y-8 border-gray-300 pl-6">
                             {steps.map((step, index) => (
                                 <li
@@ -280,7 +282,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-[17px] ${activeStep === index
+                                            className={`font-medium font-syne text-[20px] ${activeStep === index
                                                 ? "text-black"
                                                 : "text-gray-400"
                                                 }`}
@@ -297,14 +299,14 @@ function Services() {
                     <div
                        
                     >
-                        <div className="w-3/5 pt-[20px]">
+                        <div className=" pt-[20px]">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
                                     <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
                                     <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
                                 </div>
                             </div>
-                            <p className="text-black/40 font-syne text-base pt-[30px]">{steps[activeStep].content}</p>
+                            <p className="text-black/40 font-syne w-[630px] text-base pt-[30px]">{steps[activeStep].content}</p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
                                 <span className="font-syne">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
