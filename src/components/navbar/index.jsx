@@ -1,61 +1,92 @@
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Northnine from '../../assets/images/no9.png';
 
 function Navbar() {
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const getActiveClass = (path) => {
         return location.pathname === path ? 'text-yellow border-b border-yellow' : 'text-white';
     };
 
-    return (
-        <div className="w-full mx-auto  items-center h-[80px] fixed bg-[#121820] z-50">
-            <div className='container mx-auto flex items-center justify-between mt-4 '>
-            <img src={Northnine} alt="Northnine Logo" className="w-[186px] h-[50px]" />
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-            <div className="flex items-center">
-                <div className="flex gap-8">
+    return (
+        <div className="w-full mx-auto items-center h-[80px] fixed bg-[#121820] z-50">
+            <div className="container mx-auto flex items-center justify-between mt-4">
+                <img src={Northnine} alt="Northnine Logo" className="w-[186px] h-[50px]" />
+
+                {/* Hamburger Icon for Small Screens */}
+                <div className="lg:hidden">
+                    <svg
+                        onClick={toggleMenu}
+                        className="w-7 h-7 text-white cursor-pointer"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 6h16M4 12h16m-7 6h7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                {/* Navigation Links */}
+                <div
+                    className={`${
+                        isMenuOpen ? 'block' : 'hidden'
+                    } lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-[80px] right-0 bg-[#121820] w-full lg:w-auto`}
+                >
                     <Link
                         to="/home"
-                        className={`${getActiveClass('/home')} block  font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/home')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className={`${getActiveClass('/about')} block  font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/about')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         About Us
                     </Link>
                     <Link
                         to="/team"
-                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         Team
                     </Link>
                     <Link
                         to="/services"
-                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         Services
                     </Link>
                     <Link
                         to="/case-studies"
-                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         Case Studies
                     </Link>
                     <Link
                         to="/contact-us"
-                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-yellow`}
+                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
                     >
                         Contact Us
                     </Link>
                 </div>
-                <div>
+
+                {/* Search Icon */}
+                <div className="hidden lg:block">
                     <svg
-                        className="ml-4 w-7 h-7 hover:text-yellow ease-in-out duration-300 text-white cursor-pointer"
+                        className="ml-4 w-7 h-7 text-white hover:text-yellow ease-in-out duration-300 cursor-pointer"
                         fill="currentColor"
                         viewBox="0 0 21 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +98,6 @@ function Navbar() {
                         ></path>
                     </svg>
                 </div>
-            </div>
             </div>
         </div>
     );
