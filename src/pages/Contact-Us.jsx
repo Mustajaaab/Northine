@@ -1,8 +1,68 @@
 import BGDot from '../assets/images/dotmap.png'
 import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
+import { useState } from "react";
 
 function Contact () {
+
+         const [form, setForm] = useState({
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+                agree: false,
+            });
+            const [file, setFile] = useState(null);
+            const [result, setResult] = useState("");
+        
+            const handleInputChange = (e) => {
+                const { name, value, type, checked } = e.target;
+                setForm((prev) => ({
+                    ...prev,
+                    [name]: type === "checkbox" ? checked : value,
+                }));
+            };
+        
+        
+            const onSubmit = async (e) => {
+                e.preventDefault();
+                setResult("Sending...");
+        
+        
+                const formData = new FormData();
+                formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
+                formData.append("name", form.name);
+                formData.append("email", form.email);
+                formData.append("phone", form.phone);
+                formData.append("message", form.message);
+                formData.append("agree", form.agree);
+        
+                if (file) {
+                    formData.append("file", file);
+                }
+        
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData,
+                });
+        
+                const data = await response.json();
+        
+                if (data.success) {
+                    setResult("Form Submitted Successfully");
+                    setForm({
+                        name: "",
+                        email: "",
+                        phone: "",
+                        message: "",
+                        agree: false,
+                    });
+                    setFile(null);
+                } else {
+                    setResult("Error: " + data.message);
+                }
+            };
+
     return (
         <>
             <Navbar/>
@@ -33,6 +93,175 @@ function Contact () {
                     </div>
                 </div>
             </div>
+            <div className='flex w-[69%] mx-auto pt-20'>
+                <form onSubmit={onSubmit} className='w-[75%]'>
+                <h1 className='font-syne text-2xl font-semibold'><span className='text-yellow'>01.</span> Tell Us About Yourself</h1>
+                    <div className="flex">
+                        {/* Left Section */}
+                        <div className="w-[50%]">
+                            <div className="flex gap-3 items-center mt-14">
+                                <p className="font-syne font-medium text-[17px]">
+                                    First Name
+                                </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleInputChange}
+                                placeholder="Alice"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-500 focus:outline-none "
+                                required
+                            />
+
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                <p className="font-syne font-medium text-[17px]">
+                                    Email Address
+                                </p>
+                            </div>
+                            <input
+                                type="email"
+                                name="email"
+                                value={form.email}
+                                onChange={handleInputChange}
+                                placeholder="doe@mydomain.com"
+                                className="text-base mt-5 p-2 w-full h-[50px] border-b placeholder:font-syne border-gray-400 placeholder-gray-400 focus:outline-none"
+                                required
+                            />
+
+
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                <p className="font-syne font-medium text-[17px]">
+                                    Company
+                                </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="company"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Enter your company name"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+                        </div>
+
+
+
+
+
+
+
+                        {/* Right Section */}
+
+
+
+
+
+
+
+                        <div className=" ml-8 w-[50%]">
+                            <div className="flex gap-3 items-center mt-14">
+                                <p className="font-syne font-medium text-[17px]">
+                                 Last Name
+                                </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleInputChange}
+                                placeholder="Eve"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder:text-gray-400 focus:outline-none "
+                                required
+                            />
+
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                <p className="font-syne font-medium text-[17px]">
+                                    Phone 
+                                </p>
+                            </div>
+                            <input
+                                type="number"
+                                name="phone"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Enter your phone number"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+
+
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                <p className="font-syne font-medium text-[17px]">
+                                    Role 
+                                </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="Role"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Enter your role"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+                        </div>
+                    </div>
+                    <h1 className='font-syne text-2xl font-semibold mt-20'>
+                        <span className='text-yellow'>02.</span> What Can We Help You With?</h1>
+                    <div className='flex'>
+                        <div className='w-[50%]'>
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                    <p className="font-syne font-medium text-[17px]">
+                                    Subject
+                                    </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="Subject"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Web Designer"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+                        </div>
+                        <div className='w-[50%] ml-8'>
+                            <div className="flex gap-3 items-center mt-[30px]">
+                                    <p className="font-syne font-medium text-[17px]">
+                                    Project Budget
+                                    </p>
+                            </div>
+                            <input
+                                type="text"
+                                name="Project Budget"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Enter your Budget"
+                                className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+                        </div>
+                    </div>
+                    <h1 className='font-syne text-2xl font-semibold mt-20'>
+                        <span className='text-yellow'>03.</span> Tell Us About Your Project</h1>
+                        <div className="flex gap-3 items-center mt-[30px]">
+                                    <p className="font-syne font-medium text-[17px]">
+                                    Project Description
+                                    </p>
+                            </div>
+                            <textarea
+                                name="Description"
+                                value={form.phone}
+                                onChange={handleInputChange}
+                                placeholder="Your Message"
+                                className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                            />
+                </form>
+                <div>
+                    <h1 className='font-syne text-xl font-semibold'>Support Request</h1>
+                </div>
+            </div>
+            
+
+
+
             <Footer/>
         </>
     )

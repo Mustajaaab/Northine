@@ -25,9 +25,6 @@ export default {
         primaryOrange: '#f57000',
         yellow: '#fdcb22',
       },
-      transitionProperty: {
-        transform: "transform",
-      },
     },
   },
   plugins: [],
