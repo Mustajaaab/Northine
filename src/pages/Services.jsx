@@ -11,6 +11,7 @@ import Phones from '../assets/images/phones.png';
 import Motion from '../assets/images/motion.png'
 import { useRef } from "react";
 import Shades from '../assets/images/white-shades.png'
+import Footer from '../components/Footer/index'
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
@@ -19,6 +20,7 @@ function Services() {
     const steps = [
         {
             title: "Discovery & R&D",
+            heading:"",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
@@ -255,7 +257,7 @@ function Services() {
             <div className="pt-24 container mx-auto pb-24">
                 <div className="flex gap-x-40 2xl:ml-20">
                     {/* Left Sidebar */}
-                    <div className="w-2/5">
+                    <div className="">
                         <ul className="relative space-y-8 border-gray-300 pl-6">
                             {steps.map((step, index) => (
                                 <li
@@ -284,7 +286,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-[20px] ${activeStep === index
+                                            className={`font-medium font-syne text-3xl ${activeStep === index
                                                 ? "text-black"
                                                 : "text-gray-400"
                                                 }`}
@@ -301,16 +303,16 @@ function Services() {
                     <div
 
                     >
-                        <div className="w-3/5 pt-[20px]">
+                        <div className="pt-[20px]">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
                                     <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
                                     <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
                                 </div>
                             </div>
-                            <p className="text-black/40 font-syne text-base pt-[30px]">{steps[activeStep].content}</p>
+                            <p className="text-black/40 font-syne text-lg pt-[30px] w-[630px]">{steps[activeStep].content}</p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
-                                <span className="font-syne">See More</span>
+                                <span className="font-syne font-semibold text-lg">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
                                     →
                                 </span>
@@ -328,7 +330,7 @@ function Services() {
             <div className="w-[69%] flex justify-end mx-auto">
                 <img src={Shades} alt="" className="w-[220px]" />
             </div>
-            <div className="w-[69%] mx-auto">
+            <div className="w-[69%] mx-auto mb-20">
                 <h1 className="text-[44px] font-semibold font-syne">Delivering <span className="text-yellow">Industry Specific</span> Mobile
                     <br />App Solutions</h1>
                 <div className="flex justify-between mt-24">
@@ -384,40 +386,9 @@ function Services() {
                     </div>
                 </div>
             </div>
-
-            <div className="w-[69%] mx-auto gap-2 flex items-center mt-28">
-                <span className="w-[2%] h-[2px] bg-yellow"></span>
-                <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
-                <span className="w-[2%] h-[2px] bg-yellow"></span>
-            </div>
-
-            <div className="mx-auto w-[69%] flex justify-between items-end">
-                <div>
-                    <div className="flex items-center gap-3 mt-24">
-                        <span className="w-2 h-2 bg-yellow rounded-full"></span>
-                        <p className="font-syne">Tech, Business and Talents</p>
-                    </div>
-                    <h1 className="text-[44px] font-syne font-semibold mt-14">Next <span className="text-yellow">Gen Tech</span> For Mobile App <br />Development</h1>
-                </div>
-                <button className="font-syne text-base font-medium px-8 rounded-full py-3 border-[2px] border-yellow">Learn More</button>
-            </div>
-
-            <div>
-                <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
-                        <g clipPath="url(#clip0_745_2)">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M39.999 16.1801H35.681V23.4401H39.999C40.552 23.4401 40.999 23.4921 40.999 24.4401C40.999 24.5961 40.552 25.4401 39.999 25.4401H35.681V31.1351C35.681 33.6421 33.642 35.6801 31.135 35.6801H26.818V39.9981C26.818 40.5511 26.371 40.9981 25.818 40.9981C25.265 40.9981 24.818 40.5511 24.818 39.9981V35.6801H16.181V39.9981C16.181 40.5511 15.734 40.9981 15.181 40.9981C14.628 40.9981 14.181 40.5511 14.181 39.9981V35.6801H9.863C7.357 35.6801 5.318 33.6421 5.318 31.1351V25.4401H0.999C0.447 25.4401 0 24.5961 0 24.4401C0 23.4921 0.447 23.4401 0.999 23.4401H5.318V16.1801H0.999C0.447 16.1801 0 15.7331 0 15.1801C0 14.6291 0.447 14.1811 0.999 14.1811H5.318V9.8621C5.318 7.3551 7.357 5.3161 9.863 5.3161H14.181V0.998098C14.181 0.445098 14.628 0.100098 15.181 0.100098C15.734 0.100098 16.181 0.445098 16.181 0.998098V5.3161H24.818V0.998098C24.818 0.445098 25.265 0.100098 25.818 0.100098C26.371 0.100098 26.818 0.445098 26.818 0.998098V5.3161H31.135C33.642 5.3161 35.681 7.3551 35.681 9.8621V14.1811H39.999C40.552 14.1811 40.999 14.6291 40.999 15.1801C40.999 15.7331 40.552 16.1801 39.999 16.1801ZM33.681 9.8621C33.681 8.4581 32.539 7.3161 31.135 7.3161H9.863C8.459 7.3161 7.318 8.4581 7.318 9.8621V31.1351C7.318 32.5381 8.459 33.6801 9.863 33.6801H31.135C32.539 33.6801 33.681 32.5381 33.681 31.1351V9.8621ZM25.818 26.8171H15.181C14.628 26.8171 14.181 26.3691 14.181 25.8171V15.1801C14.181 14.6291 14.628 14.1811 15.181 14.1811H25.818C26.371 14.1811 26.818 14.6291 26.818 15.1801V25.8171C26.818 26.3691 26.371 26.8171 25.818 26.8171ZM24.818 16.1801H16.181V24.8171H24.818V16.1801Z" fill="#121820" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_745_2">
-                                <rect width="41" height="41" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-                <h3>AI/ML</h3>
-            </div>
+            <Footer/>
         </>
+        
     );
 }
 
