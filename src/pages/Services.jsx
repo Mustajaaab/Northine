@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
 import Smartphone from '../assets/images/22.svg'
@@ -20,30 +20,42 @@ function Services() {
     const steps = [
         {
             title: "Discovery & R&D",
-            heading:"",
+            heading: "Research and Discover New Insights",
+            image: "discovery-image.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "UX/UI Design",
+            heading: "Crafting User Experiences",
+            image: "uxui-design.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Development",
+            heading: "Building Scalable Applications",
+            image: "development-image.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "QA",
+            heading: "Ensuring Quality Standards",
+            image: "qa-image.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Launch",
+            heading: "Taking the Product Live",
+            image: "launch-image.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
+            heading: "Keeping Things Running Smoothly",
+            image: "maintenance-image.png", // Replace with the actual image path
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
+
 
     const slides = [
         {
@@ -246,18 +258,18 @@ function Services() {
                 </div>
             </div>
 
-                <div className="w-[69%] mx-auto">
-                    <div className="flex items-center gap-3 mt-24">
-                        <span className="w-2 h-2 bg-yellow rounded-full"></span>
-                        <p className="font-syne">All Devices</p>
-                    </div>
-                    <h1 className="text-[44px] font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+            <div className="w-[69%] mx-auto">
+                <div className="flex items-center gap-3 mt-24">
+                    <span className="w-2 h-2 bg-yellow rounded-full"></span>
+                    <p className="font-syne">All Devices</p>
                 </div>
+                <h1 className="text-[44px] font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+            </div>
 
             <div className="pt-24 container mx-auto pb-24">
                 <div className="flex gap-x-40 2xl:ml-20">
                     {/* Left Sidebar */}
-                    <div className="">
+                    <div>
                         <ul className="relative space-y-8 border-gray-300 pl-6">
                             {steps.map((step, index) => (
                                 <li
@@ -267,9 +279,7 @@ function Services() {
                                 >
                                     {index < steps.length - 1 && (
                                         <span
-                                            className={`absolute left-[10px] top-[28px] h-full w-[2px] ${activeStep > index
-                                                ? "bg-gray-300"
-                                                : "bg-gray-300"
+                                            className={`absolute left-[10px] top-[28px] h-full w-[2px] ${activeStep > index ? "bg-gray-300" : "bg-gray-300"
                                                 }`}
                                         ></span>
                                     )}
@@ -277,8 +287,8 @@ function Services() {
                                     <div className="flex items-center space-x-4">
                                         <span
                                             className={`w-6 h-6 rounded-full flex items-center justify-center border-4 ${activeStep === index
-                                                ? "bg-yellow border-yellow"
-                                                : "bg-white border-gray-300"
+                                                    ? "bg-yellow border-yellow"
+                                                    : "bg-white border-gray-300"
                                                 }`}
                                         >
                                             {activeStep === index && (
@@ -286,9 +296,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-3xl ${activeStep === index
-                                                ? "text-black"
-                                                : "text-gray-400"
+                                            className={`font-medium font-syne text-3xl ${activeStep === index ? "text-black" : "text-gray-400"
                                                 }`}
                                         >
                                             {step.title}
@@ -300,17 +308,17 @@ function Services() {
                     </div>
 
                     {/* Right Content */}
-                    <div
-
-                    >
+                    <div>
                         <div className="pt-[20px]">
-                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
-                                <div className="relative mx-auto rounded-full ">
-                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
-                                </div>
-                            </div>
-                            <p className="text-black/40 font-syne text-lg pt-[30px] w-[630px]">{steps[activeStep].content}</p>
+                            <img
+                                src={steps[activeStep].image}
+                                alt={steps[activeStep].title}
+                                className="w-full h-auto mb-4 rounded-lg"
+                            />
+                            <h2 className="text-2xl font-bold mb-4">{steps[activeStep].heading}</h2>
+                            <p className="text-black/40 font-syne text-lg pt-[30px] w-[630px]">
+                                {steps[activeStep].content}
+                            </p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
                                 <span className="font-syne font-semibold text-lg">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
@@ -321,6 +329,7 @@ function Services() {
                     </div>
                 </div>
             </div>
+
 
             <div className="w-[69%] mx-auto gap-2 flex items-center mt-8">
                 <span className="w-[2%] h-[2px] bg-yellow"></span>
@@ -386,9 +395,9 @@ function Services() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
-        
+
     );
 }
 
