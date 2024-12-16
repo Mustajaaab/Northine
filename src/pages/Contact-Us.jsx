@@ -6,10 +6,15 @@ import { useState } from "react";
 function Contact () {
 
          const [form, setForm] = useState({
-                name: "",
+                firstName: "",
+                lastName: "",
                 email: "",
                 phone: "",
-                message: "",
+                company: "",
+                role: "",
+                subject: "",
+                projectBudget: "",
+                description: "",
                 agree: false,
             });
             const [file, setFile] = useState(null);
@@ -93,8 +98,8 @@ function Contact () {
                     </div>
                 </div>
             </div>
-            <div className='flex w-[69%] mx-auto pt-20'>
-                <form onSubmit={onSubmit} className='w-[75%]'>
+            <div className='flex w-[69%] mx-auto pt-20 justify-between'>
+                <form onSubmit={onSubmit} className='w-[65%]'>
                 <h1 className='font-syne text-2xl font-semibold'><span className='text-yellow'>01.</span> Tell Us About Yourself</h1>
                     <div className="flex">
                         {/* Left Section */}
@@ -106,7 +111,7 @@ function Contact () {
                             </div>
                             <input
                                 type="text"
-                                name="name"
+                                name="firstName"
                                 value={form.name}
                                 onChange={handleInputChange}
                                 placeholder="Alice"
@@ -167,7 +172,7 @@ function Contact () {
                             </div>
                             <input
                                 type="text"
-                                name="name"
+                                name="lastName"
                                 value={form.name}
                                 onChange={handleInputChange}
                                 placeholder="Eve"
@@ -197,7 +202,7 @@ function Contact () {
                             </div>
                             <input
                                 type="text"
-                                name="Role"
+                                name="role"
                                 value={form.phone}
                                 onChange={handleInputChange}
                                 placeholder="Enter your role"
@@ -216,7 +221,7 @@ function Contact () {
                             </div>
                             <input
                                 type="text"
-                                name="Subject"
+                                name="subject"
                                 value={form.phone}
                                 onChange={handleInputChange}
                                 placeholder="Web Designer"
@@ -230,8 +235,8 @@ function Contact () {
                                     </p>
                             </div>
                             <input
-                                type="text"
-                                name="Project Budget"
+                                type="number"
+                                name="projectBudget"
                                 value={form.phone}
                                 onChange={handleInputChange}
                                 placeholder="Enter your Budget"
@@ -253,9 +258,81 @@ function Contact () {
                                 placeholder="Your Message"
                                 className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
                             />
+                            <button
+                                type="submit"
+                                className={`mt-[50px] mb-10 text-lg font-normal text-center font-syne py-[22px] w-full rounded-full ease-in-out duration-300 transition-transform border-[4px] border-yellow hover:scale-105 ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                                    }`}
+                                disabled={result === "Sending..."}
+                            >
+                                {result === "Sending..." ? "Sending..." : "Submit"}
+                            </button>
                 </form>
-                <div>
+                <div className='w-[30%]'>
                     <h1 className='font-syne text-xl font-semibold'>Support Request</h1>
+                    <p className='font-syne text-lg text-black/50 mt-7'>Our experts are ready to answer your questions.</p>
+                    <div className='flex items-center gap-5 mt-7 group'>
+                        <p className='font-semibold font-syne group-hover:text-yellow duration-300 ease-in-out cursor-pointer'>Get Support</p>
+                        <button className='w-10 h-10 rounded-full bg-yellow group-hover:bg-transparent group-hover:border-[3px] cursor-pointer duration-300 ease-in-out group-hover:text-yellow group-hover:border-yellow text-white font-syne text-xl'>&gt;</button>
+                    </div>
+                    <div className="gap-2 flex items-center mt-24">
+                        <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
+                        <span className="w-[96%] h-[3px] rounded-full bg-[#e7e7e8]"></span>
+                        <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
+                    </div>
+                    
+                    <div className='bg-[#f3f4f1] w-16 h-16 flex justify-center mt-16 items-center rounded-full relative' >
+                        <svg className='z-10' xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon"/>
+                            <script xmlns=""/><script xmlns=""/>
+                            <g clipPath="url(#clip0_716_2)">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.42 9.42 0 21 0C32.579 0 41.999 9.42 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.522 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.522 31.476 1.999 21 1.999ZM21.156 23.948C21.51 23.982 20.944 24 20.839 24C20.421 24 20.32 23.735 19.892 23.316C19.716 22.793 19.999 22.227 20.522 22.51C22.1 21.554 25.839 19.677 25.839 16.999C25.843 14.876 24.5 12.978 22.498 12.274C19.896 11.359 17.38 12.73 16.123 15.331C15.94 15.852 15.369 16.125 14.847 15.942C14.327 15.76 14.53 15.188 14.236 14.667C14.857 12.903 16.127 11.487 17.813 10.678C19.498 9.869 21.398 9.766 23.163 10.387C25.964 11.373 27.844 14.31 27.839 17.1C27.839 21.666 21.429 23.857 21.156 23.948ZM21 29.999H21.19C21.572 29.999 22.19 30.447 22.19 30.999C22.19 31.551 21.572 31.999 21.19 31.999C20.467 31.999 20.9 31.551 20.9 30.999C20.9 30.447 20.447 29.999 21 29.999Z" fill="#121820"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_716_2">
+                                    <rect width="42" height="42" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span className='w-4 h-4 bg-yellow rounded-full absolute top-10 left-9'></span>
+                    </div>
+                    <h1 className='font-syne text-xl font-semibold mt-10'>Need Help?</h1>
+                    <p className='font-syne text-lg text-black/50 mt-7'>For technical questions or billing <br /> questions, please contact Customer Care.</p>
+                    <div className='flex items-center gap-5 mt-7 group'>
+                        <p className='font-semibold font-syne group-hover:text-yellow duration-300 ease-in-out cursor-pointer'>Help Center</p>
+                        <button className='w-10 h-10 rounded-full bg-yellow group-hover:bg-transparent group-hover:border-[3px] cursor-pointer duration-300 ease-in-out group-hover:text-yellow group-hover:border-yellow text-white font-syne text-xl'>&gt;</button>
+                    </div>
+
+                    <div className="gap-2 flex items-center mt-24">
+                        <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
+                        <span className="w-[96%] h-[3px] rounded-full bg-[#e7e7e8]"></span>
+                        <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
+                    </div>
+
+                    
+                    <div className='bg-[#f3f4f1] w-16 h-16 flex justify-center mt-16 items-center rounded-full relative'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon"/>
+                        <script xmlns=""/>
+                        <script xmlns=""/>
+                        <g clipPath="url(#clip0_716_6)">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.419 9.42 0 21 0C32.579 0 41.999 9.419 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.523 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.523 31.476 1.999 21 1.999ZM21.19 13.999C20.467 13.999 20.9 13.551 20.9 12.999C20.9 12.447 20.447 11.999 21 11.999H21.19C21.572 11.999 22.19 12.447 22.19 12.999C22.19 13.551 21.572 13.999 21.19 13.999ZM21 19.999C21.552 19.999 21.999 20.447 21.999 20.999V28.999C21.999 29.551 21.552 29.999 21 29.999C20.447 29.999 19.999 29.551 19.999 28.999V20.999C19.999 20.447 20.447 19.999 21 19.999Z" fill="#121820"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_716_6">
+                            <rect width="42" height="42" fill="white"/>
+                            </clipPath>
+                        </defs>
+                        </svg>  
+                        <span className='w-4 h-4 bg-yellow rounded-full absolute top-10 left-9'></span>
+                    </div>
+                    
+                    <h1 className='font-syne text-xl font-semibold mt-10'>Need More Info?</h1>
+                    <p className='font-syne text-lg text-black/50 mt-7'>For technical questions or billing <br /> questions, please contact Customer Care.</p>
+                    <div className='flex items-center gap-5 mt-7 group'>
+                        <p className='font-semibold font-syne group-hover:text-yellow duration-300 ease-in-out cursor-pointer'>Legality Guide</p>
+                        <button className='w-10 h-10 rounded-full bg-yellow group-hover:bg-transparent group-hover:border-[3px] cursor-pointer duration-300 ease-in-out group-hover:text-yellow group-hover:border-yellow text-white font-syne text-xl'>&gt;</button>
+                    </div>
+
                 </div>
             </div>
             
