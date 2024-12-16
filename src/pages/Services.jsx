@@ -19,39 +19,39 @@ function Services() {
 
     const steps = [
         {
-            title: "Discovery & R&D",
+            title: "Data Security",
             heading: "Research and Discover New Insights",
-            image: "discovery-image.png", // Replace with the actual image path
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            image: "../src/assets/services/serv19.svg",
+            content: "Protecting digital information from unauthorized access or corruption. Implementing measures encryption. Firewalls to safeguard sensitive data. Implementing security measures. Developing incident response plans.",
         },
         {
             title: "UX/UI Design",
             heading: "Crafting User Experiences",
-            image: "uxui-design.png", // Replace with the actual image path
+            image: "../src/assets/services/seo.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Development",
             heading: "Building Scalable Applications",
-            image: "development-image.png", // Replace with the actual image path
+            image: "../src/assets/services/serv19.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
-            title: "QA",
-            heading: "Ensuring Quality Standards",
-            image: "qa-image.png", // Replace with the actual image path
+            title: "SEO and Optimazation",
+            heading: "SEO and Optimazation",
+            image: "../src/assets/services/seo.svg", 
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Launch",
             heading: "Taking the Product Live",
-            image: "launch-image.png", // Replace with the actual image path
+            image: "../src/assets/services/seo.svg", // Replace with the actual image path
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
             heading: "Keeping Things Running Smoothly",
-            image: "maintenance-image.png", // Replace with the actual image path
+            image: "../src/assets/services/seo.svg", // Replace with the actual image path
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
@@ -279,7 +279,7 @@ function Services() {
                                 >
                                     {index < steps.length - 1 && (
                                         <span
-                                            className={`absolute left-[10px] top-[28px] h-full w-[2px] ${activeStep > index ? "bg-gray-300" : "bg-gray-300"
+                                            className={`absolute left-[10px] top-[34px] h-full w-[2px] ${activeStep > index ? "bg-gray-300" : "bg-gray-300"
                                                 }`}
                                         ></span>
                                     )}
@@ -309,14 +309,17 @@ function Services() {
 
                     {/* Right Content */}
                     <div>
-                        <div className="pt-[20px]">
+                        <div className="pt-10">
+                            <div className="flex relative">
                             <img
                                 src={steps[activeStep].image}
                                 alt={steps[activeStep].title}
-                                className="w-full h-auto mb-4 rounded-lg"
+                                className="h-12 mb-4 rounded-lg z-10"
                             />
+                            <span className="absolute w-4 h-4 bg-yellow rounded-full top-7 left-7" ></span>
+                            </div>
                             <h2 className="text-2xl font-bold mb-4">{steps[activeStep].heading}</h2>
-                            <p className="text-black/40 font-syne text-lg pt-[30px] w-[630px]">
+                            <p className="text-black/40 font-syne text-lg  w-[630px]">
                                 {steps[activeStep].content}
                             </p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
