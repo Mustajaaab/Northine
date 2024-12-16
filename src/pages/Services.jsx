@@ -191,18 +191,15 @@ function Services() {
                         </div>
                     </div>
                 </div>
-
-
-                {/* Swiper slider */}
                 <Swiper
-                    slidesPerView={3} // Number of slides visible at a time
-                    spaceBetween={20} // Space between slides
-                    navigation={false} // Disable built-in navigation
+                    slidesPerView={3} 
+                    spaceBetween={20}
+                    navigation={false}
                     pagination={{ clickable: true, el: null }}
                     modules={[Navigation, Pagination]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-                    slidesOffsetBefore={290} // Add gap before the first slide
-                    slidesOffsetAfter={290}  // Add gap after the last slide
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    slidesOffsetBefore={290}
+                    slidesOffsetAfter={290}
                     speed={1000}
                     breakpoints={{
                         640: {
