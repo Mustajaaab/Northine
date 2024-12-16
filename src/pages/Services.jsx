@@ -45,13 +45,13 @@ function Services() {
         {
             title: "Launch",
             heading: "Taking the Product Live",
-            image: "../src/assets/services/seo.svg", // Replace with the actual image path
+            image: "../src/assets/services/serv19.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
             heading: "Keeping Things Running Smoothly",
-            image: "../src/assets/services/seo.svg", // Replace with the actual image path
+            image: "../src/assets/services/seo.svg", 
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
@@ -191,18 +191,15 @@ function Services() {
                         </div>
                     </div>
                 </div>
-
-
-                {/* Swiper slider */}
                 <Swiper
-                    slidesPerView={3} // Number of slides visible at a time
-                    spaceBetween={20} // Space between slides
-                    navigation={false} // Disable built-in navigation
+                    slidesPerView={3} 
+                    spaceBetween={20}
+                    navigation={false}
                     pagination={{ clickable: true, el: null }}
                     modules={[Navigation, Pagination]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-                    slidesOffsetBefore={290} // Add gap before the first slide
-                    slidesOffsetAfter={290}  // Add gap after the last slide
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    slidesOffsetBefore={290}
+                    slidesOffsetAfter={290}
                     speed={1000}
                     breakpoints={{
                         640: {
