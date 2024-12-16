@@ -22,30 +22,25 @@ AUTOTUNE = tf.data.experimental.AUTOTUNE
     
 print(tf.__version__)
 
-batch_size = 64  # Batch size for training.
-epochs = 200  # Number of epochs to train for.
-latent_dim = 512  # Latent dimensionality of the encoding space.
+batch_size = 64
+epochs = 200
+latent_dim = 512 
 num_samples = 50000
 
-# reading dataset
 df = pd.read_csv('../input/chatbot-dataset-topical-chat/topical_chat.csv')
 df.head()
 
-# basic preprocessing
 def process(text):
     text = text.lower().replace('\n', ' ').replace('-', ' ').replace(':', ' ').replace(',', '') \
           .replace('"', ' ').replace(".", " ").replace("!", " ").replace("?", " ").replace(";", " ").replace(":", " ")
 
     text = "".join(v for v in text if v not in string.punctuation).lower()
-    #text = text.encode("utf8").decode("ascii",'ignore')
 
     text = " ".join(text.split())
-    #text+="<eos>"
     return text
 
 df.message = df.message.apply(process)
 
-# Vectorize the data.
 input_texts = []
 target_texts = []
 input_words_set = set()
