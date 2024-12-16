@@ -45,13 +45,13 @@ function Services() {
         {
             title: "Launch",
             heading: "Taking the Product Live",
-            image: "../src/assets/services/seo.svg", // Replace with the actual image path
+            image: "../src/assets/services/serv19.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
             heading: "Keeping Things Running Smoothly",
-            image: "../src/assets/services/seo.svg", // Replace with the actual image path
+            image: "../src/assets/services/seo.svg", 
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
