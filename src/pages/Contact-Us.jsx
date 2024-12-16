@@ -3,74 +3,74 @@ import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
 import { useState } from "react";
 
-function Contact () {
+function Contact() {
 
-         const [form, setForm] = useState({
-                firstName: "",
-                lastName: "",
+    const [form, setForm] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        role: "",
+        subject: "",
+        projectBudget: "",
+        description: "",
+        agree: false,
+    });
+    const [file, setFile] = useState(null);
+    const [result, setResult] = useState("");
+
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setForm((prev) => ({
+            ...prev,
+            [name]: type === "checkbox" ? checked : value,
+        }));
+    };
+
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        setResult("Sending...");
+
+
+        const formData = new FormData();
+        formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
+        formData.append("name", form.name);
+        formData.append("email", form.email);
+        formData.append("phone", form.phone);
+        formData.append("message", form.message);
+        formData.append("agree", form.agree);
+
+        if (file) {
+            formData.append("file", file);
+        }
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            setForm({
+                name: "",
                 email: "",
                 phone: "",
-                company: "",
-                role: "",
-                subject: "",
-                projectBudget: "",
-                description: "",
+                message: "",
                 agree: false,
             });
-            const [file, setFile] = useState(null);
-            const [result, setResult] = useState("");
-        
-            const handleInputChange = (e) => {
-                const { name, value, type, checked } = e.target;
-                setForm((prev) => ({
-                    ...prev,
-                    [name]: type === "checkbox" ? checked : value,
-                }));
-            };
-        
-        
-            const onSubmit = async (e) => {
-                e.preventDefault();
-                setResult("Sending...");
-        
-        
-                const formData = new FormData();
-                formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
-                formData.append("name", form.name);
-                formData.append("email", form.email);
-                formData.append("phone", form.phone);
-                formData.append("message", form.message);
-                formData.append("agree", form.agree);
-        
-                if (file) {
-                    formData.append("file", file);
-                }
-        
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData,
-                });
-        
-                const data = await response.json();
-        
-                if (data.success) {
-                    setResult("Form Submitted Successfully");
-                    setForm({
-                        name: "",
-                        email: "",
-                        phone: "",
-                        message: "",
-                        agree: false,
-                    });
-                    setFile(null);
-                } else {
-                    setResult("Error: " + data.message);
-                }
-            };
+            setFile(null);
+        } else {
+            setResult("Error: " + data.message);
+        }
+    };
 
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -100,7 +100,7 @@ function Contact () {
             </div>
             <div className='flex w-[69%] mx-auto pt-20 justify-between'>
                 <form onSubmit={onSubmit} className='w-[65%]'>
-                <h1 className='font-syne text-2xl font-semibold'><span className='text-yellow'>01.</span> Tell Us About Yourself</h1>
+                    <h1 className='font-syne text-2xl font-semibold'><span className='text-yellow'>01.</span> Tell Us About Yourself</h1>
                     <div className="flex">
                         {/* Left Section */}
                         <div className="w-[50%]">
@@ -167,7 +167,7 @@ function Contact () {
                         <div className=" ml-8 w-[50%]">
                             <div className="flex gap-3 items-center mt-14">
                                 <p className="font-syne font-medium text-[17px]">
-                                 Last Name
+                                    Last Name
                                 </p>
                             </div>
                             <input
@@ -182,7 +182,7 @@ function Contact () {
 
                             <div className="flex gap-3 items-center mt-[30px]">
                                 <p className="font-syne font-medium text-[17px]">
-                                    Phone 
+                                    Phone
                                 </p>
                             </div>
                             <input
@@ -197,7 +197,7 @@ function Contact () {
 
                             <div className="flex gap-3 items-center mt-[30px]">
                                 <p className="font-syne font-medium text-[17px]">
-                                    Role 
+                                    Role
                                 </p>
                             </div>
                             <input
@@ -215,9 +215,9 @@ function Contact () {
                     <div className='flex'>
                         <div className='w-[50%]'>
                             <div className="flex gap-3 items-center mt-[30px]">
-                                    <p className="font-syne font-medium text-[17px]">
+                                <p className="font-syne font-medium text-[17px]">
                                     Subject
-                                    </p>
+                                </p>
                             </div>
                             <input
                                 type="text"
@@ -230,9 +230,9 @@ function Contact () {
                         </div>
                         <div className='w-[50%] ml-8'>
                             <div className="flex gap-3 items-center mt-[30px]">
-                                    <p className="font-syne font-medium text-[17px]">
+                                <p className="font-syne font-medium text-[17px]">
                                     Project Budget
-                                    </p>
+                                </p>
                             </div>
                             <input
                                 type="number"
@@ -246,26 +246,26 @@ function Contact () {
                     </div>
                     <h1 className='font-syne text-2xl font-semibold mt-20'>
                         <span className='text-yellow'>03.</span> Tell Us About Your Project</h1>
-                        <div className="flex gap-3 items-center mt-[30px]">
-                                    <p className="font-syne font-medium text-[17px]">
-                                    Project Description
-                                    </p>
-                            </div>
-                            <textarea
-                                name="Description"
-                                value={form.phone}
-                                onChange={handleInputChange}
-                                placeholder="Your Message"
-                                className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
-                            />
-                            <button
-                                type="submit"
-                                className={`mt-[50px] mb-10 text-lg font-normal text-center font-syne py-[22px] w-full rounded-full ease-in-out duration-300 transition-transform border-[4px] border-yellow hover:scale-105 ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
-                                    }`}
-                                disabled={result === "Sending..."}
-                            >
-                                {result === "Sending..." ? "Sending..." : "Submit"}
-                            </button>
+                    <div className="flex gap-3 items-center mt-[30px]">
+                        <p className="font-syne font-medium text-[17px]">
+                            Project Description
+                        </p>
+                    </div>
+                    <textarea
+                        name="Description"
+                        value={form.phone}
+                        onChange={handleInputChange}
+                        placeholder="Your Message"
+                        className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
+                    />
+                    <button
+                        type="submit"
+                        className={`mt-[50px] mb-10 text-lg font-normal text-center font-syne py-[22px] w-full rounded-full ease-in-out duration-300 transition-transform border-[4px] border-yellow hover:scale-105 ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                            }`}
+                        disabled={result === "Sending..."}
+                    >
+                        {result === "Sending..." ? "Sending..." : "Submit"}
+                    </button>
                 </form>
                 <div className='w-[30%]'>
                     <h1 className='font-syne text-xl font-semibold'>Support Request</h1>
@@ -279,17 +279,17 @@ function Contact () {
                         <span className="w-[96%] h-[3px] rounded-full bg-[#e7e7e8]"></span>
                         <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
                     </div>
-                    
+
                     <div className='bg-[#f3f4f1] w-16 h-16 flex justify-center mt-16 items-center rounded-full relative' >
                         <svg className='z-10' xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-                            <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon"/>
-                            <script xmlns=""/><script xmlns=""/>
+                            <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon" />
+                            <script xmlns="" /><script xmlns="" />
                             <g clipPath="url(#clip0_716_2)">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.42 9.42 0 21 0C32.579 0 41.999 9.42 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.522 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.522 31.476 1.999 21 1.999ZM21.156 23.948C21.51 23.982 20.944 24 20.839 24C20.421 24 20.32 23.735 19.892 23.316C19.716 22.793 19.999 22.227 20.522 22.51C22.1 21.554 25.839 19.677 25.839 16.999C25.843 14.876 24.5 12.978 22.498 12.274C19.896 11.359 17.38 12.73 16.123 15.331C15.94 15.852 15.369 16.125 14.847 15.942C14.327 15.76 14.53 15.188 14.236 14.667C14.857 12.903 16.127 11.487 17.813 10.678C19.498 9.869 21.398 9.766 23.163 10.387C25.964 11.373 27.844 14.31 27.839 17.1C27.839 21.666 21.429 23.857 21.156 23.948ZM21 29.999H21.19C21.572 29.999 22.19 30.447 22.19 30.999C22.19 31.551 21.572 31.999 21.19 31.999C20.467 31.999 20.9 31.551 20.9 30.999C20.9 30.447 20.447 29.999 21 29.999Z" fill="#121820"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.42 9.42 0 21 0C32.579 0 41.999 9.42 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.522 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.522 31.476 1.999 21 1.999ZM21.156 23.948C21.51 23.982 20.944 24 20.839 24C20.421 24 20.32 23.735 19.892 23.316C19.716 22.793 19.999 22.227 20.522 22.51C22.1 21.554 25.839 19.677 25.839 16.999C25.843 14.876 24.5 12.978 22.498 12.274C19.896 11.359 17.38 12.73 16.123 15.331C15.94 15.852 15.369 16.125 14.847 15.942C14.327 15.76 14.53 15.188 14.236 14.667C14.857 12.903 16.127 11.487 17.813 10.678C19.498 9.869 21.398 9.766 23.163 10.387C25.964 11.373 27.844 14.31 27.839 17.1C27.839 21.666 21.429 23.857 21.156 23.948ZM21 29.999H21.19C21.572 29.999 22.19 30.447 22.19 30.999C22.19 31.551 21.572 31.999 21.19 31.999C20.467 31.999 20.9 31.551 20.9 30.999C20.9 30.447 20.447 29.999 21 29.999Z" fill="#121820" />
                             </g>
                             <defs>
                                 <clipPath id="clip0_716_2">
-                                    <rect width="42" height="42" fill="white"/>
+                                    <rect width="42" height="42" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
@@ -308,38 +308,47 @@ function Contact () {
                         <span className="w-[2%] h-[3px] rounded-full bg-yellow"></span>
                     </div>
 
-                    
+
                     <div className='bg-[#f3f4f1] w-16 h-16 flex justify-center mt-16 items-center rounded-full relative'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-                        <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon"/>
-                        <script xmlns=""/>
-                        <script xmlns=""/>
-                        <g clipPath="url(#clip0_716_6)">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.419 9.42 0 21 0C32.579 0 41.999 9.419 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.523 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.523 31.476 1.999 21 1.999ZM21.19 13.999C20.467 13.999 20.9 13.551 20.9 12.999C20.9 12.447 20.447 11.999 21 11.999H21.19C21.572 11.999 22.19 12.447 22.19 12.999C22.19 13.551 21.572 13.999 21.19 13.999ZM21 19.999C21.552 19.999 21.999 20.447 21.999 20.999V28.999C21.999 29.551 21.552 29.999 21 29.999C20.447 29.999 19.999 29.551 19.999 28.999V20.999C19.999 20.447 20.447 19.999 21 19.999Z" fill="#121820"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_716_6">
-                            <rect width="42" height="42" fill="white"/>
-                            </clipPath>
-                        </defs>
-                        </svg>  
+                            <script xmlns="" id="eppiocemhmnlbhjplcgkofciiegomcon" />
+                            <script xmlns="" />
+                            <script xmlns="" />
+                            <g clipPath="url(#clip0_716_6)">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M21 41.999C9.42 41.999 0 32.579 0 20.999C0 9.419 9.42 0 21 0C32.579 0 41.999 9.419 41.999 20.999C41.999 32.579 32.579 41.999 21 41.999ZM21 1.999C10.523 1.999 1.999 10.523 1.999 20.999C1.999 31.476 10.523 39.999 21 39.999C31.476 39.999 39.999 31.476 39.999 20.999C39.999 10.523 31.476 1.999 21 1.999ZM21.19 13.999C20.467 13.999 20.9 13.551 20.9 12.999C20.9 12.447 20.447 11.999 21 11.999H21.19C21.572 11.999 22.19 12.447 22.19 12.999C22.19 13.551 21.572 13.999 21.19 13.999ZM21 19.999C21.552 19.999 21.999 20.447 21.999 20.999V28.999C21.999 29.551 21.552 29.999 21 29.999C20.447 29.999 19.999 29.551 19.999 28.999V20.999C19.999 20.447 20.447 19.999 21 19.999Z" fill="#121820" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_716_6">
+                                    <rect width="42" height="42" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                         <span className='w-4 h-4 bg-yellow rounded-full absolute top-10 left-9'></span>
                     </div>
-                    
+
                     <h1 className='font-syne text-xl font-semibold mt-10'>Need More Info?</h1>
                     <p className='font-syne text-lg text-black/50 mt-7'>For technical questions or billing <br /> questions, please contact Customer Care.</p>
                     <div className='flex items-center gap-5 mt-7 group'>
                         <p className='font-semibold font-syne group-hover:text-yellow duration-300 ease-in-out cursor-pointer'>Legality Guide</p>
                         <button className='w-10 h-10 rounded-full bg-yellow group-hover:bg-transparent group-hover:border-[3px] cursor-pointer duration-300 ease-in-out group-hover:text-yellow group-hover:border-yellow text-white font-syne text-xl'>&gt;</button>
                     </div>
-
                 </div>
             </div>
-            
 
 
+            <div style={{ width: '100%', height: '400px' }}>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.208825154099!2d74.3497978!3d35.9183534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa898a5d8e146f9e1%3A0xb9b6b67b71bb9a67!2sNorthnine%20Pvt%20LTD%2C%20W89X%2B8WV%2C%20Northnine%20Pvt%20LTD%2C%20Gilgit%2C%2015100!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none' }}
+                    allowFullScreen
+                    loading="lazy"
+                    title="Northnine Pvt LTD Location"
+                ></iframe>
+            </div>
 
-            <Footer/>
+            <Footer />
         </>
     )
 }
