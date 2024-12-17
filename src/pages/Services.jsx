@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import { useState } from "react";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
 import Smartphone from '../assets/images/22.svg'
@@ -12,6 +10,8 @@ import "swiper/css/pagination";
 import Phones from '../assets/images/phones.png';
 import Motion from '../assets/images/motion.png'
 import { useRef } from "react";
+import Shades from '../assets/images/white-shades.png'
+import Footer from '../components/Footer/index'
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
@@ -19,30 +19,43 @@ function Services() {
 
     const steps = [
         {
-            title: "Discovery & R&D",
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            title: "Data Security",
+            heading: "Research and Discover New Insights",
+            image: "../src/assets/services/serv19.svg",
+            content: "Protecting digital information from unauthorized access or corruption. Implementing measures encryption. Firewalls to safeguard sensitive data. Implementing security measures. Developing incident response plans.",
         },
         {
             title: "UX/UI Design",
+            heading: "Crafting User Experiences",
+            image: "../src/assets/services/seo.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Development",
+            heading: "Building Scalable Applications",
+            image: "../src/assets/services/serv19.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
-            title: "QA",
+            title: "SEO and Optimazation",
+            heading: "SEO and Optimazation",
+            image: "../src/assets/services/seo.svg", 
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Launch",
+            heading: "Taking the Product Live",
+            image: "../src/assets/services/serv19.svg",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
+            heading: "Keeping Things Running Smoothly",
+            image: "../src/assets/services/seo.svg", 
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
+
 
     const slides = [
         {
@@ -71,9 +84,6 @@ function Services() {
         },
     ];
 
-    useEffect(() => {
-        AOS.init({ duration: 500, offset: 200 });
-    }, []);
     return (
         <>
             <Navbar />
@@ -171,8 +181,8 @@ function Services() {
                 </div>
             </div>
 
-            <div className="py-8">
-                <div className="w-[69%] mx-auto">
+            <div className="py-8 bg-[#f3f3f4]">
+                <div className="w-[69%] mx-auto pt-16">
                     <div className='flex justify-between'>
                         <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
                         <div className='flex gap-[30px]'>
@@ -181,18 +191,15 @@ function Services() {
                         </div>
                     </div>
                 </div>
-
-
-                {/* Swiper slider */}
                 <Swiper
-                    slidesPerView={3} // Number of slides visible at a time
-                    spaceBetween={20} // Space between slides
-                    navigation={false} // Disable built-in navigation
+                    slidesPerView={3} 
+                    spaceBetween={20}
+                    navigation={false}
                     pagination={{ clickable: true, el: null }}
                     modules={[Navigation, Pagination]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-                    slidesOffsetBefore={290} // Add gap before the first slide
-                    slidesOffsetAfter={290}  // Add gap after the last slide
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    slidesOffsetBefore={290}
+                    slidesOffsetAfter={290}
                     speed={1000}
                     breakpoints={{
                         640: {
@@ -239,7 +246,7 @@ function Services() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
+                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[50px]'>
                     <div className='flex gap-[14px] items-center group'>
                         <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
@@ -248,10 +255,18 @@ function Services() {
                 </div>
             </div>
 
+            <div className="w-[69%] mx-auto">
+                <div className="flex items-center gap-3 mt-24">
+                    <span className="w-2 h-2 bg-yellow rounded-full"></span>
+                    <p className="font-syne">All Devices</p>
+                </div>
+                <h1 className="text-[44px] font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+            </div>
+
             <div className="pt-24 container mx-auto pb-24">
                 <div className="flex gap-x-40 2xl:ml-20">
                     {/* Left Sidebar */}
-                    <div className="w-2/5">
+                    <div>
                         <ul className="relative space-y-8 border-gray-300 pl-6">
                             {steps.map((step, index) => (
                                 <li
@@ -261,9 +276,7 @@ function Services() {
                                 >
                                     {index < steps.length - 1 && (
                                         <span
-                                            className={`absolute left-[10px] top-[28px] h-full w-[2px] ${activeStep > index
-                                                ? "bg-gray-300"
-                                                : "bg-gray-300"
+                                            className={`absolute left-[10px] top-[34px] h-full w-[2px] ${activeStep > index ? "bg-gray-300" : "bg-gray-300"
                                                 }`}
                                         ></span>
                                     )}
@@ -271,8 +284,8 @@ function Services() {
                                     <div className="flex items-center space-x-4">
                                         <span
                                             className={`w-6 h-6 rounded-full flex items-center justify-center border-4 ${activeStep === index
-                                                ? "bg-yellow border-yellow"
-                                                : "bg-white border-gray-300"
+                                                    ? "bg-yellow border-yellow"
+                                                    : "bg-white border-gray-300"
                                                 }`}
                                         >
                                             {activeStep === index && (
@@ -280,9 +293,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-[17px] ${activeStep === index
-                                                ? "text-black"
-                                                : "text-gray-400"
+                                            className={`font-medium font-syne text-3xl ${activeStep === index ? "text-black" : "text-gray-400"
                                                 }`}
                                         >
                                             {step.title}
@@ -294,19 +305,22 @@ function Services() {
                     </div>
 
                     {/* Right Content */}
-                    <div
-                       
-                    >
-                        <div className="w-3/5 pt-[20px]">
-                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
-                                <div className="relative mx-auto rounded-full ">
-                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
-                                </div>
+                    <div>
+                        <div className="pt-10">
+                            <div className="flex relative">
+                            <img
+                                src={steps[activeStep].image}
+                                alt={steps[activeStep].title}
+                                className="h-12 mb-4 rounded-lg z-10"
+                            />
+                            <span className="absolute w-4 h-4 bg-yellow rounded-full top-7 left-7" ></span>
                             </div>
-                            <p className="text-black/40 font-syne text-base pt-[30px]">{steps[activeStep].content}</p>
+                            <h2 className="text-2xl font-bold mb-4">{steps[activeStep].heading}</h2>
+                            <p className="text-black/40 font-syne text-lg  w-[630px]">
+                                {steps[activeStep].content}
+                            </p>
                             <button className="mt-4 flex text-center gap-5 items-center justify-center">
-                                <span className="font-syne">See More</span>
+                                <span className="font-syne font-semibold text-lg">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
                                     →
                                 </span>
@@ -317,7 +331,73 @@ function Services() {
             </div>
 
 
+            <div className="w-[69%] mx-auto gap-2 flex items-center mt-8">
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+                <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
+                <span className="w-[2%] h-[2px] bg-yellow"></span>
+            </div>
+            <div className="w-[69%] flex justify-end mx-auto">
+                <img src={Shades} alt="" className="w-[220px]" />
+            </div>
+            <div className="w-[69%] mx-auto mb-20">
+                <h1 className="text-[44px] font-semibold font-syne">Delivering <span className="text-yellow">Industry Specific</span> Mobile
+                    <br />App Solutions</h1>
+                <div className="flex justify-between mt-24">
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                                <g clipPath="url(#clip0_790_24)">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_790_24">
+                                        <rect width="40" height="45" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>
+                    </div>
+
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                                <g clipPath="url(#clip0_790_24)">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_790_24">
+                                        <rect width="40" height="45" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>
+                    </div>
+
+                    <div>
+                        <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
+                                <g clipPath="url(#clip0_790_24)">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M34.777 44.9231H5.222C2.342 44.9231 0 42.5911 0 39.7251V10.3121C0 10.1891 0.28 10.7101 0.71 9.95909C0.86 9.91909 0.109 9.88609 0.129 9.84909C0.153 9.80509 0.169 9.75609 0.2 9.71509L6.533 1.31209C6.721 1.61009 7.18 0.913086 7.332 0.913086H32.666C32.981 0.913086 33.277 1.61009 33.466 1.31209L39.799 9.71509C39.83 9.75609 39.846 9.80509 39.87 9.84909C39.89 9.88609 39.913 9.91909 39.928 9.95909C39.971 10.7101 39.999 10.1891 39.999 10.3121V39.7251C39.999 42.5911 37.657 44.9231 34.777 44.9231ZM32.166 2.90309H7.832L2.999 9.31709H37L32.166 2.90309ZM37.999 11.3071H1.999V39.7251C1.999 41.4941 3.445 42.9321 5.222 42.9321H34.777C36.554 42.9321 37.999 41.4941 37.999 39.7251V11.3071ZM19.999 28.1141C14.792 28.1141 10.555 23.8981 10.555 18.7151C10.555 18.1661 11.3 17.7201 11.555 17.7201C12.107 17.7201 12.555 18.1661 12.555 18.7151C12.555 22.8001 15.894 26.1241 19.999 26.1241C24.104 26.1241 27.444 22.8001 27.444 18.7151C27.444 18.1661 27.892 17.7201 28.444 17.7201C28.996 17.7201 29.444 18.1661 29.444 18.7151C29.444 23.8981 25.207 28.1141 19.999 28.1141Z" fill="#121820" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_790_24">
+                                        <rect width="40" height="45" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2 className="font-syne text-lg font-semibold mt-8">eCcommerce</h2>
+                        <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>
+                    </div>
+                </div>
+            </div>
+            <Footer />
         </>
+
     );
 }
 
