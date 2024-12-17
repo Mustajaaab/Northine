@@ -16,38 +16,30 @@ except:
     strategy = tf.distribute.get_strategy()
 print('Number of replicas:', strategy.num_replicas_in_sync)
 
-AUTOTUNE = tf.data.experimental.AUTOTUNE
-    
-print(tf.__version__)
+# Configuration Parameters
+AUTOTUNE = tf.data.AUTOTUNE
+BATCH_SIZE = 64
+EPOCHS = 200
+LATENT_DIM = 512
+NUM_SAMPLES = 50000
 
-batch_size = 64  # Batch size for training.
-epochs = 200  # Number of epochs to train for.
-latent_dim = 512  # Latent dimensionality of the encoding space.
-num_samples = 50000
-
-# reading dataset
+# Load Dataset
 df = pd.read_csv('../input/chatbot-dataset-topical-chat/topical_chat.csv')
 
-# basic preprocessing
-def process(text):
-    text = text.lower().replace('\n', ' ').replace('-', ' ').replace(':', ' ').replace(',', '') \
-          .replace('"', ' ').replace(".", " ").replace("!", " ").replace("?", " ").replace(";", " ").replace(":", " ")
-
-    text = "".join(v for v in text if v not in string.punctuation).lower()
-    #text = text.encode("utf8").decode("ascii",'ignore')
-
-    text = " ".join(text.split())
-    #text+="<eos>"
+# Preprocessing Function
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r'[\n\-:,"]', ' ', text)  # Replace unwanted characters
+    text = re.sub(r'[.!?;:]', ' ', text)       # Remove punctuation
+    text = re.sub(r'\s+', ' ', text).strip()  # Remove extra spaces
     return text
 
 # Apply Preprocessing
 df['message'] = df['message'].apply(clean_text)
 
-# Vectorize the data.
-input_texts = []
-target_texts = []
-input_words_set = set()
-target_words_set = set()
+# Initialize Data Lists and Word Sets
+input_texts, target_texts = [], []
+input_vocab, target_vocab = set(), set()
 
 # Generate Input-Output Pairs
 for idx in tqdm(range(1, len(df))):
