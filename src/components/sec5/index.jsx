@@ -49,7 +49,7 @@ function Sec5() {
         setTimeout(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
             setAnimationClass("slide-in");
-        }, 800); // Match the duration of the slide-out animation
+        }, 800);
     };
 
     const handlePrev = () => {
@@ -57,17 +57,17 @@ function Sec5() {
         setTimeout(() => {
             setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
             setAnimationClass("slide-in");
-        }, 800); // Match the duration of the slide-out animation
+        }, 800);
     };
 
     const currentContent = slides[currentSlide];
 
     return (
-        <div className="w-[69%] mx-auto overflow-hidden">
+        <div className="w-[70%] mx-auto overflow-hidden">
             <div className="flex justify-end w-[78%]">
                 <img src={Shades} alt="" className="w-[203px] h-[140px]" />
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center 3">
                 <div>
                     <p className="flex gap-2 items-center">
                         <img src={Dot} alt="" className="w-[14px] h-[14px]" />
@@ -80,20 +80,19 @@ function Sec5() {
                 <div className="flex gap-[30px]">
                     <button
                         onClick={handlePrev}
-                        className="font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110"
+                        className="font-syne text-base font-semibold hover:text-yellow ease-in-out duration-300 hover:scale-110"
                     >
                         🡸 Prev
                     </button>
                     <button
                         onClick={handleNext}
-                        className="font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110"
+                        className="font-syne text-base font-semibold hover:text-yellow ease-in-out duration-300 hover:scale-110"
                     >
                         Next 🡺
                     </button>
                 </div>
             </div>
             <div className={`mt-[90px] flex gap-[30px] ${animationClass}`}>
-                {/* Main content */}
                 <div>
                     <img
                         src={currentContent.mainImg}
@@ -107,7 +106,7 @@ function Sec5() {
                             </h1>
                             <p className="font-syne font-semibold text-base leading-[22px] mt-5">
                                 By:{" "}
-                                <span className="text-[#F57C00]">
+                                <span className="text-yellow">
                                     {currentContent.mainAuthor}
                                 </span>
                             </p>
@@ -117,8 +116,6 @@ function Sec5() {
                         </p>
                     </div>
                 </div>
-
-                {/* Side content */}
                 <div className="w-[315px]">
                     <h1 className="font-syne font-semibold text-[22px] leading-[30px]">
                         {currentContent.sideTitle1}
@@ -149,10 +146,10 @@ function Sec5() {
             </div>
 
             <div className="flex gap-[14px] items-center group mt-[90px] mb-[120px]">
-                <button className="font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110">
+                <button className="font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110">
                     View More Insights
                 </button>
-                <button className="w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110">
+                <button className="w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110">
                     🡺
                 </button>
             </div>
