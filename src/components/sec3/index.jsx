@@ -23,10 +23,7 @@ function Sec3() {
                             <img src={Pana} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Thinking Big</h3>
                         </div>
-                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incidiasndjkansdjdunt ut labore et dolore magna <br />
-                        aliqua.</p>
+                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Transform your bold ideas into powerful digital solutions <br />that create meaningful impact and drive success.</p>
                     </div>
 
                     <div>
@@ -34,10 +31,7 @@ function Sec3() {
                             <img src={Flag} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Starting Small</h3>
                         </div>
-                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
-                        aliqua.</p>
+                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Begin with UI/UX design, website development, and <br />digital marketing to build a strong foundation for <br /> future growth</p>
                     </div>
 
                     <div>
@@ -45,10 +39,7 @@ function Sec3() {
                             <img src={Save} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Creating Fast</h3>
                         </div>
-                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
-                        aliqua.</p>
+                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Quickly implement effective bookkeeping systems,<br /> websites, and marketing strategies that get your <br />business running smoothly.</p>
                     </div>
 
                     <div>
@@ -56,15 +47,12 @@ function Sec3() {
                             <img src={Cloud} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Innovating Scale</h3>
                         </div>
-                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Lorem ipsum dolor sit amet, consectetur <br />
-                        adipiscing elit, sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna <br />
-                        aliqua.</p>
+                        <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne mt-7'>Scale your business with adaptable cloud computing, <br />digital marketing, AI, and IoT services that foster<br /> long-term success and growth.</p>
                     </div>
                 </div>
                 <div className='justify-between flex pt-[107px]'>
                     <div className='flex gap-[14px] items-center group'>
-                        <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>Learn More</button>
+                        <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>Contact Now</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
                     </div>
                     <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110'>How We Work</button>
