@@ -299,7 +299,7 @@ function Contact() {
                                 size={20}
                                 className="text-gray-600 hover:text-yellow-500 ease-in-out duration-75"
                             />
-                            <span className="hover:text-yellow-500 ease-in-out duration-75">
+                            <span className="hover:text-yellow ease-in-out duration-75">
                                 Attach your file
                             </span>
                             <input
