@@ -336,7 +336,7 @@ function Contact() {
             </div>
 
 
-            <div style={{ width: '100%', height: '400px' }}>
+            <div style={{ width: '100%', height: '600px' }}>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.208825154099!2d74.3497978!3d35.9183534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa898a5d8e146f9e1%3A0xb9b6b67b71bb9a67!2sNorthnine%20Pvt%20LTD%2C%20W89X%2B8WV%2C%20Northnine%20Pvt%20LTD%2C%20Gilgit%2C%2015100!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
                     width="100%"
