@@ -1,6 +1,7 @@
 import BGDot from '../assets/images/dotmap.png'
 import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
+import { FiPaperclip } from "react-icons/fi";
 import { useState } from "react";
 
 function Contact() {
@@ -67,6 +68,50 @@ function Contact() {
             setResult("Error: " + data.message);
         }
     };
+    const handleFileClick = () => {
+        document.getElementById("fileInput")?.click();
+    };
+
+
+    const handleFileChange = (event) => {
+        const selectedFile = event.target.files?.[0];
+        if (selectedFile) {
+            setFile(selectedFile);
+        }
+    };
+
+    const handleSubmit = async () => {
+        if (!file) {
+            alert("Please select a file before submitting!");
+            return;
+        }
+
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+
+        try {
+            const response = await fetch("/api/upload", {
+                method: "POST",
+                body: formData,
+            });
+
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log("File uploaded successfully:", result);
+                alert("File uploaded successfully!");
+            } else {
+                console.error("Error uploading file");
+                alert("Failed to upload file. Please try again.");
+            }
+        } catch (error) {
+            console.error("An error occurred:", error);
+            alert("An error occurred while uploading.");
+        }
+    };
+
 
     return (
         <>
@@ -149,21 +194,7 @@ function Contact() {
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
                             />
                         </div>
-
-
-
-
-
-
-
                         {/* Right Section */}
-
-
-
-
-
-
-
                         <div className=" ml-8 w-[50%]">
                             <div className="flex gap-3 items-center mt-14">
                                 <p className="font-syne font-medium text-[17px]">
@@ -258,6 +289,35 @@ function Contact() {
                         placeholder="Your Message"
                         className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
                     />
+                    {/* Attach File Section */}
+                    <div className="mt-10">
+                        <div
+                            className="flex items-center gap-2 cursor-pointer"
+                            onClick={handleFileClick}
+                        >
+                            <FiPaperclip
+                                size={20}
+                                className="text-gray-600 hover:text-yellow-500 ease-in-out duration-75"
+                            />
+                            <span className="hover:text-yellow-500 ease-in-out duration-75">
+                                Attach your file
+                            </span>
+                            <input
+                                type="file"
+                                id="fileInput"
+                                className="hidden"
+                                onChange={handleFileChange}
+                                accept="image/*,application/pdf"
+                            />
+                        </div>
+                        {file && (
+                            <div className="mt-4">
+                                <p className="text-gray-700">Selected File: {file.name}</p>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Main Submit Button */}
                     <button
                         type="submit"
                         className={`mt-[50px] mb-10 text-lg font-normal text-center font-syne py-[22px] w-full rounded-full ease-in-out duration-300 transition-transform border-[4px] border-yellow hover:scale-105 ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
@@ -266,6 +326,7 @@ function Contact() {
                     >
                         {result === "Sending..." ? "Sending..." : "Submit"}
                     </button>
+
                 </form>
                 <div className='w-[30%]'>
                     <h1 className='font-syne text-xl font-semibold'>Support Request</h1>
