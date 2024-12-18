@@ -1,7 +1,6 @@
 import BGDot from '../assets/images/dotmap.png'
 import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
-import { FiPaperclip } from "react-icons/fi";
 import { useState } from "react";
 
 function Contact() {
