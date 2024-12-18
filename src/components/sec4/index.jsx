@@ -13,12 +13,12 @@ function Sec4() {
                     setIsVisible(true);
 
                     setSkillPercentages([
-                        65, 
+                        85, 
                         90, 
                         50,
-                        95,
-                        60, 
-                        90, 
+                        70,
+                        50, 
+                        65, 
                         80,
                     ]);
                 }
@@ -50,15 +50,17 @@ function Sec4() {
                 </p>
             </div>
             <div className="w-[69%] mx-auto pt-[89px]">
-                <div className="flex justify-between">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Digital Marketing", index: 0 },
+                        { title: "Data Science & Ai", index: 0 },
                         { title: "Web Development", index: 1 },
                         { title: "UI / UX Design", index: 2 },
                         { title: " Bookkeeping", index: 3 },
+                        { title: "Digital Marketing ", index: 4 },
+                        { title: "Graphic Designing", index: 5 },
                     ].map((skill, idx) => (
-                        <div key={idx} className="w-[20%]">
-                            <h4 className="font-syne font-semibold text-base">{skill.title}</h4>
+                        <div key={idx} className="">
+                            <h4 className="font-syne font-bold text-lg">{skill.title}</h4>
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
