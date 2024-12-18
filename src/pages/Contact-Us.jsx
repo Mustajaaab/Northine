@@ -1,10 +1,10 @@
-import BGDot from '../assets/images/dotmap.png'
-import Navbar from '../components/navbar'
-import Footer from '../components/Footer'
+import BGDot from '../assets/images/dotmap.png';
+import Navbar from '../components/navbar';
+import Footer from '../components/Footer';
 import { useState } from "react";
+import { FiPaperclip } from "react-icons/fi";
 
 function Contact() {
-
     const [form, setForm] = useState({
         firstName: "",
         lastName: "",
@@ -28,49 +28,9 @@ function Contact() {
         }));
     };
 
-
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        setResult("Sending...");
-
-
-        const formData = new FormData();
-        formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
-        formData.append("name", form.name);
-        formData.append("email", form.email);
-        formData.append("phone", form.phone);
-        formData.append("message", form.message);
-        formData.append("agree", form.agree);
-
-        if (file) {
-            formData.append("file", file);
-        }
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            setForm({
-                name: "",
-                email: "",
-                phone: "",
-                message: "",
-                agree: false,
-            });
-            setFile(null);
-        } else {
-            setResult("Error: " + data.message);
-        }
-    };
     const handleFileClick = () => {
         document.getElementById("fileInput")?.click();
     };
-
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files?.[0];
@@ -79,38 +39,56 @@ function Contact() {
         }
     };
 
-    const handleSubmit = async () => {
-        if (!file) {
-            alert("Please select a file before submitting!");
-            return;
-        }
-
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        setResult("Sending...");
 
         const formData = new FormData();
-        formData.append("file", file);
+        formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
+        formData.append("firstName", form.firstName);
+        formData.append("lastName", form.lastName);
+        formData.append("email", form.email);
+        formData.append("phone", form.phone);
+        formData.append("company", form.company);
+        formData.append("role", form.role);
+        formData.append("subject", form.subject);
+        formData.append("projectBudget", form.projectBudget);
+        formData.append("description", form.description);
+        formData.append("agree", form.agree);
 
+        if (file) {
+            formData.append("file", file);
+        }
 
         try {
-            const response = await fetch("/api/upload", {
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData,
             });
+            const data = await response.json();
 
-
-            if (response.ok) {
-                const result = await response.json();
-                console.log("File uploaded successfully:", result);
-                alert("File uploaded successfully!");
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                setForm({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    company: "",
+                    role: "",
+                    subject: "",
+                    projectBudget: "",
+                    description: "",
+                    agree: false,
+                });
+                setFile(null);
             } else {
-                console.error("Error uploading file");
-                alert("Failed to upload file. Please try again.");
+                setResult(`Error: ${data.message}`);
             }
         } catch (error) {
-            console.error("An error occurred:", error);
-            alert("An error occurred while uploading.");
+            setResult("Error: Could not submit the form.");
         }
     };
-
 
     return (
         <>
@@ -139,6 +117,7 @@ function Contact() {
                                 </linearGradient>
                             </defs>
                         </svg>
+
                     </div>
                 </div>
             </div>
@@ -288,7 +267,6 @@ function Contact() {
                         placeholder="Your Message"
                         className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
                     />
-                    {/* Attach File Section */}
                     <div className="mt-10">
                         <div
                             className="flex items-center gap-2 cursor-pointer"
