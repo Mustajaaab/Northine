@@ -8,7 +8,7 @@ function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const getActiveClass = (path) => {
-        return location.pathname === path ? 'text-yellow border-b border-yellow' : 'text-white';
+        return location.pathname === path ? 'text-yellow lg:border-b border-yellow' : 'text-white';
     };
 
     const toggleMenu = () => {
