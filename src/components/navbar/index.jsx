@@ -18,13 +18,13 @@ function Navbar() {
     return (
         <div className="w-full mx-auto items-center h-[110px] lg:h-[80px] fixed bg-[#121820] z-50">
             <div className="container mx-auto flex items-center justify-between mt-4">
-                <img src={Northnine} alt="Northnine Logo" className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[286px] h-[80px] " />
+                <img src={Northnine} alt="Northnine Logo" className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[206px] h-[60px] " />
 
                 {/* Hamburger Icon for Small Screens */}
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-20 h-20 md:w-14 md:h-14 text-white cursor-pointer "
+                        className="w-16 h-16 md:w-14 md:h-14 text-white cursor-pointer "
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"

@@ -4,8 +4,8 @@ function Sec1() {
         <>
             <div className="bg-[#121820] ">
                 <div className="container mx-auto flex justify-between items-center gap-[103px] max-w-[1170px]  2xl:max-w-[1370px]">
-                    <div className="pt-[350px] pb-[171px]  animate-fadeInSlideDown">
-                        <h3 className="text-white font-syne text-lg "><span className="text-[#fdcb22]">Northnine</span> Pvt Ltd</h3>
+                    <div className="lg:pt-[350px] pt-32 pb-[171px]  animate-fadeInSlideDown">
+                        <h3 className="text-white font-syne text-lg text-center lg:text-left"><span className="text-[#fdcb22]">Northnine</span> Pvt Ltd</h3>
                         <h1 className="text-white text-6xl font-semibold leading-[84px] font-syne mt-12 animate-fadeInSlideDown text-center lg:text-left">Your Partner in Smart <br />
                             Digital Solutions  <span className="font-satisfy text-[#fdcb22]">Tech</span></h1>
                         <div className="lg:flex mt-14 text-center lg:text-left items-center">
