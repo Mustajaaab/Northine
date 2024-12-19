@@ -35,12 +35,12 @@ function Sec4() {
     }, []);
 
     return (
-        <div id="sec4">
-            <div className="w-[69%] mx-auto flex items-center gap-2 mt-[120px]">
+        <div id="sec4" className="container mx-auto">
+            <div className=" flex items-center gap-2 mt-[120px]">
                 <div className='w-2 h-2 bg-yellow rounded-full'> </div>
                 <p className="font-syne text-base font-medium">Our Skill</p>
             </div>
-            <div className="w-[69%] mx-auto flex justify-between mt-7 items-end">
+            <div className=" lg:flex justify-between mt-7 items-end">
                 <h1 className="font-syne font-semibold text-[42px] leading-[58px]">
                     Business <span className="text-yellow">Success</span> With <br />
                     Technology
@@ -49,7 +49,7 @@ function Sec4() {
                 Achieve success with digital solution tech. Our digital <br />web solutions improve your online presence. At NorthNine <br />we offer digital learning solutions to boost skills and growth. <br />As a leading digital solutions company, we provide custom solutions <br />to meet your needs. Partner with digital solutions pvt ltd <br />for reliable results.
                 </p>
             </div>
-            <div className="w-[69%] mx-auto pt-[89px]">
+            <div className="pt-[89px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
                         { title: "Data Science & Ai", index: 0 },
@@ -100,7 +100,7 @@ function Sec4() {
                         </div>
                 </div>
             </div>
-            <div className="w-[69%] flex mx-auto mt-[152px] pb-3 gap-1">
+            <div className="container flex mx-auto mt-[152px] pb-3 gap-1">
                 <div className="w-[2%] h-[2px] bg-yellow"></div>
                 <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
                 <div className="w-[2%] h-[2px] bg-yellow"></div>

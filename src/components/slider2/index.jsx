@@ -54,8 +54,8 @@ const Slider2 = () => {
   return (
     
     <div className="py-8 bg-[#121820]/5 pt-[120px]">
-        <div className="w-[69%] mx-auto">
-            <div className='flex justify-between'>
+        <div className="container mx-auto">
+            <div className='lg:flex lg:justify-between'>
                 <div>
                 <div className="flex items-center gap-2">
                     <img src={Dot} alt="" className="w-2 h-2"/>
@@ -114,7 +114,7 @@ const Slider2 = () => {
         </div>
         <div>
           <div className="mt-7">
-          <SeeMoreText text={slide.text} maxLength={0} className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-[361px]" />
+          <SeeMoreText text={slide.text} maxLength={150} className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-[361px]" />
           </div>
           <div className="flex mt-8 gap-5 mb-[120px]">
             <img src={slide.icon} alt="" className="w-[55px] h-[55px] rounded-full grayscale hover:grayscale-0 duration-300 ease-in-out"/>

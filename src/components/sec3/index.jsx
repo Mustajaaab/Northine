@@ -17,7 +17,7 @@ function Sec3() {
                     <p className="font-syne font-medium text-base ">Discover Our Company</p>
                 </div>
                 <h1 className='font-syne text-[42px] font-semibold mt-7'>How We <span className='text-yellow'>Collaborate</span> With You</h1>
-                <div className='mt-[90px] flex justify-between'>
+                <div className='mt-[90px] lg:flex lg:justify-between'>
                     <div>
                         <div className='flex items-center gap-4'>
                             <img src={Pana} alt="" className='w-5 h-5'/>

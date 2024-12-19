@@ -77,12 +77,12 @@ function Footer() {
                 </svg>
 
             </div>
-            <div className="w-[69%] mx-auto">
+            <div className="container mx-auto">
                 <h1 className="text-white font-syne font-semibold text-[42px]">
                     Contact <span className="text-yellow">Us</span>
                 </h1>
                 <form onSubmit={onSubmit}>
-                    <div className="flex">
+                    <div className="lg:flex">
                         {/* Left Section */}
                         <div className="w-[50%]">
                             <div className="flex gap-3 items-center mt-24">
@@ -141,7 +141,7 @@ function Footer() {
                             {/* File Upload */}
                             <button
                                 type="submit"
-                                className={`mt-[40px] text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                                className={`mt-[40px]  text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
                                     }`}
                                 disabled={result === "Sending..."}
                             >
@@ -150,7 +150,7 @@ function Footer() {
                         </div>
 
                         {/* Right Section */}
-                        <div className="mt-24 ml-8 w-[50%]">
+                        <div className="mt-24 ml-8 w-[50%] ">
                             <p className="text-white font-syne text-[15px] font-medium">
                                 Message <span className="text-yellow">Required</span>
                             </p>
@@ -186,7 +186,7 @@ function Footer() {
 
                 </form>
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
-                <div className='flex justify-between items-center'>
+                <div className='lg:flex lg:justify-between lg:items-center'>
                     <div>
                         <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'> Offering top-notch services in UI/UX Designing, Web Development, <br />Digital Marketing, and Bookkeeping to help businesses thrive with <br />creativity, precision, and strategy</p>
                         <div className='flex mt-[48px] gap-14'>
@@ -218,13 +218,13 @@ function Footer() {
                     <div className='w-[96%] h-[2px] bg-[#FFFFFF]/30'></div>
                     <div className='w-[2%] h-[2px] bg-yellow'></div>
                 </div>
-                <div className='flex justify-between items-center mt-[50px]'>
+                <div className='lg:flex lg:justify-between lg:items-center mt-[50px]'>
                     <ul className='flex gap-7 items-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>FaceBook</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Instagram</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Linkedin</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Twitter</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Youtube</li>
+                        <li className='font-syne text-[15px] font-normal text-white lg:block hidden'>Youtube</li>
                     </ul>
                     <ul className='flex gap-7 items-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>Terms and Conditions</li>
