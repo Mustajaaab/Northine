@@ -63,11 +63,11 @@ function Sec5() {
     const currentContent = slides[currentSlide];
 
     return (
-        <div className="w-[70%] mx-auto overflow-hidden">
+        <div className="container mx-auto overflow-hidden">
             <div className="flex justify-end w-[78%]">
                 <img src={Shades} alt="" className="w-[203px] h-[140px]" />
             </div>
-            <div className="flex justify-between items-center 3">
+            <div className="lg:flex lg:justify-between items-center 3">
                 <div>
                     <p className="flex gap-2 items-center">
                         <img src={Dot} alt="" className="w-[14px] h-[14px]" />
@@ -93,13 +93,13 @@ function Sec5() {
                 </div>
             </div>
             <div className={`mt-[90px] flex gap-[30px] ${animationClass}`}>
-                <div>
+                <div className="hidden lg:block">
                     <img
                         src={currentContent.mainImg}
                         alt=""
                         className="w-[645px] h-[400px] rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
                     />
-                    <div className="flex w-[645px] mt-5 justify-between">
+                    <div className="flex w-[645px] mt-5 lg:justify-between">
                         <div>
                             <h1 className="font-syne font-semibold text-[22px] leading-[30px]">
                                 {currentContent.mainTitle}
@@ -116,7 +116,7 @@ function Sec5() {
                         </p>
                     </div>
                 </div>
-                <div className="w-[315px]">
+                <div className="lg:block w-[315px] hidden">
                     <h1 className="font-syne font-semibold text-[22px] leading-[30px]">
                         {currentContent.sideTitle1}
                     </h1>

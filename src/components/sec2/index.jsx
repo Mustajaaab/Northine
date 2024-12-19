@@ -5,9 +5,6 @@ import Photo4 from '../../assets/images/4.png'
 import Photo5 from '../../assets/images/5.png'
 import Photo6 from '../../assets/images/6.png'
 import Shades from '../../assets/images/white-shades.png'
-import Cloud from '../../assets/images/cloud.png';
-import Bell from '../../assets/images/bell.png'
-import Setting from '../../assets/images/setting.png'
 import File from '../../assets/images/file.png'
 import Spark from '../../assets/images/spark.png'
 import Save from '../../assets/images/save.png'
@@ -38,14 +35,14 @@ function Sec2() {
             <div className='w-[70%] mx-auto'>
                 <h1 className='font-syne font-semibold text-[42px] leading-[58px]'>How We Can <span className='text-[#fdcb22]'>Help You</span></h1>
 
-                <div className='flex items-center gap-2 mt-14'>
-                    <div className='w-[50%]'>
+                <div className='lg:flex lg:items-center gap-2 mt-14 block'>
+                    <div className='lg:w-[50%]'>
                         <p className='font-syne font-semibold text-[22px] leading-8 w-[50%] '>IT Services</p>
                         <div className="flex gap-1 w-full mt-[60px] h-5">
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px] relative '>
+                        <div className='lg:flex gap-[121px] mt-[30px] relative '>
                             <CiCloud className='w-[45px] h-[45px] ml-[30px] z-10' />
                             <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
                             <div>
@@ -60,11 +57,9 @@ function Sec2() {
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px]'>
-                        <div className=' flex relative'>
-                            <CiBellOn className='w-[45px] h-[45px] ml-[31px] z-10'  />
-                            <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
-                        </div>
+                        <div className='lg:flex gap-[121px] mt-[30px] relative'>
+                        <CiBellOn className='w-[45px] h-[45px] ml-[31px] z-10'  />
+                        <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
                         <div>
                             <div className='flex gap-3'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>02</div>
@@ -78,7 +73,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
 
-                        <div className='flex gap-[121px] relative '>
+                        <div className='lg:flex gap-[121px] relative '>
                         <CiFolderOn className='w-[45px] h-[45px] ml-[31px] mt-7 z-10' />
                         <span className='w-5 h-5  bg-yellow rounded-full absolute top-12 left-16 '></span>
                         <div>
@@ -94,7 +89,7 @@ function Sec2() {
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div> 
-                        <div className='flex gap-[121px] mt-[30px]'>
+                        <div className='lg:flex gap-[121px] mt-[30px]'>
                         <img src={File} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
@@ -108,12 +103,12 @@ function Sec2() {
                     </div>
                 
                     <div>
-                        <p className='font-syne font-semibold text-[22px] leading-8'>IT Solutions</p>
+                        <p className='font-syne font-semibold text-[22px] leading-8 mt-16 lg:mt-0'>IT Solutions</p>
                         <div className="flex gap-1 w-full mt-[60px] h-5">
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px] relative'>
+                        <div className='lg:flex gap-[121px] mt-[30px] relative'>
                             <CiSettings className='w-[45px] h-[45px] ml-[31px] z-10' />
                             <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
                             <div>
@@ -128,7 +123,7 @@ function Sec2() {
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px]'>
+                        <div className='lg:flex gap-[121px] mt-[30px]'>
                         <img src={Spark} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
@@ -142,7 +137,7 @@ function Sec2() {
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px]'>
+                        <div className='lg:flex gap-[121px] mt-[30px]'>
                             <img src={Save} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                             <div>
                                 <div className='flex gap-3'>
@@ -156,7 +151,7 @@ function Sec2() {
                             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
-                        <div className='flex gap-[121px] mt-[30px]'>
+                        <div className='lg:flex gap-[121px] mt-[30px]'>
                         <img src={Save} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
