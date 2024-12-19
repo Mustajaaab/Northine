@@ -14,7 +14,6 @@ function Home() {
         <Navbar/>
         <Sec1/>
         <Sec2/>
-        <Slider1/>
         <Sec3/>
         <Sec4/>
         <Sec5/>

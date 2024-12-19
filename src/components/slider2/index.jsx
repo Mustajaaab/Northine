@@ -11,7 +11,7 @@ import Client1 from '../../assets/images/client1.jpg'
 import Client2 from '../../assets/images/client2.jpg'
 import Client3 from '../../assets/images/client3.jpg'
 import Client4 from '../../assets/images/client4.jpg'
-
+import SeeMoreText from "../seemore/seemore"
 const Slider2 = () => {
   // Create a reference for the Swiper instance
   const swiperRef = useRef(null);
@@ -20,15 +20,15 @@ const Slider2 = () => {
     {
       img: Comma,
       img2: Stars,
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      client: "Tamzyn French",
-      work: "Agency",
+      text: "Irfan is absolutely one of the best designers I know. Without a doubt. It has been an honor to work with some-one of such high integrity, kindness and so committed to our mutual success. He not only designs, He does research, spends time in understanding and implementing with great attention to every detail. Additionally, Irfan puts his heart and soul into his work. He gives you everything he’s got when he gets into a project. Just hire him and you’ll agree!",
+      client: "Kaies H. | Associate, Executive Director",
+      work: "Sustainable Marketplace MVP Product. May 2023",
       icon: Client1 ,
     },
     {
       img: Comma,
       img2: Stars,
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      text: "Jami is highly responsive and enthusiastic about her work. Willing to contribute ideas and is also open to feedback. Great experience working with her!",
       client: "Margaret Williams",
       work: "Agency",
       icon: Client2 ,
@@ -36,7 +36,7 @@ const Slider2 = () => {
     {
       img: Comma,
       img2: Stars,
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      text: "I had the pleasure of working with Kashif, and I couldn't be happier with the results. From start to finish, he demonstrated exceptional professionalism, expertise, and attention to detail. Kashif was communicative, always available to address my questions, and delivered high-quality work that exceeded my expectations. The project was completed ahead of schedule, and his creative insights added tremendous value. I highly recommend Kashif to anyone looking for a skilled, reliable, and dedicated pro. I look forward to working together on future projects!",
       client: "Tarryyn Gillies",
       work: "Agency",
       icon: Client3 ,
@@ -44,7 +44,7 @@ const Slider2 = () => {
     {
       img: Comma,
       img2: Stars,
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      text: "Another amazing experience with Shazmeen. Great work as usual! Very knowledgeable, easy to work with, and always ready to get work feedback on how to improve. I'll never hesitate to hire and work with her.",
       client: "Tamzyn French",
       work: "Agency",
       icon: Client4 ,
@@ -104,6 +104,7 @@ const Slider2 = () => {
   }}
   className="mySwiper mt-10 w-full"
 >
+
   {slides.map((slide, index) => (
     <SwiperSlide key={index} >
       <div className=" overflow-hidden">
@@ -112,9 +113,9 @@ const Slider2 = () => {
             <img src={slide.img2} alt='' className="w-[110px] h-[25px]"/>
         </div>
         <div>
-          <h3 className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-[361px] mt-7">
-            {slide.text}
-          </h3>
+          <div className="mt-7">
+          <SeeMoreText text={slide.text} maxLength={0} className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-[361px]" />
+          </div>
           <div className="flex mt-8 gap-5 mb-[120px]">
             <img src={slide.icon} alt="" className="w-[55px] h-[55px] rounded-full grayscale hover:grayscale-0 duration-300 ease-in-out"/>
             <div>

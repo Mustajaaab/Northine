@@ -13,12 +13,12 @@ function Sec4() {
                     setIsVisible(true);
 
                     setSkillPercentages([
-                        65, 
+                        85, 
                         90, 
                         50,
-                        95,
-                        60, 
-                        90, 
+                        70,
+                        50, 
+                        65, 
                         80,
                     ]);
                 }
@@ -46,24 +46,21 @@ function Sec4() {
                     Technology
                 </h1>
                 <p className="text-[#121820]/40 font-syne text-[15px] leading-[25.5px]">
-                    It is a long established fact that a reader will be distracted by the
-                    readable content of a <br />
-                    page when looking at its layout. The point of using Lorem Ipsum is
-                    that it has a more- <br />
-                    or-less normal distribution of letters, as opposed to using content
-                    here.
+                Achieve success with digital solution tech. Our digital <br />web solutions improve your online presence. At NorthNine <br />we offer digital learning solutions to boost skills and growth. <br />As a leading digital solutions company, we provide custom solutions <br />to meet your needs. Partner with digital solutions pvt ltd <br />for reliable results.
                 </p>
             </div>
             <div className="w-[69%] mx-auto pt-[89px]">
-                <div className="flex justify-between">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Software Development", index: 0 },
+                        { title: "Data Science & Ai", index: 0 },
                         { title: "Web Development", index: 1 },
                         { title: "UI / UX Design", index: 2 },
-                        { title: "App Development", index: 3 },
+                        { title: " Bookkeeping", index: 3 },
+                        { title: "Digital Marketing ", index: 4 },
+                        { title: "Graphic Designing", index: 5 },
                     ].map((skill, idx) => (
-                        <div key={idx} className="w-[20%]">
-                            <h4 className="font-syne font-semibold text-base">{skill.title}</h4>
+                        <div key={idx} className="">
+                            <h4 className="font-syne font-bold text-lg">{skill.title}</h4>
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
@@ -91,41 +88,8 @@ function Sec4() {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-between mt-[60px]">
-                    {[
-                        { title: "Internet of Things", index: 4 },
-                        { title: "Artificial Intelligence", index: 5 },
-                        { title: "Blockchain", index: 6 },
-                    ].map((skill, idx) => (
-                        <div key={idx} className="w-[20%]">
-                            <h4 className="font-syne font-semibold text-base">{skill.title}</h4>
-                            <div className="flex mt-[30px]">
-                                <div className="flex items-center w-[90%] gap-[1px]">
-                                    <div
-                                        className={`h-[2px] bg-yellow`}
-                                        style={{
-                                            width: `${skillPercentages[skill.index]}%`,
-                                            transition: "width 3s ease-in-out",
-                                        }}
-                                    ></div>
-                                     <div className="w-3 h-3 bg-yellow rounded-full"></div>
-                                    <div
-                                        className={`h-[2px] bg-[#121820]/40`}
-                                        style={{
-                                            width: `${100 - skillPercentages[skill.index]}%`,
-                                            transition: "width 3s ease-in-out",
-                                        }}
-                                    ></div>
-                                </div>
-                                <div className="flex justify-end w-[20%]">
-                                    <p className="font-sans text-[#121820]/40 text-[13px]">
-                                        {skillPercentages[skill.index]}%
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                    <div className="w-[20%] flex justify-center items-end">
+                
+                <div className="flex justify-end my-14">
                         <div className="flex items-center gap-[14px] group">
                             <button className="font-syne font-semibold text-base group-hover:text-yellow ease-in-out duration-300 group-hover:scale-110">
                                 More
@@ -134,7 +98,6 @@ function Sec4() {
                                 🡺
                             </button>
                         </div>
-                    </div>
                 </div>
             </div>
             <div className="w-[69%] flex mx-auto mt-[152px] pb-3 gap-1">

@@ -8,7 +8,7 @@ function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const getActiveClass = (path) => {
-        return location.pathname === path ? 'text-yellow border-b border-yellow' : 'text-white';
+        return location.pathname === path ? 'text-yellow lg:border-b border-yellow' : 'text-white';
     };
 
     const toggleMenu = () => {
@@ -16,15 +16,15 @@ function Navbar() {
     };
 
     return (
-        <div className="w-full mx-auto items-center h-[80px] fixed bg-[#121820] z-50">
+        <div className="w-full mx-auto items-center h-[110px] lg:h-[80px] fixed bg-[#121820] z-50">
             <div className="container mx-auto flex items-center justify-between mt-4">
-                <img src={Northnine} alt="Northnine Logo" className="w-[186px] h-[50px]" />
+                <img src={Northnine} alt="Northnine Logo" className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[286px] h-[80px] ml-5" />
 
                 {/* Hamburger Icon for Small Screens */}
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-7 h-7 text-white cursor-pointer"
+                        className="w-20 h-20 md:w-14 md:h-14 text-white cursor-pointer mr-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -47,37 +47,37 @@ function Navbar() {
                 >
                     <Link
                         to="/home"
-                        className={`${getActiveClass('/home')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/home')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className={`${getActiveClass('/about')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/about')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         About Us
                     </Link>
                     <Link
                         to="/team"
-                        className={`${getActiveClass('/team')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/team')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         Team
                     </Link>
                     <Link
                         to="/services"
-                        className={`${getActiveClass('/services')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/services')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         Services
                     </Link>
                     <Link
                         to="/case-studies"
-                        className={`${getActiveClass('/case-studies')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/case-studies')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         Case Studies
                     </Link>
                     <Link
                         to="/contact-us"
-                        className={`${getActiveClass('/contact-us')} block font-syne font-semibold hover:text-yellow py-2 lg:py-0`}
+                        className={`${getActiveClass('/contact-us')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
                     >
                         Contact Us
                     </Link>
