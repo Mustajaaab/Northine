@@ -2,6 +2,8 @@ import { useState } from "react";
 import No9 from "../../assets/images/no9.png";
 import Googleplay from "../../assets/images/googleplay.png";
 import Appstore from "../../assets/images/appstore.png";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 function Footer() {
     const [form, setForm] = useState({
@@ -11,8 +13,14 @@ function Footer() {
         message: "",
         agree: false,
     });
+    const [input, setInput] = useState({
+        countryCode: "pk",
+        value: "",
+        id: 1,
+    });
     const [file, setFile] = useState(null);
     const [result, setResult] = useState("");
+    const [errors, setErrors] = useState({});
 
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -20,19 +28,55 @@ function Footer() {
             ...prev,
             [name]: type === "checkbox" ? checked : value,
         }));
+        setErrors((prev) => ({
+            ...prev,
+            [name]: "", // Clear error for the current field on change
+        }));
     };
 
+    const validateForm = () => {
+        const newErrors = {};
+
+        if (!form.name.trim()) {
+            newErrors.name = "Name is required.";
+        }
+
+        if (!form.email.trim()) {
+            newErrors.email = "Email is required.";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+            newErrors.email = "Please enter a valid email address.";
+        }
+
+        if (input.value && !/^\d+$/.test(input.value)) {
+            newErrors.phone = "Phone number must contain only digits.";
+        }
+
+        if (!form.message.trim()) {
+            newErrors.message = "Message is required.";
+        }
+
+        if (!form.agree) {
+            newErrors.agree = "You must agree to the terms.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        setResult("Sending...");
 
+        if (!validateForm()) {
+            return;
+        }
+
+        setResult("Sending...");
 
         const formData = new FormData();
         formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
         formData.append("name", form.name);
         formData.append("email", form.email);
-        formData.append("phone", form.phone);
+        formData.append("phone", input.value);
         formData.append("message", form.message);
         formData.append("agree", form.agree);
 
@@ -56,10 +100,19 @@ function Footer() {
                 message: "",
                 agree: false,
             });
+            setInput({ countryCode: "pk", value: "", id: 1 });
             setFile(null);
         } else {
             setResult("Error: " + data.message);
         }
+    };
+
+    const handlePhoneChange = (id, phone) => {
+        setInput({ ...input, value: phone });
+        setErrors((prev) => ({
+            ...prev,
+            phone: "",
+        }));
     };
 
     return (
@@ -77,13 +130,12 @@ function Footer() {
                 </svg>
 
             </div>
-            <div className="w-[69%] mx-auto">
+            <div className="container mx-auto">
                 <h1 className="text-white font-syne font-semibold text-[42px]">
                     Contact <span className="text-yellow">Us</span>
                 </h1>
                 <form onSubmit={onSubmit}>
-                    <div className="flex">
-                        {/* Left Section */}
+                    <div className="lg:flex">
                         <div className="w-[50%]">
                             <div className="flex gap-3 items-center mt-24">
                                 <p className="text-white font-syne font-medium text-[15px]">
@@ -102,6 +154,7 @@ function Footer() {
                                 className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
                                 required
                             />
+                            {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name}</p>}
 
                             <div className="flex gap-3 items-center mt-[30px]">
                                 <p className="text-white font-syne font-medium text-[15px]">
@@ -120,8 +173,9 @@ function Footer() {
                                 className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
                                 required
                             />
+                            {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
 
-                            <div className="flex gap-3 items-center mt-[30px]">
+                            <div className="flex gap-3 items-center my-6">
                                 <p className="text-white font-syne font-medium text-[15px]">
                                     Phone
                                 </p>
@@ -129,16 +183,33 @@ function Footer() {
                                     Optional
                                 </p>
                             </div>
-                            <input
-                                type="number"
-                                name="phone"
-                                value={form.phone}
-                                onChange={handleInputChange}
-                                placeholder="Enter your phone"
-                                className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
+                            <PhoneInput
+                                country={input.countryCode}
+                                value={input.value}
+                                onChange={(phone) => handlePhoneChange(input.id, phone)}
+                                containerClass="flex w-full items-center bg-[#181E26] rounded-md"
+                                inputStyle={{
+                                    border: 'none',
+                                    boxShadow: 'none',
+                                    width: '100%',
+                                    outline: 'none',
+                                    padding: '10px',
+                                    background: "#181E26",
+                                    height: "50px",
+                                }}
+                                inputClass="placeholder-gray-500 pl-5"
+                                dropdownStyle={{
+                                    backgroundColor: "#181E26",
+                                    border: "1px solid #333",
+                                    borderRadius: "0.375rem",
+                                    color: "#fff",
+                                }}
+                                placeholder="Phone number"
+                                autoFormat
+                                disableCountryCode={false}
                             />
+                            {errors.phone && <p className="text-red-500 text-sm mt-2">{errors.phone}</p>}
 
-                            {/* File Upload */}
                             <button
                                 type="submit"
                                 className={`mt-[40px] text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
@@ -149,7 +220,6 @@ function Footer() {
                             </button>
                         </div>
 
-                        {/* Right Section */}
                         <div className="mt-24 ml-8 w-[50%]">
                             <p className="text-white font-syne text-[15px] font-medium">
                                 Message <span className="text-yellow">Required</span>
@@ -162,6 +232,7 @@ function Footer() {
                                 className="text-base p-2 mt-5 w-full bg-[#181E26] h-[295px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1 resize-none"
                                 required
                             />
+                            {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
 
                             <p className="font-syne font-normal text-[13px] text-white/50 pt-[30px]">
                                 We will process your personal information in accordance with our
@@ -180,10 +251,9 @@ function Footer() {
                                     events and services.
                                 </label>
                             </div>
+                            {errors.agree && <p className="text-red-500 text-sm mt-2">{errors.agree}</p>}
                         </div>
-
                     </div>
-
                 </form>
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
                 <div className='flex justify-between items-center'>
