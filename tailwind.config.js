@@ -24,6 +24,7 @@ export default {
         gradientEnd: '#121820',
         primaryOrange: '#f57000',
         yellow: '#fdcb22',
+        dropdownBg: '#181E26',
       },
     },
   },
