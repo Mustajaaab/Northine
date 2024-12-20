@@ -30,7 +30,7 @@ function Footer() {
         }));
         setErrors((prev) => ({
             ...prev,
-            [name]: "", // Clear error for the current field on change
+            [name]: "",
         }));
     };
 
