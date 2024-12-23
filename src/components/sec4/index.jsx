@@ -35,18 +35,18 @@ function Sec4() {
     }, []);
 
     return (
-        <div id="sec4" className="container mx-auto">
+        <div id="sec4" className="lg:container w-[95%] mx-auto">
             <div className=" flex items-center gap-2 mt-[120px]">
                 <div className='w-2 h-2 bg-yellow rounded-full'> </div>
                 <p className="font-syne text-base font-medium">Our Skill</p>
             </div>
             <div className=" lg:flex justify-between mt-7 items-end">
-                <h1 className="font-syne font-semibold text-[42px] leading-[58px]">
+                <h1 className="font-syne font-semibold lg:text-[42px] text-[32px] lg:leading-[58px] leading-[45px]">
                     Business <span className="text-yellow">Success</span> With <br />
                     Technology
                 </h1>
-                <p className="text-[#121820]/40 font-syne text-[15px] leading-[25.5px]">
-                Achieve success with digital solution tech. Our digital <br />web solutions improve your online presence. At NorthNine <br />we offer digital learning solutions to boost skills and growth. <br />As a leading digital solutions company, we provide custom solutions <br />to meet your needs. Partner with digital solutions pvt ltd <br />for reliable results.
+                <p className="text-[#121820]/40 font-syne text-[18px] leading-[25.5px] lg:w-[44%] lg:mt-0 mt-7">
+                Achieve success with digital solution tech. Our digital web solutions improve your online presence. At NorthNine we offer digital learning solutions to boost skills and growth. As a leading digital solutions company, we provide custom solutions to meet your needs. Partner with digital solutions pvt ltd for reliable results.
                 </p>
             </div>
             <div className="pt-[89px]">
