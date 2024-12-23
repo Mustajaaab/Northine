@@ -6,6 +6,8 @@ import pandas as pd
 from tqdm import tqdm
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from sklearn.model_selection import train_test_split
+
 # TPU Setup
 try:
     tpu = tf.distribute.cluster_resolver.TPUClusterResolver()
@@ -79,3 +81,7 @@ max_target_len = max(len(seq) for seq in target_sequences)
 
 input_sequences = pad_sequences(input_sequences, maxlen=max_input_len, padding='post')
 target_sequences = pad_sequences(target_sequences, maxlen=max_target_len, padding='post')
+
+input_train, input_val, target_train, target_val = train_test_split(
+    input_sequences, target_sequences, test_size=0.2, random_state=42
+)
