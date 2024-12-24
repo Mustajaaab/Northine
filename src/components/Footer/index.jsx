@@ -184,32 +184,42 @@ function Footer() {
                                     Optional
                                 </p>
                             </div>
-                            <PhoneInput
-                                country={input.countryCode}
-                                value={input.value}
-                                onChange={(phone) => handlePhoneChange(input.id, phone)}
-                                containerClass="flex w-full items-center bg-[#181E26] rounded-md"
-                                inputStyle={{
-                                    border: 'none',
-                                    boxShadow: 'none',
-                                    width: '100%',
-                                    outline: 'none',
-                                    padding: '10px',
-                                    background: "#181E26",
-                                    height: "50px",
-                                }}
-                                inputClass="placeholder-gray-500 pl-5"
-                                dropdownStyle={{
-                                    backgroundColor: "#181E26",
-                                    border: "1px solid #333",
-                                    borderRadius: "0.375rem",
-                                    color: "#fff",
-                                }}
-                                placeholder="Phone number"
-                                autoFormat
-                                disableCountryCode={false}
-                            />
-                            {errors.phone && <p className="text-red-500 text-sm mt-2">{errors.phone}</p>}
+                                <div role="group" aria-labelledby="phone-input-label">
+                                    <PhoneInput
+                                        country={input.countryCode}
+                                        value={input.value}
+                                        onChange={(phone) => handlePhoneChange(input.id, phone)}
+                                        containerClass={`flex w-full items-center rounded-md  ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                                            } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
+                                        inputStyle={{
+                                            border: 'none',
+                                            boxShadow: 'none',
+                                            width: '100%',
+                                            outline: 'none',
+                                            padding: '10px 50px',
+                                            color: "white",
+                                            background: "#181E26",
+                                            height: "50px",
+                                        }}
+                                        inputClass="placeholder-gray-500"
+                                        dropdownStyle={{
+                                            backgroundColor: "#181E26",
+                                            border: "1px solid #333",
+                                            borderRadius: "0.375rem",
+                                            color: "#fff",
+                                        }}
+                                        placeholder="Phone number"
+                                        autoFormat
+                                        disableCountryCode={false}
+                                        aria-invalid={!!errors.phone}
+                                    />
+                                    {errors.phone && (
+                                        <p id="phone-input-error" className="text-red-500 text-sm mt-2">
+                                            {errors.phone}
+                                        </p>
+                                    )}
+                                </div>
+
 
                             <button
                                 type="submit"
