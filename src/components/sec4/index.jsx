@@ -60,7 +60,7 @@ function Sec4() {
                         { title: "Graphic Designing", index: 5 },
                     ].map((skill, idx) => (
                         <div key={idx} className="">
-                            <h4 className="font-syne font-bold text-lg">{skill.title}</h4>
+                            <h4 className="font-syne     font-bold text-lg">{skill.title}</h4>
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
@@ -89,7 +89,7 @@ function Sec4() {
                     ))}
                 </div>
                 
-                <div className="flex justify-end my-14">
+                <div className="flex justify-center lg:justify-end my-14">
                         <div className="flex items-center gap-[14px] group">
                             <button className="font-syne font-semibold text-base group-hover:text-yellow ease-in-out duration-300 group-hover:scale-110">
                                 More
