@@ -1,3 +1,4 @@
+import '../../App.css';
 import { useState } from "react";
 import No9 from "../../assets/images/no9.png";
 import Googleplay from "../../assets/images/googleplay.png";
@@ -184,43 +185,42 @@ function Footer() {
                                     Optional
                                 </p>
                             </div>
-                                <div role="group" aria-labelledby="phone-input-label">
-                                    <PhoneInput
-                                        country={input.countryCode}
-                                        value={input.value}
-                                        onChange={(phone) => handlePhoneChange(input.id, phone)}
-                                        containerClass={`flex w-full items-center rounded-md  ${errors.phone ? 'border-red-500' : 'border-gray-300'
-                                            } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
-                                        inputStyle={{
-                                            border: 'none',
-                                            boxShadow: 'none',
-                                            width: '100%',
-                                            outline: 'none',
-                                            padding: '10px 50px',
-                                            color: "white",
-                                            background: "#181E26",
-                                            height: "50px",
-                                        }}
-                                        inputClass="placeholder-gray-500"
-                                        dropdownStyle={{
-                                            backgroundColor: "#181E26",
-                                            border: "1px solid #333",
-                                            borderRadius: "0.375rem",
-                                            color: "#fff",
-                                        }}
-                                        placeholder="Phone number"
-                                        autoFormat
-                                        disableCountryCode={false}
-                                        aria-invalid={!!errors.phone}
-                                    />
-                                    {errors.phone && (
-                                        <p id="phone-input-error" className="text-red-500 text-sm mt-2">
-                                            {errors.phone}
-                                        </p>
-                                    )}
-                                </div>
-
-
+                            <PhoneInput
+                                country={input.countryCode}
+                                value={input.value}
+                                onChange={(phone) => handlePhoneChange(input.id, phone)}
+                                containerClass={`flex w-full items-center rounded-md border-b ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                                    } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
+                                inputStyle={{
+                                    border: 'none',
+                                    boxShadow: 'none',
+                                    width: '100%',
+                                    outline: 'none',
+                                    padding: '10px 50px',
+                                    color: 'white',
+                                    background: '#181E26',
+                                    height: '50px',
+                                }}
+                                inputClass="placeholder-gray-500"
+                                dropdownStyle={{
+                                    backgroundColor: '#181E26',
+                                    border: '1px solid #333',
+                                    borderRadius: '0.375rem',
+                                    color: '#fff',
+                                    maxHeight: '200px',
+                                    overflowY: 'auto',
+                                }}
+                                placeholder="Phone number"
+                                autoFormat
+                                disableCountryCode={false}
+                                aria-invalid={!!errors.phone}
+                                aria-describedby="phone-input-error"
+                            />
+                            {errors.phone && (
+                                <p id="phone-input-error" className="text-red-500 text-sm mt-2">
+                                    {errors.phone}
+                                </p>
+                            )}
                             <button
                                 type="submit"
                                 className={`mt-[40px]  text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""

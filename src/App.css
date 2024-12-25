@@ -37,3 +37,15 @@
   animation: slideOut 1s ease-in-out forwards;
 }
 
+.react-tel-input .flag-dropdown {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    padding: 0 !important;
+    background-color: #181E26 !important;
+    border-radius: 3px 0 0 3px !important;
+    color: #fff !important; 
+}
+
+
+
