@@ -37,14 +37,28 @@
   animation: slideOut 1s ease-in-out forwards;
 }
 
-.react-tel-input .flag-dropdown {
+.flag-dropdown {
     position: absolute !important;
     top: 0 !important;
     bottom: 0 !important;
     padding: 0 !important;
     background-color: #181E26 !important;
-    border-radius: 3px 0 0 3px !important;
-    color: #fff !important; 
+    border: none !important;
+}
+
+.selected-flag {
+  background: #181E26 !important;
+}
+
+.country.highlight{
+  background-color: #fdcb22;
+  color: black;
+  font-weight: 500;
+}
+.country:hover{
+  background-color: #fdcb22 !important;
+  color: black;
+  font-weight: 500;
 }
 
 
