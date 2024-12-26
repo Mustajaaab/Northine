@@ -114,6 +114,9 @@ target_val = target_val.reshape(target_val.shape[0], target_val.shape[1], 1)
 #Model Training
 #Train the model using the prepared data
 
+BATCH_SIZE = 32  # Start with 32
+EPOCHS = 20      # Start with 20 epochs and adjust as needed
+
 history = model.fit(
     [input_train, target_train[:, :-1]], 
     target_train[:, 1:], 
