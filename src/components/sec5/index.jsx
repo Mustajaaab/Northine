@@ -92,7 +92,7 @@ function Sec5() {
                     </button>
                 </div>
             </div>
-            <div className={`mt-[90px] flex gap-[30px] ${animationClass}`}>
+            <div className={`mt-[90px] flex gap-[30px] mx-auto ${animationClass}`}>
                 <div className="hidden lg:block">
                     <img
                         src={currentContent.mainImg}

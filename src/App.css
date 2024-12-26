@@ -30,11 +30,11 @@
 }
 
 .slide-in {
-  animation: slideIn 1s ease-in-out forwards;
+  animation: slideIn 0.8s ease-in-out forwards;
 }
 
 .slide-out {
-  animation: slideOut 1s ease-in-out forwards;
+  animation: slideOut 0.8s ease-in-out forwards;
 }
 
 .react-tel-input .flag-dropdown {

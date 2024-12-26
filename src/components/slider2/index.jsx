@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
-import "swiper/css"; // Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { useRef } from "react"; // For controlling Swiper externally
+import { useRef } from "react"; 
 import Dot from '../../assets/images/dot.png'
 import Stars from '../../assets/images/stars.png'
 import Comma from '../../assets/images/commas.png'
@@ -13,7 +13,7 @@ import Client3 from '../../assets/images/client3.jpg'
 import Client4 from '../../assets/images/client4.jpg'
 import SeeMoreText from "../seemore/seemore"
 const Slider2 = () => {
-  // Create a reference for the Swiper instance
+ 
   const swiperRef = useRef(null);
 
   const slides = [
@@ -73,29 +73,35 @@ const Slider2 = () => {
 
       {/* Swiper slider */}
       <Swiper
-  slidesPerView={3} // Number of slides visible at a time
-  spaceBetween={20} // Space between slides
-  navigation={false} // Disable built-in navigation
+  slidesPerView={3}
+  spaceBetween={20} 
+  navigation={false} 
   pagination={{ clickable: true, el: null }}
   modules={[Navigation, Pagination]}
-  onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-  slidesOffsetBefore={290} // Add gap before the first slide
+  onSwiper={(swiper) => (swiperRef.current = swiper)} 
+  slidesOffsetBefore={290} 
   slidesOffsetAfter={290} 
-  speed={1000} // Add gap after the last slide
+  speed={1000} 
   breakpoints={{
     640: {
       slidesPerView: 1,
       spaceBetween: 20,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
+      slidesOffsetBefore: 30,
+      slidesOffsetAfter: 30,
     },
     1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      slidesOffsetBefore: 30,
+      slidesOffsetAfter: 30,
+    },
+    1536: {
       slidesPerView: 4,
       spaceBetween: 80,
       slidesOffsetBefore: 290,
