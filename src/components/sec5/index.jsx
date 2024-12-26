@@ -145,14 +145,21 @@ function Sec5() {
                 </div>
             </div>
 
-            <div className="flex gap-[14px] items-center group mt-[90px] mb-[120px]">
-                <button className="font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110">
+            <div className="inline-flex gap-[14px] items-center group mt-[90px] mb-[120px]">
+                <button
+                    className="font-syne font-semibold text-base ease-out duration-300 group-hover:text-yellow group-hover:scale-105"
+                    aria-label="View More Insights"
+                >
                     View More Insights
                 </button>
-                <button className="w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110">
+                <div
+                    className="w-8 h-8 flex items-center justify-center rounded-full text-white bg-yellow ease-out duration-300 group-hover:bg-black group-hover:scale-105"
+                    aria-label="Next Arrow"
+                >
                     🡺
-                </button>
+                </div>
             </div>
+
         </div>
     );
 }
