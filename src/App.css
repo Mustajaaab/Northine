@@ -51,7 +51,7 @@
 }
 
 .country.highlight{
-  background-color: #fdcb22;
+  background-color: #fdcb22 !important;
   color: black;
   font-weight: 500;
 }
