@@ -106,3 +106,18 @@ model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 # Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.summary()
+#Data Preparation for Training
+#Reshape the target data for the decoder.
+target_train = target_train.reshape(target_train.shape[0], target_train.shape[1], 1)
+target_train = target_train.reshape(target_train.shape[0], target_train.shape[1], 1)
+target_val = target_val.reshape(target_val.shape[0], target_val.shape[1], 1)
+#Model Training
+#Train the model using the prepared data
+
+history = model.fit(
+    [input_train, target_train[:, :-1]], 
+    target_train[:, 1:], 
+    batch_size=BATCH_SIZE, 
+    epochs=EPOCHS, 
+    validation_data=([input_val, target_val[:, :-1]], target_val[:, 1:])
+)
