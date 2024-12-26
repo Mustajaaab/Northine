@@ -53,18 +53,18 @@ const Slider2 = () => {
 
   return (
     <div className="py-8 bg-[#121820]/5 pt-[120px]">
-      <div className="container mx-auto">
+      <div className="lg:container w-[95%] mx-auto">
         <div className="lg:flex lg:justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <img src={Dot} alt="" className="w-2 h-2" />
+              <img src={Dot} alt="" className="w-4 h-4" />
               <p className="font-syne font-medium text-base leading-[25px]">Testimonial</p>
             </div>
             <h1 className="font-syne font-semibold text-[42px] mt-8">
               What Our <span className="text-[#F57C00]">Clients</span> Say
             </h1>
           </div>
-          <div className="flex gap-[30px] mt-14">
+          <div className="flex gap-[30px] mt-14 justify-center lg:justify-start">
             <button
               className="font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110"
               onClick={() => swiperRef.current?.slidePrev()}
@@ -83,58 +83,69 @@ const Slider2 = () => {
 
       {/* Swiper slider */}
       <Swiper
-  slidesPerView={3} // Number of slides visible at a time
-  spaceBetween={20} // Space between slides
+  slidesPerView={1} // Default slides visible at a time for smallest screens
+  spaceBetween={10} // Default space between slides for smallest screens
   navigation={false} // Disable built-in navigation
   pagination={{ clickable: true, el: null }}
   modules={[Navigation, Pagination]}
   onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
-  slidesOffsetBefore={290} // Add gap before the first slide
-  slidesOffsetAfter={290} 
-  speed={1000} // Add gap after the last slide
+  speed={1000} // Animation speed
   breakpoints={{
     640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
+      slidesPerView: 1.5, // 1.5 slides visible on small screens
+      spaceBetween: 15, // Smaller space between slides
+      slidesOffsetBefore: 10,
+      slidesOffsetAfter: 10,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
+      slidesPerView: 2, // 2 slides visible on medium screens
+      spaceBetween: 20,
+      slidesOffsetBefore: 20,
+      slidesOffsetAfter: 20,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 80,
-      slidesOffsetBefore: 290,
-      slidesOffsetAfter: 290,
+      slidesPerView: 3, // 3 slides visible on large screens
+      spaceBetween: 30,
+      slidesOffsetBefore: 40,
+      slidesOffsetAfter: 40,
+    },
+    1280: {
+      slidesPerView: 4, // 4 slides visible on extra-large screens
+      spaceBetween: 40,
+      slidesOffsetBefore: 60,
+      slidesOffsetAfter: 60,
     },
   }}
   className="mySwiper mt-10 w-full"
 >
-
   {slides.map((slide, index) => (
-    <SwiperSlide key={index} >
-      <div className=" overflow-hidden">
-        <div className="flex gap-5 items-center">
-            <img src={slide.img} alt='' className="w-[25px] h-[21px]"/>
-            <img src={slide.img2} alt='' className="w-[110px] h-[25px]"/>
+    <SwiperSlide key={index}>
+      <div className="overflow-hidden">
+        <div className="flex gap-10  items-center">
+          <img src={slide.img} alt="" className="w-[25px] h-[21px]" />
+          <img src={slide.img2} alt="" className="w-[110px] h-[25px]" />
         </div>
         <div>
           <div className="mt-7">
-          <SeeMoreText text={slide.text} maxLength={150} className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-[361px]" />
+            <SeeMoreText
+              text={slide.text}
+              maxLength={150}
+              className="font-normal text-[15px] text-[#121820]/40 font-syne leading-[25px] w-full md:w-[361px]"
+            />
           </div>
           <div className="flex mt-8 gap-5 mb-[120px]">
-            <img src={slide.icon} alt="" className="w-[55px] h-[55px] rounded-full grayscale hover:grayscale-0 duration-300 ease-in-out"/>
+            <img
+              src={slide.icon}
+              alt=""
+              className="w-[55px] h-[55px] rounded-full grayscale hover:grayscale-0 duration-300 ease-in-out"
+            />
             <div>
-                <p className="text-base mb-2 font-syne font-semibold">
-                    {slide.client}
-                </p>
-                <p className="text-[15px] font-normal font-syne text-[#121820]/40">
-                    {slide.work}
-                </p>
+              <p className="text-base mb-2 font-syne font-semibold">
+                {slide.client}
+              </p>
+              <p className="text-[15px] font-normal font-syne text-[#121820]/40">
+                {slide.work}
+              </p>
             </div>
           </div>
         </div>
@@ -142,6 +153,7 @@ const Slider2 = () => {
     </SwiperSlide>
   ))}
 </Swiper>
+
 
 
     </div>

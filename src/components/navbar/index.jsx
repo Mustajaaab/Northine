@@ -61,14 +61,14 @@ function Navbar() {
                 <img
                     src={Northnine}
                     alt="Northnine Logo"
-                    className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[206px] h-[60px]"
+                    className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[126px] h-[30px]"
                 />
 
                 {/* Hamburger Icon for Small Screens */}
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-16 h-16 md:w-14 md:h-14 text-white cursor-pointer"
+                        className="w-7 h-7 md:w-14 md:h-14 text-white cursor-pointer"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -87,20 +87,20 @@ function Navbar() {
                 <div
                     className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-[80px] right-0 bg-[#121820] w-full lg:w-auto`}
                 >
-                    <Link to="/home" className={`${getActiveClass('/home')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>Home</Link>
-                    <Link to="/about" className={`${getActiveClass('/about')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>About Us</Link>
-                    <Link to="/team" className={`${getActiveClass('/team')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>Team</Link>
-                    <Link to="/services" className={`${getActiveClass('/services')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>Services</Link>
-                    <Link to="/case-studies" className={`${getActiveClass('/case-studies')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>Case Studies</Link>
-                    <Link to="/contact-us" className={`${getActiveClass('/contact-us')} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}>Contact Us</Link>
+                    <Link to="/home" className={`${getActiveClass('/home')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Home</Link>
+                    <Link to="/about" className={`${getActiveClass('/about')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>About Us</Link>
+                    <Link to="/team" className={`${getActiveClass('/team')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Team</Link>
+                    <Link to="/services" className={`${getActiveClass('/services')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Services</Link>
+                    <Link to="/case-studies" className={`${getActiveClass('/case-studies')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Case Studies</Link>
+                    <Link to="/contact-us" className={`${getActiveClass('/contact-us')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 pb-4 lg:py-0`}>Contact Us</Link>
                 </div>
 
                 {/* Search Bar */}
-                <form onSubmit={handleSearchSubmit} className="lg:flex items-center space-x-2">
+                <form onSubmit={handleSearchSubmit} className="lg:flex items-center space-x-2 ">
                     <div className="flex items-center border border-gray-600 rounded-full bg-[#1e2832] group focus-within:border-yellow">
                         <button type="submit" className="text-yellow group-focus:text-white pl-3">
                             <svg
-                                className="h-5 w-5 text-white group-focus:text-yellow ease-in-out duration-300 cursor-pointer"
+                                className="h-4 w-4 text-white group-focus:text-yellow ease-in-out duration-300 cursor-pointer"
                                 fill="currentColor"
                                 viewBox="0 0 21 20"
                                 xmlns="http://www.w3.org/2000/svg"

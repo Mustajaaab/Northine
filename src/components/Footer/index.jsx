@@ -131,15 +131,15 @@ function Footer() {
                 </svg>
 
             </div>
-            <div className="container mx-auto">
-                <h1 className="text-white font-syne font-semibold text-[42px]">
+            <div className="lg:container mx-auto w-[90%]">
+                <h1 className="text-white font-syne font-semibold text-[42px] mt-6 lg:mt-0">
                     Contact <span className="text-yellow">Us</span>
                 </h1>
                 <form onSubmit={onSubmit}>
-                    <div className="flex">
+                    <div className="lg:flex">
                         {/* Left Section */}
-                        <div className="w-[50%]">
-                            <div className="flex gap-3 items-center mt-24">
+                        <div className="lg:w-[50%]">
+                            <div className="flex gap-3 items-center lg:mt-24 mt-14">
                                 <p className="text-white font-syne font-medium text-[15px]">
                                     Name
                                 </p>
@@ -231,7 +231,7 @@ function Footer() {
                         </div>
 
                         {/* Right Section */}
-                        <div className="mt-24 ml-8 w-[50%]">
+                        <div className="mt-24 lg:ml-8 lg:w-[50%]">
                             <p className="text-white font-syne text-[15px] font-medium">
                                 Message <span className="text-yellow">Required</span>
                             </p>
@@ -249,7 +249,7 @@ function Footer() {
                                 We will process your personal information in accordance with our
                                 Privacy Policy.
                             </p>
-                            <div className="flex items-center gap-3 mt-[10px]">
+                            <div className="flex items-center lg:gap-3 gap-8 mt-[10px]">
                                 <input
                                     type="checkbox"
                                     name="agree"
@@ -257,7 +257,7 @@ function Footer() {
                                     onChange={handleInputChange}
                                     className="h-5 w-5 bg-[#181E26] border-[#181E26] rounded focus:border-[#181E26] focus:ring-1"
                                 />
-                                <label className="font-syne font-normal text-[13px] leading-[32px] text-white">
+                                <label className="font-syne font-normal text-[13px] lg:leading-[32px] text-white">
                                     I would like to be contacted with news and updates about your
                                     events and services.
                                 </label>
@@ -269,7 +269,7 @@ function Footer() {
                 <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
                 <div className='lg:flex lg:justify-between lg:items-center'>
                     <div>
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'> Offering top-notch services in UI/UX Designing, Web Development, <br />Digital Marketing, and Bookkeeping to help businesses thrive with <br />creativity, precision, and strategy</p>
+                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block'/>creativity, precision, and strategy</p>
                         <div className='flex mt-[48px] gap-14'>
                             <div className='flex items-center gap-2'>
                                 <img src={Googleplay} alt="" className='w-8 h-8' />
@@ -291,7 +291,7 @@ function Footer() {
                     <div>
                         <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[25px]'>Join The <span className='text-yellow'>Northnine</span> <br />
                             Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Stay updated with the latest trends in design, development, <br />marketing, and finance. Contact us now!</p>
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block'  />marketing, and finance. Contact us now!</p>
                     </div>
                 </div>
                 <div className='flex mt-[120px] pb-3 gap-1'>
@@ -300,14 +300,14 @@ function Footer() {
                     <div className='w-[2%] h-[2px] bg-yellow'></div>
                 </div>
                 <div className='lg:flex lg:justify-between lg:items-center mt-[50px]'>
-                    <ul className='flex gap-7 items-center'>
+                    <ul className='flex gap-7 items-center lg:justify-start justify-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>FaceBook</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Instagram</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Linkedin</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Twitter</li>
                         <li className='font-syne text-[15px] font-normal text-white lg:block hidden'>Youtube</li>
                     </ul>
-                    <ul className='flex gap-7 items-center'>
+                    <ul className='flex gap-7 items-center lg:justify-start justify-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>Terms and Conditions</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Privacy Policy</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Sitemap</li>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Girl from "../../assets/images/Girl.jpg";
 import Shades from "../../assets/images/white-shades.png";
 import Dot from "../../assets/images/dot.png";
@@ -63,8 +63,8 @@ function Sec5() {
     const currentContent = slides[currentSlide];
 
     return (
-        <div className="container mx-auto overflow-hidden">
-            <div className="flex justify-end w-[78%]">
+        <div className="lg:container w-[95%] mx-auto overflow-hidden lg:mt-0 mt-24">
+            <div className="lg:flex hidden justify-end w-[78%]">
                 <img src={Shades} alt="" className="w-[203px] h-[140px]" />
             </div>
             <div className="lg:flex lg:justify-between items-center 3">
@@ -77,7 +77,7 @@ function Sec5() {
                         Latest Projects
                     </h1>
                 </div>
-                <div className="flex gap-[30px]">
+                <div className="flex gap-[30px] mt-6 lg:mt-0 justify-center lg:justify-start">
                     <button
                         onClick={handlePrev}
                         className="font-syne text-base font-semibold hover:text-yellow ease-in-out duration-300 hover:scale-110"
@@ -92,8 +92,8 @@ function Sec5() {
                     </button>
                 </div>
             </div>
-            <div className={`mt-[90px] flex gap-[30px] mx-auto ${animationClass}`}>
-                <div className="hidden lg:block">
+            <div className={`mt-[90px] flex gap-[30px] justify-center ${animationClass}`}>
+                <div className="hidden lg:block ">
                     <img
                         src={currentContent.mainImg}
                         alt=""
@@ -136,16 +136,16 @@ function Sec5() {
                         alt=""
                         className="w-[315px] h-[315px] object-cover rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
                     />
-                    <h1 className="font-syne font-semibold text-[22px] leading-[30px] mt-[30px]">
+                    <h1 className="font-syne font-semibold text-[22px] leading-[30px] mt-[30px] lg:text-left text-center">
                         {currentContent.sideTitle2}
                     </h1>
-                    <p className="font-syne text-[#121820]/40 leading-6 text-[15px] font-normal mt-[20px]">
+                    <p className="font-syne text-[#121820]/40 leading-6 text-[15px] font-normal mt-[20px] lg:text-left text-center">
                         {currentContent.sideDesc2}
                     </p>
                 </div>
             </div>
 
-            <div className="flex gap-[14px] items-center group mt-[90px] mb-[120px]">
+            <div className="flex gap-[14px] items-center group mt-[90px] mb-[120px] lg:justify-start justify-center">
                 <button className="font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110">
                     View More Insights
                 </button>
