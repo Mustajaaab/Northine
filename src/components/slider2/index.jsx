@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { useRef } from "react"; 
+import { useRef } from "react"; // For controlling Swiper externally
 import Dot from '../../assets/images/dot.png'
 import Stars from '../../assets/images/stars.png'
 import Comma from '../../assets/images/commas.png'
@@ -13,7 +13,7 @@ import Client3 from '../../assets/images/client3.jpg'
 import Client4 from '../../assets/images/client4.jpg'
 import SeeMoreText from "../seemore/seemore"
 const Slider2 = () => {
- 
+  // Create a reference for the Swiper instance
   const swiperRef = useRef(null);
 
   const slides = [
@@ -52,56 +52,60 @@ const Slider2 = () => {
   ];
 
   return (
-    
     <div className="py-8 bg-[#121820]/5 pt-[120px]">
-        <div className="container mx-auto">
-            <div className='lg:flex lg:justify-between'>
-                <div>
-                <div className="flex items-center gap-2">
-                    <img src={Dot} alt="" className="w-2 h-2"/>
-                    <p className="font-syne font-medium text-base leading-[25px]">Testimonial</p>
-                </div>
-                <h1 className='font-syne font-semibold text-[42px] mt-8'>What Our <span className="text-[#F57C00]">Clients</span> Say</h1>
-                </div>
-                <div className='flex gap-[30px] mt-14'>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slidePrev()}>🡸    Prev</button>
-                    <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slideNext()}>Next 🡺</button>
-                </div>
+      <div className="container mx-auto">
+        <div className="lg:flex lg:justify-between">
+          <div>
+            <div className="flex items-center gap-2">
+              <img src={Dot} alt="" className="w-2 h-2" />
+              <p className="font-syne font-medium text-base leading-[25px]">Testimonial</p>
             </div>
+            <h1 className="font-syne font-semibold text-[42px] mt-8">
+              What Our <span className="text-[#F57C00]">Clients</span> Say
+            </h1>
+          </div>
+          <div className="flex gap-[30px] mt-14">
+            <button
+              className="font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110"
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              🡸 Prev
+            </button>
+            <button
+              className="font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110"
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              Next 🡺
+            </button>
+          </div>
         </div>
-     
+      </div>
 
       {/* Swiper slider */}
       <Swiper
-  slidesPerView={3}
-  spaceBetween={20} 
-  navigation={false} 
+  slidesPerView={3} // Number of slides visible at a time
+  spaceBetween={20} // Space between slides
+  navigation={false} // Disable built-in navigation
   pagination={{ clickable: true, el: null }}
   modules={[Navigation, Pagination]}
-  onSwiper={(swiper) => (swiperRef.current = swiper)} 
-  slidesOffsetBefore={290} 
+  onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
+  slidesOffsetBefore={290} // Add gap before the first slide
   slidesOffsetAfter={290} 
-  speed={1000} 
+  speed={1000} // Add gap after the last slide
   breakpoints={{
     640: {
       slidesPerView: 1,
       spaceBetween: 20,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
     1024: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
-    },
-    1536: {
       slidesPerView: 4,
       spaceBetween: 80,
       slidesOffsetBefore: 290,

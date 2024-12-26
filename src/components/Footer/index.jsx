@@ -204,11 +204,10 @@ function Footer() {
                                 inputClass="placeholder-gray-500"
                                 dropdownStyle={{
                                     backgroundColor: '#181E26',
-                                    border: '1px solid #333',
-                                    borderRadius: '0.375rem',
                                     color: '#fff',
                                     maxHeight: '200px',
                                     overflowY: 'auto',
+                                    hover:"yelllow"
                                 }}
                                 placeholder="Phone number"
                                 autoFormat
