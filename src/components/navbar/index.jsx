@@ -1,17 +1,15 @@
-import { useLocation, Link } from 'react-router-dom';
-import { useState } from 'react';
-import Northnine from '../../assets/images/no9.png';
+import { useLocation, Link } from "react-router-dom";
+import { useState } from "react";
+import Northnine from "../../assets/images/no9.png";
+import ChatBot from "../chatot";
 
 function Navbar() {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
-    const [isChatOpen, setIsChatOpen] = useState(false);
-    const [chatMessages, setChatMessages] = useState([]);
-    const [userMessage, setUserMessage] = useState('');
+    const [searchQuery, setSearchQuery] = useState("");
 
     const getActiveClass = (path) => {
-        return location.pathname === path ? 'text-yellow lg:border-b border-yellow' : 'text-white';
+        return location.pathname === path ? "text-yellow lg:border-b border-yellow" : "text-white";
     };
 
     const toggleMenu = () => {
@@ -19,40 +17,12 @@ function Navbar() {
     };
 
     const handleSearchChange = (e) => {
-        const query = e.target.value;
-        setSearchQuery(query);
-
-        // Open the chat when the user types anything in the search bar
-        if (query.trim()) {
-            setIsChatOpen(true);
-            setUserMessage(query);  // Automatically put the search query in the chat
-        } else {
-            setIsChatOpen(false);
-        }
+        setSearchQuery(e.target.value);
     };
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        console.log('Search query:', searchQuery);
-    };
-
-    const toggleChat = () => {
-        setIsChatOpen(!isChatOpen);
-    };
-
-    const handleSendMessage = () => {
-        if (userMessage.trim()) {
-            setChatMessages([...chatMessages, { type: 'user', text: userMessage }]);
-            setUserMessage('');
-
-            // Simulate chatbot reply
-            setTimeout(() => {
-                setChatMessages((prevMessages) => [
-                    ...prevMessages,
-                    { type: 'bot', text: `You said: ${userMessage}` },
-                ]);
-            }, 500);
-        }
+        console.log("Search query:", searchQuery);
     };
 
     return (
@@ -85,18 +55,60 @@ function Navbar() {
 
                 {/* Navigation Links */}
                 <div
-                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-[80px] right-0 bg-[#121820] w-full lg:w-auto`}
+                    className={`${isMenuOpen ? "block" : "hidden"} lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-[80px] right-0 bg-[#121820] w-full lg:w-auto`}
                 >
-                    <Link to="/home" className={`${getActiveClass('/home')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Home</Link>
-                    <Link to="/about" className={`${getActiveClass('/about')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>About Us</Link>
-                    <Link to="/team" className={`${getActiveClass('/team')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Team</Link>
-                    <Link to="/services" className={`${getActiveClass('/services')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Services</Link>
-                    <Link to="/case-studies" className={`${getActiveClass('/case-studies')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>Case Studies</Link>
-                    <Link to="/contact-us" className={`${getActiveClass('/contact-us')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 pb-4 lg:py-0`}>Contact Us</Link>
+                    <Link
+                        to="/home"
+                        className={`${getActiveClass(
+                            "/home"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        to="/about"
+                        className={`${getActiveClass(
+                            "/about"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        About Us
+                    </Link>
+                    <Link
+                        to="/team"
+                        className={`${getActiveClass(
+                            "/team"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        Team
+                    </Link>
+                    <Link
+                        to="/services"
+                        className={`${getActiveClass(
+                            "/services"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        Services
+                    </Link>
+                    <Link
+                        to="/case-studies"
+                        className={`${getActiveClass(
+                            "/case-studies"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        Case Studies
+                    </Link>
+                    <Link
+                        to="/contact-us"
+                        className={`${getActiveClass(
+                            "/contact-us"
+                        )} block font-syne lg:text-base text-3xl font-semibold hover:text-yellow py-5 lg:py-0`}
+                    >
+                        Contact Us
+                    </Link>
                 </div>
 
                 {/* Search Bar */}
-                <form onSubmit={handleSearchSubmit} className="lg:flex items-center space-x-2 ">
+                <form onSubmit={handleSearchSubmit} className="hidden lg:flex items-center space-x-2">
                     <div className="flex items-center border border-gray-600 rounded-full bg-[#1e2832] group focus-within:border-yellow">
                         <button type="submit" className="text-yellow group-focus:text-white pl-3">
                             <svg
@@ -119,55 +131,12 @@ function Navbar() {
                             placeholder="Search..."
                             className="bg-transparent text-white pl-3 pr-4 py-2 focus:outline-none w-48"
                         />
-
                     </div>
                 </form>
             </div>
 
-            {/* Chat Widget */}
-            <div className="fixed bottom-4 right-4">
-                <button
-                    onClick={toggleChat}
-                    className="bg-yellow text-black p-3 rounded-full shadow-md"
-                >
-                    Chat
-                </button>
-
-                {isChatOpen && (
-                    <div className="bg-white w-[300px] h-[400px] rounded-lg shadow-lg p-4 flex flex-col">
-                        <div className="flex justify-between items-center border-b pb-2 mb-2">
-                            <h4 className="text-lg font-bold">Chat</h4>
-                            <button onClick={toggleChat} className="text-gray-500 hover:text-gray-700">
-                                &times;
-                            </button>
-                        </div>
-                        <div className="flex-1 overflow-y-auto mb-2">
-                            {chatMessages.map((msg, index) => (
-                                <div key={index} className={`mb-2 ${msg.type === 'user' ? 'text-right' : 'text-left'}`}>
-                                    <span className={`inline-block px-4 py-2 rounded-lg ${msg.type === 'user' ? 'bg-yellow text-black' : 'bg-gray-200 text-gray-800'}`}>
-                                        {msg.text}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex items-center border-t pt-2">
-                            <input
-                                type="text"
-                                value={userMessage}
-                                onChange={(e) => setUserMessage(e.target.value)}
-                                placeholder="Type your message..."
-                                className="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none"
-                            />
-                            <button
-                                onClick={handleSendMessage}
-                                className="bg-yellow text-black px-4 py-2 rounded-r-lg"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </div>
+            {/* ChatBot Component */}
+            <ChatBot />
         </div>
     );
 }
