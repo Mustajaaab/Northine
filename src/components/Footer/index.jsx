@@ -1,8 +1,6 @@
 import '../../App.css';
 import { useState } from "react";
 import No9 from "../../assets/images/no9.png";
-import Googleplay from "../../assets/images/googleplay.png";
-import Appstore from "../../assets/images/appstore.png";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
@@ -266,30 +264,15 @@ function Footer() {
                         </div>
                     </div>
                 </form>
-                <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
-                <div className='lg:flex lg:justify-between lg:items-center'>
+                
+                <div className='lg:flex lg:justify-between lg:items-center mt-32'>
                     <div>
+                        <img src={No9} alt="" className='w-[140px] h-[40px] ' />
                         <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block'/>creativity, precision, and strategy</p>
-                        <div className='flex mt-[48px] gap-14'>
-                            <div className='flex items-center gap-2'>
-                                <img src={Googleplay} alt="" className='w-8 h-8' />
-                                <div>
-                                    <p className='text-yellow font-syne font-normal text-[13px]'>Available on the</p>
-                                    <p className='text-white font-syne font-semibold text-base'>Google Play</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center gap-2'>
-                                <img src={Appstore} alt="" className='w-8 h-8' />
-                                <div>
-                                    <p className='text-yellow font-syne font-normal text-[13px]'>Available on the</p>
-                                    <p className='text-white font-syne font-semibold text-base'>Google Play</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div>
-                        <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[25px]'>Join The <span className='text-yellow'>Northnine</span> <br />
+                        <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0'>Join The <span className='text-yellow'>Northnine</span> <br />
                             Experience</h1>
                         <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block'  />marketing, and finance. Contact us now!</p>
                     </div>

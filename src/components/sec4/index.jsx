@@ -100,7 +100,7 @@ function Sec4() {
                         </div>
                 </div>
             </div>
-            <div className="container flex mx-auto mt-[152px] pb-3 gap-1">
+            <div className="container flex mx-auto mt-[52px] pb-3 gap-1">
                 <div className="w-[2%] h-[2px] bg-yellow"></div>
                 <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
                 <div className="w-[2%] h-[2px] bg-yellow"></div>

@@ -35,7 +35,7 @@ function Sec2() {
             <div className='lg:container w-[95%] mx-auto'>
                 <h1 className='font-syne font-semibold text-3xl lg:text-[42px] leading-[58px]'>How We Can <span className='text-[#fdcb22]'>Help You</span></h1>
 
-                <div className='lg:flex lg:items-center gap-2 mt-14 block'>
+                <div className='lg:flex lg:items-center gap-2 mt-14 block mb-12'>
                     <div className='lg:w-[50%]'>
                         <p className='font-syne font-semibold text-[22px] leading-8 w-[50%] '>IT Services</p>
                         <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -160,22 +160,13 @@ function Sec2() {
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>04</div>
                                 <h2 className='font-semibold font-syne text-lg'>Bookkeeping Services</h2>
                             </div>
-                            <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px] h-20'>Simplify financial management with accurate record-keeping <br className='lg:block hidden' />and reporting. Trusted by businesses, digital solutions pvt ltd services <br className='lg:block hidden' /> ensure efficiency.</p>
+                            <p className='text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px] h-20'>Simplify financial management with accurate record-keeping <br className='lg:block hidden' />and reporting. Trusted by businesses, digital solutions pvt ltd <br className='lg:block hidden' />  services ensure efficiency.</p>
                         </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <div className='w-[95%] lg:container flex mx-auto mt-[90px] pb-3 gap-1'>
-                <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
-                <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
-                <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
-            </div>
-            <div className='w-[10%] mx-auto lg:flex lg:justify-end hidden'>
-                <img src={Shades} alt="" className='w-[203px] h-[140px]' />
-            </div>
 
         </>
     )

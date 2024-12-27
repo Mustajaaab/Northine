@@ -92,7 +92,7 @@ function Sec5() {
                     </button>
                 </div>
             </div>
-            <div className={`mt-[90px] flex gap-[30px] justify-center ${animationClass}`}>
+            <div className={`mt-[90px] flex gap-[30px] mb-[120px] justify-center ${animationClass}`}>
                 <div className="hidden lg:block ">
                     <img
                         src={currentContent.mainImg}
@@ -144,22 +144,6 @@ function Sec5() {
                     </p>
                 </div>
             </div>
-
-            <div className="inline-flex gap-[14px] items-center group mt-[90px] mb-[120px]">
-                <button
-                    className="font-syne font-semibold text-base ease-out duration-300 group-hover:text-yellow group-hover:scale-105"
-                    aria-label="View More Insights"
-                >
-                    View More Insights
-                </button>
-                <div
-                    className="w-8 h-8 flex items-center justify-center rounded-full text-white bg-yellow ease-out duration-300 group-hover:bg-black group-hover:scale-105"
-                    aria-label="Next Arrow"
-                >
-                    🡺
-                </div>
-            </div>
-
         </div>
     );
 }
