@@ -31,14 +31,14 @@ function Navbar() {
                 <img
                     src={Northnine}
                     alt="Northnine Logo"
-                    className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[206px] h-[60px]"
+                    className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[126px] h-[30px]"
                 />
 
                 {/* Hamburger Icon for Small Screens */}
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-16 h-16 md:w-14 md:h-14 text-white cursor-pointer"
+                        className="w-7 h-7 md:w-14 md:h-14 text-white cursor-pointer"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ function Navbar() {
                     <div className="flex items-center border border-gray-600 rounded-full bg-[#1e2832] group focus-within:border-yellow">
                         <button type="submit" className="text-yellow group-focus:text-white pl-3">
                             <svg
-                                className="h-5 w-5 text-white group-focus:text-yellow ease-in-out duration-300 cursor-pointer"
+                                className="h-4 w-4 text-white group-focus:text-yellow ease-in-out duration-300 cursor-pointer"
                                 fill="currentColor"
                                 viewBox="0 0 21 20"
                                 xmlns="http://www.w3.org/2000/svg"
