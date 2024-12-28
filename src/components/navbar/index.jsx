@@ -123,51 +123,6 @@ function Navbar() {
                     </div>
                 </form>
             </div>
-
-            {/* Chat Widget */}
-            <div className="fixed bottom-4 right-4">
-                <button
-                    onClick={toggleChat}
-                    className="bg-yellow text-black p-3 rounded-full shadow-md"
-                >
-                    Chat
-                </button>
-
-                {isChatOpen && (
-                    <div className="bg-white w-[300px] h-[400px] rounded-lg shadow-lg p-4 flex flex-col">
-                        <div className="flex justify-between items-center border-b pb-2 mb-2">
-                            <h4 className="text-lg font-bold">Chat</h4>
-                            <button onClick={toggleChat} className="text-gray-500 hover:text-gray-700">
-                                &times;
-                            </button>
-                        </div>
-                        <div className="flex-1 overflow-y-auto mb-2">
-                            {chatMessages.map((msg, index) => (
-                                <div key={index} className={`mb-2 ${msg.type === 'user' ? 'text-right' : 'text-left'}`}>
-                                    <span className={`inline-block px-4 py-2 rounded-lg ${msg.type === 'user' ? 'bg-yellow text-black' : 'bg-gray-200 text-gray-800'}`}>
-                                        {msg.text}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex items-center border-t pt-2">
-                            <input
-                                type="text"
-                                value={userMessage}
-                                onChange={(e) => setUserMessage(e.target.value)}
-                                placeholder="Type your message..."
-                                className="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none"
-                            />
-                            <button
-                                onClick={handleSendMessage}
-                                className="bg-yellow text-black px-4 py-2 rounded-r-lg"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </div>
         </div>
     );
 }
