@@ -34,7 +34,7 @@ function Sec1() {
                             </div>
                             <div className="flex group items-center gap-4 mt-[58px]">
                                 <button className="w-[50px] h-[50px] bg-white/10 group-hover:bg-[#fdcb22] rounded-full text-white text-[32px] font-extralight grid place-items-center font-syne ease-out duration-300 group-hover:scale-110"><p>+</p></button>
-                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 group-hover:scale-110">Developers</p>
+                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300">Developers</p>
                             </div>
                         </div>
 
@@ -51,7 +51,7 @@ function Sec1() {
                             </div>
                             <div className="flex group items-center gap-4 mt-10 ml-[250px]">
                                 <button className="w-[50px] h-[50px] bg-white/10 group-hover:bg-[#fdcb22] rounded-full text-white text-[32px] font-extralight grid place-items-center font-syne ease-out duration-300 group-hover:scale-110"><p>+</p></button>
-                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 group-hover:scale-110">Marketers</p>
+                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300">Marketers</p>
                             </div>
                         </div>
 
@@ -69,7 +69,7 @@ function Sec1() {
                             </div>
                             <div className="flex group items-center gap-4 mt-16 ml-[8px]">
                                 <button className="w-[50px] h-[50px] bg-white/10 group-hover:bg-[#fdcb22] rounded-full text-white text-[32px] font-extralight grid place-items-center font-syne ease-out duration-300 group-hover:scale-110"><p>+</p></button>
-                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 group-hover:scale-110">Designers</p>
+                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 ">Designers</p>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@ function Sec1() {
                             </div>
                             <div className="flex group items-center gap-4 mt-14 ml-[255px]">
                                 <button className="w-[50px] h-[50px] bg-white/10 group-hover:bg-[#fdcb22] rounded-full text-white text-[32px] font-extralight grid place-items-center font-syne ease-out duration-300 group-hover:scale-110"><p>+</p></button>
-                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 group-hover:scale-110">Book Keepers</p>
+                                <p className="font-syne font-semibold text-base text-white cursor-pointer group-hover:text-[#fdcb22] ease-out duration-300 ">Book Keepers</p>
                             </div>
                         </div>
                     </div>

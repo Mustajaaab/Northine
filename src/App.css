@@ -60,6 +60,44 @@
   color: black;
   font-weight: 500;
 }
+/* Button Styling */
+.hover-button {
+  width: 50px;
+  height: 50px;
+  background-color: #fdcb22; /* Initial orange color */
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.hover-button:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Background Glow Effect */
+.hover-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15); /* Light white glow */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.hover-button:hover .hover-background {
+  opacity: 1;
+  transform: scale(2); /* Expands the glowing circle */
+}
+
+/* Text Animation */
+.group-hover .hover-button span {
+  color: white;
+}
+
 
 
 
