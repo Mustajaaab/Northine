@@ -91,7 +91,7 @@ function Services() {
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-                <div className="w-[70%] mx-auto flex justify-between items-center">
+                <div className="container mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
                             <p className="text-lg font-syne font-medium">Home</p>
@@ -115,7 +115,7 @@ function Services() {
                 </div>
             </div>
 
-            <div className="w-[69%] mx-auto pb-[100px]">
+            <div className="container mx-auto pb-[100px]">
                 <div className="flex gap-2 items-center pt-[100px]">
                     <div className="bg-yellow h-2 w-2 rounded-full"></div>
                     <p className="font-normal font-syne">Our Data Analytics Experties</p>
@@ -182,7 +182,7 @@ function Services() {
             </div>
 
             <div className="py-8 bg-[#f3f3f4]">
-                <div className="w-[69%] mx-auto pt-16">
+                <div className="container mx-auto pt-16">
                     <div className='flex justify-between'>
                         <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
                         <div className='flex gap-[30px]'>
@@ -198,8 +198,6 @@ function Services() {
                     pagination={{ clickable: true, el: null }}
                     modules={[Navigation, Pagination]}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    slidesOffsetBefore={290}
-                    slidesOffsetAfter={290}
                     speed={1000}
                     breakpoints={{
                         640: {
@@ -217,8 +215,8 @@ function Services() {
                         1024: {
                             slidesPerView: 3,
                             spaceBetween: 40,
-                            slidesOffsetBefore: 290,
-                            slidesOffsetAfter: 290,
+                            slidesOffsetBefore: 190,
+                            slidesOffsetAfter: 190,
                         },
                     }}
                     className="mySwiper mt-10 w-full"
@@ -246,7 +244,7 @@ function Services() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[50px]'>
+                <div className='container mx-auto justify-between flex mt-[107px] mb-[50px]'>
                     <div className='flex gap-[14px] items-center group'>
                         <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
@@ -255,7 +253,7 @@ function Services() {
                 </div>
             </div>
 
-            <div className="w-[69%] mx-auto">
+            <div className="container mx-auto">
                 <div className="flex items-center gap-3 mt-24">
                     <span className="w-2 h-2 bg-yellow rounded-full"></span>
                     <p className="font-syne">All Devices</p>
@@ -331,15 +329,15 @@ function Services() {
             </div>
 
 
-            <div className="w-[69%] mx-auto gap-2 flex items-center mt-8">
+            <div className="container mx-auto gap-2 flex items-center mt-8">
                 <span className="w-[2%] h-[2px] bg-yellow"></span>
                 <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
                 <span className="w-[2%] h-[2px] bg-yellow"></span>
             </div>
-            <div className="w-[69%] flex justify-end mx-auto">
+            <div className="container flex justify-end mx-auto">
                 <img src={Shades} alt="" className="w-[220px]" />
             </div>
-            <div className="w-[69%] mx-auto mb-20">
+            <div className="container mx-auto mb-20">
                 <h1 className="text-[44px] font-semibold font-syne">Delivering <span className="text-yellow">Industry Specific</span> Mobile
                     <br />App Solutions</h1>
                 <div className="flex justify-between mt-24">

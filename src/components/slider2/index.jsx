@@ -91,10 +91,16 @@ const Slider2 = () => {
   onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
   speed={1000} // Animation speed
   breakpoints={{
+    360: {
+      slidesPerView: 1, // 1.5 slides visible on small screens
+      spaceBetween: 15, // Smaller space between slides
+      slidesOffsetBefore: 20,
+      slidesOffsetAfter: 10,
+    },
     640: {
       slidesPerView: 1.5, // 1.5 slides visible on small screens
       spaceBetween: 15, // Smaller space between slides
-      slidesOffsetBefore: 10,
+      slidesOffsetBefore: 20,
       slidesOffsetAfter: 10,
     },
     768: {
@@ -112,8 +118,8 @@ const Slider2 = () => {
     1280: {
       slidesPerView: 4, // 4 slides visible on extra-large screens
       spaceBetween: 40,
-      slidesOffsetBefore: 60,
-      slidesOffsetAfter: 60,
+      slidesOffsetBefore: 290,
+      slidesOffsetAfter: 290,
     },
   }}
   className="mySwiper mt-10 w-full"

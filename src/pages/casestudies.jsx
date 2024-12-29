@@ -11,7 +11,7 @@ function Casestudies () {
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-                <div className="w-[70%] mx-auto flex justify-between items-center">
+                <div className="container mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
                             <p className="text-lg font-syne font-medium">Home</p>

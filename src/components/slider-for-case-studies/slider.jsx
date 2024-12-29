@@ -48,10 +48,10 @@ function Sliderrr() {
     const currentContent = slides[currentSlide];
 
     return (
-        <div className="w-[69%] mx-auto overflow-hidden">
+        <div className="container mx-auto overflow-hidden">
             
             <div className={` ${animationClass}`}>
-                    <div className="mt-[90px] flex gap-[30px]">
+                    <div className="mt-[90px] flex justify-between">
                         <img
                             src={currentContent.mainImg}
                             alt=""
@@ -76,7 +76,7 @@ function Sliderrr() {
                         </div>
                     </div>
 
-                    <div className="mt-[90px] flex gap-[30px]">
+                    <div className="mt-[90px] flex justify-between">
                         <div className=" w-[645px] mt-[100px] pl-[50px]">
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 rounded-full bg-yellow"></div>
@@ -101,7 +101,7 @@ function Sliderrr() {
                         />
                     </div>
 
-                    <div className="mt-[90px] flex gap-[30px]">
+                    <div className="mt-[90px] flex justify-between">
                         <img
                             src={currentContent.mainImg}
                             alt=""

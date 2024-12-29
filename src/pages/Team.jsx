@@ -29,7 +29,7 @@ function Team(){
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-                <div className="w-[70%] mx-auto flex justify-between items-center">
+                <div className="container mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
                             <p className="text-lg font-syne font-medium">Home</p>
@@ -55,7 +55,7 @@ function Team(){
             <h1 className="text-center text-2xl font-semibold font-syne mt-[110px]">The leadership team plays a cruical role <br /> in 
             <span className="text-yellow"> guiding and towards</span> success.</h1>
 
-            <div className="flex justify-center gap-[40px] mt-[80px]">
+            <div className="flex justify-center gap-[180px] mt-[80px]">
     {[
         { img: Client1, name: "Jane Meldrum", title: "CEO ITSulu" },
         { img: Client2, name: "John Doe", title: "CTO XYZ" },
@@ -90,7 +90,7 @@ function Team(){
     ))}
 </div>
 
-            <div className="flex justify-center gap-[40px] mt-[80px]">
+            <div className="flex justify-center gap-[180px] mt-[80px]">
     {[
         { img: Client1, name: "Jane Meldrum", title: "Marketer" },
         { img: Client2, name: "John Doe", title: "UX/UI Desgin" },
@@ -129,18 +129,18 @@ function Team(){
 
         
 
-            <div className='w-[69%] flex mx-auto pb-3 gap-1 mt-[120px]'>
+            <div className='container flex mx-auto pb-3 gap-1 mt-[120px]'>
                 <div className='w-[2%] h-[2px] bg-yellow'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
 
-            <div className="w-[69%] flex mx-auto mt-[120px] justify-between">
+            <div className="container flex mx-auto mt-[120px] justify-between">
                 <h1 className="text-4xl font-syne font-semibold ">Value that <span className="text-yellow">Leads Us</span></h1>
                 <p className="text-lg text-black/40 font-syne">Powerful and easy-to-use solution. With our tools, you can <br />streamline your development process.</p>
             </div>
 
-            <div className="flex justify-center gap-5 mt-28 mb-28">
+            <div className="flex justify-center gap-[130px] mt-28 mb-28">
                 <div>
                     <img src={Spark} alt="" className="w-[40px] mx-auto h-[50px]"/>
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">01.</span> Productivity</h1>
@@ -191,37 +191,17 @@ function Team(){
                     <button className='border-[2px] border-yellow hover:border-[4px] mt-10 bg-transparent font-syne text-[18px] font-normal w-[302px] hover:py-[23px] py-[25px] rounded-full text-white ease-in-out duration-300 transition-transform'>Book an Appointment</button>
                 </div>
             </div>
-            <div className="w-[69%] mx-auto">
-                <img src={No9} alt="" className='w-[140px] h-[40px] mt-32' />
-                <div className='flex justify-between items-center'>
+            <div className="lg:container mx-auto w-[90%]">
+                <div className='lg:flex lg:justify-between lg:items-center mt-32'>
                     <div>
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px]'>Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
-                        <div className='flex mt-[48px] gap-14'>
-                            <div className='flex items-center gap-2'>
-                                <img src={Googleplay} alt="" className='w-8 h-8' />
-                                <div>
-                                    <p className='text-yellow font-syne font-normal text-[13px]'>Available on the</p>
-                                    <p className='text-white font-syne font-semibold text-base'>Google Play</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center gap-2'>
-                                <img src={Appstore} alt="" className='w-8 h-8' />
-                                <div>
-                                    <p className='text-yellow font-syne font-normal text-[13px]'>Available on the</p>
-                                    <p className='text-white font-syne font-semibold text-base'>Google Play</p>
-                                </div>
-                            </div>
-                        </div>
+                        <img src={No9} alt="" className='w-[140px] h-[40px] ' />
+                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block'/>creativity, precision, and strategy</p>
                     </div>
-
+                
                     <div>
-                        <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-[30px]'>Join The <span className='text-yellow'>Northnine</span> <br />
-                            Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px]'>Got dreams? Let&apos;s discuss how to make them a reality. Connect now, and let&apos;s create something extraordinary together.</p>
-                    </div>
-                    <div>
-                        <button className='text-[#121820]/30 bg-white font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-yellow ease-in-out duration-300 transition-transform hover:scale-105'>Your Email Address</button> <br />
-                        <button className='mt-2 bg-yellow font-syne text-[15px] font-normal w-[302px] py-[25px] rounded-full hover:text-[#121820]/30 ease-in-out duration-300 transition-transform hover:scale-105'>Subscribe Now</button>
+                        <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0'>Join The <span className='text-yellow'>Northnine</span> <br />
+                        Experience</h1>
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block'  />marketing, and finance. Contact us now!</p>
                     </div>
                 </div>
                 <div className='flex mt-[120px] pb-3 gap-1'>
