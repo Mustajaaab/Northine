@@ -150,3 +150,26 @@ decoder_outputs = decoder_dense(decoder_lstm_outputs)
 decoder_model = Model(
     [decoder_inputs] + decoder_states_inputs, [decoder_outputs] + decoder_states
 )
+#Create a function to generate responses.
+def decode_sequence(input_seq):
+    states_value = encoder_model.predict(input_seq)
+    target_seq = np.zeros((1, 1))
+    target_seq[0, 0] = target_tokenizer.word_index["bos"]
+
+    decoded_sentence = ""
+    stop_condition = False
+
+    while not stop_condition:
+        output_tokens, h, c = decoder_model.predict([target_seq] + states_value)
+        sampled_token_index = np.argmax(output_tokens[0, -1, :])
+        sampled_word = target_tokenizer.index_word[sampled_token_index]
+
+        if sampled_word == "eos" or len(decoded_sentence.split()) > max_target_len:
+            stop_condition = True
+        else:
+            decoded_sentence += " " + sampled_word
+
+        target_seq[0, 0] = sampled_token_index
+        states_value = [h, c]
+
+    return decoded_sentence
