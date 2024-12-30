@@ -133,3 +133,43 @@ with open("input_tokenizer.pkl", "wb") as f:
     pickle.dump(input_tokenizer, f)
 with open("target_tokenizer.pkl", "wb") as f:
     pickle.dump(target_tokenizer, f)
+#Prepare the encoder and decoder models for inference.
+# Encoder Model
+encoder_model = Model(encoder_inputs, [state_h, state_c])
+
+# Decoder Model
+decoder_state_input_h = Input(shape=(LATENT_DIM,))
+decoder_state_input_c = Input(shape=(LATENT_DIM,))
+decoder_states_inputs = [decoder_state_input_h, decoder_state_input_c]
+decoder_lstm_outputs, state_h, state_c = decoder_lstm(
+    decoder_embedding, initial_state=decoder_states_inputs
+)
+decoder_states = [state_h, state_c]
+decoder_outputs = decoder_dense(decoder_lstm_outputs)
+
+decoder_model = Model(
+    [decoder_inputs] + decoder_states_inputs, [decoder_outputs] + decoder_states
+)
+#Create a function to generate responses.
+def decode_sequence(input_seq):
+    states_value = encoder_model.predict(input_seq)
+    target_seq = np.zeros((1, 1))
+    target_seq[0, 0] = target_tokenizer.word_index["bos"]
+
+    decoded_sentence = ""
+    stop_condition = False
+
+    while not stop_condition:
+        output_tokens, h, c = decoder_model.predict([target_seq] + states_value)
+        sampled_token_index = np.argmax(output_tokens[0, -1, :])
+        sampled_word = target_tokenizer.index_word[sampled_token_index]
+
+        if sampled_word == "eos" or len(decoded_sentence.split()) > max_target_len:
+            stop_condition = True
+        else:
+            decoded_sentence += " " + sampled_word
+
+        target_seq[0, 0] = sampled_token_index
+        states_value = [h, c]
+
+    return decoded_sentence
