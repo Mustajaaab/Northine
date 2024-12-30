@@ -168,12 +168,12 @@ function Sec2() {
             </div>
 
 
-            <div className='w-[69%] flex mx-auto mt-[90px] pb-3 gap-1'>
+            <div className='w-[95%] lg:container flex mx-auto mt-[90px] pb-3 gap-1'>
                 <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-[#fdcb22]'></div>
             </div>
-            <div className='w-[10%] mx-auto flex justify-end'>
+            <div className='w-[10%] mx-auto lg:flex lg:justify-end hidden'>
                 <img src={Shades} alt="" className='w-[203px] h-[140px]' />
             </div>
 

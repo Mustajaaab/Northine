@@ -37,3 +37,29 @@
   animation: slideOut 1s ease-in-out forwards;
 }
 
+.flag-dropdown {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    padding: 0 !important;
+    background-color: #181E26 !important;
+    border: none !important;
+}
+
+.selected-flag {
+  background: #181E26 !important;
+}
+
+.country.highlight{
+  background-color: #fdcb22 !important;
+  color: black;
+  font-weight: 500;
+}
+.country:hover{
+  background-color: #fdcb22 !important;
+  color: black;
+  font-weight: 500;
+}
+
+
+

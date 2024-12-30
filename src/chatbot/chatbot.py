@@ -124,3 +124,12 @@ history = model.fit(
     epochs=EPOCHS, 
     validation_data=([input_val, target_val[:, :-1]], target_val[:, 1:])
 )
+#Save the model and tokenizers for future use.
+model.save("chatbot_model.h5")
+
+# Save tokenizers
+import pickle
+with open("input_tokenizer.pkl", "wb") as f:
+    pickle.dump(input_tokenizer, f)
+with open("target_tokenizer.pkl", "wb") as f:
+    pickle.dump(target_tokenizer, f)
