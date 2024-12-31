@@ -70,7 +70,7 @@ function Sec5() {
             <div className="lg:flex lg:justify-between items-center 3">
                 <div>
                     <p className="flex gap-2 items-center">
-                        <img src={Dot} alt="" className="w-[14px] h-[14px]" />
+                    <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                         <a className="font-syne font-medium text-base">Our Project News</a>
                     </p>
                     <h1 className="font-syne font-semibold mt-6 text-[42px]">

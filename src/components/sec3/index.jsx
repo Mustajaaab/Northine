@@ -4,6 +4,10 @@ import Save from '../../assets/images/save.png'
 import Pana from '../../assets/images/pana.png'
 import flag from '../../assets/images/flag.png'
 import Shades2 from '../../assets/images/white-shades2.png'
+import pen from '../../assets/images/pen.png'
+import thinking from '../../assets/images/thinking.png'
+import shuttle from '../../assets/images/shuttle.png'
+import innovation from '../../assets/images/innovation.png'
 
 function Sec3() {
     
@@ -24,14 +28,14 @@ function Sec3() {
                         <div className='lg:flex lg:justify-evenly w-[50%]'>
                             <div className='mt-7 lg:mt-0'>
                                 <div className='flex items-center gap-4'>
-                                <img src={Pana} alt="" className='w-5 h-5'/>
+                                <img src={thinking} alt="" className='w-5 h-5'/>
                                 <h3 className='font-syne font-semibold text-lg'>Thinking Big</h3>
                             </div>
                              <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne lg:mt-7 mt-4 w-[280px]'>Transform your bold ideas into powerful digital solutions that create meaningful impact and drive success.</p>
                             </div>
                             <div className='mt-7 lg:mt-0'>
                              <div className='flex items-center gap-4'>
-                                <img src={flag} alt="" className='w-5 h-5'/>
+                                <img src={shuttle} alt="" className='w-5 h-5'/>
                                 <h3 className='font-syne font-semibold text-lg'>Starting Small</h3>
                             </div>
                             <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne lg:mt-7 mt-4 w-[280px]'>Begin with UI/UX design, website development, and digital marketing to build a strong foundation for future growth</p>
@@ -40,7 +44,7 @@ function Sec3() {
                     <div className='lg:flex lg:justify-evenly w-[50%]'>
                     <div className='mt-7 lg:mt-0'>
                         <div className='flex items-center gap-4'>
-                            <img src={Save} alt="" className='w-5 h-5'/>
+                            <img src={pen} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Creating Fast</h3>
                         </div>
                         <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne lg:mt-7 mt-4 w-[280px]'>Implement effective bookkeeping, websites, and marketing strategies to get your business running smoothly.</p>
@@ -48,7 +52,7 @@ function Sec3() {
 
                     <div className='mt-7 lg:mt-0'>
                         <div className='flex items-center gap-4'>
-                            <img src={Cloud} alt="" className='w-5 h-5'/>
+                            <img src={innovation} alt="" className='w-5 h-5'/>
                             <h3 className='font-syne font-semibold text-lg'>Innovating Scale</h3>
                         </div>
                         <p className='text-[#121820]/40 leading-[25.5px] text-[15px] font-syne lg:mt-7 mt-4 w-[280px]'>Scale your business with cloud computing, digital marketing, AI, and IoT for long-term success and growth.</p>

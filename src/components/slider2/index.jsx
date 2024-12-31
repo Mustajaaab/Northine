@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { useRef } from "react"; // For controlling Swiper externally
-import Dot from '../../assets/images/dot.png'
+import rating from '../../assets/images/rating.png'
 import Stars from '../../assets/images/stars.png'
 import Comma from '../../assets/images/commas.png'
 import Client1 from '../../assets/images/client1.jpg'
@@ -57,11 +57,11 @@ const Slider2 = () => {
         <div className="lg:flex lg:justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <img src={Dot} alt="" className="w-4 h-4" />
+            <span className="w-3 h-3 bg-yellow rounded-full" ></span>
               <p className="font-syne font-medium text-base leading-[25px]">Testimonial</p>
             </div>
             <h1 className="font-syne font-semibold text-[42px] mt-8">
-              What Our <span className="text-[#F57C00]">Clients</span> Say
+              What Our <span className="text-yellow">Clients</span> Say
             </h1>
           </div>
           <div className="flex gap-[30px] mt-14 justify-center lg:justify-start">
@@ -127,12 +127,12 @@ const Slider2 = () => {
   {slides.map((slide, index) => (
     <SwiperSlide key={index}>
       <div className="overflow-hidden">
-        <div className="flex gap-10  items-center">
-          <img src={slide.img} alt="" className="w-[25px] h-[21px]" />
-          <img src={slide.img2} alt="" className="w-[110px] h-[25px]" />
+        <div className="flex  items-center">
+          <img src={slide.img} alt="" className="h-6" />
+          <img src={rating} alt="" className="h-32" />
         </div>
         <div>
-          <div className="mt-7">
+          <div className="">
             <SeeMoreText
               text={slide.text}
               maxLength={150}
