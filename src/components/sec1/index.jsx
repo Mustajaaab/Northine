@@ -1,13 +1,38 @@
+import { useState, useEffect } from "react";
+import office from "../../assets/images/office.jpg";
+import officeStuf from "../../assets/images/officeStuf.jpg";
+import code from "../../assets/images/code.jpg";
 
 function Sec1() {
+    const [backgroundIndex, setBackgroundIndex] = useState(0);
+    const backgrounds = [office, code, officeStuf];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+        }, 7000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <>
-            <div className="bg-[#121820] ">
-                <div className="container mx-auto flex justify-between items-center  max-w-[1170px]  2xl:max-w-[1370px]">
-                    <div className="lg:pt-[350px] pt-32 pb-[171px]  animate-fadeInSlideDown">
-                        <h3 className="text-white font-syne text-lg text-center lg:text-left"><span className="text-[#fdcb22]">Northnine</span> Pvt Ltd</h3>
-                        <h1 className="text-white text-6xl font-semibold leading-[84px] font-syne mt-12 animate-fadeInSlideDown text-center lg:text-left">Your Partner in Smart <br />
-                            Digital Solutions  <span className="font-satisfy text-[#fdcb22]">Tech</span></h1>
+
+        <div
+        className="relative bg-cover bg-center bg-no-repeat transition-all duration-2000 ease-in-out"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgrounds[backgroundIndex]})`,
+        }}
+      >
+
+                <div className="container mx-auto flex justify-between items-center max-w-[1170px] 2xl:max-w-[1370px]">
+                    <div className="lg:pt-[350px] pt-32 pb-[171px] animate-fadeInSlideDown">
+                        <h3 className="text-white font-syne text-lg text-center lg:text-left">
+                            <span className="text-[#fdcb22]">Northnine</span> Pvt Ltd
+                        </h3>
+                        <h1 className="text-white text-6xl font-semibold leading-[84px] font-syne mt-12 animate-fadeInSlideDown text-center lg:text-left">
+                            Your Partner in Smart <br />
+                            Digital Solutions{" "}
+                            <span className="font-satisfy text-[#fdcb22]">Tech</span>
+                        </h1>
                         <div className="lg:flex mt-14 text-center lg:text-left items-center">
                             <p className="order-1 lg:order-2 mb-10 lg:mb-0 font-normal text-[15px] leading-[25.5px] pl-0 lg:pl-16 text-white">
                                 Create user-friendly websites, attract more customers, <br />
@@ -17,7 +42,6 @@ function Sec1() {
                                 Let&apos;s Talk
                             </button>
                         </div>
-
                     </div>
                     <div className="animate-fadeInSlideDown hidden lg:block">
                         {/* Web Development Section */}
@@ -128,10 +152,9 @@ function Sec1() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </>
-    )
+    );
 }
-export default Sec1 
+
+export default Sec1;

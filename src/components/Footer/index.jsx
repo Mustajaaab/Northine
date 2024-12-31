@@ -134,147 +134,151 @@ function Footer() {
                     Contact <span className="text-yellow">Us</span>
                 </h1>
                 <form onSubmit={onSubmit}>
-                    <div className="lg:flex">
-                        {/* Left Section */}
-                        <div className="lg:w-[50%]">
-                            <div className="flex gap-3 items-center lg:mt-24 mt-14">
-                                <p className="text-white font-syne font-medium text-[15px]">
-                                    Name
-                                </p>
-                                <p className="text-yellow font-syne font-medium text-[15px]">
-                                    Required
-                                </p>
-                            </div>
-                            <input
-                                type="text"
-                                name="name"
-                                value={form.name}
-                                onChange={handleInputChange}
-                                placeholder="Enter your name"
-                                className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
-                                required
-                            />
-                            {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name}</p>}
-
-                            <div className="flex gap-3 items-center mt-[30px]">
-                                <p className="text-white font-syne font-medium text-[15px]">
-                                    Email Address
-                                </p>
-                                <p className="text-yellow font-syne font-medium text-[15px]">
-                                    Required
-                                </p>
-                            </div>
-                            <input
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleInputChange}
-                                placeholder="Enter your email"
-                                className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
-                                required
-                            />
-                            {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
-
-                            <div className="flex gap-3 items-center my-6">
-                                <p className="text-white font-syne font-medium text-[15px]">
-                                    Phone
-                                </p>
-                                <p className="text-[#FFFFFF]/50 font-syne font-medium text-[15px]">
-                                    Optional
-                                </p>
-                            </div>
-                            <PhoneInput
-                                country={input.countryCode}
-                                value={input.value}
-                                onChange={(phone) => handlePhoneChange(input.id, phone)}
-                                containerClass={`flex w-full items-center rounded-md border-b ${errors.phone ? 'border-red-500' : 'border-gray-300'
-                                    } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
-                                inputStyle={{
-                                    border: 'none',
-                                    boxShadow: 'none',
-                                    width: '100%',
-                                    outline: 'none',
-                                    padding: '10px 50px',
-                                    color: 'white',
-                                    background: '#181E26',
-                                    height: '50px',
-                                }}
-                                inputClass="placeholder-gray-500"
-                                dropdownStyle={{
-                                    backgroundColor: '#181E26',
-                                    color: '#fff',
-                                    maxHeight: '200px',
-                                    overflowY: 'auto',
-                                    hover:"yelllow"
-                                }}
-                                placeholder="Phone number"
-                                autoFormat
-                                disableCountryCode={false}
-                                aria-invalid={!!errors.phone}
-                                aria-describedby="phone-input-error"
-                            />
-                            {errors.phone && (
-                                <p id="phone-input-error" className="text-red-500 text-sm mt-2">
-                                    {errors.phone}
-                                </p>
-                            )}
-                            <button
-                                type="submit"
-                                className={`mt-[40px]  text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
-                                    }`}
-                                disabled={result === "Sending..."}
-                            >
-                                {result === "Sending..." ? "Sending..." : "Submit"}
-                            </button>
-                        </div>
-
-                        {/* Right Section */}
-                        <div className="mt-24 lg:ml-8 lg:w-[50%]">
-                            <p className="text-white font-syne text-[15px] font-medium">
-                                Message <span className="text-yellow">Required</span>
-                            </p>
-                            <textarea
-                                name="message"
-                                value={form.message}
-                                onChange={handleInputChange}
-                                placeholder="Enter your text here"
-                                className="text-base p-2 mt-5 w-full bg-[#181E26] h-[295px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1 resize-none"
-                                required
-                            />
-                            {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
-
-                            <p className="font-syne font-normal text-[13px] text-white/50 pt-[30px]">
-                                We will process your personal information in accordance with our
-                                Privacy Policy.
-                            </p>
-                            <div className="flex items-center lg:gap-3 gap-8 mt-[10px]">
+                    <div>
+                        <div className="lg:flex">
+                            {/* Left Section */}
+                            <div className="lg:w-[50%]">
+                                <div className="flex gap-3 items-center lg:mt-24 mt-14">
+                                    <p className="text-white font-syne font-medium text-[15px]">
+                                        Name
+                                    </p>
+                                    <p className="text-yellow font-syne font-medium text-[15px]">
+                                        Required
+                                    </p>
+                                </div>
                                 <input
-                                    type="checkbox"
-                                    name="agree"
-                                    checked={form.agree}
+                                    type="text"
+                                    name="name"
+                                    value={form.name}
                                     onChange={handleInputChange}
-                                    className="h-5 w-5 bg-[#181E26] border-[#181E26] rounded focus:border-[#181E26] focus:ring-1"
+                                    placeholder="Enter your name"
+                                    className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
+                                    required
                                 />
-                                <label className="font-syne font-normal text-[13px] lg:leading-[32px] text-white">
-                                    I would like to be contacted with news and updates about your
-                                    events and services.
-                                </label>
+                                {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name}</p>}
+
+                                <div className="flex gap-3 items-center mt-[30px]">
+                                    <p className="text-white font-syne font-medium text-[15px]">
+                                        Email Address
+                                    </p>
+                                    <p className="text-yellow font-syne font-medium text-[15px]">
+                                        Required
+                                    </p>
+                                </div>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your email"
+                                    className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
+                                    required
+                                />
+                                {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
+
+                                <div className="flex gap-3 items-center my-6">
+                                    <p className="text-white font-syne font-medium text-[15px]">
+                                        Phone
+                                    </p>
+                                    <p className="text-[#FFFFFF]/50 font-syne font-medium text-[15px]">
+                                        Optional
+                                    </p>
+                                </div>
+                                <PhoneInput
+                                    country={input.countryCode}
+                                    value={input.value}
+                                    onChange={(phone) => handlePhoneChange(input.id, phone)}
+                                    containerClass={`flex w-full items-center rounded-md border-b ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                                        } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
+                                    inputStyle={{
+                                        border: 'none',
+                                        boxShadow: 'none',
+                                        width: '100%',
+                                        outline: 'none',
+                                        padding: '10px 50px',
+                                        color: 'white',
+                                        background: '#181E26',
+                                        height: '50px',
+                                    }}
+                                    inputClass="placeholder-gray-500"
+                                    dropdownStyle={{
+                                        backgroundColor: '#181E26',
+                                        color: '#fff',
+                                        maxHeight: '200px',
+                                        overflowY: 'auto',
+                                        hover: "yelllow"
+                                    }}
+                                    placeholder="Phone number"
+                                    autoFormat
+                                    disableCountryCode={false}
+                                    aria-invalid={!!errors.phone}
+                                    aria-describedby="phone-input-error"
+                                />
+                                {errors.phone && (
+                                    <p id="phone-input-error" className="text-red-500 text-sm mt-2">
+                                        {errors.phone}
+                                    </p>
+                                )}
+                               <p className="font-syne font-normal text-[13px] text-white/50 pt-[30px]">
+                                    We will process your personal information in accordance with our
+                                    Privacy Policy.
+                                </p>
+                                <div className="flex items-center lg:gap-3 gap-8 mt-[10px]">
+                                    <input
+                                        type="checkbox"
+                                        name="agree"
+                                        checked={form.agree}
+                                        onChange={handleInputChange}
+                                        className="h-5 w-5 bg-[#181E26] border-[#181E26] rounded focus:border-[#181E26] focus:ring-1"
+                                    />
+                                    <label className="font-syne font-normal text-[13px] lg:leading-[32px] text-white">
+                                        I would like to be contacted with news and updates about your
+                                        events and services.
+                                    </label>
+                                </div>
+                                {errors.agree && <p className="text-red-500 text-sm mt-2">{errors.agree}</p>}
                             </div>
-                            {errors.agree && <p className="text-red-500 text-sm mt-2">{errors.agree}</p>}
+
+                            {/* Right Section */}
+                            <div className="mt-24 lg:ml-8 lg:w-[50%]">
+                                <p className="text-white font-syne text-[15px] font-medium">
+                                    Message <span className="text-yellow">Required</span>
+                                </p>
+                                <textarea
+                                    name="message"
+                                    value={form.message}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your text here"
+                                    className="text-base p-2 mt-5 w-full bg-[#181E26] h-[295px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1 resize-none"
+                                    required
+                                />
+                                {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
+
+                                <button
+                                    type="submit"
+                                    className={`mt-[40px]  text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
+                                        }`}
+                                    disabled={result === "Sending..."}
+                                >
+                                    {result === "Sending..." ? "Sending..." : "Submit"}
+                                </button>
+
+                            </div>
                         </div>
+                        
                     </div>
                 </form>
-                
+
                 <div className='lg:flex lg:justify-between lg:items-center mt-32'>
                     <div>
-                        <img src={No9} alt="" className='w-[140px] h-[40px] ' />
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block'/>creativity, precision, and strategy</p>
+                        <img src={No9} alt="" className='w-[140px] h-[40px] mx-auto lg:mx-0 ' />
+                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block' />creativity, precision, and strategy</p>
                     </div>
 
                     <div>
-                        <h1 className='text-white font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0'>Join The <span className='text-yellow'>Northnine</span> <br />
+                        <h1 className='text-white text-center lg:text-left font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0'>Join The <span className='text-yellow'>Northnine</span> <br />
                             Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block'  />marketing, and finance. Contact us now!</p>
+                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block' />marketing, and finance. Contact us now!</p>
                     </div>
                 </div>
                 <div className='flex mt-[120px] pb-3 gap-1'>
@@ -282,18 +286,16 @@ function Footer() {
                     <div className='w-[96%] h-[2px] bg-[#FFFFFF]/30'></div>
                     <div className='w-[2%] h-[2px] bg-yellow'></div>
                 </div>
-                <div className='lg:flex lg:justify-between lg:items-center mt-[50px]'>
+                <div className='lg:flex lg:justify-between lg:items-center space-y-4'>
                     <ul className='flex gap-7 items-center lg:justify-start justify-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>FaceBook</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Instagram</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Linkedin</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Twitter</li>
                         <li className='font-syne text-[15px] font-normal text-white lg:block hidden'>Youtube</li>
                     </ul>
                     <ul className='flex gap-7 items-center lg:justify-start justify-center'>
                         <li className='font-syne text-[15px] font-normal text-white'>Terms and Conditions</li>
                         <li className='font-syne text-[15px] font-normal text-white'>Privacy Policy</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Sitemap</li>
                     </ul>
                 </div>
                 <div className='flex items-center justify-between mt-[80px] pb-[30px]'>
