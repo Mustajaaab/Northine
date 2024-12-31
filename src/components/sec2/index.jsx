@@ -5,11 +5,13 @@ import Photo4 from '../../assets/images/4.png'
 import Photo5 from '../../assets/images/5.png'
 import Photo6 from '../../assets/images/6.png'
 import Shades from '../../assets/images/white-shades.png'
-import File from '../../assets/images/file.png'
-import Spark from '../../assets/images/spark.png'
-import Save from '../../assets/images/save.png'
-import { CiCloud,CiBellOn,CiSettings,CiFolderOn } from "react-icons/ci";
-
+import code from '../../assets/images/coding.png'
+import desgin from '../../assets/images/desgin.png'
+import bookkeeping from '../../assets/images/bookkeeping.png'
+import maintenace from '../../assets/images/maintenance.png'
+import socialMedia from '../../assets/images/socialMedia.png'
+import streamlined from '../../assets/images/streamlined.png'
+import ai from '../../assets/images/ai.png'
 function Sec2() {
     const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
     return (
@@ -43,8 +45,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-6 lg:mt-[30px] relative '>
-                            <CiCloud className='w-[45px] h-[45px] ml-[30px] z-10' />
-                            <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
+                            <img src={maintenace} className='w-[45px] h-[45px] ml-[30px] z-10' />
                             <div>
                                 <div className='flex gap-3'>
                                     <div className='text-[#fdcb22] font-semibold text-lg font-syne'>01</div>
@@ -58,8 +59,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-[30px] relative'>
-                        <CiBellOn className='w-[45px] h-[45px] ml-[31px] z-10'  />
-                        <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
+                        <img src={socialMedia} className='w-[45px] h-[45px] ml-[31px] z-10'  />
                         <div>
                             <div className='flex gap-3'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>02</div>
@@ -74,8 +74,7 @@ function Sec2() {
                         </div>
 
                         <div className='lg:flex gap-[121px] relative '>
-                        <CiFolderOn className='w-[45px] h-[45px] ml-[31px] mt-7 z-10' />
-                        <span className='w-5 h-5  bg-yellow rounded-full absolute top-12 left-16 '></span>
+                        <img src={streamlined} className='w-[45px] h-[45px] ml-[31px] mt-7 z-10' />
                         <div>
                             <div className='flex gap-3 mt-[30px]'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>03</div>
@@ -90,7 +89,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div> 
                         <div className='lg:flex gap-[121px] mt-[30px]'>
-                        <img src={File} alt="" className='w-[45px] h-[45px] ml-[31px]' />
+                        <img src={ai} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>04</div>
@@ -109,8 +108,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-[30px] relative'>
-                            <CiSettings className='w-[45px] h-[45px] ml-[31px] z-10' />
-                            <span className='w-5 h-5  bg-yellow rounded-full absolute top-6 left-14 '></span>
+                            <img src={code} className='w-[45px] h-[45px] ml-[31px] z-10' />
                             <div>
                                 <div className='flex gap-3'>
                                     <div className='text-[#fdcb22] font-semibold text-lg font-syne'>01</div>
@@ -126,7 +124,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-[30px]'>
-                        <img src={Spark} alt="" className='w-[45px] h-[45px] ml-[31px]' />
+                        <img src={desgin} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>02</div>
@@ -140,7 +138,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-[30px]'>
-                            <img src={Save} alt="" className='w-[45px] h-[45px] ml-[31px]' />
+                            <img src={socialMedia} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                             <div>
                                 <div className='flex gap-3'>
                                     <div className='text-[#fdcb22] font-semibold text-lg font-syne'>03</div>
@@ -154,7 +152,7 @@ function Sec2() {
                             <div className="w-[96%] h-[2px] bg-gray-300"></div>
                         </div>
                         <div className='lg:flex gap-[121px] mt-[30px]'>
-                        <img src={Save} alt="" className='w-[45px] h-[45px] ml-[31px]' />
+                        <img src={bookkeeping} alt="" className='w-[45px] h-[45px] ml-[31px]' />
                         <div>
                             <div className='flex gap-3'>
                                 <div className='text-[#fdcb22] font-semibold text-lg font-syne'>04</div>
