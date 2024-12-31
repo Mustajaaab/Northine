@@ -91,14 +91,14 @@ function Services() {
                 className="flex justify-center items-center pt-[128px] bg-[#f2f4f3] h-[500px]"
                 style={{ backgroundImage: `url(${BGDot})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-                <div className="container mx-auto flex justify-between items-center">
+                <div className="lg:container w-[90%] mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
                             <p className="text-lg font-syne font-medium">Home</p>
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">Services</p>
                         </div>
-                        <h1 className="text-5xl font-syne mt-10 font-semibold uppercase">Mobile App Development</h1>
+                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Mobile App Development</h1>
                     </div>
                     <div className="hidden lg:block">
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">
@@ -115,12 +115,12 @@ function Services() {
                 </div>
             </div>
 
-            <div className="container mx-auto pb-[100px]">
+            <div className="lg:container w-[90%] mx-auto pb-[100px]">
                 <div className="flex gap-2 items-center pt-[100px]">
                     <div className="bg-yellow h-2 w-2 rounded-full"></div>
                     <p className="font-normal font-syne">Our Data Analytics Experties</p>
                 </div>
-                <h1 className="text-[43px] font-syne font-semibold pt-[30px]">Custom <span className="text-yellow">App Solutions</span> For any Mobile Platform</h1>
+                <h1 className="lg:text-5xl text-3xl font-syne font-semibold pt-[30px]">Custom <span className="text-yellow">App Solutions</span> For any Mobile Platform</h1>
 
                 <div className="mt-[100px] lg:flex justify-between">
                     <div>
@@ -141,7 +141,7 @@ function Services() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="mt-20 lg:mt-0">
                         <div className="flex justify-center">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
@@ -159,7 +159,7 @@ function Services() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="mt-20 lg:mt-0">
                         <div className="flex justify-center">
                             <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
                                 <div className="relative mx-auto rounded-full ">
@@ -182,10 +182,10 @@ function Services() {
             </div>
 
             <div className="py-8 bg-[#f3f3f4]">
-                <div className="container mx-auto pt-16">
+                <div className="lg:container w-[90%] mx-auto pt-16">
                     <div className='lg:flex justify-between'>
-                        <h1 className='font-syne font-semibold text-[42px]'>Latest Projects</h1>
-                        <div className='flex gap-[30px]'>
+                        <h1 className='font-syne font-semibold lg:text-5xl text-3xl'>Latest Projects</h1>
+                        <div className='flex lg:gap-[30px] justify-evenly lg:justify-start mt-6 lg:mt-0 '>
                             <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slidePrev()}>🡸    Prev</button>
                             <button className='font-syne text-base font-semibold hover:text-[#121820]/50 ease-in-out duration-300 hover:scale-110' onClick={() => swiperRef.current?.slideNext()}>Next 🡺</button>
                         </div>
@@ -250,28 +250,28 @@ function Services() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='container mx-auto justify-between flex mt-[107px] mb-[50px]'>
-                    <div className='flex gap-[14px] items-center group'>
+                <div className='lg:container w-[90%] mx-auto lg:justify-between grid justify-center lg:flex mt-[107px] mb-[50px]'>
+                    <div className='flex lg:gap-[14px] justify-evenly lg:justify-start items-center group'>
                         <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
                     </div>
-                    <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
+                    <button className='font-sans text-base py-5 px-14 border-[2px] lg:mt-0 mt-4 border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
                 </div>
             </div>
 
-            <div className="container mx-auto">
+            <div className="lg:container w-[90%] mx-auto">
                 <div className="flex items-center gap-3 mt-24">
                     <span className="w-2 h-2 bg-yellow rounded-full"></span>
                     <p className="font-syne">All Devices</p>
                 </div>
-                <h1 className="text-[44px] font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
+                <h1 className="lg:text-[44px] text-3xl font-syne font-semibold mt-14"><span className="text-yellow">End-to-End</span> Mobile Development Services</h1>
             </div>
 
-            <div className="pt-24 container mx-auto pb-24">
+            <div className="pt-24 lg:container w-[90%] mx-auto pb-24">
                 <div className="lg:flex gap-x-40 2xl:ml-20">
                     {/* Left Sidebar */}
                     <div>
-                        <ul className="relative space-y-8 border-gray-300 pl-6">
+                        <ul className="relative space-y-8 border-gray-300 lg:pl-6">
                             {steps.map((step, index) => (
                                 <li
                                     key={index}
@@ -297,7 +297,7 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-3xl ${activeStep === index ? "text-black" : "text-gray-400"
+                                            className={`font-medium font-syne text-2xl lg:text-3xl ${activeStep === index ? "text-black" : "text-gray-400"
                                                 }`}
                                         >
                                             {step.title}
@@ -310,20 +310,20 @@ function Services() {
 
                     {/* Right Content */}
                     <div>
-                        <div className="pt-10">
+                        <div className="lg:pt-10 pt-20">
                             <div className="flex relative">
                             <img
                                 src={steps[activeStep].image}
                                 alt={steps[activeStep].title}
-                                className="h-12 mb-4 rounded-lg z-10"
+                                className="h-12 lg:mb-4 mb-8 rounded-lg z-10"
                             />
                             <span className="absolute w-4 h-4 bg-yellow rounded-full top-7 left-7" ></span>
                             </div>
-                            <h2 className="text-2xl font-bold mb-4">{steps[activeStep].heading}</h2>
-                            <p className="text-black/40 font-syne text-lg  lg:w-[630px]">
+                            <h2 className="text-2xl font-bold lg:mb-4 mb-8">{steps[activeStep].heading}</h2>
+                            <p className="text-black/40 font-syne lg:text-lg  lg:w-[630px]">
                                 {steps[activeStep].content}
                             </p>
-                            <button className="mt-4 flex text-center gap-5 items-center justify-center">
+                            <button className="lg:mt-4 mt-8 flex text-center gap-5 items-center justify-center">
                                 <span className="font-syne font-semibold text-lg">See More</span>
                                 <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
                                     →
@@ -335,16 +335,16 @@ function Services() {
             </div>
 
 
-            <div className="container mx-auto gap-2 flex items-center mt-8">
+            <div className="lg:container w-[90%] mx-auto gap-2 flex items-center mt-8">
                 <span className="w-[2%] h-[2px] bg-yellow"></span>
                 <span className="w-[96%] h-[2px] bg-[#e7e7e8]"></span>
                 <span className="w-[2%] h-[2px] bg-yellow"></span>
             </div>
-            <div className="container flex justify-end mx-auto">
+            <div className="container lg:flex justify-end mx-auto hidden">
                 <img src={Shades} alt="" className="w-[220px]" />
             </div>
-            <div className="container mx-auto mb-20">
-                <h1 className="text-[44px] font-semibold font-syne">Delivering <span className="text-yellow">Industry Specific</span> Mobile
+            <div className="lg:container w-[90%] mx-auto mb-20">
+                <h1 className="lg:text-[44px] text-3xl font-semibold font-syne lg:mt-0 mt-16">Delivering <span className="text-yellow">Industry Specific</span> Mobile
                     <br />App Solutions</h1>
                 <div className="lg:flex justify-between mt-24">
                     <div>
@@ -364,7 +364,7 @@ function Services() {
                         <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>
                     </div>
 
-                    <div>
+                    <div className="mt-14 lg:mt-0">
                         <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
                                 <g clipPath="url(#clip0_790_24)">
@@ -381,7 +381,7 @@ function Services() {
                         <p className="font-syne text-base mt-4 font-medium text-black/35">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor facilisis.</p>
                     </div>
 
-                    <div>
+                    <div className="mt-14 lg:mt-0">
                         <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 40 45" fill="none">
                                 <g clipPath="url(#clip0_790_24)">
