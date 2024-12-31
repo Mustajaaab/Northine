@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import office from "../../assets/images/office.jpg";
 import officeStuf from "../../assets/images/officeStuf.jpg";
 import code from "../../assets/images/code.jpg";
+import coder from "../../assets/images/coder.jpg";
+import mac from "../../assets/images/mac.jpg";
+import setup from "../../assets/images/setup.jpg";
 
 function Sec1() {
     const [backgroundIndex, setBackgroundIndex] = useState(0);
-    const backgrounds = [office, code, officeStuf];
+    const backgrounds = [office,setup,coder,mac];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,7 +20,7 @@ function Sec1() {
     return (
 
         <div
-        className="relative bg-cover bg-center bg-no-repeat transition-all duration-2000 ease-in-out"
+        className="relative bg-cover bg-center bg-no-repeat transition-all duration-2000 ease-in-out 2xl:h-screen "
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgrounds[backgroundIndex]})`,
         }}
