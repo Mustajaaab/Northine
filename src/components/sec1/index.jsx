@@ -24,7 +24,7 @@ function Sec1() {
       >
 
                 <div className="container mx-auto flex justify-between items-center max-w-[1170px] 2xl:max-w-[1370px]">
-                    <div className="lg:pt-[350px] pt-32 pb-[171px] animate-fadeInSlideDown">
+                    <div className="lg:pt-64 pt-32 pb-[171px] animate-fadeInSlideDown">
                         <h3 className="text-white font-syne text-lg text-center lg:text-left">
                             <span className="text-[#fdcb22]">Northnine</span> Pvt Ltd
                         </h3>
