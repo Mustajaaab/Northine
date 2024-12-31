@@ -11,15 +11,10 @@ function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 10) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 10);
         };
 
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -48,10 +43,11 @@ function Navbar() {
                     className="lg:w-[186px] lg:h-[50px] md:w-[200px] md:h-[60px] w-[126px] h-[30px]"
                 />
 
+                {/* Mobile Menu Button */}
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-7 h-7 md:w-14 md:h-14 text-white cursor-pointer"
+                        className="w-7 h-7 md:w-14 md:h-14 text-white cursor-pointer hover:text-yellow transition-colors"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -66,29 +62,63 @@ function Navbar() {
                     </svg>
                 </div>
 
+                {/* Navigation Links */}
                 <div
-                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-16 right-0 w-full lg:w-auto`}
+                    className={`${
+                        isMenuOpen ? 'block' : 'hidden'
+                    } lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-16 right-0 w-full lg:w-auto bg-[#121820] lg:bg-transparent transition-all duration-300`}
                 >
-                    <Link to="/home" className={`${getActiveClass('/home')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>
+                    <Link
+                        to="/home"
+                        className={`${getActiveClass(
+                            '/home'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                    >
                         Home
                     </Link>
-                    <Link to="/about" className={`${getActiveClass('/about')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>
+                    <Link
+                        to="/about"
+                        className={`${getActiveClass(
+                            '/about'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                    >
                         About Us
                     </Link>
-                    <Link to="/team" className={`${getActiveClass('/team')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>
+                    <Link
+                        to="/team"
+                        className={`${getActiveClass(
+                            '/team'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                    >
                         Team
                     </Link>
-                    <Link to="/services" className={`${getActiveClass('/services')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>
+                    <Link
+                        to="/services"
+                        className={`${getActiveClass(
+                            '/services'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                    >
                         Services
                     </Link>
-                    <Link to="/case-studies" className={`${getActiveClass('/case-studies')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}>
+                    <Link
+                        to="/case-studies"
+                        className={`${getActiveClass(
+                            '/case-studies'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                    >
                         Case Studies
                     </Link>
-                    <Link to="/contact-us" className={`${getActiveClass('/contact-us')} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 pb-6 lg:py-0`}>
+                    <Link
+                        to="/contact-us"
+                        className={`${getActiveClass(
+                            '/contact-us'
+                        )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 pb-6 lg:py-0`}
+                    >
                         Contact Us
                     </Link>
                 </div>
 
+                {/* Search Form */}
                 {!isHomePage && (
                     <form className="lg:flex items-center space-x-2 hidden">
                         <div className="flex items-center border border-gray-600 rounded-full group focus-within:border-yellow">
