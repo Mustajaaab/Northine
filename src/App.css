@@ -82,7 +82,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.15); /* Light white glow */
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
