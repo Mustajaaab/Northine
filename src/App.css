@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 #root {
   max-width: screen;
   margin: 0 auto;
