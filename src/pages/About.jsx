@@ -37,7 +37,7 @@ function About() {
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">About Us</p>
                         </div>
-                        <h1 className="text-5xl font-syne mt-10 font-semibold">ENTERPRISE</h1>
+                        <h1 className=" text-3xl lg:text-5xl font-syne mt-10 font-semibold">ENTERPRISE</h1>
                     </div>
                     <div className="hidden lg:block">
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">

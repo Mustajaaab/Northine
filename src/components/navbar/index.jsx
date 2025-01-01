@@ -16,7 +16,11 @@ function Navbar() {
         };
 
         const handleResize = () => {
-            setIsLargeScreen(window.innerWidth >= 1024);
+            const isLarge = window.innerWidth >= 1024;
+            setIsLargeScreen(isLarge);
+            if (isLarge) {
+                document.body.classList.remove('overflow-hidden');
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -36,18 +40,25 @@ function Navbar() {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        if (!isLargeScreen) {
+            document.body.classList.toggle('overflow-hidden', !isMenuOpen);
+        }
     };
 
     return (
         <div
-            className={`w-full mx-auto items-center py-5 fixed z-50 transition-colors duration-300 ${
-                isScrolled ? 'bg-[#121820]' : isHomePage ? 'bg-transparent' : 'bg-[#1A1A1A]'
-            }`}
-        >
+        className={`w-full mx-auto items-center py-5 fixed z-50 transition-colors duration-300 ${
+            isScrolled
+                ? 'bg-[#121820]'
+                : isHomePage
+                ? 'bg-transparent'
+                : 'bg-[#121820]' 
+        } ${isScrolled ? 'lg:bg-[#121820]' : ''}`}
+    >
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <img
-                    src={isLargeScreen ? Northnine : Northnine}
+                    src={Northnine}
                     alt="Northnine Logo"
                     className={isLargeScreen ? 'w-[186px] h-[50px]' : 'w-[126px] h-[30px]'}
                 />
@@ -56,7 +67,7 @@ function Navbar() {
                 <div className="lg:hidden">
                     <svg
                         onClick={toggleMenu}
-                        className="w-7 h-7 md:w-14 md:h-14 text-white cursor-pointer hover:text-yellow transition-colors"
+                        className="w-7 h-7 text-white cursor-pointer hover:text-yellow transition-colors"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +85,8 @@ function Navbar() {
                 {/* Navigation Links */}
                 <div
                     className={`${
-                        isMenuOpen ? 'block' : 'hidden'
-                    } lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-16 right-0 w-full lg:w-auto bg-[#121820] lg:bg-transparent transition-all duration-300`}
+                        isMenuOpen ? 'block bg-[#121820]' : 'hidden'
+                    } lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-16 right-0 w-full lg:w-auto`}
                 >
                     {['/home', '/about', '/team', '/services', '/case-studies', '/contact-us'].map(
                         (path, index) => (
@@ -98,7 +109,7 @@ function Navbar() {
                         <div className="flex items-center border border-gray-600 rounded-full group focus-within:border-yellow">
                             <button type="submit" className="text-yellow group-focus:text-white pl-3">
                                 <svg
-                                    className="h-4 w-4 text-white group-focus:text-yellow ease-in-out duration-300 cursor-pointer"
+                                    className="h-4 w-4 text-white group-focus:text-yellow transition-colors"
                                     fill="currentColor"
                                     viewBox="0 0 21 20"
                                     xmlns="http://www.w3.org/2000/svg"
