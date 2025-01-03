@@ -7,10 +7,10 @@ import X from '../assets/images/x.png'
 import Instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/fb.png'
 import linked from '../assets/images/li.png'
-import Spark from '../assets/images/spark.png'
-import setting from '../assets/images/setting.png'
-import person from '../assets/images/person.png'
-import marker from '../assets/images/marker.png'
+import man from '../assets/images/man.png'
+import Increase from '../assets/images/increase.png'
+import target from '../assets/images/target.png'
+import transparency from '../assets/images/transparency.png'
 import No9 from "../assets/images/no9.png";
 import SAVE from '../assets/images/instaaa.png'
 
@@ -106,25 +106,25 @@ function Team(){
 
             <div className="lg:flex justify-center gap-[130px] lg:mt-28 mt-12 mb-28">
                 <div>
-                    <img src={Spark} alt="" className="w-[40px] mx-auto h-[50px]"/>
+                    <img src={Increase} alt="" className="w-[40px] mx-auto h-[50px]"/>
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">01.</span> Productivity</h1>
                     <p className="text-base text-black/40 font-syne text-center mt-6">Top of cutting-edge technology trends & <br />providing great customer experience for <br />businesses and branding.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
-                    <img src={setting} alt="" className="w-[50px] mx-auto h-[50px]"/>
+                    <img src={transparency} alt="" className="w-[50px] mx-auto h-[50px]"/>
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">02.</span> Transparency</h1>
                     <p className="text-base text-black/40 font-syne text-center mt-6">We offer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
-                    <img src={person} alt="" className="w-[60px] mx-auto"/>
+                    <img src={man} alt="" className="w-[60px] mx-auto"/>
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">03.</span> Personality</h1>
                     <p className="text-base text-black/40 font-syne text-center mt-6">With our tools, you can streamline your <br />development process and achieve better <br />outcomes.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
-                    <img src={marker} alt="" className="w-[60px] mx-auto h-[54px]"/>
+                    <img src={target} alt="" className="w-[60px] mx-auto h-[54px]"/>
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">04.</span> Volition</h1>
                     <p className="text-base text-black/40 font-syne text-center mt-6">We offer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
                 </div>
