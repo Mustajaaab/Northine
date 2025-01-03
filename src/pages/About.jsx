@@ -1,5 +1,8 @@
 import Navbar from "../components/navbar";
-import dot from '../assets/images/dot.png'
+import management from '../assets/images/management.png'
+import like from '../assets/images/like.png'
+import workSchedule from '../assets/images/workSchedule.png'
+import support from '../assets/images/support.png'
 import BGDot from '../assets/images/dotmap.png'
 import play from '../assets/images/play.png'
 import Shades from '../assets/images/white-shades.png'
@@ -13,11 +16,10 @@ import Photo4 from '../assets/images/4.png'
 import Photo5 from '../assets/images/5.png'
 import Photo6 from '../assets/images/6.png'
 import Oldman from '../assets/images/oldman.png'
-import save from '../assets/images/save.png'
-import bell from '../assets/images/bell.png'
 import tic from '../assets/images/tic.png'
-import spark from '../assets/images/spark.png'
-import setting from '../assets/images/setting.png'
+import innovation from '../assets/images/innovation.png'
+import basho from '../assets/images/basho.png'
+import hasso from '../assets/images/hasso.png'
 import Footer from '../components/Footer'
 
 
@@ -73,7 +75,7 @@ function About() {
                 </div>
                 <div className="lg:flex pb-20 container mx-auto">
                     <div className="lg:w-[50%] flex justify-end lg:pr-[100px]">
-                        <img src={Scope} alt="" className="w-[650px]" />
+                        <img src={hasso} alt="" className="w-full h-full" />
                     </div>
                     <div className="mt-4 lg:mt-4 w-[90%] lg:w-full lg:mx-0 mx-auto ">
                         <div className="flex items-center gap-4">
@@ -126,7 +128,7 @@ function About() {
                     <h2 className="lg:text-[44px] text-3xl font-syne font-semibold mt-[60px]">We Run All Kinds of IT <br />Services That Vow Your <br />Success</h2>
                 </div>
                 <div>
-                    <h2 className="text-[26px] font-syne mt-[60px] lg:mt-0 font-semibold">Accelerate <span className="text-yellow ">Innovation</span> <br className="lg:hidden"/> with world class tech <br />
+                    <h2 className="text-[26px] font-syne mt-[60px] lg:mt-0 font-semibold">Accelerate <span className="text-yellow ">Innovation</span> <br className="lg:hidden" /> with world class tech <br />
                         teams We&apos;ll match you to an entire <span className="text-yellow ">Remote <br /> Technology</span></h2>
 
 
@@ -186,8 +188,8 @@ function About() {
                     <img src={Shades} alt="" className="w-[200px]" />
                 </div>
                 <div className="lg:flex container mx-auto justify-between items-center pb-[90px]">
-                    <div className="lg:w-[50%] ">
-                        <img src={Oldman} alt="" className="w-full" />
+                    <div className="relative lg:w-[50%] flex items-center justify-center">
+                        <img src={basho} alt="Basho" className="" />
                     </div>
                     <div className="lg:w-full w-[95%] mx-auto">
                         <div className="flex gap-2 items-center mt-[50px]">
@@ -195,20 +197,20 @@ function About() {
                             <p className="font-syne text-lg">IT Enterprise</p>
                         </div>
                         <h1 className="text-5xl font-syne font-semibold mt-[50px]">Our Mission</h1>
-                        <p className="mt-[50px] font-syne text-black/30">Many desktop publishing packages and web page editors now use Lorem Ipsum as <br className="lg:block hidden"/>
-                            their default model text, and a search for lorem ipsum will uncover many web sites <br className="lg:block hidden"/>
-                            still in their infancy. Various versions have evolved over the years, sometimes by <br className="lg:block hidden"/>
+                        <p className="mt-[50px] font-syne text-black/30">Many desktop publishing packages and web page editors now use Lorem Ipsum as <br className="lg:block hidden" />
+                            their default model text, and a search for lorem ipsum will uncover many web sites <br className="lg:block hidden" />
+                            still in their infancy. Various versions have evolved over the years, sometimes by <br className="lg:block hidden" />
                             accident, sometimes on purpose. There are many variations of passages majority.</p>
                         <div className="flex gap-5 items-center mt-[50px]">
-                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
+                            <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">Accelerate innovation.</p>
                         </div>
                         <div className="flex gap-5 items-center mt-[20px]">
-                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
+                            <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">With world class tech teams.</p>
                         </div>
                         <div className="flex gap-5 items-center mt-[20px]">
-                        <span className="w-2 h-2 bg-yellow rounded-full" ></span>
+                            <span className="w-2 h-2 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">Our all service offerings to enhance.</p>
                         </div>
                     </div>
@@ -216,7 +218,7 @@ function About() {
             </div>
             <div className="lg:container w-[95%] mx-auto mt-[100px]">
                 <div className="flex gap-5 items-center">
-                <span className="w-3 h-3 bg-yellow rounded-full" ></span>
+                    <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                     <p className="font-syne text-lg">Our all service offerings to enhance.</p>
                 </div>
                 <h1 className="font-syne font-semibold lg:text-5xl text-3xl mt-10">Why Work With Us</h1>
@@ -228,7 +230,7 @@ function About() {
             </div>
             <div className="lg:flex items-center lg:container w-[95%] mx-auto justify-between mt-[70px]">
                 <div className="lg:flex items-end gap-[200px]">
-                    <img src={save} alt="" className="w-[40px] h-[48px]" />
+                    <img src={like} alt="" className="h-10" />
                     <h2 className="text-2xl font-syne font-semibold lg:mt-0 mt-6">Top Expertise</h2>
                 </div>
                 <p className="font-syne text-black/30 lg:mt-0 mt-6">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
@@ -242,7 +244,7 @@ function About() {
             </div>
             <div className="lg:flex items-center lg:container w-[95%] mx-auto justify-between mt-[70px]">
                 <div className="lg:flex items-end gap-[200px]">
-                    <img src={tic} alt="" className="w-[43px] h-[43px]" />
+                    <img src={management} alt="" className="h-10" />
                     <h2 className="text-2xl font-syne font-semibold lg:mt-0 mt-6">Quality Management</h2>
                 </div>
                 <p className="font-syne text-black/30 lg:mt-0 mt-6">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
@@ -256,7 +258,7 @@ function About() {
             </div>
             <div className="lg:flex items-center lg:container w-[95%] mx-auto justify-between mt-[70px]">
                 <div className="lg:flex items-end gap-[200px]">
-                    <img src={bell} alt="" className="w-[48px] h-[48px]" />
+                    <img src={workSchedule} alt="" className="h-10" />
                     <h2 className="text-2xl font-syne font-semibold lg:mt-0 mt-6">Utmost Flexibility</h2>
                 </div>
                 <p className="font-syne text-black/30 lg:mt-0 mt-6">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
@@ -270,7 +272,7 @@ function About() {
             </div>
             <div className="lg:flex items-center lg:container w-[95%] mx-auto justify-between mt-[70px]">
                 <div className="lg:flex items-end gap-[200px]">
-                    <img src={setting} alt="" className="w-[48px] h-[48px]" />
+                    <img src={support} alt="" className="h-10" />
                     <h2 className="text-2xl font-syne font-semibold lg:mt-0 mt-6">Agility</h2>
                 </div>
                 <p className="font-syne text-black/30 lg:mt-0 mt-6">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
@@ -284,7 +286,7 @@ function About() {
             </div>
             <div className="lg:flex items-center lg:container w-[95%] mx-auto justify-between mt-[70px]">
                 <div className="lg:flex items-end gap-[200px]">
-                    <img src={spark} alt="" className="w-[40px] h-[48px]" />
+                    <img src={innovation} alt="" className="h-10" />
                     <h2 className="text-2xl font-syne font-semibold lg:mt-0 mt-6">Innovation</h2>
                 </div>
                 <p className="font-syne text-black/30 lg:mt-0 mt-6">Et iusto odio dignissim qui blandit praesent luptatum zzril delenit. Duis autem vel eum <br />
