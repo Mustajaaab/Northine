@@ -171,3 +171,4 @@ def decode_sequence(input_seq):
         states_value = [h, c]
 
     return decoded_sentence
+# almost done
