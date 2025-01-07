@@ -3,8 +3,6 @@ import office from "../../assets/images/office.jpg";
 import coder from "../../assets/images/coder.jpg";
 import mac from "../../assets/images/mac.jpg";
 import setup from "../../assets/images/setup.jpg";
-import officeStuf from "../../assets/images/officeStuf.jpg";
-import code from "../../assets/images/code.jpg";
 
 
 function Sec1() {
