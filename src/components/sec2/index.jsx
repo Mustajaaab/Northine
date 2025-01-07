@@ -134,7 +134,7 @@ function Sec2() {
   return (
     <>
       {/* Slider Section */}
-      <div className="w-full py-12">
+      <div className="w-full py-12 overflow-hidden">
         <Slider {...sliderSettings}>
           {photos.map((photo, index) => (
             <div key={index}>
