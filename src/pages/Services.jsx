@@ -15,43 +15,44 @@ import Footer from '../components/Footer/index'
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
     const swiperRef = useRef(null);
 
     const steps = [
         {
             title: "Data Security",
             heading: "Research and Discover New Insights",
-            image: "../src/assets/services/serv19.svg",
+            image: "../src/assets/images/dataProtection.png",
             content: "Protecting digital information from unauthorized access or corruption. Implementing measures encryption. Firewalls to safeguard sensitive data. Implementing security measures. Developing incident response plans.",
         },
         {
             title: "UX/UI Design",
             heading: "Crafting User Experiences",
-            image: "../src/assets/services/seo.svg",
+            image: "../src/assets/images/webDesign.png",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Development",
             heading: "Building Scalable Applications",
-            image: "../src/assets/services/serv19.svg",
+            image: "../src/assets/images/coding.png",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "SEO and Optimazation",
             heading: "SEO and Optimazation",
-            image: "../src/assets/services/seo.svg", 
+            image: "../src/assets/images/searchEngine.png",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Launch",
             heading: "Taking the Product Live",
-            image: "../src/assets/services/serv19.svg",
+            image: "../src/assets/images/launch.png",
             content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
         {
             title: "Maintenance & Support",
             heading: "Keeping Things Running Smoothly",
-            image: "../src/assets/services/seo.svg", 
+            image: "../src/assets/images/maintenance.png",
             content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
         },
     ];
@@ -83,6 +84,16 @@ function Services() {
             description: "Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
     ];
+
+    const handleStepClick = (index) => {
+        if (index !== activeStep) {
+            setIsAnimating(true);
+            setTimeout(() => {
+                setActiveStep(index);
+                setIsAnimating(false);
+            }, 500);
+        }
+    };
 
     return (
         <>
@@ -192,7 +203,7 @@ function Services() {
                     </div>
                 </div>
                 <Swiper
-                    slidesPerView={3} 
+                    slidesPerView={3}
                     spaceBetween={20}
                     navigation={false}
                     pagination={{ clickable: true, el: null }}
@@ -275,16 +286,14 @@ function Services() {
                             {steps.map((step, index) => (
                                 <li
                                     key={index}
-                                    onClick={() => setActiveStep(index)}
+                                    onClick={() => handleStepClick(index)}
                                     className="cursor-pointer relative"
                                 >
                                     {index < steps.length - 1 && (
                                         <span
-                                            className={`absolute left-[10px] top-[34px] h-full w-[2px] ${activeStep > index ? "bg-gray-300" : "bg-gray-300"
-                                                }`}
+                                            className={`absolute left-[10px] top-[34px] h-full w-[2px] bg-gray-300`}
                                         ></span>
                                     )}
-
                                     <div className="flex items-center space-x-4">
                                         <span
                                             className={`w-6 h-6 rounded-full flex items-center justify-center border-4 ${activeStep === index
@@ -297,7 +306,9 @@ function Services() {
                                             )}
                                         </span>
                                         <span
-                                            className={`font-medium font-syne text-2xl lg:text-3xl ${activeStep === index ? "text-black" : "text-gray-400"
+                                            className={`font-medium font-syne text-2xl lg:text-3xl ${activeStep === index
+                                                    ? "text-black"
+                                                    : "text-gray-400"
                                                 }`}
                                         >
                                             {step.title}
@@ -310,17 +321,21 @@ function Services() {
 
                     {/* Right Content */}
                     <div>
-                        <div className="lg:pt-10 pt-20">
+                        <div
+                            className={`lg:pt-10 pt-20 transition-transform duration-300 ${isAnimating ? "translate-x-10 opacity-0" : "translate-x-0 opacity-100"
+                                }`}
+                        >
                             <div className="flex relative">
-                            <img
-                                src={steps[activeStep].image}
-                                alt={steps[activeStep].title}
-                                className="h-12 lg:mb-4 mb-8 rounded-lg z-10"
-                            />
-                            <span className="absolute w-4 h-4 bg-yellow rounded-full top-7 left-7" ></span>
+                                <img
+                                    src={steps[activeStep].image}
+                                    alt={steps[activeStep].title}
+                                    className="h-14 lg:mb-4 mb-8 rounded-lg z-10"
+                                />
                             </div>
-                            <h2 className="text-2xl font-bold lg:mb-4 mb-8">{steps[activeStep].heading}</h2>
-                            <p className="text-black/40 font-syne lg:text-lg  lg:w-[630px]">
+                            <h2 className="text-2xl font-bold lg:mb-4 mb-8">
+                                {steps[activeStep].heading}
+                            </h2>
+                            <p className="text-black/40 font-syne lg:text-lg lg:w-[630px]">
                                 {steps[activeStep].content}
                             </p>
                             <button className="lg:mt-4 mt-8 flex text-center gap-5 items-center justify-center">
@@ -333,7 +348,6 @@ function Services() {
                     </div>
                 </div>
             </div>
-
 
             <div className="lg:container w-[90%] mx-auto gap-2 flex items-center mt-8">
                 <span className="w-[2%] h-[2px] bg-yellow"></span>

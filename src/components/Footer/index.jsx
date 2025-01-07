@@ -1,118 +1,8 @@
 import '../../App.css';
-import { useState } from "react";
 import No9 from "../../assets/images/no9.png";
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+import FormSubmission from '../form';
 
 function Footer() {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-        agree: false,
-    });
-    const [input, setInput] = useState({
-        countryCode: "pk",
-        value: "",
-        id: 1,
-    });
-    const [file, setFile] = useState(null);
-    const [result, setResult] = useState("");
-    const [errors, setErrors] = useState({});
-
-    const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setForm((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-        setErrors((prev) => ({
-            ...prev,
-            [name]: "",
-        }));
-    };
-
-    const validateForm = () => {
-        const newErrors = {};
-
-        if (!form.name.trim()) {
-            newErrors.name = "Name is required.";
-        }
-
-        if (!form.email.trim()) {
-            newErrors.email = "Email is required.";
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-            newErrors.email = "Please enter a valid email address.";
-        }
-
-        if (input.value && !/^\d+$/.test(input.value)) {
-            newErrors.phone = "Phone number must contain only digits.";
-        }
-
-        if (!form.message.trim()) {
-            newErrors.message = "Message is required.";
-        }
-
-        if (!form.agree) {
-            newErrors.agree = "You must agree to the terms.";
-        }
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const onSubmit = async (e) => {
-        e.preventDefault();
-
-        if (!validateForm()) {
-            return;
-        }
-
-        setResult("Sending...");
-
-        const formData = new FormData();
-        formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
-        formData.append("name", form.name);
-        formData.append("email", form.email);
-        formData.append("phone", input.value);
-        formData.append("message", form.message);
-        formData.append("agree", form.agree);
-
-        if (file) {
-            formData.append("file", file);
-        }
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            setForm({
-                name: "",
-                email: "",
-                phone: "",
-                message: "",
-                agree: false,
-            });
-            setInput({ countryCode: "pk", value: "", id: 1 });
-            setFile(null);
-        } else {
-            setResult("Error: " + data.message);
-        }
-    };
-
-    const handlePhoneChange = (id, phone) => {
-        setInput({ ...input, value: phone });
-        setErrors((prev) => ({
-            ...prev,
-            phone: "",
-        }));
-    };
 
     return (
         <div className="bg-gradient-to-b from-gradientStart to-gradientEnd">
@@ -127,148 +17,12 @@ function Footer() {
                         </linearGradient>
                     </defs>
                 </svg>
-
             </div>
             <div className="lg:container mx-auto w-[90%]">
                 <h1 className="text-white font-syne font-semibold text-[42px] mt-6 lg:mt-0">
                     Contact <span className="text-yellow">Us</span>
                 </h1>
-                <form onSubmit={onSubmit}>
-                    <div>
-                        <div className="lg:flex">
-                            {/* Left Section */}
-                            <div className="lg:w-[50%]">
-                                <div className="flex gap-3 items-center lg:mt-24 mt-14">
-                                    <p className="text-white font-syne font-medium text-[15px]">
-                                        Name
-                                    </p>
-                                    <p className="text-yellow font-syne font-medium text-[15px]">
-                                        Required
-                                    </p>
-                                </div>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={form.name}
-                                    onChange={handleInputChange}
-                                    placeholder="Enter your name"
-                                    className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
-                                    required
-                                />
-                                {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name}</p>}
-
-                                <div className="flex gap-3 items-center mt-[30px]">
-                                    <p className="text-white font-syne font-medium text-[15px]">
-                                        Email Address
-                                    </p>
-                                    <p className="text-yellow font-syne font-medium text-[15px]">
-                                        Required
-                                    </p>
-                                </div>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={form.email}
-                                    onChange={handleInputChange}
-                                    placeholder="Enter your email"
-                                    className="text-base mt-5 p-2 w-full bg-[#181E26] h-[50px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1"
-                                    required
-                                />
-                                {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
-
-                                <div className="flex gap-3 items-center my-6">
-                                    <p className="text-white font-syne font-medium text-[15px]">
-                                        Phone
-                                    </p>
-                                    <p className="text-[#FFFFFF]/50 font-syne font-medium text-[15px]">
-                                        Optional
-                                    </p>
-                                </div>
-                                <PhoneInput
-                                    country={input.countryCode}
-                                    value={input.value}
-                                    onChange={(phone) => handlePhoneChange(input.id, phone)}
-                                    containerClass={`flex w-full items-center rounded-md border-b ${errors.phone ? 'border-red-500' : 'border-gray-300'
-                                        } bg-[#181E26] focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1`}
-                                    inputStyle={{
-                                        border: 'none',
-                                        boxShadow: 'none',
-                                        width: '100%',
-                                        outline: 'none',
-                                        padding: '10px 50px',
-                                        color: 'white',
-                                        background: '#181E26',
-                                        height: '50px',
-                                    }}
-                                    inputClass="placeholder-gray-500"
-                                    dropdownStyle={{
-                                        backgroundColor: '#181E26',
-                                        color: '#fff',
-                                        maxHeight: '200px',
-                                        overflowY: 'auto',
-                                        hover: "yelllow"
-                                    }}
-                                    placeholder="Phone number"
-                                    autoFormat
-                                    disableCountryCode={false}
-                                    aria-invalid={!!errors.phone}
-                                    aria-describedby="phone-input-error"
-                                />
-                                {errors.phone && (
-                                    <p id="phone-input-error" className="text-red-500 text-sm mt-2">
-                                        {errors.phone}
-                                    </p>
-                                )}
-                               <p className="font-syne font-normal text-[13px] text-white/50 pt-[30px]">
-                                    We will process your personal information in accordance with our
-                                    Privacy Policy.
-                                </p>
-                                <div className="flex items-center lg:gap-3 gap-8 mt-[10px]">
-                                    <input
-                                        type="checkbox"
-                                        name="agree"
-                                        checked={form.agree}
-                                        onChange={handleInputChange}
-                                        className="h-5 w-5 bg-[#181E26] border-[#181E26] rounded focus:border-[#181E26] focus:ring-1"
-                                    />
-                                    <label className="font-syne font-normal text-[13px] lg:leading-[32px] text-white">
-                                        I would like to be contacted with news and updates about your
-                                        events and services.
-                                    </label>
-                                </div>
-                                {errors.agree && <p className="text-red-500 text-sm mt-2">{errors.agree}</p>}
-                            </div>
-
-                            {/* Right Section */}
-                            <div className="mt-24 lg:ml-8 lg:w-[50%]">
-                                <p className="text-white font-syne text-[15px] font-medium">
-                                    Message <span className="text-yellow">Required</span>
-                                </p>
-                                <textarea
-                                    name="message"
-                                    value={form.message}
-                                    onChange={handleInputChange}
-                                    placeholder="Enter your text here"
-                                    className="text-base p-2 mt-5 w-full bg-[#181E26] h-[295px] border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none focus:border-yellow focus:ring-yellow focus:ring-1 resize-none"
-                                    required
-                                />
-                                {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
-
-                                <button
-                                    type="submit"
-                                    className={`mt-[40px]  text-base font-normal text-center font-syne py-[14px] w-full rounded-full bg-yellow ease-in-out duration-300 transition-transform hover:scale-105 text-white ${result === "Sending..." ? "opacity-50 cursor-not-allowed" : ""
-                                        }`}
-                                    disabled={result === "Sending..."}
-                                >
-                                    {result === "Sending..." ? "Sending..." : "Submit"}
-                                </button>
-
-                            </div>
-                        </div>
-                        
-                    </div>
-                </form>
-
+                <FormSubmission />
                 <div className='lg:flex lg:justify-between lg:items-center mt-32'>
                     <div>
                         <img src={No9} alt="" className='w-[140px] h-[40px] mx-auto lg:mx-0 ' />
@@ -299,8 +53,10 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='flex items-center justify-between mt-[80px] pb-[30px]'>
-                    <p className='text-white/10 font-syne font-normal text-[13px] '>©Northnine 2024.</p>
-                    <p className='text-white/10 font-syne font-normal text-[13px] '>All Right Reserved.</p>
+                    <p className="text-white/10 font-syne font-normal text-sm">
+                        ©Northnine {new Date().getFullYear()}.
+                    </p>
+                    <p className='text-white/10 font-syne font-normal text-sm '>All Right Reserved.</p>
                 </div>
             </div>
         </div>
