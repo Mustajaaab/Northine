@@ -8,7 +8,8 @@ function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
-    const isHomePage = location.pathname === '/home';
+    const isHomePage = location.pathname === '/' || location.pathname === '/home';
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,10 +34,12 @@ function Navbar() {
     }, []);
 
     const getActiveClass = (path) => {
-        return location.pathname === path
+        const currentPath = location.pathname === '/' ? '/home' : location.pathname;
+        return currentPath === path
             ? 'text-yellow lg:border-b border-yellow'
             : 'text-white';
     };
+    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -105,7 +108,7 @@ function Navbar() {
 
                 {/* Search Form */}
                 {!isHomePage && (
-                    <form className="lg:flex items-center space-x-2 hidden">
+                    <form className="xl:flex items-center space-x-2 hidden">
                         <div className="flex items-center border border-gray-600 rounded-full group focus-within:border-yellow">
                             <button type="submit" className="text-yellow group-focus:text-white pl-3">
                                 <svg
