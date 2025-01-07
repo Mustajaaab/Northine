@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import "../../App.css"
 import Photo1 from "../../assets/images/New folder/365estatehub.png";
 import Photo2 from "../../assets/images/New folder/growerck.png";
 import Photo3 from "../../assets/images/New folder/plan.png";
@@ -100,34 +100,34 @@ function Sec2() {
     cssEase: 'linear',
     rtl: true,
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 6,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 320,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
         }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
     ]
   };
 
@@ -137,11 +137,11 @@ function Sec2() {
       <div className="w-full py-12 overflow-hidden">
         <Slider {...sliderSettings}>
           {photos.map((photo, index) => (
-            <div key={index}  >
+            <div key={index} >
               <img
                 src={photo}
                 alt={`Photo ${index + 1}`}
-                className="w-[80%] h-auto"
+                className="w-[80%] h-auto "
               />
             </div>
           ))}
