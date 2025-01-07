@@ -25,7 +25,6 @@ function Sec1() {
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgrounds[backgroundIndex]})`,
         }}
       >
-
                 <div className="container mx-auto flex justify-between items-center max-w-[1170px] 2xl:max-w-[1370px]">
                     <div className="lg:pt-64 pt-32 pb-[171px] animate-fadeInSlideDown">
                         <h3 className="text-white font-syne text-lg text-center lg:text-left">

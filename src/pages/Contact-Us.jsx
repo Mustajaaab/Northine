@@ -66,7 +66,7 @@ function Contact() {
                 body: formData,
             });
             const data = await response.json();
-
+        
             if (data.success) {
                 setResult("Form Submitted Successfully");
                 setForm({
@@ -88,7 +88,8 @@ function Contact() {
         } catch (error) {
             setResult("Error: Could not submit the form.");
         }
-    };
+    }
+            
 
     return (
         <>
@@ -388,6 +389,6 @@ function Contact() {
 
             <Footer />
         </>
-    )
-}
+    )}
+
 export default Contact
