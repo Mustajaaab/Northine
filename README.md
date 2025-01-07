@@ -1,2 +1,2 @@
 # Northnine Website 
-# chatbot ins in under development.
+# chatbot is in under development.
