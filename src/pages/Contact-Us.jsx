@@ -122,7 +122,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <div className='lg:flex lg:w-[69%] w-[90%] mx-auto pt-20 justify-between'>
+            <div className='lg:flex xl:w-[69%] w-[90%] mx-auto pt-20 justify-between'>
                 <form onSubmit={onSubmit} className='lg:w-[65%]'>
                     <h1 className='font-syne text-2xl font-semibold'><span className='text-yellow'>01.</span> Tell Us About Yourself</h1>
                     <div className="lg:flex">

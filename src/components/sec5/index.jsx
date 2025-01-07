@@ -1,7 +1,6 @@
 import  { useState } from "react";
 import Girl from "../../assets/images/Girl.jpg";
 import Shades from "../../assets/images/white-shades.png";
-import Dot from "../../assets/images/dot.png";
 import Gamla from "../../assets/images/gamla.jpg";
 import Docs from "../../assets/images/docs.jpg.png";
 
@@ -130,7 +129,7 @@ function Sec5() {
                     />
                 </div>
 
-                <div className="w-[315px]">
+                <div className="w-[315px] lg:hidden xl:block">
                     <img
                         src={currentContent.sideImg2}
                         alt=""

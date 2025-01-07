@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Photo1 from "../../assets/images/1.png";
-import Photo2 from "../../assets/images/2.png";
-import Photo3 from "../../assets/images/3.png";
-import Photo4 from "../../assets/images/4.png";
-import Photo5 from "../../assets/images/5.png";
-import Photo6 from "../../assets/images/6.png";
+import Photo1 from "../../assets/images/New folder/365estatehub.png";
+import Photo2 from "../../assets/images/New folder/growerck.png";
+import Photo3 from "../../assets/images/New folder/plan.png";
+import Photo4 from "../../assets/images/New folder/Hackino.png";
+import Photo5 from "../../assets/images/New folder/KMA-logo.svg";
+import Photo6 from "../../assets/images/New folder/readinggraphics.webp";
 import Shades from "../../assets/images/white-shades.png";
 import code from "../../assets/images/coding.png";
 import desgin from "../../assets/images/desgin.png";
@@ -134,14 +134,14 @@ function Sec2() {
   return (
     <>
       {/* Slider Section */}
-      <div className="w-full py-12">
+      <div className="w-full py-12  ">
         <Slider {...sliderSettings}>
           {photos.map((photo, index) => (
-            <div key={index}>
+            <div key={index}  >
               <img
                 src={photo}
                 alt={`Photo ${index + 1}`}
-                className="w-[80%]"
+                className="w-[80%] h-auto"
               />
             </div>
           ))}
