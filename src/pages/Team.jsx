@@ -47,17 +47,17 @@ function Team(){
                     </div>
                 </div>
             </div>
-            <h1 className="text-center text-2xl font-semibold font-syne mt-[110px]">The leadership team plays a cruical role <br className="lg:block hidden" /> in 
-            <span className="text-yellow"> guiding and <br className="lg:hidden"/>towards</span> success.</h1>
+            <h1 className="text-center text-2xl font-semibold font-syne mt-[110px]">Meet 
+            <span className="text-yellow"> Our</span> Leadership</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[80px] justify-items-center lg:mt-[80px] mt-0 px-4">
     {[
-        { img: Client1, name: "Jane Meldrum", title: "Marketer" },
-        { img: Client2, name: "John Doe", title: "UX/UI Designer" },
-        { img: Client3, name: "Emily Smith", title: "App Developer" },
-        { img: Client1, name: "Jane Meldrum", title: "CEO ITSulu" },
-        { img: Client2, name: "John Doe", title: "CTO XYZ" },
-        { img: Client3, name: "Emily Smith", title: "COO ABC" },
+        { img: Client1, name: "Jami Baig", title: "CEO  & Co-Founder" },
+        { img: Client2, name: "Farhan Ali", title: "Co-Founder & UI/UX Designer" },
+        { img: Client3, name: "Ahsam Ullah Baig", title: "Co-Founder & UI/UX Designer" },
+        { img: Client1, name: "Irfan Ullah Baig", title: "Co-Founder & UI/UX Designer" },
+        { img: Client2, name: "Hasina Baig", title: "Co-Founder & Digital Marketing Expert" },
+        { img: Client3, name: "Rahat Karim", title: "Senior Data Scientist" },
     ].map((client, index) => (
         <div key={index} className="text-center group relative mt-9">
             <div className="relative w-[350px] h-[350px] lg:h-[400px] lg:w-[400px] rounded-full overflow-hidden">

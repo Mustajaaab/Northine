@@ -109,7 +109,7 @@ function Services() {
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">Services</p>
                         </div>
-                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Mobile App Development</h1>
+                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Our Services </h1>
                     </div>
                     <div className="hidden lg:block">
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">

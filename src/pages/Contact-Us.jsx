@@ -105,7 +105,7 @@ function Contact() {
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">Contact Us</p>
                         </div>
-                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Let&apos;s discuss your opportunity</h1>
+                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Let&apos;s Discuss Your Project</h1>
                     </div>
                     <div className='lg:block hidden'>
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">
