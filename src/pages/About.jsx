@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Slider from "../components/projectsSlider/ProjectSlider";
 import management from '../assets/images/management.png'
 import like from '../assets/images/like.png'
 import workSchedule from '../assets/images/workSchedule.png'
@@ -6,16 +7,8 @@ import support from '../assets/images/support.png'
 import BGDot from '../assets/images/dotmap.png'
 import play from '../assets/images/play.png'
 import Shades from '../assets/images/white-shades.png'
-import Scope from '../assets/images/scope.png'
 import tickk from '../assets/images/tickk.png'
 import client1 from '../assets/images/client1.jpg'
-import Photo1 from '../assets/images/1.png'
-import Photo2 from '../assets/images/2.png'
-import Photo3 from '../assets/images/3.png'
-import Photo4 from '../assets/images/4.png'
-import Photo5 from '../assets/images/5.png'
-import Photo6 from '../assets/images/6.png'
-import Oldman from '../assets/images/oldman.png'
 import tic from '../assets/images/tic.png'
 import innovation from '../assets/images/innovation.png'
 import basho from '../assets/images/basho.png'
@@ -24,7 +17,6 @@ import Footer from '../components/Footer'
 
 
 function About() {
-    const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
     return (
         <>
             <Navbar />
@@ -173,16 +165,7 @@ function About() {
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
-            <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-auto py-20">
-                {photos.map((photo, index) => (
-                    <img
-                        key={index}
-                        src={photo}
-                        alt={`Photo ${index + 1}`}
-                        className="w-[150px] h-[40px] mx-auto ease-in-out duration-300 hover:scale-110"
-                    />
-                ))}
-            </div>
+           <Slider/>
             <div className="bg-[#f3f4f2]">
                 <div className="lg:flex hidden justify-end w-[85%]">
                     <img src={Shades} alt="" className="w-[200px]" />
