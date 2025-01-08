@@ -20,7 +20,7 @@ function Footer() {
             </div>
             <div className="lg:container mx-auto w-[90%]">
                 <h1 className="text-white font-syne font-semibold text-[42px] mt-6 lg:mt-0">
-                    Contact <span className="text-yellow">Us</span>
+                    Contact <span className="text-yellow">Us<br />Let&apos;s Make It </span>Happen
                 </h1>
                 <FormSubmission />
                 <div className='lg:flex lg:justify-between lg:items-center mt-32'>
