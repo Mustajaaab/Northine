@@ -1,8 +1,8 @@
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
-import Client1 from '../assets/images/client1.jpg'
+import Client1 from '../assets/images/Jami.png'
 import Client2 from '../assets/images/client2.jpg'
-import Client3 from '../assets/images/client3.jpg'
+import Client3 from '../assets/images/Kashifx.jpg'
 import X from '../assets/images/x.png'
 import Instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/fb.png'
@@ -57,7 +57,7 @@ function Team(){
         { img: Client3, name: "Ahsam Ullah Baig", title: "Co-Founder & UI/UX Designer" },
         { img: Client1, name: "Irfan Ullah Baig", title: "Co-Founder & UI/UX Designer" },
         { img: Client2, name: "Hasina Baig", title: "Co-Founder & Digital Marketing Expert" },
-        { img: Client3, name: "Rahat Karim", title: "Senior Data Scientist" },
+        { img: Client3, name: "Kashif Ali Khan", title: "Lead Web Development" },
     ].map((client, index) => (
         <div key={index} className="text-center group relative mt-9">
             <div className="relative w-[350px] h-[350px] lg:h-[400px] lg:w-[400px] rounded-full overflow-hidden">

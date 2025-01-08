@@ -9,6 +9,11 @@ import Photo3 from "../../assets/images/New folder/plan.png";
 import Photo4 from "../../assets/images/New folder/Hackino.png";
 import Photo5 from "../../assets/images/New folder/KMA-logo.svg";
 import Photo6 from "../../assets/images/New folder/readinggraphics.webp";
+import Photo7 from "../../assets/images/New folder/Raising_Mama_Logo.avif";
+import Photo8 from "../../assets/images/New folder/serptag.png";
+import Photo9 from "../../assets/images/New folder/vlbpo.png";
+import Photo10 from "../../assets/images/New folder/up_venture_media_logo.jpeg";
+import Photo11 from "../../assets/images/New folder/thekcclogo.webp";
 import Shades from "../../assets/images/white-shades.png";
 import code from "../../assets/images/coding.png";
 import desgin from "../../assets/images/desgin.png";
@@ -19,7 +24,7 @@ import streamlined from "../../assets/images/streamlined.png";
 import ai from "../../assets/images/ai.png";
 
 function Sec2() {
-  const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
+  const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6, Photo7, Photo8, Photo9, Photo10, Photo11];
 
   const services = [
     {
@@ -189,15 +194,10 @@ function Sec2() {
                       className="w-[45px] h-[45px] ml-[30px] z-10 mb-4 lg:mb-0"
                     />
                     <div>
-                      <div className="flex gap-3">
-                        <div className="text-[#fdcb22] font-semibold text-lg font-syne">
-                          {item.number}
-                        </div>
                         <h2 className="font-semibold font-syne text-lg">
                           {item.title}
                         </h2>
-                      </div>
-                      <p className="text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px] h-20">
+                      <p className="text-[#121820]/60 font-syne text-[17px] leading-[25.5px] mt-[30px] h-20">
                         {item.description}
                       </p>
                     </div>
