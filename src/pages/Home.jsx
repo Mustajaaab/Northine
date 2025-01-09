@@ -4,7 +4,7 @@ import Sec3 from '../components/sec3'
 import Sec4 from '../components/sec4'
 import Sec5 from '../components/sec5'
 import Slider2 from '../components/slider2'
-import Footer from '../components/Footer'
+import MainFooter from '../components/Footer/mainFooter'
 import Navbar  from '../components/navbar'
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
         <Sec4/>
         <Sec5/>
         <Slider2/>
-        <Footer/>  
+        <MainFooter/>  
         </>
     )
 } 
