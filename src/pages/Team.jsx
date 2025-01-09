@@ -3,9 +3,7 @@ import BGDot from '../assets/images/dotmap.png'
 import Client1 from '../assets/images/Jami.png'
 import Client2 from '../assets/images/client2.jpg'
 import Client3 from '../assets/images/Kashifx.jpg'
-import Instagram from '../assets/images/instagram.png'
-import facebook from '../assets/images/fb.png'
-import linked from '../assets/images/li.png'
+import Haseena from '../assets/images/haseena.jpg'
 import man from '../assets/images/man.png'
 import Increase from '../assets/images/increase.png'
 import target from '../assets/images/target.png'
@@ -55,7 +53,7 @@ function Team() {
                     { img: Client2, name: "John Doe", title: "UX/UI Designer" },
                     { img: Client3, name: "Emily Smith", title: "App Developer" },
                     { img: Client1, name: "Jane Meldrum", title: "CEO ITSulu" },
-                    { img: Client2, name: "John Doe", title: "CTO XYZ" },
+                    { img: Haseena, name: "Haseena Baig", title: "CTO XYZ" },
                     { img: Client3, name: "Emily Smith", title: "COO ABC" },
                 ].map((client, index) => (
                     <div key={index} className="text-center group relative mt-9">
@@ -73,16 +71,6 @@ function Team() {
                         <p className="font-mono text-black/40 text-base font-semibold mt-[8px] group-hover:text-black ease-out duration-300">
                             {client.title}
                         </p>
-                        <div className="flex mt-1 justify-center gap-2">
-                            {[facebook, linked, Instagram].map((icon, i) => (
-                                <div
-                                    key={i}
-                                    className="flex h-[40px] w-[40px] bg-[#f2f4f3] justify-center items-center rounded-full group-hover:bg-[#e2e4e3] ease-out duration-300"
-                                >
-                                    <img src={icon} alt={`Icon ${i}`} className="w-[20px] h-[20px]" />
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 ))}
             </div>
@@ -113,7 +101,7 @@ function Team() {
                 <div className="mt-12 lg:mt-0">
                     <img src={transparency} alt="" className="w-[50px] mx-auto h-[50px]" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">02.</span> Transparency</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">We offer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">We offfer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
