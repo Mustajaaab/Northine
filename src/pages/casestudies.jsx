@@ -1,7 +1,7 @@
 import BGDot from '../assets/images/dotmap.png'
 import Navbar from '../components/navbar'
 import Sliderrr from '../components/slider-for-case-studies/slider'
-import Footer from '../components/Footer'
+import MainFooter from '../components/Footer/mainFooter'
 
 function Casestudies () {
     return (
@@ -35,7 +35,7 @@ function Casestudies () {
                 </div>
             </div>
             <Sliderrr/>
-            <Footer/>
+            <MainFooter/>
         </>
     )
 }

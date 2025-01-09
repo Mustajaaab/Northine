@@ -11,7 +11,7 @@ import Phones from '../assets/images/phones.png';
 import Motion from '../assets/images/motion.png'
 import { useRef } from "react";
 import Shades from '../assets/images/white-shades.png'
-import Footer from '../components/Footer/index'
+import MainFooter from '../components/Footer/mainFooter'
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
@@ -413,7 +413,7 @@ function Services() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <MainFooter />
         </>
 
     );
