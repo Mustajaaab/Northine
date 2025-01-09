@@ -10,6 +10,8 @@ import ai from "../../assets/images/ai.png";
 
 function Sec2() {
 
+  
+
   const services = [
     {
       category: "IT Services",
@@ -127,15 +129,10 @@ function Sec2() {
                       className="w-[45px] h-[45px] ml-[30px] z-10 mb-4 lg:mb-0"
                     />
                     <div>
-                      <div className="flex gap-3">
-                        <div className="text-[#fdcb22] font-semibold text-lg font-syne">
-                          {item.number}
-                        </div>
                         <h2 className="font-semibold font-syne text-lg">
                           {item.title}
                         </h2>
-                      </div>
-                      <p className="text-[#121820]/40 font-syne text-[15px] leading-[25.5px] mt-[30px] h-20">
+                      <p className="text-[#121820]/60 font-syne text-[17px] leading-[25.5px] mt-[30px] h-20">
                         {item.description}
                       </p>
                     </div>

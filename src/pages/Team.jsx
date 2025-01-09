@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
-import Client1 from '../assets/images/client1.jpg'
+import Client1 from '../assets/images/Jami.png'
 import Client2 from '../assets/images/client2.jpg'
 import Client3 from '../assets/images/client3.jpg'
 import man from '../assets/images/man.png'

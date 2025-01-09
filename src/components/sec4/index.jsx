@@ -13,13 +13,12 @@ function Sec4() {
                     setIsVisible(true);
 
                     setSkillPercentages([
-                        85, 
+                        88, 
                         90, 
-                        50,
-                        70,
-                        50, 
-                        65, 
-                        80,
+                        87,
+                        85,
+                        89, 
+                        80, 
                     ]);
                 }
             },
