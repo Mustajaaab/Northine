@@ -9,6 +9,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Input
 from tensorflow.keras.models import Model
+from flask import Flask, request, jsonify
+import pickle
 
 # TPU Setup
 try:
@@ -29,8 +31,6 @@ NUM_SAMPLES = 50000
 
 # Load Dataset
 df = pd.read_csv(r'C:\Users\yara\Northine\src\chatbot\data\dataset.csv', encoding='utf-8')
-
-print(df.columns)
 
 # Preprocessing Function
 def clean_text(text):
@@ -93,9 +93,6 @@ input_train, input_val, target_train, target_val = train_test_split(
 target_train = target_train.reshape(target_train.shape[0], target_train.shape[1], 1)
 target_val = target_val.reshape(target_val.shape[0], target_val.shape[1], 1)
 
-# Ensure correct padding for target sequences
-print(f"Max target length: {max_target_len}")
-
 # Model Definition
 # Encoder
 encoder_inputs = Input(shape=(max_input_len,))
@@ -111,64 +108,4 @@ decoder_dense = Dense(target_vocab_size, activation='softmax')
 decoder_outputs = decoder_dense(decoder_outputs)
 
 # Compile Model
-model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.summary()
-
-# Train the Model
-history = model.fit(
-    [input_train, target_train[:, :-1]],
-    target_train[:, 1:],
-    batch_size=BATCH_SIZE,
-    epochs=EPOCHS,
-    validation_data=([input_val, target_val[:, :-1]], target_val[:, 1:])
-)
-
-# Save Model and Tokenizers
-model.save("chatbot_model.h5")
-import pickle
-with open("input_tokenizer.pkl", "wb") as f:
-    pickle.dump(input_tokenizer, f)
-with open("target_tokenizer.pkl", "wb") as f:
-    pickle.dump(target_tokenizer, f)
-
-# Encoder Model for Inference
-encoder_model = Model(encoder_inputs, [state_h, state_c])
-
-# Decoder Model for Inference
-decoder_state_input_h = Input(shape=(LATENT_DIM,))
-decoder_state_input_c = Input(shape=(LATENT_DIM,))
-decoder_states_inputs = [decoder_state_input_h, decoder_state_input_c]
-decoder_lstm_outputs, state_h, state_c = decoder_lstm(
-    decoder_embedding, initial_state=decoder_states_inputs
-)
-decoder_states = [state_h, state_c]
-decoder_outputs = decoder_dense(decoder_lstm_outputs)
-decoder_model = Model(
-    [decoder_inputs] + decoder_states_inputs, [decoder_outputs] + decoder_states
-)
-
-# Response Generation Function
-def decode_sequence(input_seq):
-    states_value = encoder_model.predict(input_seq)
-    target_seq = np.zeros((1, 1))
-    target_seq[0, 0] = target_tokenizer.word_index["bos"]
-
-    decoded_sentence = ""
-    stop_condition = False
-
-    while not stop_condition:
-        output_tokens, h, c = decoder_model.predict([target_seq] + states_value)
-        sampled_token_index = np.argmax(output_tokens[0, -1, :])
-        sampled_word = target_tokenizer.index_word[sampled_token_index]
-
-        if sampled_word == "eos" or len(decoded_sentence.split()) > max_target_len:
-            stop_condition = True
-        else:
-            decoded_sentence += " " + sampled_word
-
-        target_seq[0, 0] = sampled_token_index
-        states_value = [h, c]
-
-    return decoded_sentence
-# almost done
+model = Model([encoder_inputs])
