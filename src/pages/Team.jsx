@@ -105,7 +105,7 @@ function Team() {
                 <div className="mt-12 lg:mt-0">
                     <img src={transparency} alt="" className="w-[50px] mx-auto h-[50px]" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">02.</span> Transparency</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">We offer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">We offfer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
