@@ -54,13 +54,13 @@ function Team() {
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 lg:mt-[80px] mt-0 px-4">
                 {[
                     { img: jami, name: "Jamila Baig", title: "CEO & Co-founder NorthNine", url: "/ourTeam/Jamila" },
-                    { img: Farhan, name: "Farhan Ali", title: "CTO & Co-founder NorthNine", url: "/profile/john-doe" },
-                    { img: Ahsam, name: "Ahsam Baig", title: "COO & Co-founder NorthNine", url: "/profile/jane-meldrum" },
-                    { img: irfan, name: "Irfan Ullah Baig", title: "CFO & Co-founder NorthNine", url: "/profile/john-doe" },
-                    { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/profile/emily-smith" },
-                    { img: Kashif, name: "Kashif Ali Khan", title: "Lead Web Development NorthNine", url: "/profile/emily-smith" },
-                    { img: Shazmeen, name: "Shazmeen Baig", title: "Lead Accountant NorthNine", url: "/profile/emily-smith" },
-                    { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/profile/emily-smith" },
+                    { img: Farhan, name: "Farhan Ali", title: "CTO & Co-founder NorthNine", url: "/OurTeam/Farhan" },
+                    { img: Ahsam, name: "Ahsam Baig", title: "COO & Co-founder NorthNine", url: "/OurTeam/Ahsam" },
+                    { img: irfan, name: "Irfan Ullah Baig", title: "CFO & Co-founder NorthNine", url: "/OurTeam/Irfan" },
+                    { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/Haseena/Haseena" },
+                    { img: Kashif, name: "Kashif Ali Khan", title: "Lead Web Development NorthNine", url: "/OurTeam/Kashif" },
+                    { img: Shazmeen, name: "Shazmeen Baig", title: "Lead Accountant NorthNine", url: "/OurTeam/Shazmeen" },
+                    { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/OurTeam/Rahat" },
                 ].map((client, index) => (
                     <div key={index} className="text-center group relative mt-9">
                         <div className="relative w-[250px] h-[250px] lg:h-[350px] lg:w-[350px] rounded-full overflow-hidden">
