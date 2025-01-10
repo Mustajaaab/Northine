@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
-import Client1 from '../assets/images/Jami.png'
-import Client2 from '../assets/images/client2.jpg'
-import Client3 from '../assets/images/client3.jpg'
+import jami from '../assets/images/Jami.png'
+import irfan from '../assets/images/irfan.jpg'
+import Haseena from '../assets/images/haseena.jpg'
+import Farhan from '../assets/images/farhan.jfif'
+import Ahsam from '../assets/images/ahsam.jpg'
+import Kashif from '../assets/images/Kashifx.jpg'
+import Shazmeen from '../assets/images/Shazmeen.jpg'
 import man from '../assets/images/man.png'
+import Rahat3 from '../assets/images/Rahat3.jpg'
 import Increase from '../assets/images/increase.png'
 import target from '../assets/images/target.png'
 import transparency from '../assets/images/transparency.png'
@@ -27,7 +32,7 @@ function Team() {
                             <span className="w-3 h-3 bg-yellow rounded-full"></span>
                             <p className="text-lg font-syne font-[100]">Team</p>
                         </div>
-                        <h1 className="text-5xl font-syne mt-10 font-semibold">LEADERSHIP TEAM</h1>
+                        <h1 className="lg:text-5xl text-3xl  font-syne mt-10 font-semibold">LEADERSHIP TEAM</h1>
                     </div>
                     <div className="lg:block hidden">
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">
@@ -46,17 +51,19 @@ function Team() {
             <h1 className="text-center text-2xl font-semibold font-syne mt-[110px]">The leadership team plays a cruical role <br className="lg:block hidden" /> in
                 <span className="text-yellow"> guiding and <br className="lg:hidden" />towards</span> success.</h1>
 
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center lg:mt-[80px] mt-0 px-4">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 lg:mt-[80px] mt-0 px-4">
                 {[
-                    { img: Client1, name: "Jamila Baig", title: "CEO", url: "/ourTeam/Jamila" },
-                    { img: Client2, name: "John Doe", title: "UX/UI Designer", url: "/profile/john-doe" },
-                    { img: Client3, name: "Emily Smith", title: "App Developer", url: "/profile/emily-smith" },
-                    { img: Client1, name: "Jane Meldrum", title: "CEO ITSulu", url: "/profile/jane-meldrum" },
-                    { img: Client2, name: "John Doe", title: "CTO XYZ", url: "/profile/john-doe" },
-                    { img: Client3, name: "Emily Smith", title: "COO ABC", url: "/profile/emily-smith" },
+                    { img: jami, name: "Jamila Baig", title: "CEO & Co-founder NorthNine", url: "/ourTeam/Jamila" },
+                    { img: Farhan, name: "Farhan Ali", title: "CTO & Co-founder NorthNine", url: "/profile/john-doe" },
+                    { img: Ahsam, name: "Ahsam Baig", title: "COO & Co-founder NorthNine", url: "/profile/jane-meldrum" },
+                    { img: irfan, name: "Irfan Ullah Baig", title: "CFO & Co-founder NorthNine", url: "/profile/john-doe" },
+                    { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/profile/emily-smith" },
+                    { img: Kashif, name: "Kashif Ali Khan", title: "Lead Web Development NorthNine", url: "/profile/emily-smith" },
+                    { img: Shazmeen, name: "Shazmeen Baig", title: "Lead Accountant NorthNine", url: "/profile/emily-smith" },
+                    { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/profile/emily-smith" },
                 ].map((client, index) => (
                     <div key={index} className="text-center group relative mt-9">
-                        <div className="relative w-[350px] h-[350px] lg:h-[350px] lg:w-[350px] rounded-full overflow-hidden">
+                        <div className="relative w-[250px] h-[250px] lg:h-[350px] lg:w-[350px] rounded-full overflow-hidden">
                             <Link
                                 to={client.url}
                                 state={{ name: client.name, title: client.title, img: client.img }} // Pass state
