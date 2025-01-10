@@ -2,12 +2,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../../components/navbar/index";
 import '../../App.css';
-import JamiJobBar from "../SkillBar/JamiJobBar";
+import RahatJobBar from "../SkillBar/RahatJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
+import GitHub from '../../assets/images/github.png'
 
-const Jamila = () => {
+const Rahat = () => {
   const location = useLocation();
   const navigate = useNavigate(); 
   const { name, title, img } = location.state || {};
@@ -70,31 +71,32 @@ const Jamila = () => {
       </div>
     </header>
 
-    <main className="container mx-auto pt-20 flex flex-col-reverse lg:flex-row gap-8">
+    <main className="container mx-auto pt-20 flex flex-col-reverse lg:flex-row gap-8 p-6">
       {/* Biography Section */}
-      <section className="">
+      <div className="">
         <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
         <p className="text-lg text-gray-600 mb-6 font-syne">
-          To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
+        Leading the Data Science and AI team at Northnine Pvt Ltd, He drive innovation by applying machine learning, NLP, and advanced analytics to deliver impactful solutions, empowering businesses with data-driven insights.
         </p>
 
         <ul className="mil-timeline">
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-            <p className="mil-text-sm font-syne">2020-2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne">Hunza WebX</h3>
+            <p className="mil-text-sm font-syne">2023-2024</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
-            <p className="mil-text-sm font-syne">Dec 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne">
+Trainee in Data Science and AI at NUST.</h3>
+            <p className="mil-text-sm font-syne">2024-2025</p>
           </li>
           <li>
             <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-            <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+            <p className="mil-text-sm font-syne">2024 - Present</p>
           </li>
         </ul>
 
         <p className="mt-6 text-gray-700 font-syne">
-          Jamila Baig, the dynamic CEO of Northnine, is a visionary leader known for steering the company towards innovation and success...
+        Rahat Karim, the dynamic Team Lead of Data Science and AI at Northnine, is a visionary leader driving innovation through advanced analytics and machine learning to deliver impactful solutions and achieve excellence...
         </p>
 
         <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -102,14 +104,14 @@ const Jamila = () => {
           <div className="w-[96%] h-[2px] bg-gray-300"></div>
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
         </div>
-        <JamiJobBar />
-      </section>
+        <RahatJobBar />
+      </div>
 
       {/* Testimonial Section */}
       <aside className="bg-white p-6 rounded-md">
         <blockquote className="text-xl italic font-light text-center mb-6 font-syne">
           <p>
-            Northnine allowed me to grow and <span className="text-yellow font-bold">reach goals</span> that I never imagined.
+            Northnine enpowered me to grow and <span className="text-yellow font-bold">achieve milestones</span> that I never imagined.
           </p>
         </blockquote>
         <div className="container flex mx-auto mt-[52px] pb-3 gap-1">
@@ -117,12 +119,12 @@ const Jamila = () => {
           <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
           <div className="w-[2%] h-[2px] bg-yellow"></div>
         </div>
-        <p className="text-center text-sm text-gray-500 font-syne">JamilaBaig@gmail.com</p>
-        <div className="mt-7">
+        <p className="text-center text-sm text-gray-500 font-syne">karimrahat33@gmail.com</p>
+        <div className="mt-7 text-center justify-center">
           <h3 className="font-semibold text-lg font-syne">Socials</h3>
-          <div className="flex space-x-4 mt-2">
+          <div className="flex space-x-4 mt-2 justify-center">
             <a
-              href="https://www.linkedin.com/in/jamibaig/" // Replace with actual LinkedIn profile URL
+              href="https://www.linkedin.com/in/rahat-karim-/" // Replace with actual LinkedIn profile URL
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit LinkedIn profile"
@@ -130,7 +132,15 @@ const Jamila = () => {
               <img src={linkedin} alt="LinkedIn" className="h-8" />
             </a>
             <a
-              href="https://medium.com/@jamilabaig69" // Replace with actual Medium profile URL
+              href="https://github.com/Rahat-karim" // Replace with actual LinkedIn profile URL
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit LinkedIn profile"
+            >
+              <img src={GitHub} alt="Github" className="h-8" />
+            </a>
+            <a
+              href="https://medium.com/@karimrahat33" // Replace with actual Medium profile URL
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Medium profile"
@@ -146,4 +156,4 @@ const Jamila = () => {
   );
 };
 
-export default Jamila;
+export default Rahat;

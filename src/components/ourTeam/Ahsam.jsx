@@ -7,7 +7,7 @@ import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
 
-const Jamila = () => {
+const Ahsam = () => {
   const location = useLocation();
   const navigate = useNavigate(); 
   const { name, title, img } = location.state || {};
@@ -70,9 +70,9 @@ const Jamila = () => {
       </div>
     </header>
 
-    <main className="container mx-auto pt-20 flex flex-col-reverse lg:flex-row gap-8">
+    <main className="container mx-auto pt-20 flex flex-col-reverse lg:flex-row gap-8 p-6">
       {/* Biography Section */}
-      <section className="">
+      <div className="">
         <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
         <p className="text-lg text-gray-600 mb-6 font-syne">
           To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
@@ -103,7 +103,7 @@ const Jamila = () => {
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
         </div>
         <JamiJobBar />
-      </section>
+      </div>
 
       {/* Testimonial Section */}
       <aside className="bg-white p-6 rounded-md">
@@ -146,4 +146,4 @@ const Jamila = () => {
   );
 };
 
-export default Jamila;
+export default Ahsam;

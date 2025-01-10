@@ -146,7 +146,7 @@
   border: solid 2px rgb(255, 255, 255);
   border-radius: 50%;
   background-color:#fdcb22;
-  z-index: 50;
+  z-index: 20;
 }
 
 /* Heading styles */
@@ -188,37 +188,28 @@
       border-left: solid 2px rgba(18, 24, 32, 0.1);
       padding: 0;
   }
-}
 
-@media screen and (max-width: 992px) {
   .mil-timeline li {
-      position: relative;
-      list-style-type: none;
-      margin-right: 30px;
-      margin-bottom: 30px;
-  }
+    position: relative;
+    list-style-type: none;
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
-@media screen and (max-width: 992px) {
-  .mil-timeline li:before {
-    border-right: none;
-  }
+.mil-timeline li:before {
+  border-right: none;
 }
-@media screen and (max-width: 992px) {
-  .mil-timeline li:after {
-    content: "";
-    position: absolute;
-    left: -7px;
-    top: 7px;
-    width: 13px;
-    height: 13px;
-    border: solid 2px rgb(255, 255, 255);
-    border-radius: 50%;
-    background-color:#fdcb22;
-    z-index: 50;
-  }
+.mil-timeline li:after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 7px;
+  width: 13px;
+  height: 13px;
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color:#fdcb22;
 }
-@media screen and (max-width: 992px) {
-  .mil-timeline li p:before {
-    display: none;
-  }
+.mil-timeline li p:before {
+  display: none;
+}
 }
