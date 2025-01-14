@@ -11,6 +11,8 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense, Input
 from tensorflow.keras.models import Model
 from flask import Flask, request, jsonify
 import pickle
+import tkinter as tk
+from tkinter import scrolledtext
 
 # TPU Setup
 try:
@@ -109,3 +111,51 @@ decoder_outputs = decoder_dense(decoder_outputs)
 
 # Compile Model
 model = Model([encoder_inputs])
+
+
+# Function to process user input and provide chatbot response
+def send_message():
+    user_message = user_input.get()
+    if user_message.strip() == "":
+        return
+    
+    # Display user message in the chat window
+    chat_window.configure(state="normal")
+    chat_window.insert(tk.END, f"You: {user_message}\n")
+    chat_window.configure(state="disabled")
+    
+    # Generate chatbot response (dummy response for demonstration)
+    chatbot_response = generate_response(user_message)
+    chat_window.configure(state="normal")
+    chat_window.insert(tk.END, f"Bot: {chatbot_response}\n\n")
+    chat_window.configure(state="disabled")
+    chat_window.see(tk.END)  # Auto-scroll to the bottom
+    
+    # Clear the input field
+    user_input.delete(0, tk.END)
+
+# Dummy function to generate a chatbot response
+def generate_response(message):
+    # Use your chatbot model here to generate a response
+    # For simplicity, returning a dummy response
+    return "This is a placeholder response."
+
+# GUI Setup
+root = tk.Tk()
+root.title("Chatbot")
+root.geometry("500x600")
+
+# Chat display area
+chat_window = scrolledtext.ScrolledText(root, wrap=tk.WORD, state="disabled", font=("Arial", 12))
+chat_window.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
+
+# User input field
+user_input = tk.Entry(root, font=("Arial", 14))
+user_input.pack(padx=10, pady=10, fill=tk.X, expand=False)
+
+# Send button
+send_button = tk.Button(root, text="Send", font=("Arial", 12), command=send_message)
+send_button.pack(padx=10, pady=10)
+
+# Start the GUI event loop
+root.mainloop()

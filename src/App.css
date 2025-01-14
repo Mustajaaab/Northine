@@ -107,3 +107,124 @@
 }
 
 
+/*  */
+
+.mil-timeline {
+  position: relative;
+  padding-top: 60px;
+  list-style: none;
+  display: flex;
+  border-top: solid 2px rgba(18, 24, 32, 0.1);
+  justify-content: space-between;
+}
+
+/* Timeline items */
+.mil-timeline li {
+  position: relative;
+  margin-bottom: 60px; /* Space between timeline items */
+}
+
+/* Dotted line */
+.mil-timeline li:before {
+  content: "";
+  position: absolute; /* Aligns with the circle */
+  left: 0px; /* Ensure alignment with the timeline */
+  top: -60px;
+  width: 1px;
+  height: 175%;
+  border-right: 2px dotted rgba(18, 24, 32, 0.1);
+  z-index: 10;
+}
+
+.mil-timeline li:after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -67px;
+  width: 13px;
+  height: 13px;
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color:#fdcb22;
+  z-index: 20;
+}
+
+/* Heading styles */
+.mil-timeline li h5 {
+  padding-left: 30px; 
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Text styles */
+.mil-timeline li p {
+  padding-left: 30px; 
+  font-size: 13px;
+  margin: 0; 
+  color: rgba(18, 24, 32, 0.7);
+}
+
+.mil-timeline li p:before {
+  content: "";
+  position: absolute;
+  margin-right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -4px;
+  background-color: rgba(18, 24, 32, 0.1);
+}
+
+/* Utility classes */
+.mil-mb-5 {
+  margin-bottom: 5px !important;
+}
+
+
+@media screen and (max-width: 992px) {
+  .mil-timeline {
+      flex-direction: column;
+      border-top: none;
+      border-left: solid 2px rgba(18, 24, 32, 0.1);
+      padding: 0;
+  }
+
+  .mil-timeline li {
+    position: relative;
+    list-style-type: none;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.mil-timeline li:before {
+  border-right: none;
+}
+.mil-timeline li:after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 7px;
+  width: 13px;
+  height: 13px;
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color:#fdcb22;
+}
+.mil-timeline li p:before {
+  display: none;
+}
+}
+
+
+/* skill bar */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out forwards;
+}

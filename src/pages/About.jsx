@@ -13,7 +13,7 @@ import tic from '../assets/images/tic.png'
 import innovation from '../assets/images/innovation.png'
 import basho from '../assets/images/basho.png'
 import hasso from '../assets/images/hasso.png'
-import Footer from '../components/Footer'
+import MainFooter from '../components/Footer/mainFooter'
 
 
 function About() {
@@ -339,7 +339,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <MainFooter />
         </>
     )
 }
