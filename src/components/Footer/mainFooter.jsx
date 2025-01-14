@@ -7,7 +7,7 @@ const MainFooter = () => {
         <div className="relative bg-gradient-to-b from-gradientStart to-gradientEnd ">
             {/* Background Image */}
             <div
-                className="absolute inset-28 bg-no-repeat bg-center bg-cover opacity-10"
+                className="absolute inset-56 bg-no-repeat bg-center bg-cover opacity-5"
                 style={{ backgroundImage: `url(${DotBg})` }}
             ></div>
 
