@@ -9,8 +9,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Input
 from tensorflow.keras.models import Model
-from flask import Flask, request, jsonify
-import pickle
 import tkinter as tk
 from tkinter import scrolledtext
 
@@ -95,6 +93,12 @@ input_train, input_val, target_train, target_val = train_test_split(
 target_train = target_train.reshape(target_train.shape[0], target_train.shape[1], 1)
 target_val = target_val.reshape(target_val.shape[0], target_val.shape[1], 1)
 
+# Convert input and target data to NumPy arrays
+input_train = np.array(input_train)
+target_train = np.array(target_train)
+input_val = np.array(input_val)
+target_val = np.array(target_val)
+
 # Model Definition
 # Encoder
 encoder_inputs = Input(shape=(max_input_len,))
@@ -110,8 +114,17 @@ decoder_dense = Dense(target_vocab_size, activation='softmax')
 decoder_outputs = decoder_dense(decoder_outputs)
 
 # Compile Model
-model = Model([encoder_inputs])
+model = Model(inputs=[encoder_inputs, decoder_inputs], outputs=decoder_outputs)
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
+# Train the Model
+model.fit([input_train, target_train], target_train, 
+          batch_size=BATCH_SIZE, 
+          epochs=EPOCHS, 
+          validation_data=([input_val, target_val], target_val))
+
+# Save the model
+model.save('chatbot_model.h5')
 
 # Function to process user input and provide chatbot response
 def send_message():
@@ -124,7 +137,7 @@ def send_message():
     chat_window.insert(tk.END, f"You: {user_message}\n")
     chat_window.configure(state="disabled")
     
-    # Generate chatbot response (dummy response for demonstration)
+    # Generate chatbot response
     chatbot_response = generate_response(user_message)
     chat_window.configure(state="normal")
     chat_window.insert(tk.END, f"Bot: {chatbot_response}\n\n")
@@ -134,11 +147,32 @@ def send_message():
     # Clear the input field
     user_input.delete(0, tk.END)
 
-# Dummy function to generate a chatbot response
+# Function to generate a chatbot response
 def generate_response(message):
-    # Use your chatbot model here to generate a response
-    # For simplicity, returning a dummy response
-    return "This is a placeholder response."
+    # Preprocess the user message
+    message = clean_text(message)
+    message_seq = input_tokenizer.texts_to_sequences([message])
+    message_seq = pad_sequences(message_seq, maxlen=max_input_len, padding='post')
+
+    # Prepare the initial state for the decoder
+    initial_state = [state_h, state_c]  # Use the last states from the encoder
+    decoder_input = np.zeros((1, max_target_len))  # Start with a zero input for the decoder
+    decoder_input[0, 0] = target_tokenizer.word_index['bos']  # Start with the 'bos' token
+
+    # Generate response
+    response = []
+    for i in range(max_target_len):
+        output_tokens = model.predict([message_seq, decoder_input])
+        sampled_token_index = np.argmax(output_tokens[0, i, :])
+        sampled_char = target_tokenizer.index_word.get(sampled_token_index, '')
+        
+        if sampled_char == 'eos':
+            break
+        
+        response.append(sampled_char)
+        decoder_input[0, i + 1] = sampled_token_index  # Update the decoder input
+
+    return ' '.join(response)
 
 # GUI Setup
 root = tk.Tk()
