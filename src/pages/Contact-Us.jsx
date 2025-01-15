@@ -24,9 +24,10 @@ function Contact() {
         const { name, value, type, checked } = e.target;
         setForm((prev) => ({
             ...prev,
-            [name]: type === "checkbox" ? checked : value,
+            [name]: type === "checkbox" ? checked : value, // Properly handle both text and checkbox inputs
         }));
     };
+
 
     const handleFileClick = () => {
         document.getElementById("fileInput")?.click();
@@ -66,7 +67,7 @@ function Contact() {
                 body: formData,
             });
             const data = await response.json();
-        
+
             if (data.success) {
                 setResult("Form Submitted Successfully");
                 setForm({
@@ -89,7 +90,7 @@ function Contact() {
             setResult("Error: Could not submit the form.");
         }
     }
-            
+
 
     return (
         <>
@@ -167,7 +168,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="company"
-                                value={form.phone}
+                                value={form.company}
                                 onChange={handleInputChange}
                                 placeholder="Enter your company name"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
@@ -183,7 +184,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="lastName"
-                                value={form.name}
+                                value={form.lastName}
                                 onChange={handleInputChange}
                                 placeholder="Eve"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder:text-gray-400 focus:outline-none "
@@ -213,7 +214,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="role"
-                                value={form.phone}
+                                value={form.role}
                                 onChange={handleInputChange}
                                 placeholder="Enter your role"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
@@ -232,7 +233,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="subject"
-                                value={form.phone}
+                                value={form.subject}
                                 onChange={handleInputChange}
                                 placeholder="Web Designer"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
@@ -247,7 +248,7 @@ function Contact() {
                             <input
                                 type="number"
                                 name="projectBudget"
-                                value={form.phone}
+                                value={form.projectBudget}
                                 onChange={handleInputChange}
                                 placeholder="Enter your Budget"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
@@ -262,12 +263,13 @@ function Contact() {
                         </p>
                     </div>
                     <textarea
-                        name="Description"
-                        value={form.phone}
+                        name="description" // Matches the state key
+                        value={form.description} // Correctly bound to state
                         onChange={handleInputChange}
                         placeholder="Your Message"
                         className="text-base mt-5 p-2 w-full h-[295px] resize-none placeholder:font-syne border-b border-gray-400 placeholder-gray-400 focus:outline-none"
                     />
+
                     <div className="mt-10">
                         <div
                             className="flex items-center gap-2 cursor-pointer"
@@ -389,6 +391,7 @@ function Contact() {
 
             <Footer />
         </>
-    )}
+    )
+}
 
 export default Contact
