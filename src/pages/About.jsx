@@ -65,12 +65,12 @@ function About() {
                 <div className=" flex justify-center items-end gap-[100px] w-[92%]">
                     <img src={Shades} alt="" className="w-[200px]" />
                 </div>
-                <div className="lg:flex pb-20 container mx-auto">
-                    <div className="lg:w-[50%] flex justify-end lg:pr-[100px]">
-                        <img src={hasso} alt="" className="w-full h-full" />
+                <div className="lg:flex pb-20 container mx-auto justify-between">
+                <div className="relative lg:w-[50%] flex items-center justify-center">
+                        <img src={hasso} alt="Basho" className="" />
                     </div>
-                    <div className="mt-4 lg:mt-4 w-[90%] lg:w-full lg:mx-0 mx-auto ">
-                        <div className="flex items-center gap-4">
+                    <div className="mt-4 lg:mt-4 w-[90%] lg:w-full lg:mx-0 mx-auto lg:space-x-32">
+                        <div className="flex items-center gap-4 justify-start ml-0 lg:ml-32 mt-10 ">
                             <div className="w-3 h-3 rounded-full bg-yellow" ></div>
                             <p className="font-syne">Firm Overview</p>
                         </div>
@@ -80,7 +80,7 @@ function About() {
                         <p className="text-black/30 font-syne mt-[60px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolorem <br className="hidden lg:block" />
                             illum sapiente mollitia delectus. Harum libero molestiae eos unde necessitatibus, <br />
                             quasi, explicabo deserunt ex nemo facilis maxime. Nam, fuga rem!</p>
-                        <div className="mt-[50px] lg:flex items-end gap-[150px]">
+                        <div className="mt-[50px] lg:flex  gap-[150px]">
                             <div>
                                 <div className="flex items-center gap-2 lg:mt-0 mt-1">
                                     <img src={tickk} alt="" className="w-10 h-9" />
@@ -174,8 +174,8 @@ function About() {
                     <div className="relative lg:w-[50%] flex items-center justify-center">
                         <img src={basho} alt="Basho" className="" />
                     </div>
-                    <div className="lg:w-full w-[95%] mx-auto">
-                        <div className="flex gap-2 items-center mt-[50px]">
+                    <div className="lg:w-full w-[95%] mx-auto space-x-0 lg:space-x-32">
+                        <div className="flex gap-2 items-center mt-[50px] ml-0 lg:ml-32">
                             <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                             <p className="font-syne text-lg">IT Enterprise</p>
                         </div>
