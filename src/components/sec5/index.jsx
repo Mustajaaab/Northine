@@ -1,8 +1,9 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Girl from "../../assets/images/Girl.jpg";
 import Shades from "../../assets/images/white-shades.png";
 import Gamla from "../../assets/images/gamla.jpg";
 import Docs from "../../assets/images/docs.jpg.png";
+import FeedBackVideo from "../../assets/kccTetimonial.mp4";
 
 function Sec5() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,7 +12,8 @@ function Sec5() {
     const slides = [
         {
             id: 1,
-            mainImg: Girl,
+            mainImg: '',
+            mainVideo: FeedBackVideo,
             mainTitle: "Easy & Most Powerful Server Platform",
             mainAuthor: "Jane Meldrum",
             mainDesc:
@@ -69,7 +71,7 @@ function Sec5() {
             <div className="lg:flex lg:justify-between items-center 3">
                 <div>
                     <p className="flex gap-2 items-center">
-                    <span className="w-3 h-3 bg-yellow rounded-full" ></span>
+                        <span className="w-3 h-3 bg-yellow rounded-full" ></span>
                         <a className="font-syne font-medium text-base">Our Project News</a>
                     </p>
                     <h1 className="font-syne font-semibold mt-6 text-[42px]">
@@ -93,11 +95,22 @@ function Sec5() {
             </div>
             <div className={`mt-[90px] flex gap-[30px] mb-[120px] justify-center ${animationClass}`}>
                 <div className="hidden lg:block ">
-                    <img
-                        src={currentContent.mainImg}
-                        alt=""
-                        className="w-[645px] h-[400px] rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
-                    />
+                    {currentContent.mainImg ? (
+                        <img
+                            src={currentContent.mainImg}
+                            alt=""
+                            className="w-[645px] h-[400px] rounded-xl grayscale hover:grayscale-0 ease-in-out duration-500"
+                        />
+                    ) : (
+                        <video
+                            src={currentContent.mainVideo}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            className="w-[645px] h-[400px] rounded-xl shadow-lg"
+                        ></video>
+                    )}
                     <div className="flex w-[645px] mt-5 lg:justify-between">
                         <div>
                             <h1 className="font-syne font-semibold text-[22px] leading-[30px]">
@@ -115,6 +128,7 @@ function Sec5() {
                         </p>
                     </div>
                 </div>
+
                 <div className="lg:block w-[315px] hidden">
                     <h1 className="font-syne font-semibold text-[22px] leading-[30px]">
                         {currentContent.sideTitle1}
