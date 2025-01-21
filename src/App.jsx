@@ -14,11 +14,13 @@ import Haseena from './components/OurTeam/Haseena';
 import Kashif from './components/OurTeam/Kashif';
 import Shazmeen from './components/OurTeam/Shazmeen';
 import Rahat from './components/OurTeam/Rahat';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <div className="App ">
+            <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

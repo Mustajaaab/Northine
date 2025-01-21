@@ -57,7 +57,7 @@ function Team() {
                     { img: Farhan, name: "Farhan Ali", title: "CTO & Co-founder NorthNine", url: "/OurTeam/Farhan" },
                     { img: Ahsam, name: "Ahsam Baig", title: "COO & Co-founder NorthNine", url: "/OurTeam/Ahsam" },
                     { img: irfan, name: "Irfan Ullah Baig", title: "CFO & Co-founder NorthNine", url: "/OurTeam/Irfan" },
-                    { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/Haseena/Haseena" },
+                    { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/OurTeam/Haseena" },
                     { img: Kashif, name: "Kashif Ali Khan", title: "Lead Web Development NorthNine", url: "/OurTeam/Kashif" },
                     { img: Shazmeen, name: "Shazmeen Baig", title: "Lead Accountant NorthNine", url: "/OurTeam/Shazmeen" },
                     { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/OurTeam/Rahat" },
