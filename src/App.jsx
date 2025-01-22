@@ -10,7 +10,7 @@ import Jamila from './components/OurTeam/jamila';
 import Farhan from './components/OurTeam/Farhan';
 import Ahsam from './components/OurTeam/Ahsam';
 import Irfan from './components/OurTeam/Irfan';
-import Haseena from './components/OurTeam/Haseena';
+import Haseena from './components/ourTeam/Haseena';
 import Kashif from './components/OurTeam/Kashif';
 import Shazmeen from './components/OurTeam/Shazmeen';
 import Rahat from './components/OurTeam/Rahat';

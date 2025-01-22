@@ -91,9 +91,9 @@ const Slider2 = () => {
   onSwiper={(swiper) => (swiperRef.current = swiper)} // Control swiper externally
   speed={1000} // Animation speed
   breakpoints={{
-    360: {
+    320: {
       slidesPerView: 1, // 1.5 slides visible on small screens
-      spaceBetween: 15, // Smaller space between slides
+      spaceBetween: 25, // Smaller space between slides
       slidesOffsetBefore: 20,
       slidesOffsetAfter: 10,
     },
