@@ -1,25 +1,19 @@
 import { useEffect, useState } from "react";
-
+import '../../App.css'
 function JamilaJobBar() {
-    const [isVisible, setIsVisible] = useState(false);
     const [skillPercentages, setSkillPercentages] = useState(
-        new Array(7).fill(0)
+        new Array(6).fill(0) 
     );
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    setIsVisible(true);
-
-                    setSkillPercentages([
-                        88, 
-                        90, 
-                        87,
-                        85,
-                        89, 
-                        80, 
-                    ]);
+                    // Start animation when section is visible
+                    setSkillPercentages([88, 90, 87, 85, 89, 80]);
+                } else {
+                    // Reset percentages to 0 when out of view
+                    setSkillPercentages(new Array(6).fill(0));
                 }
             },
             { threshold: 0.3 }
@@ -38,19 +32,21 @@ function JamilaJobBar() {
             <div className="pt-[89px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Seo", index: 0 },
-                        { title: "Web Development", index: 1 },
-                        { title: "UI / UX Design", index: 2 },
-                        { title: " Bookkeeping", index: 3 },
-                        { title: "Digital Marketing ", index: 4 },
-                        { title: "Graphic Designing", index: 5 },
+                        { title: "Content Writing", index: 0 },
+                        { title: "Seo", index: 1 },
+                        { title: "Deep Learning", index: 2 },
+                        { title: "Generative AI", index: 3 },
+                        { title: "Computer Vision ", index: 4 },
+                        { title: "Expert Systems", index: 5 },
                     ].map((skill, idx) => (
                         <div key={idx} className="">
-                            <h4 className="font-syne     font-bold text-lg">{skill.title}</h4>
+                            <h4 className="font-syne font-bold text-lg">
+                                {skill.title}
+                            </h4>
                             <div className="flex mt-[30px]">
                                 <div className="flex items-center w-[90%] gap-[1px]">
                                     <div
-                                        className={`h-[2px] bg-yellow`}
+                                        className="h-[2px] bg-yellow"
                                         style={{
                                             width: `${skillPercentages[skill.index]}%`,
                                             transition: "width 3s ease-in-out",
@@ -58,7 +54,7 @@ function JamilaJobBar() {
                                     ></div>
                                     <div className="w-3 h-3 bg-yellow rounded-full"></div>
                                     <div
-                                        className={`h-[2px] bg-[#121820]/40`}
+                                        className="h-[2px] bg-[#121820]/40"
                                         style={{
                                             width: `${100 - skillPercentages[skill.index]}%`,
                                             transition: "width 3s ease-in-out",
