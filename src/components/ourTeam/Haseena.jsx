@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../../components/navbar/index";
 import '../../App.css';
-import JamilaJobBar from "../SkillBar/JamiJobBar";
+import HasiJobBar from "../SkillBar/HasiJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
@@ -75,26 +75,26 @@ const Haseena = () => {
         <div className="">
           <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
           <p className="text-lg text-gray-600 mb-6 font-syne">
-            To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
+          Haseena Baig is the co-founder and HR Manager of Northnine Private Limited. She has a versatile skill set in content writing, ghostwriting, copywriting, social media management, on-page SEO, and email marketing. Alongside her creative expertise, Haseena also manages human resources, ensuring the company fosters a supportive and productive work environment. 
           </p>
 
           <ul className="mil-timeline">
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-              <p className="mil-text-sm font-syne">2020-2021</p>
+              <h3 className="mil-mb-5 ml-7 font-syne">UP Venture Media</h3>
+              <p className="mil-text-sm font-syne"> June 2024 to Now</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
-              <p className="mil-text-sm font-syne">Dec 2021</p>
+              <h3 className="mil-mb-5 ml-7 font-syne">KMA:</h3>
+              <p className="mil-text-sm font-syne">Jan 2024 to Now</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-              <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+              <h3 className="mil-mb-5 ml-7 font-syne">McNulty Counseling and wellness</h3>
+              <p className="mil-text-sm font-syne"> Jan 2024 to May 2024</p>
             </li>
           </ul>
 
           <p className="mt-6 text-gray-700 font-syne">
-            Jamila Baig, the dynamic CEO of Northnine, is a visionary leader known for steering the company towards innovation and success...
+          With experience at UP Venture Media, KMA, and McNulty Counseling and Wellness, she is dedicated to helping businesses grow while building strong teams
           </p>
 
           <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -102,7 +102,7 @@ const Haseena = () => {
             <div className="w-[96%] h-[2px] bg-gray-300"></div>
             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
           </div>
-          <JamilaJobBar />
+          <HasiJobBar />
         </div>
 
         {/* Testimonial Section */}
@@ -117,7 +117,7 @@ const Haseena = () => {
             <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
             <div className="w-[2%] h-[2px] bg-yellow"></div>
           </div>
-          <p className="text-center text-sm text-gray-500 font-syne">JamilaBaig@gmail.com</p>
+          <p className="text-center text-sm text-gray-500 font-syne">haseena.baig118@gmail.com</p>
           <div className="mt-7">
             <h3 className="font-semibold text-lg font-syne">Socials</h3>
             <div className="flex space-x-4 mt-2">

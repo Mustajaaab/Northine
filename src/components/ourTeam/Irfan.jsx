@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../../components/navbar/index";
 import '../../App.css';
-import JamiJobBar from "../SkillBar/JamiJobBar";
+import JamiJobBar from "../SkillBar/IrfanJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
@@ -88,7 +88,7 @@ const Irfan = () => {
               <p className="mil-text-sm font-syne">2020-2021</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
+              <h3 className="mil-mb-5 ml-7 font-syne">GO-Globe</h3>
               <p className="mil-text-sm font-syne">Dec 2021</p>
             </li>
             <li>
