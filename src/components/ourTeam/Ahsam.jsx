@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../../components/navbar/index";
 import '../../App.css';
-import JamiJobBar from "../SkillBar/JamiJobBar";
+import AhsamJobBar from "../SkillBar/AhsamJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
@@ -75,26 +75,26 @@ const Ahsam = () => {
       <div className="">
         <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
         <p className="text-lg text-gray-600 mb-6 font-syne">
-          To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
+        Ahsam brings innovation and creativity to every project. His designs focus on usability and aesthetics, delivering standout digital web solutions.
         </p>
 
         <ul className="mil-timeline">
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-            <p className="mil-text-sm font-syne">2020-2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">uConnect</h3>
+            <p className="mil-text-lg font-semibold font-syne">2020-2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
-            <p className="mil-text-sm font-syne">Dec 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">pine</h3>
+            <p className="mil-text-lg font-semibold ">Dec 2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-            <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">Northnine</h3>
+            <p className="mil-text-lg font-semibold  font-syne">Sep 2020 - Nov 2021</p>
           </li>
         </ul>
 
         <p className="mt-6 text-gray-700 font-syne">
-          Jamila Baig, the dynamic CEO of Northnine, is a visionary leader known for steering the company towards innovation and success...
+          Ahsam Baig, the dynamic CFO of Northnine, is a visionary leader known for steering the company towards innovation and success...
         </p>
 
         <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -102,7 +102,7 @@ const Ahsam = () => {
           <div className="w-[96%] h-[2px] bg-gray-300"></div>
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
         </div>
-        <JamiJobBar />
+        <AhsamJobBar />
       </div>
 
       {/* Testimonial Section */}

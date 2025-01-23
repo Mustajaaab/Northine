@@ -2,10 +2,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../../components/navbar/index";
 import '../../App.css';
-import JamiJobBar from "../SkillBar/JamiJobBar";
+import FarhanJobBar from "../SkillBar/FarhanJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
+import insta from '../../assets/images/insta.png'
+import behance from '../../assets/images/behance.png'
+import dribble from '../../assets/images/dribble.png'
 
 const Farhan = () => {
   const location = useLocation();
@@ -75,26 +78,26 @@ const Farhan = () => {
       <div className="">
         <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
         <p className="text-lg text-gray-600 mb-6 font-syne">
-          To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
+        Farhan creates designs that engage and inspire. His expertise ensures seamless UI/UX designs tailored for users' needs. 
         </p>
 
         <ul className="mil-timeline">
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-            <p className="mil-text-sm font-syne">2020-2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">uConnect</h3>
+            <p className="mil-text-lg font-syne font-semibold">2018-2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
-            <p className="mil-text-sm font-syne">Dec 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">Pine</h3>
+            <p className="mil-text-lg font-syne font-semibold">Dec 2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-            <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-syne font-semibold">Northnine</h3>
+            <p className="mil-text-lg font-syne font-semibold">Sep 2021 Present</p>
           </li>
         </ul>
 
         <p className="mt-6 text-gray-700 font-syne">
-          Jamila Baig, the dynamic CEO of Northnine, is a visionary leader known for steering the company towards innovation and success...
+          Farhan ali, the dynamic CTO of Northnine, is a visionary leader known for steering the company towards innovation and success...
         </p>
 
         <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -102,7 +105,7 @@ const Farhan = () => {
           <div className="w-[96%] h-[2px] bg-gray-300"></div>
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
         </div>
-        <JamiJobBar />
+        <FarhanJobBar />
       </div>
 
       {/* Testimonial Section */}
@@ -117,26 +120,51 @@ const Farhan = () => {
           <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
           <div className="w-[2%] h-[2px] bg-yellow"></div>
         </div>
-        <p className="text-center text-sm text-gray-500 font-syne">JamilaBaig@gmail.com</p>
+        <p className="text-center text-sm text-gray-500 font-syne">Farhanali@gmail.com</p>
         <div className="mt-7">
           <h3 className="font-semibold text-lg font-syne">Socials</h3>
           <div className="flex space-x-4 mt-2">
-            <a
-              href="https://www.linkedin.com/in/jamibaig/" // Replace with actual LinkedIn profile URL
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit LinkedIn profile"
-            >
-              <img src={linkedin} alt="LinkedIn" className="h-8" />
-            </a>
-            <a
-              href="https://medium.com/@jamilabaig69" // Replace with actual Medium profile URL
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Medium profile"
-            >
-              <img src={medium} alt="Medium" className="h-8" />
-            </a>
+          <a
+                href="https://www.linkedin.com/in/farhan-ux/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={linkedin} alt="LinkedIn" className="h-8" />
+              </a>
+              <a
+                href="https://www.behance.net/farhanali3" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={behance} alt="behance" className="h-8" />
+              </a>
+              <a
+                href="https://dribbble.com/Ali803" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={dribble} alt="dribble" className="h-8" />
+              </a>
+              {/* <a
+                href="https://www.instagram.com/uxirfan/" // Replace with actual LinkedIn profile URL
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={insta} alt="insta" className="h-8" />
+              </a> */}
+             
+              {/* <a
+                href="https://medium.com/@IrfanUlahBaig" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Medium profile"
+              >
+                <img src={medium} alt="Medium" className="h-8" />
+              </a> */}
           </div>
         </div>
       </aside>
