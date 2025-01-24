@@ -122,8 +122,8 @@ const Farhan = () => {
         </div>
         <p className="text-center text-sm text-gray-500 font-syne">Farhanali@gmail.com</p>
         <div className="mt-7">
-          <h3 className="font-semibold text-lg font-syne">Socials</h3>
-          <div className="flex space-x-4 mt-2">
+          <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
+          <div className="flex space-x-4 mt-2 justify-center">
           <a
                 href="https://www.linkedin.com/in/farhan-ux/" 
                 target="_blank"
