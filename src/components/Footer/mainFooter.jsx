@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import DotBg from '../../assets/images/dotmap.png';
 import No9 from '../../assets/images/no9.png';
+import { FaSquareFacebook, FaLinkedin, FaSquareInstagram } from "react-icons/fa6";
 import SAVE from '../../assets/images/instaaa.png';
 
 const MainFooter = () => {
@@ -7,7 +9,7 @@ const MainFooter = () => {
         <div className="relative bg-gradient-to-b from-gradientStart to-gradientEnd ">
             {/* Background Image */}
             <div
-                className="absolute inset-0 lg:inset-56 bg-no-repeat bg-center bg-cover opacity-5"
+                className="absolute inset-0 bottom-36 mt-1 bg-no-repeat bg-center bg-cover opacity-5"
                 style={{ backgroundImage: `url(${DotBg})` }}
             ></div>
 
@@ -24,7 +26,7 @@ const MainFooter = () => {
                 </svg>
             </div>
             {/* Content Section */}
-            <div className="relative">
+            {/* <div className="relative">
                 <div className="flex justify-center">
                     <img src={SAVE} alt="" className="w-[50px]" />
                 </div>
@@ -39,11 +41,11 @@ const MainFooter = () => {
                         Book an Appointment
                     </button>
                 </div>
-            </div>
+            </div> */}
 
             {/* Footer Content */}
             <div className="lg:container mx-auto w-[90%]">
-                <div className="lg:flex lg:justify-between lg:items-center mt-32">
+                <div className="lg:flex lg:justify-between lg:items-center mt-5">
                     <div>
                         <img src={No9} alt="" className="w-[140px] h-[40px]" />
                         <p className="text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start">
@@ -63,24 +65,67 @@ const MainFooter = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex mt-[120px] pb-3 gap-1">
+                <div className="flex mt-10 pb-3 gap-1">
                     <div className="w-[2%] h-[2px] bg-yellow"></div>
                     <div className="w-[96%] h-[2px] bg-[#FFFFFF]/30"></div>
                     <div className="w-[2%] h-[2px] bg-yellow"></div>
                 </div>
-                <div className="lg:flex justify-between items-center mt-[50px]">
+                <div className="lg:flex justify-between items-center mt-5">
                     <ul className="flex gap-7 items-center lg:justify-start justify-center">
-                        <li className="font-syne text-[15px] font-normal text-white">Facebook</li>
-                        <li className="font-syne text-[15px] font-normal text-white">Instagram</li>
-                        <li className="font-syne text-[15px] font-normal text-white">LinkedIn</li>
-                        <li className="font-syne text-[15px] font-normal text-white">Twitter</li>
+                        <li>
+                            <a
+                                href="https://www.facebook.com/NorthnineN9/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="Facebook"
+                            >
+                                <FaSquareFacebook />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.instagram.com/northnine.pk/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="Instagram"
+                            >
+                                <FaSquareInstagram />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/company/the-north-nine/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="LinkedIn"
+                            >
+                                <FaLinkedin />
+                            </a>
+                        </li>
                     </ul>
                     <ul className="flex gap-7 items-center lg:justify-start justify-center">
-                        <li className="font-syne text-[15px] font-normal text-white">Terms and Conditions</li>
-                        <li className="font-syne text-[15px] font-normal text-white">Privacy Policy</li>
+                        <li>
+                            <Link
+                                to="/terms-and-conditions"
+                                className="font-syne text-[15px] font-normal text-white"
+                            >
+                                Terms and Conditions
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/privacy-policy"
+                                className="font-syne text-[15px] font-normal text-white"
+                            >
+                                Privacy Policy
+                            </Link>
+                        </li>
                     </ul>
                 </div>
-                <div className="flex items-center justify-between mt-[80px] pb-[30px]">
+                <div className="flex items-center justify-between mt-10 pb-[30px]">
                     <p className="text-white/10 font-syne font-normal text-[13px]">©Northnine {new Date().getFullYear()}</p>
                     <p className="text-white/10 font-syne font-normal text-[13px]">All Rights Reserved.</p>
                 </div>

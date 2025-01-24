@@ -84,16 +84,16 @@ const Irfan = () => {
 
           <ul className="mil-timeline">
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-              <p className="mil-text-sm font-syne">2020-2021</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">uConnect Technologies</h3>
+              <p className="mil-text-lg font-semibold font-syne">2020-2021</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">GO-Globe</h3>
-              <p className="mil-text-sm font-syne">Dec 2021</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">GO-Globe</h3>
+              <p className="mil-text-lg font-semibold font-syne">Dec 2021</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-              <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">Northnine</h3>
+              <p className="mil-text-lg font-semibold font-syne">Sep 2020 - Nov 2021</p>
             </li>
           </ul>
 
@@ -123,8 +123,8 @@ const Irfan = () => {
           </div>
           <p className="text-center text-sm text-gray-500 font-syne">IrfanUllahBaig@gmail.com</p>
           <div className="mt-7">
-            <h3 className="font-semibold text-lg font-syne">Socials</h3>
-            <div className="flex space-x-4 mt-2">
+            <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
+            <div className="flex space-x-4 mt-2 justify-center">
             <a
                 href="https://www.linkedin.com/in/baigirfan/" // Replace with actual LinkedIn profile URL
                 target="_blank"

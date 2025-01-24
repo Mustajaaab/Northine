@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from '../../assets/images/dotmap.png';
 import Navbar from "../navbar/index";
 import '../../App.css';
-import JamiJobBar from "../SkillBar/JamiJobBar";
+import ShazmeenJobBar from "../SkillBar/ShazmeenJobBar";
 import MainFooter from '../Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
@@ -75,34 +75,34 @@ const Shazmeen = () => {
       <div className="">
         <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
         <p className="text-lg text-gray-600 mb-6 font-syne">
-          To leverage my digital marketing skills and experience to drive growth and engagement for a dynamic and innovative company, while continuously expanding my knowledge and expertise in the field.
+        Shazmeen leads bookkeeping with 5+ years of expertise in QuickBooks, Xero, and Zoho, ensuring accurate financial management.
         </p>
 
         <ul className="mil-timeline">
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">uConnect Technologies</h3>
-            <p className="mil-text-sm font-syne">2020-2021</p>
+            <h3 className="mil-mb-5 ml-7 font-semibold  font-syne">uConnect Technologies</h3>
+            <p className="mil-text-lg font-semibold font-syne">2020-2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">SheDev</h3>
-            <p className="mil-text-sm font-syne">Dec 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-semibold font-syne">SheDev</h3>
+            <p className="mil-text-lg font-semibold font-syne">Dec 2021</p>
           </li>
           <li>
-            <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
-            <p className="mil-text-sm font-syne">Sep 2020 - Nov 2021</p>
+            <h3 className="mil-mb-5 ml-7 font-semibold font-syne">Northnine</h3>
+            <p className="mil-text-lg font-semibold font-syne">Sep 2020 - Nov 2021</p>
           </li>
         </ul>
 
-        <p className="mt-6 text-gray-700 font-syne">
+        {/* <p className="mt-6 text-gray-700 font-syne">
           Jamila Baig, the dynamic CEO of Northnine, is a visionary leader known for steering the company towards innovation and success...
-        </p>
+        </p> */}
 
         <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
           <div className="w-[96%] h-[2px] bg-gray-300"></div>
           <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
         </div>
-        <JamiJobBar />
+        <ShazmeenJobBar />
       </div>
 
       {/* Testimonial Section */}
@@ -117,12 +117,12 @@ const Shazmeen = () => {
           <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
           <div className="w-[2%] h-[2px] bg-yellow"></div>
         </div>
-        <p className="text-center text-sm text-gray-500 font-syne">JamilaBaig@gmail.com</p>
+        <p className="text-center text-sm text-gray-500 font-syne">baigshazmeen97@gmail.com</p>
         <div className="mt-7">
-          <h3 className="font-semibold text-lg font-syne">Socials</h3>
-          <div className="flex space-x-4 mt-2">
+          <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
+          <div className="flex space-x-4 mt-2 justify-center">
             <a
-              href="https://www.linkedin.com/in/jamibaig/" // Replace with actual LinkedIn profile URL
+              href="https://www.linkedin.com/in/shazmeenbaig/" // Replace with actual LinkedIn profile URL
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit LinkedIn profile"

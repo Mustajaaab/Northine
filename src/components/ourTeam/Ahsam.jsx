@@ -6,6 +6,8 @@ import AhsamJobBar from "../SkillBar/AhsamJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
+import behance from '../../assets/images/behance.png'
+import dribble from '../../assets/images/dribble.png'
 
 const Ahsam = () => {
   const location = useLocation();
@@ -117,12 +119,12 @@ const Ahsam = () => {
           <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
           <div className="w-[2%] h-[2px] bg-yellow"></div>
         </div>
-        <p className="text-center text-sm text-gray-500 font-syne">JamilaBaig@gmail.com</p>
+        <p className="text-center text-sm text-gray-500 font-syne">AhsamBaig@gmail.com</p>
         <div className="mt-7">
-          <h3 className="font-semibold text-lg font-syne">Socials</h3>
-          <div className="flex space-x-4 mt-2">
+          <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
+          <div className="flex space-x-4 mt-2 justify-center">
             <a
-              href="https://www.linkedin.com/in/jamibaig/" // Replace with actual LinkedIn profile URL
+              href="https://www.linkedin.com/in/baig-ahsam-71447619b/" // Replace with actual LinkedIn profile URL
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit LinkedIn profile"
@@ -130,13 +132,21 @@ const Ahsam = () => {
               <img src={linkedin} alt="LinkedIn" className="h-8" />
             </a>
             <a
-              href="https://medium.com/@jamilabaig69" // Replace with actual Medium profile URL
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Medium profile"
-            >
-              <img src={medium} alt="Medium" className="h-8" />
-            </a>
+                href="https://www.behance.net/ahsamhunzai?" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={behance} alt="behance" className="h-8" />
+              </a>
+              <a
+                href="https://dribbble.com/Ali803" 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+              >
+                <img src={dribble} alt="dribble" className="h-8" />
+              </a>
           </div>
         </div>
       </aside>

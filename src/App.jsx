@@ -7,14 +7,16 @@ import Services from './pages/Services';
 import Casestudies from './pages/Casestudies'; // Fixed casing in import
 import Contact from './pages/Contact-Us';
 import Jamila from './components/OurTeam/jamila';
-import Farhan from './components/OurTeam/Farhan';
+import Farhan from './components/ourTeam/Farhan';
 import Ahsam from './components/OurTeam/Ahsam';
 import Irfan from './components/OurTeam/Irfan';
 import Haseena from './components/ourTeam/Haseena';
 import Kashif from './components/OurTeam/Kashif';
-import Shazmeen from './components/OurTeam/Shazmeen';
+import Shazmeen from './components/ourTeam/Shazmeen';
 import Rahat from './components/OurTeam/Rahat';
 import ScrollToTop from './components/ScrollToTop';
+import TermsAndConditions from './pages/TermsAndConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import './App.css';
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
         <Route path="/ourTeam/Kashif" element={<Kashif />} />
         <Route path="/ourTeam/Shazmeen" element={<Shazmeen />} />
         <Route path="/ourTeam/Rahat" element={<Rahat />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );

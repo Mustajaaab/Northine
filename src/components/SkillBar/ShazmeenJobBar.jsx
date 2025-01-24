@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import '../../App.css'
-function JamilaJobBar() {
+function ShazmeenJobBar() {
     const [skillPercentages, setSkillPercentages] = useState(
-        new Array(9).fill(0) 
+        new Array(6).fill(0) 
     );
 
     useEffect(() => {
@@ -10,10 +10,10 @@ function JamilaJobBar() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     // Start animation when section is visible
-                    setSkillPercentages([88, 90, 87, 85, 89, 80, 88, 91,96]);
+                    setSkillPercentages([88, 90, 87, 85, 89, 80]);
                 } else {
                     // Reset percentages to 0 when out of view
-                    setSkillPercentages(new Array(9).fill(0));
+                    setSkillPercentages(new Array(6).fill(0));
                 }
             },
             { threshold: 0.3 }
@@ -32,18 +32,14 @@ function JamilaJobBar() {
             <div className="pt-[89px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Content Writing", index: 0 },
-                        { title: "Designing", index: 1 },
-                        { title: "Digital Marketing Strategies", index: 2 },
-                        { title: "SEO", index: 3 },
-                        { title: "Social Media Management ", index: 4 },
-                        { title: "Business Plan Writing", index: 5 },
-                        { title: "Designing ", index: 6 },
-                        { title: "Ad Campaigns", index: 7 },
-                        { title: "WordPress Design & Development", index: 8 },
+                        { title: "Microsoft Excel", index: 0 },
+                        { title: "Budgeting", index: 1 },
+                        { title: "Financial Reporting", index: 2 },
+                        { title: "Accounting", index: 3 },
+                        { title: "Bookkeeping", index: 4 },
                     ].map((skill, idx) => (
                         <div key={idx} className="">
-                            <h4 className="font-syne font-bold lg:text-md  xl:text-lg text-nowrap truncate">
+                            <h4 className="font-syne font-bold text-lg">
                                 {skill.title}
                             </h4>
                             <div className="flex mt-[30px]">
@@ -78,4 +74,4 @@ function JamilaJobBar() {
     );
 }
 
-export default JamilaJobBar;
+export default ShazmeenJobBar;

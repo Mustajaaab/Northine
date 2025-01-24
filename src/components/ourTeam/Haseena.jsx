@@ -80,16 +80,16 @@ const Haseena = () => {
 
           <ul className="mil-timeline">
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">UP Venture Media</h3>
-              <p className="mil-text-sm font-syne"> June 2024 to Now</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">UP Venture Media</h3>
+              <p className="mil-text-lg font-semibold font-syne"> June 2024 to Now</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">KMA:</h3>
-              <p className="mil-text-sm font-syne">Jan 2024 to Now</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">KMA:</h3>
+              <p className="mil-text-lg font-semibold font-syne">Jan 2024 to Now</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-syne">McNulty Counseling and wellness</h3>
-              <p className="mil-text-sm font-syne"> Jan 2024 to May 2024</p>
+              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">McNulty Counseling and wellness</h3>
+              <p className="mil-text-lg font-semibold font-syne"> Jan 2024 to May 2024</p>
             </li>
           </ul>
 
@@ -119,8 +119,8 @@ const Haseena = () => {
           </div>
           <p className="text-center text-sm text-gray-500 font-syne">haseena.baig118@gmail.com</p>
           <div className="mt-7">
-            <h3 className="font-semibold text-lg font-syne">Socials</h3>
-            <div className="flex space-x-4 mt-2">
+            <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
+            <div className="flex space-x-4 justify-center mt-2">
               <a
                 href="https://www.linkedin.com/in/jamibaig/"
                 target="_blank"
