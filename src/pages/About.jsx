@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import Navbar from "../components/navbar";
 import Slider from "../components/projectsSlider/ProjectSlider";
 import management from '../assets/images/management.png'
@@ -27,7 +28,12 @@ function About() {
                 <div className="lg:container w-[90%] mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
-                            <p className="text-lg font-syne font-medium">Home</p>
+                            <Link
+                                to="/home"
+                                className="text-lg font-syne font-medium hover:text-yellow transition-colors"
+                            >
+                                Home
+                            </Link>
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">About Us</p>
                         </div>
@@ -66,7 +72,7 @@ function About() {
                     <img src={Shades} alt="" className="w-[200px]" />
                 </div>
                 <div className="lg:flex pb-20 container mx-auto justify-between">
-                <div className="relative lg:w-[50%] flex items-center justify-center">
+                    <div className="relative lg:w-[50%] flex items-center justify-center">
                         <img src={hasso} alt="Basho" className="" />
                     </div>
                     <div className="mt-4 lg:mt-4 w-[90%] lg:w-full lg:mx-0 mx-auto lg:space-x-32">
@@ -165,7 +171,7 @@ function About() {
                 <div className='w-[96%] h-[2px] bg-[#121820]/10'></div>
                 <div className='w-[2%] h-[2px] bg-yellow'></div>
             </div>
-           <Slider/>
+            <Slider />
             <div className="bg-[#f3f4f2]">
                 <div className="lg:flex hidden justify-end w-[85%]">
                     <img src={Shades} alt="" className="w-[200px]" />

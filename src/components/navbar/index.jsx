@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import clsx from 'clsx';
 import Northnine from '../../assets/images/no9.png';
 
 function Navbar() {
@@ -10,70 +11,70 @@ function Navbar() {
 
     const isHomePage = location.pathname === '/' || location.pathname === '/home';
 
-
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 10);
 
         const handleResize = () => {
             const isLarge = window.innerWidth >= 1024;
             setIsLargeScreen(isLarge);
-            if (isLarge) {
-                document.body.classList.remove('overflow-hidden');
-            }
+            if (isLarge) document.body.classList.remove('overflow-hidden');
         };
 
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleResize);
+        const debouncedResize = debounce(handleResize, 200);
+        window.addEventListener('resize', debouncedResize);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', debouncedResize);
         };
     }, []);
 
-    const getActiveClass = (path) => {
-        const currentPath = location.pathname === '/' ? '/home' : location.pathname;
-        return currentPath === path
-            ? 'text-yellow lg:border-b border-yellow'
-            : 'text-white';
+    const debounce = (func, delay) => {
+        let timer;
+        return (...args) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => func(...args), delay);
+        };
     };
-    
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen((prev) => !prev);
         if (!isLargeScreen) {
             document.body.classList.toggle('overflow-hidden', !isMenuOpen);
         }
     };
 
+    const getActiveClass = (path) => {
+        const currentPath = location.pathname === '/' ? '/home' : location.pathname;
+        return currentPath === path ? 'text-yellow' : 'text-white';
+    };
+
     return (
         <div
-        className={`w-full mx-auto items-center py-5 fixed z-50 transition-colors duration-300 ${
-            isScrolled
-                ? 'bg-[#121820]'
-                : isHomePage
-                ? 'bg-transparent'
-                : 'bg-[#121820]' 
-        } ${isScrolled ? 'lg:bg-[#121820]' : ''}`}
-    >
+            className={clsx(
+                'w-full mx-auto py-5 fixed z-50 transition-colors duration-300',
+                isScrolled || !isHomePage ? 'bg-[#121820]' : 'bg-transparent'
+            )}
+        >
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <img
                     src={Northnine}
                     alt="Northnine Logo"
-                    className={isLargeScreen ? 'w-[186px] h-[50px]' : 'w-[126px] h-[30px]'}
+                    className="w-[126px] h-[30px] lg:w-[186px] lg:h-[50px]"
                 />
 
                 {/* Mobile Menu Button */}
-                <div className="lg:hidden">
+                <button
+                    onClick={toggleMenu}
+                    aria-expanded={isMenuOpen}
+                    className="lg:hidden focus:outline-none"
+                >
                     <svg
-                        onClick={toggleMenu}
                         className="w-7 h-7 text-white cursor-pointer hover:text-yellow transition-colors"
                         fill="currentColor"
                         viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
                             d="M4 6h16M4 12h16m-7 6h7"
@@ -83,39 +84,39 @@ function Navbar() {
                             strokeLinejoin="round"
                         />
                     </svg>
-                </div>
+                </button>
 
                 {/* Navigation Links */}
-                <div
-                    className={`${
-                        isMenuOpen ? 'block bg-[#121820]' : 'hidden'
-                    } lg:flex lg:items-center lg:gap-8 text-center absolute lg:static top-16 right-0 w-full lg:w-auto`}
+                <nav
+                    className={clsx(
+                        'lg:flex lg:items-center lg:gap-8 text-center absolute space-x-4 lg:static top-16 right-0 w-full lg:w-auto bg-[#121820] lg:bg-transparent transition-transform duration-300',
+                        isMenuOpen ? 'block' : 'hidden'
+                    )}
                 >
                     {['/home', '/about', '/team', '/services', '/case-studies', '/contact-us'].map(
-                        (path, index) => (
+                        (path) => (
                             <Link
-                                key={index}
+                                key={path}
                                 to={path}
-                                className={`${getActiveClass(
-                                    path
-                                )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
+                                className={clsx(
+                                    'block relative font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0',
+                                    getActiveClass(path)
+                                )}
                             >
                                 {path.split('/')[1].replace('-', ' ').toUpperCase()}
+                                <span className="absolute -top-1 right-[-12px] w-2 h-2 border-2 border-yellow rounded-full"></span>
+
                             </Link>
                         )
                     )}
-                </div>
 
-                {/* Search Form */}
-                {!isHomePage && (
-                    <form className="xl:flex items-center space-x-2 hidden">
-                        <div className="flex items-center border border-gray-600 rounded-full group focus-within:border-yellow">
-                            <button type="submit" className="text-yellow group-focus:text-white pl-3">
+                    {!isHomePage && (
+                        <div className="hidden xl:flex items-center gap-4">
+                            <button type="button" className="text-white hover:text-yellow transition-colors">
                                 <svg
-                                    className="h-4 w-4 text-white group-focus:text-yellow transition-colors"
+                                    className="h-6 w-6"
                                     fill="currentColor"
                                     viewBox="0 0 21 20"
-                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
                                         fillRule="evenodd"
@@ -124,14 +125,12 @@ function Navbar() {
                                     ></path>
                                 </svg>
                             </button>
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                className="bg-transparent text-white pl-3 pr-4 py-2 focus:outline-none w-48"
-                            />
                         </div>
-                    </form>
-                )}
+                    )}
+                </nav>
+
+                {/* Search Form */}
+
             </div>
         </div>
     );

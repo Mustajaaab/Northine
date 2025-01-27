@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BGDot from '../assets/images/dotmap.png';
 import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
@@ -102,7 +103,12 @@ function Contact() {
                 <div className="lg:container w-[90%] mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
-                            <p className="text-lg font-syne font-medium">Home</p>
+                        <Link
+                                to="/home"
+                                className="text-lg font-syne font-medium hover:text-yellow transition-colors"
+                            >
+                                Home
+                            </Link>
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">Contact Us</p>
                         </div>

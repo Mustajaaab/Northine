@@ -8,6 +8,7 @@ import rating from '../../assets/images/rating.png'
 import Stars from '../../assets/images/stars.png'
 import Comma from '../../assets/images/commas.png'
 import Client1 from '../../assets/images/client1.jpg'
+import jamiClient from '../../assets/images/jamiClient.jpg'
 import Client2 from '../../assets/images/client2.jpg'
 import Client3 from '../../assets/images/client3.jpg'
 import Client4 from '../../assets/images/client4.jpg'
@@ -29,9 +30,9 @@ const Slider2 = () => {
       img: Comma,
       img2: Stars,
       text: "Jami is highly responsive and enthusiastic about her work. Willing to contribute ideas and is also open to feedback. Great experience working with her!",
-      client: "Margaret Williams",
-      work: "Agency",
-      icon: Client2 ,
+      client: "Angela lam",
+      work: "ReadinGraphics",
+      icon: jamiClient ,
     },
     {
       img: Comma,

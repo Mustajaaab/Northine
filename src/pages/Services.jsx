@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
-import Smartphone from '../assets/images/22.svg'
+import Servicesfield from "../components/Servicesfield";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -12,6 +12,7 @@ import Motion from '../assets/images/motion.png'
 import { useRef } from "react";
 import Shades from '../assets/images/white-shades.png'
 import MainFooter from '../components/Footer/mainFooter'
+import { Link } from "react-router-dom";
 
 function Services() {
     const [activeStep, setActiveStep] = useState(0);
@@ -19,41 +20,41 @@ function Services() {
     const swiperRef = useRef(null);
 
     const steps = [
-        {
-            title: "Data Security",
-            heading: "Research and Discover New Insights",
-            image: "../src/assets/images/dataProtection.png",
-            content: "Protecting digital information from unauthorized access or corruption. Implementing measures encryption. Firewalls to safeguard sensitive data. Implementing security measures. Developing incident response plans.",
-        },
+        // {
+        //     title: "Data Security",
+        //     heading: "Research and Discover New Insights",
+        //     image: "../src/assets/images/dataProtection.png",
+        //     content: "Protecting digital information from unauthorized access or corruption. Implementing measures encryption. Firewalls to safeguard sensitive data. Implementing security measures. Developing incident response plans.",
+        // },
         {
             title: "UX/UI Design",
-            heading: "Crafting User Experiences",
+            heading: "UI/UX Designing Services",
             image: "../src/assets/images/webDesign.png",
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            content: "Transform your ideas into engaging, user-friendly designs that deliver seamless experiences.",
         },
         {
             title: "Development",
-            heading: "Building Scalable Applications",
+            heading: "Website Development Services",
             image: "../src/assets/images/coding.png",
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            content: "Build high-performing, responsive websites tailored to your business goals.",
         },
         {
-            title: "SEO and Optimazation",
-            heading: "SEO and Optimazation",
+            title: "Digital Marketing",
+            heading: "Digital Marketing Services",
             image: "../src/assets/images/searchEngine.png",
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            content: " Boost your brand visibility and drive traffic with cutting-edge strategies.",
         },
         {
-            title: "Launch",
-            heading: "Taking the Product Live",
+            title: "Bookkeeping",
+            heading: "Bookkeeping Services",
             image: "../src/assets/images/launch.png",
-            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            content: "Stay organized and focused with accurate financial management and reporting.",
         },
         {
-            title: "Maintenance & Support",
-            heading: "Keeping Things Running Smoothly",
-            image: "../src/assets/images/maintenance.png",
-            content: "There are many variations of passages of Lorem hello, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            title: "Artificial intelligence",
+            heading: "AI & ML Service",
+            image: "../src/assets/images/ai.png",
+            content: "Unlock the power of Artificial Intelligence and Machine Learning with our cutting-edge solutions. We specialize in building intelligent models for data-driven insights, automation, and predictive analytics. From model development to deployment, our services cater to businesses seeking efficiency, innovation, and smarter decision-making.",
         },
     ];
 
@@ -85,6 +86,7 @@ function Services() {
         },
     ];
 
+
     const handleStepClick = (index) => {
         if (index !== activeStep) {
             setIsAnimating(true);
@@ -105,11 +107,16 @@ function Services() {
                 <div className="lg:container w-[90%] mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
-                            <p className="text-lg font-syne font-medium">Home</p>
+                            <Link
+                                to="/home"
+                                className="text-lg font-syne font-medium hover:text-yellow transition-colors"
+                            >
+                                Home
+                            </Link>
                             <div className="bg-yellow h-2 w-2 rounded-full"></div>
                             <p className="text-lg font-syne font-[100]">Services</p>
                         </div>
-                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Our Services </h1>
+                        <h1 className="lg:text-5xl text-3xl font-syne mt-10 font-semibold uppercase">Digital Services </h1>
                     </div>
                     <div className="hidden lg:block">
                         <svg className="rotate-90" xmlns="http://www.w3.org/2000/svg" width="272" height="187" viewBox="0 0 272 187" fill="none">
@@ -129,66 +136,12 @@ function Services() {
             <div className="lg:container w-[90%] mx-auto pb-[100px]">
                 <div className="flex gap-2 items-center pt-[100px]">
                     <div className="bg-yellow h-2 w-2 rounded-full"></div>
-                    <p className="font-normal font-syne">Our Data Analytics Experties</p>
+                    <p className="font-normal font-syne">Our Services</p>
                 </div>
-                <h1 className="lg:text-5xl text-3xl font-syne font-semibold pt-[30px]">Custom <span className="text-yellow">App Solutions</span> For any Mobile Platform</h1>
+                <h1 className="lg:text-5xl text-3xl font-syne font-semibold pt-[30px]">Digital Services and <span className="text-yellow">Solutions for </span>Every Business Need</h1>
 
-                <div className="mt-[100px] lg:flex justify-between">
-                    <div>
-                        <div className="flex justify-center">
-                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
-                                <div className="relative mx-auto rounded-full ">
-                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <span className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h1 className="text-xl font-semibold font-syne text-center mt-[30px]">Android Platform</h1>
-                        <p className="text-black/30 text-base font-syne text-center mt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua accumsan lacus vel facilisis.</p>
-                        <div className="flex items-center gap-4 justify-center mt-[20px]">
-                            <p className="font-syne text-sm font-medium">Java</p>
-                            <div className="w-2 h-2 bg-yellow rounded-full"></div>
-                            <p className="font-syne text-sm font-medium">Kotlin</p>
-                        </div>
-                    </div>
-
-                    <div className="mt-20 lg:mt-0">
-                        <div className="flex justify-center">
-                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
-                                <div className="relative mx-auto rounded-full ">
-                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <div className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></div>
-                                </div>
-                            </div>
-                        </div>
-                        <h1 className="text-xl font-semibold font-syne text-center mt-[30px]">Android Platform</h1>
-                        <p className="text-black/30 text-base font-syne text-center mt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua accumsan lacus vel facilisis.</p>
-                        <div className="flex items-center gap-4 justify-center mt-[20px]">
-                            <p className="font-syne text-sm font-medium">Swift</p>
-                            <div className="w-2 h-2 bg-yellow rounded-full"></div>
-                            <p className="font-syne text-sm font-medium">Objective-C</p>
-                        </div>
-                    </div>
-
-                    <div className="mt-20 lg:mt-0">
-                        <div className="flex justify-center">
-                            <div className="w-[70px] h-[70px] bg-[#f2f4f3] rounded-full ">
-                                <div className="relative mx-auto rounded-full ">
-                                    <img src={Smartphone} alt="" className="absolute w-6 z-10 left-[20px] top-[20px]" />
-                                    <div className="bg-yellow h-4 w-4 rounded-full absolute left-[35px] top-[40px] "></div>
-                                </div>
-                            </div>
-                        </div>
-                        <h1 className="text-xl font-semibold font-syne text-center mt-[30px]">Android Platform</h1>
-                        <p className="text-black/30 text-base font-syne text-center mt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua accumsan lacus vel facilisis.</p>
-                        <div className="flex items-center gap-4 justify-center mt-[20px]">
-                            <p className="font-syne text-sm font-medium">React Native</p>
-                            <div className="w-2 h-2 bg-yellow rounded-full"></div>
-                            <p className="font-syne text-sm font-medium">Flutter</p>
-                            <div className="w-2 h-2 bg-yellow rounded-full"></div>
-                            <p className="font-syne text-sm font-medium">Xamarin</p>
-                        </div>
-                    </div>
+                <div className="mt-[100px]">
+<Servicesfield/>
                 </div>
             </div>
 
@@ -297,8 +250,8 @@ function Services() {
                                     <div className="flex items-center space-x-4">
                                         <span
                                             className={`w-6 h-6 rounded-full flex items-center justify-center border-4 ${activeStep === index
-                                                    ? "bg-yellow border-yellow"
-                                                    : "bg-white border-gray-300"
+                                                ? "bg-yellow border-yellow"
+                                                : "bg-white border-gray-300"
                                                 }`}
                                         >
                                             {activeStep === index && (
@@ -307,8 +260,8 @@ function Services() {
                                         </span>
                                         <span
                                             className={`font-medium font-syne text-2xl lg:text-3xl ${activeStep === index
-                                                    ? "text-black"
-                                                    : "text-gray-400"
+                                                ? "text-black"
+                                                : "text-gray-400"
                                                 }`}
                                         >
                                             {step.title}
@@ -340,7 +293,7 @@ function Services() {
                             </p>
                             <button className="lg:mt-4 mt-8 flex text-center gap-5 items-center justify-center">
                                 <span className="font-syne font-semibold text-lg">See More</span>
-                                <span className="h-10 w-10 bg-yellow text-white text-2xl rounded-full">
+                                <span className="h-8 w-8 bg-yellow text-white text-xl rounded-full">
                                     →
                                 </span>
                             </button>

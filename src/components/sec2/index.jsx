@@ -35,7 +35,7 @@ function Sec2() {
           title: "Streamlined Processes",
           number: "03",
           description:
-            "Simplify your financial operations with smart bookkeeping tools, ensuring accuracy and saving time.",
+            "Simplify your financial operations with smart bookkeeping tools, ensuring accuracy and saving time",
         },
         {
           icon: ai,

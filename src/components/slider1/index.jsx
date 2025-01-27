@@ -98,7 +98,7 @@ const Slider1 = () => {
             {slide.title}
           </h3>
           <p className="text-lg mb-2 font-syne">
-            by: <span className="text-[#F57C00]">{slide.author}</span>
+            by: <span className="text-yellow">{slide.author}</span>
           </p>
           <p className="text-[15px] font-normal font-syne text-[#121820]/40">
             {slide.description}
@@ -110,10 +110,10 @@ const Slider1 = () => {
 </Swiper>
         <div className='w-[69%] mx-auto justify-between flex mt-[107px] mb-[120px]'>
             <div className='flex gap-[14px] items-center group'>
-                <button className='font-syne font-semibold text-base group-hover:text-[#F57C00] ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
-                <button className='w-[35px] h-[35px] rounded-full text-white bg-[#F57C00] group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
+                <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>View All Cases</button>
+                <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
             </div>
-            <button className='font-sans text-base py-5 px-14 border-[2px] border-[#F57C00] hover:bg-[#F57C00] rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
+            <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 '>Get Started</button>
         </div>
 
     </div>
