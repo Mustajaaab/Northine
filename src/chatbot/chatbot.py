@@ -9,6 +9,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Input
 from tensorflow.keras.models import Model
+from flask import Flask, request, jsonify
+import pickle
 
 # TPU Setup
 try:
@@ -29,8 +31,6 @@ NUM_SAMPLES = 50000
 
 # Load Dataset
 df = pd.read_csv(r'C:\Users\yara\Northine\src\chatbot\data\dataset.csv', encoding='utf-8')
-
-print(df.columns)
 
 # Preprocessing Function
 def clean_text(text):
@@ -81,7 +81,10 @@ target_vocab_size = len(target_tokenizer.word_index) + 1
 max_input_len = max(len(seq) for seq in input_sequences)
 max_target_len = max(len(seq) for seq in target_sequences)
 
-# Adjust the target sequence length to match the expected input size
+# Pad input sequences
+input_sequences = pad_sequences(input_sequences, maxlen=max_input_len, padding='post')
+
+# Pad target sequences
 target_sequences = pad_sequences(target_sequences, maxlen=max_target_len, padding='post')
 
 # Train-Test Split
@@ -93,15 +96,11 @@ input_train, input_val, target_train, target_val = train_test_split(
 target_train = target_train.reshape(target_train.shape[0], target_train.shape[1], 1)
 target_val = target_val.reshape(target_val.shape[0], target_val.shape[1], 1)
 
-# Ensure correct padding for target sequences
-print(f"Max target length: {max_target_len}")
-
 # Model Definition
 # Encoder
 encoder_inputs = Input(shape=(max_input_len,))
 encoder_embedding = Embedding(input_vocab_size, LATENT_DIM)(encoder_inputs)
 encoder_lstm, state_h, state_c = LSTM(LATENT_DIM, return_state=True)(encoder_embedding)
-
 # Decoder
 decoder_inputs = Input(shape=(max_target_len,))
 decoder_embedding = Embedding(target_vocab_size, LATENT_DIM)(decoder_inputs)
@@ -117,8 +116,8 @@ model.summary()
 
 # Train the Model
 history = model.fit(
-    [input_train, target_train[:, :-1]],
-    target_train[:, 1:],
+    [input_train, target_train[:, :-1]],  # Use all but the last target token for input
+    target_train[:, 1:],  # Use all but the first target token for output
     batch_size=BATCH_SIZE,
     epochs=EPOCHS,
     validation_data=([input_val, target_val[:, :-1]], target_val[:, 1:])
@@ -126,7 +125,6 @@ history = model.fit(
 
 # Save Model and Tokenizers
 model.save("chatbot_model.h5")
-import pickle
 with open("input_tokenizer.pkl", "wb") as f:
     pickle.dump(input_tokenizer, f)
 with open("target_tokenizer.pkl", "wb") as f:
@@ -171,4 +169,20 @@ def decode_sequence(input_seq):
         states_value = [h, c]
 
     return decoded_sentence
-# almost done
+
+# Flask Web Service
+app = Flask(__name__)
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.json['message']
+    input_seq = input_tokenizer.texts_to_sequences([clean_text(user_message)])
+    input_seq = pad_sequences(input_seq, maxlen=max_input_len, padding='post')
+    
+    response = decode_sequence(input_seq)
+    return jsonify({'response': response.strip()})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+    #gui
+    
