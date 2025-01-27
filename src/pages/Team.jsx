@@ -28,8 +28,13 @@ function Team() {
                 <div className="container w-[95%] mx-auto flex justify-between items-center">
                     <div >
                         <div className="flex items-center gap-5">
-                            <p className="text-lg font-syne font-medium">Home</p>
-                            <span className="w-3 h-3 bg-yellow rounded-full"></span>
+                            <Link
+                                to="/home"
+                                className="text-lg font-syne font-medium hover:text-yellow transition-colors"
+                            >
+                                Home
+                            </Link>
+                            <span className="w-2 h-2 bg-yellow rounded-full"></span>
                             <p className="text-lg font-syne font-[100]">Team</p>
                         </div>
                         <h1 className="lg:text-5xl text-3xl  font-syne mt-10 font-semibold">LEADERSHIP TEAM</h1>
@@ -95,29 +100,29 @@ function Team() {
                 <p className="text-lg text-black/40 font-syne lg:mt-0 mt-3">Powerful and easy-to-use solution. With our tools, you can <br className="hidden lg:block" />streamline your development process.</p>
             </div>
 
-            <div className="lg:flex justify-center gap-[130px] lg:mt-28 mt-12 mb-28">
+            <div className="lg:flex justify-center gap-[130px] lg:mt-28 mt-12 mb-28 container mx-auto">
                 <div>
                     <img src={Increase} alt="" className="w-[40px] mx-auto h-[50px]" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">01.</span> Productivity</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">Top of cutting-edge technology trends & <br />providing great customer experience for <br />businesses and branding.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">We focus on delivering efficient and scalable digital learning solutions tailored to your business. .</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
                     <img src={transparency} alt="" className="w-[50px] mx-auto h-[50px]" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">02.</span> Transparency</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">We offfer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">Clear communication and honest collaboration are at the heart of our digital solutions pvt ltd approach. </p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
                     <img src={man} alt="" className="w-[60px] mx-auto" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">03.</span> Personality</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">With our tools, you can streamline your <br />development process and achieve better <br />outcomes.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">Every project reflects your unique vision, supported by our expert digital web solutions team.</p>
                 </div>
 
                 <div className="mt-12 lg:mt-0">
                     <img src={target} alt="" className="w-[60px] mx-auto h-[54px]" />
                     <h1 className="text-lg font-semibold font-syne text-center mt-5"><span className="text-yellow">04.</span> Volition</h1>
-                    <p className="text-base text-black/40 font-syne text-center mt-6">We offer a range of features that enable <br />you to create robust applications quickly <br />and efficiently.</p>
+                    <p className="text-base text-black/40 font-syne text-center mt-6">We’re committed to crafting solutions that align with your goals, using the latest in digital solution tech.</p>
                 </div>
             </div>
 

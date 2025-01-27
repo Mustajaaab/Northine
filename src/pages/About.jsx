@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import Navbar from "../components/navbar";
 import Slider from "../components/projectsSlider/ProjectSlider";
 import management from "../assets/images/management.png";

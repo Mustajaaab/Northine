@@ -2,6 +2,9 @@ import { useState } from "react";
 import Girl from "../../assets/images/Girl.jpg";
 import Shades from "../../assets/images/white-shades.png";
 import Gamla from "../../assets/images/gamla.jpg";
+import baadmay from "../../assets/images/baadmay.png";
+import baadmayLogo from "../../assets/images/baadmayLogo.png";
+import baadmayScreen from "../../assets/images/baadmayScreen.png";
 import Docs from "../../assets/images/docs.jpg.png";
 import FeedBackVideo from "../../assets/kccTetimonial.mp4";
 
@@ -14,34 +17,34 @@ function Sec5() {
             id: 1,
             mainImg: '',
             mainVideo: FeedBackVideo,
-            mainTitle: "Easy & Most Powerful Server Platform",
-            mainAuthor: "Jane Meldrum",
+            mainTitle: "Seamless Collaboration & Outstanding Expertise",
+            mainAuthor: "Kaitlyn Cook ",
             mainDesc:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Working with Jami and the NorthNine team was a seamless and rewarding experience.",
             sideImg1: Gamla,
-            sideTitle1: "Powerful Tools for Developers",
+            sideTitle1: "A Multifaceted Partnership",
             sideDesc1:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Working with KCC has been an enriching experience, spanning multiple domains to support their vision for growth and innovation.",
             sideImg2: Docs,
-            sideTitle2: "Enhanced Collaboration",
+            sideTitle2: "Holistic Solutions for Business Success",
             sideDesc2:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "From creating dynamic strategies to executing impactful deliverables, this partnership embodies a holistic approach to solving business challenges.",
         },
         {
             id: 2,
-            mainImg: Gamla,
+            mainImg: baadmay,
             mainTitle: "A Robust Platform for Developers",
             mainAuthor: "John Doe",
             mainDesc:
-                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            sideImg1: Docs,
+                "NorthNine designed the BaadMay payment solution, from idea to UX/UI, to make shopping easier for customers.",
+            sideImg1: baadmayScreen,
             sideTitle1: "Developer-Friendly Features",
             sideDesc1:
-                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-            sideImg2: Girl,
+                "BaadMay allows users to buy now and pay later in three easy installments, simplifying the shopping experience while staying on budget.",
+            sideImg2: baadmayLogo,
             sideTitle2: "Streamlined Workflows",
             sideDesc2:
-                "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+                "With NorthNine's design expertise, BaadMay provides a flexible and user-friendly payment plan",
         },
     ];
 

@@ -53,14 +53,14 @@ function Sec3() {
                         <p className='text-[#121820]/50 leading-[25.5px] text-[17px] font-syne lg:mt-7 mt-4 w-[280px]'>Scale your business with cloud computing, digital marketing, AI, and IoT for long-term success and growth.</p>
                     </div>
                 </div>
-
+{/* 
                 <div className='lg:justify-between lg:flex-row flex-col flex lg:pt-[107px] items-center gap-7 mx-auto lg:mx-0 lg:w-auto pt-12 pb-24 lg:pb-0'>
                     <div className='flex gap-[14px] items-center group ml-7 lg:ml-0'>
                         <button className='font-syne font-semibold text-base group-hover:text-yellow ease-out duration-300 group-hover:scale-110 '>Contact Now</button>
                         <button className='w-[35px] h-[35px] rounded-full text-white bg-yellow group-hover:bg-black ease-out duration-300 group-hover:scale-110'>🡺</button>
                     </div>
                     <button className='font-sans text-base py-5 px-14 border-[2px] border-yellow hover:bg-yellow rounded-full hover:text-white ease-out duration-300 hover:scale-110 mt-7 lg:mt-0'>How We Work</button>
-                </div>
+                </div> */}
 
                 <div className='lg:flex lg:justify-end lg:w-[40%] w-[95%] hidden'>
                     <img src={Shades2} alt="" className='lg:w-[203px] lg:h-[140px] h-[100px] '/>
