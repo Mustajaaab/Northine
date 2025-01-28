@@ -92,9 +92,9 @@ function Services() {
     {
       img: webDesign,
       title: " Web Development",
-      author: "EcoEnergy",
+      author: "GynoEcho.ai",
       description:
-        "For EcoEnergy, we created a sleek, responsive website that works perfectly on phones, tablets, and desktops. The site now loads in under two seconds, helping EcoEnergy see a boost in traffic and triple their customer inquiries.",
+        "For GynoEcho, we created a sleek, responsive website that works perfectly on phones, tablets, and desktops. The site now loads in under two seconds, helping GynoEcho see a boost in traffic and triple their customer inquiries.",
     },
     {
       img: Kcc,
@@ -305,7 +305,7 @@ function Services() {
           <p className="font-syne">All Devices</p>
         </div>
         <h1 className="lg:text-[44px] text-3xl font-syne font-semibold mt-14">
-          <span className="text-yellow">End-to-End</span> Mobile Development
+          <span className="text-yellow">End-to-End</span> Development
           Services
         </h1>
       </div>

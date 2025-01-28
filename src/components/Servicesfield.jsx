@@ -4,14 +4,13 @@ import code from "../assets/images/coding.png";
 import socialMedia from "../assets/images/socialMedia.png";
 import bookkeeping from "../assets/images/bookkeeping.png";
 import gameDev from "../assets/images/gamedevelopmenticon.svg";
-
+import Ai from "../assets/images/ai.png";
 const Servicesfield = () => {
   const services = [
     {
       title: "UX/UI Designing Services",
       description:
         "Create designs that grab attention and guide users seamlessly. Great designs improve engagement and keep visitors connected.",
-      skills: ["Figma", "Kotlin"],
       icon: webDesgin,
     },
     {
@@ -42,6 +41,13 @@ const Servicesfield = () => {
       skills: ["Unity", "Unreal Engine"],
       icon: gameDev, // Add the corresponding icon here
     },
+    {
+      title: "AI & ML Service",
+      description:
+        "We offer cutting-edge AI and machine learning solutions designed to revolutionize your business. From concept to deployment, our team develops intelligent systems that enhance efficiency, automate processes, and provide actionable insights. Let us bring your ideas to life with innovative algorithms and transformative technologies.",
+      skills: ["Python", "TensorFlow"],
+      icon: Ai, // Add the corresponding icon here
+    },
   ];
 
   function ServiceCard({ title, description, skills, icon }) {
@@ -63,16 +69,7 @@ const Servicesfield = () => {
         <p className="text-black/30 text-base font-syne text-center mb-[20px]">
           {description}
         </p>
-        <div className="flex items-center gap-4 justify-center mt-[10px]">
-          {skills.map((skill, index) => (
-            <React.Fragment key={index}>
-              <p className="font-syne text-sm font-medium">{skill}</p>
-              {index < skills.length - 1 && (
-                <div className="w-2 h-2 bg-yellow rounded-full" />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+       
       </div>
     );
   }
@@ -84,7 +81,6 @@ const Servicesfield = () => {
           key={index}
           title={service.title}
           description={service.description}
-          skills={service.skills}
           icon={service.icon}
         />
       ))}

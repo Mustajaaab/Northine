@@ -17,7 +17,7 @@ function Navbar() {
         const handleResize = () => {
             const isLarge = window.innerWidth >= 1024;
             setIsLargeScreen(isLarge);
-            if (isLarge) document.body.classList.remove('overflow-hidden');
+            if (isLarge) document.body.classList.remove('-hidden');
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -41,7 +41,7 @@ function Navbar() {
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev);
         if (!isLargeScreen) {
-            document.body.classList.toggle('overflow-hidden', !isMenuOpen);
+            document.body.classList.toggle('-hidden', !isMenuOpen);
         }
     };
 
