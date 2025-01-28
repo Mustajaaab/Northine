@@ -47,7 +47,7 @@ function Services() {
         {
             title: "Bookkeeping",
             heading: "Bookkeeping Services",
-            image: "../src/assets/images/launch.png",
+            image: "../src/assets/images/bookkeeping.png",
             content: "Stay organized and focused with accurate financial management and reporting.",
         },
         {
