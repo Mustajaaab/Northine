@@ -7,11 +7,17 @@ import setup from "../../assets/images/setup.jpg";
 
 function Sec1() {
     const [backgroundIndex, setBackgroundIndex] = useState(0);
-    const backgrounds = [office,setup,coder,mac];
+    const [fadeClass, setFadeClass] = useState("fade-in");
+
+    const backgrounds = [office, setup, coder, mac]; // Replace with actual paths
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+            // Start fading out
+            setTimeout(() => {
+                // Change background after fade-out and fade-in
+                setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+            }, 1000); // Duration of the fade-out transition
         }, 7000);
         return () => clearInterval(interval);
     }, []);
@@ -19,9 +25,9 @@ function Sec1() {
     return (
 
         <div
-        className="relative bg-cover bg-center bg-no-repeat transition-all duration-2000 ease-in-out 2xl:h-screen "
+        className={`relative bg-cover bg-center bg-no-repeat transition-opacity duration-1000  2xl:h-screen`}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgrounds[backgroundIndex]})`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgrounds[backgroundIndex]})`,
         }}
       >
                 <div className="container mx-auto flex justify-between items-center max-w-[1170px] 2xl:max-w-[1370px]">

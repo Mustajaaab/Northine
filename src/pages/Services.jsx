@@ -19,7 +19,12 @@ import GameDev from "../assets/images/Rubix.png";
 import Bookkeeping from "../assets/images/bookkeeping.jpeg";
 import code from "../assets/images/coding.png";
 import Kcc from "../assets/images/Kcc.png";
-
+import webDesgin1 from "../assets/images/webDesign.png";
+import code1 from "../assets/images/coding.png";
+import socialMedia1 from "../assets/images/socialMedia.png";
+import bookkeeping1 from "../assets/images/bookkeeping.png";
+import gameDev1 from "../assets/images/gamedevelopmenticon.svg";
+import Ai from "../assets/images/ai.png";
 function Services() {
   const [activeStep, setActiveStep] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -35,44 +40,44 @@ function Services() {
     {
       title: "UX/UI Design",
       heading: "UI/UX Designing Services",
-      image: "../src/assets/images/webDesign.png",
+      image: webDesgin1,
       content:
         "Transform your ideas into engaging, user-friendly designs that deliver seamless experiences.",
     },
     {
       title: "Development",
       heading: "Website Development Services",
-      image: "../assets/images/coding.png",
+      image: code1,
       content:
         "Build high-performing, responsive websites tailored to your business goals.",
     },
     {
       title: "Digital Marketing",
       heading: "Digital Marketing Services",
-      image: "../src/assets/images/searchEngine.png",
+      image: socialMedia1,
       content:
         " Boost your brand visibility and drive traffic with cutting-edge strategies.",
     },
     {
       title: "Bookkeeping",
       heading: "Bookkeeping Services",
-      image: "../src/assets/images/launch.png",
+      image: bookkeeping1,
       content:
         "Stay organized and focused with accurate financial management and reporting.",
     },
     {
       title: "Artificial intelligence",
       heading: "AI & ML Service",
-      image: "../src/assets/images/ai.png",
+      image: Ai,
       content:
         "Unlock the power of Artificial Intelligence and Machine Learning with our cutting-edge solutions. We specialize in building intelligent models for data-driven insights, automation, and predictive analytics. From model development to deployment, our services cater to businesses seeking efficiency, innovation, and smarter decision-making.",
     },
     {
       title: "Game Development",
-      heading: "AI & ML Service",
-      image: "../src/assets/images/ai.png",
+      heading: "Game Development Services",
+      image: gameDev1,
       content:
-        "Unlock the power of Artificial Intelligence and Machine Learning with our cutting-edge solutions. We specialize in building intelligent models for data-driven insights, automation, and predictive analytics. From model development to deployment, our services cater to businesses seeking efficiency, innovation, and smarter decision-making.",
+        "We offer top-notch game development services tailored to your vision. From concept to launch, our team creates engaging, high-performance games for all platforms. Let us bring your ideas to life with stunning visuals and immersive gameplay.",
     },
   ];
 
@@ -108,7 +113,7 @@ function Services() {
     {
       img: GameDev,
       title: "Rubiks Cube",
-      author: "Subzero Commercial inc",
+      author: "Rounds",
       description:
         "Ready to challenge your brain and test your speed? Dive into the most immersive and engaging cube puzzle game available on mobile. With real mechanical turning and lifelike physics, this game brings the iconic cube to life right in your hands! Whether you're a beginner or a seasoned solver, this game is designed to provide a fun, smooth, and interactive experience for",
     },

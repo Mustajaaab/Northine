@@ -1,5 +1,4 @@
 import React from "react";
-import Smartphone from "../assets/images/22.svg";
 import webDesgin from "../assets/images/webDesign.png";
 import code from "../assets/images/coding.png";
 import socialMedia from "../assets/images/socialMedia.png";
