@@ -607,7 +607,7 @@ function Services() {
             <div className="bg-[#e7e7e8] w-20 h-20 flex justify-center items-center rounded-full">
               <svg
                 fill="#000000"
-               width="40"
+                width="40"
                 height="45"
                 viewBox="0 0 50 50"
                 xmlns="http://www.w3.org/2000/svg"
