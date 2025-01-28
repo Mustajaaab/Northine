@@ -1,13 +1,15 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import BGDot from "../../assets/images/dotmap.png";
-import Navbar from "../navbar/index";
+import Navbar from "../../components/navbar/index";
 import "../../App.css";
-import ShazmeenJobBar from "../SkillBar/ShazmeenJobBar";
-import MainFooter from "../Footer/mainFooter";
+import JamiJobBar from "../SkillBar/JamiJobBar";
+import MainFooter from "../../components/Footer/mainFooter";
 import linkedin from "../../assets/images/linkedin.png";
+import JavaidJobBar from "../SkillBar/JavaidJobBar";
 import medium from "../../assets/images/medium.png";
+import github from "../../assets/images/github-logo.png";
 
-const Shazmeen = () => {
+const Javaid = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { name, title, img } = location.state || {};
@@ -75,42 +77,32 @@ const Shazmeen = () => {
         <div className="">
           <h2 className="text-3xl font-bold mb-4 font-syne">Biography</h2>
           <p className="text-lg text-gray-600 mb-6 font-syne">
-            Shazmeen Baig is a lead accountant and certified bookkeeper
-            specializing in QuickBooks Online, Zoho Books, and Wave. With over
-            five years of experience, she helps businesses streamline
-            bookkeeping, financial reporting, payroll, and tax compliance with
-            accuracy and efficiency. As the head of the accounts department, she
-            also manages data migration and accounting software implementation,
-            providing custom solutions for startups and established companies.{" "}
+            Javed Ur Rehman is a lead game developer with expertise in Unity 3D,
+            C# coding, debugging, and AI animations. With four years of
+            experience, he has designed, developed, and optimized engaging
+            games, including Rubik’s Cube 3D, which has surpassed half a million
+            downloads on Google Play.
           </p>
 
           <ul className="mil-timeline">
             <li>
-              <h3 className="mil-mb-5 ml-7 font-semibold  font-syne">
-                Smart Business Solution{" "}
+              <h3 className="mil-mb-5 ml-7 font-syne">
+                Secretariat Finance Dept
               </h3>
-              <p className="mil-text-lg font-semibold font-syne">Apr 2020 - May 2022</p>
+              <p className="mil-text-sm font-syne">Feb-2021-present</p>
             </li>
             <li>
-              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">Corvus</h3>
-              <p className="mil-text-lg font-semibold font-syne">june 2022- Aug 2024</p>
-            </li>
-            <li>
-              <h3 className="mil-mb-5 ml-7 font-semibold font-syne">
-              Northnine
-              </h3>
-              <p className="mil-text-lg font-semibold font-syne">
-              Aug 2024-Present
-              </p>
+              <h3 className="mil-mb-5 ml-7 font-syne">Northnine</h3>
+              <p className="mil-text-sm font-syne">Aug 2024-present</p>
             </li>
           </ul>
 
           <p className="mt-6 text-gray-700 font-syne">
-            Shazmeen’s expertise ensures businesses optimize financial
-            operations, improve decision-making, and stay compliant. Passionate
-            about financial excellence, she is committed to delivering reliable
-            accounting strategies that help organizations grow and maintain
-            long-term financial stability.{" "}
+            Javed’s passion for game design and development has led him to work
+            with clients worldwide, delivering high-quality gaming experiences.
+            As the head of the game development department, he now leads teams,
+            manages projects, and innovates within the industry, helping
+            businesses and developers bring their gaming visions to life.
           </p>
 
           <div className="flex gap-1 w-full mt-5 lg:mt-[60px] h-5">
@@ -118,7 +110,7 @@ const Shazmeen = () => {
             <div className="w-[96%] h-[2px] bg-gray-300"></div>
             <div className="w-[2%] h-[2px] bg-[#fdcb22]"></div>
           </div>
-          <ShazmeenJobBar />
+          <JavaidJobBar />
         </div>
 
         {/* Testimonial Section */}
@@ -136,22 +128,27 @@ const Shazmeen = () => {
             <div className="w-[2%] h-[2px] bg-yellow"></div>
           </div>
           <p className="text-center text-sm text-gray-500 font-syne">
-            baigshazmeen97@gmail.com
+            javedbarcha@gmail.com{" "}
           </p>
           <div className="mt-7">
-            <h3 className="font-semibold text-lg font-syne text-center">
-              Socials
-            </h3>
-            <div className="flex space-x-4 mt-2 justify-center">
+            <h3 className="font-semibold text-lg font-syne">Socials</h3>
+            <div className="flex space-x-4 mt-2">
               <a
-                href="https://www.linkedin.com/in/shazmeenbaig/" // Replace with actual LinkedIn profile URL
+                href="https://www.linkedin.com/in/javedbarcha/" // Replace with actual LinkedIn profile URL
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit LinkedIn profile"
               >
                 <img src={linkedin} alt="LinkedIn" className="h-8" />
               </a>
-             
+              <a
+                href="https://github.com/javedbarcha" // Replace with actual Medium profile URL
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Medium profile"
+              >
+                <img src={github} alt="Medium" className="h-8" />
+              </a>
             </div>
           </div>
         </aside>
@@ -161,4 +158,4 @@ const Shazmeen = () => {
   );
 };
 
-export default Shazmeen;
+export default Javaid;

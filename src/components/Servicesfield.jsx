@@ -1,6 +1,10 @@
 import React from 'react';
 import Smartphone from '../assets/images/22.svg';
 import webDesgin from '../assets/images/webDesign.png';
+import code from "../assets/images/coding.png";
+import socialMedia from "../assets/images/socialMedia.png";
+import bookkeeping from "../assets/images/bookkeeping.png";
+import gameDev from "../assets/images/gamedevelopmenticon.svg";
 
 const Servicesfield = () => {
     const services = [
@@ -14,19 +18,25 @@ const Servicesfield = () => {
             title: "Website Development Services",
             description: "High-performing, professional websites built to work on every device. Digital web solutions ensure fast speeds, better engagement, and lasting impressions.",
             skills: ["React", "Node.js"],
-            icon: Smartphone,
+            icon: code,
         },
         {
             title: "Digital Marketing Services",
             description: "Drive business growth with effective digital learning solutions. Reach the right audience through creative campaigns and targeted strategies.",
             skills: ["SEO", "PPC"],
-            icon: Smartphone,
+            icon: socialMedia,
         },
         {
             title: "Bookkeeping Services",
             description: "Simplify financial management with expert support. Track finances, organize payments, and stay on top of your accounts with ease.",
             skills: ["QuickBooks", "Xero"],
-            icon: Smartphone, // Add the corresponding icon here
+            icon: bookkeeping, // Add the corresponding icon here
+        },
+        {
+            title: "Game Development Services",
+            description: "We offer top-notch game development services tailored to your vision. From concept to launch, our team creates engaging, high-performance games for all platforms. Let us bring your ideas to life with stunning visuals and immersive gameplay.",
+            skills: ["Unity", "Unreal Engine"],
+            icon: gameDev, // Add the corresponding icon here
         }
     ];
 

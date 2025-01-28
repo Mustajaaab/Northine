@@ -2,19 +2,21 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import BGDot from '../assets/images/dotmap.png'
 import jami from '../assets/images/Jami.png'
-import irfan from '../assets/images/irfan.jpg'
+import irfan from '../assets/images/Irfan.png'
 import Haseena from '../assets/images/haseena.jpg'
-import Farhan from '../assets/images/farhan.jfif'
+import Farhan from '../assets/images/Farhan2.jpg'
 import Ahsam from '../assets/images/ahsam.jpg'
 import Kashif from '../assets/images/Kashifx.jpg'
-import Shazmeen from '../assets/images/Shazmeen.jpg'
+import Shazmeen from '../assets/images/Shazmeen2.png'
 import man from '../assets/images/man.png'
-import Rahat3 from '../assets/images/Rahat3.jpg'
+import Rahat3 from '../assets/images/Rahat2.png'
 import Increase from '../assets/images/increase.png'
 import target from '../assets/images/target.png'
 import transparency from '../assets/images/transparency.png'
 import MainFooter from "../components/Footer/mainFooter";
-
+import javaid from '../assets/images/javaid.png'
+import Afshan from '../assets/images/Afsheen1.png'
+import Sohail from '../assets/images/Sohail.png'
 
 function Team() {
 
@@ -59,14 +61,18 @@ function Team() {
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 lg:mt-[80px] mt-0 px-4">
                 {[
                     { img: jami, name: "Jamila Baig", title: "CEO & Co-founder NorthNine", url: "/ourTeam/Jamila" },
-                    { img: Farhan, name: "Farhan Ali", title: "CTO & Co-founder NorthNine", url: "/OurTeam/Farhan" },
+                    { img: Farhan, name: "Farhan Ali", title: "Co-founder NorthNine", url: "/OurTeam/Farhan" },
                     { img: Ahsam, name: "Ahsam Baig", title: "COO & Co-founder NorthNine", url: "/OurTeam/Ahsam" },
                     { img: irfan, name: "Irfan Ullah Baig", title: "CFO & Co-founder NorthNine", url: "/OurTeam/Irfan" },
                     { img: Haseena, name: "Haseena Baig", title: "HR & Co-founder NorthNine", url: "/OurTeam/Haseena" },
                     { img: Kashif, name: "Kashif Ali Khan", title: "Lead Web Development NorthNine", url: "/OurTeam/Kashif" },
                     { img: Shazmeen, name: "Shazmeen Baig", title: "Lead Accountant NorthNine", url: "/OurTeam/Shazmeen" },
-                    { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/OurTeam/Rahat" },
+                    { img: javaid, name: "Javaid Barcha", title: "Lead Game Development NorthNine", url: "/OurTeam/Javaid" },
+                    { img: Rahat3, name: "Rahat Karim", title: "Lead Data Science and AI NorthNine", url: "/ourTeam/Rahat" },
+                    { img: Afshan, name: "Afshan Bano", title: "Lead Digital Marketer NorthNine", url: "/ourTeam/Afshan" },
+                    { img: Sohail, name: "Sohail Karim", title: "Lead UX/UI Designer NorthNine", url: "/ourTeam/Sohail" },
                 ].map((client, index) => (
+                    
                     <div key={index} className="text-center group relative mt-9">
                         <div className="relative w-[250px] h-[250px] lg:h-[350px] lg:w-[350px] rounded-full overflow-hidden">
                             <Link

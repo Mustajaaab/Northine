@@ -9,9 +9,12 @@ import Photo3 from "../../assets/images/New folder/plan.png";
 import Photo4 from "../../assets/images/New folder/Hackino.png";
 import Photo5 from "../../assets/images/New folder/KMA-logo.svg";
 import Photo6 from "../../assets/images/New folder/readinggraphics.webp";
+import Photo7 from "../../assets/images/New folder/McNulty.webp";
+import Photo8 from "../../assets/images/New folder/uplogo.jpeg";
+
 
 const ProjectSlider = () => {
-    const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
+    const photos = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6, Photo7];
 
     const sliderSettings = {
         infinite: true,

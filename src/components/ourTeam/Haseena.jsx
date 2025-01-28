@@ -6,7 +6,8 @@ import HasiJobBar from "../SkillBar/HasiJobBar";
 import MainFooter from '../../components/Footer/mainFooter'
 import linkedin from '../../assets/images/linkedin.png'
 import medium from '../../assets/images/medium.png'
-
+import instagram from '../../assets/images/instagram1.png'
+import facebook from '../../assets/images/facebook.png'
 const Haseena = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -117,12 +118,12 @@ const Haseena = () => {
             <div className="w-[96%] h-[2px] bg-[#121820]/10"></div>
             <div className="w-[2%] h-[2px] bg-yellow"></div>
           </div>
-          <p className="text-center text-sm text-gray-500 font-syne">haseena.baig118@gmail.com</p>
+          <p className="text-center text-sm text-gray-500 font-syne">haseena@northine.pk</p>
           <div className="mt-7">
             <h3 className="font-semibold text-lg font-syne text-center">Socials</h3>
             <div className="flex space-x-4 justify-center mt-2">
               <a
-                href="https://www.linkedin.com/in/jamibaig/"
+                href="https://www.linkedin.com/in/haseena-baig/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit LinkedIn profile"
@@ -130,12 +131,28 @@ const Haseena = () => {
                 <img src={linkedin} alt="LinkedIn" className="h-8" />
               </a>
               <a
-                href="https://medium.com/@jamilabaig69"
+                href="https://medium.com/@haseena-baig118"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Medium profile"
               >
                 <img src={medium} alt="Medium" className="h-8" />
+              </a>
+              <a
+                href="https://www.instagram.com/hasina.writes?igsh=ZXVocTcxNWZtZXds"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Medium profile"
+              >
+                <img src={instagram} alt="Medium" className="h-8" />
+              </a>
+              <a
+                href="https://www.facebook.com/haseenawrites"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Medium profile"
+              >
+                <img src={facebook} alt="Medium" className="h-8" />
               </a>
             </div>
           </div>

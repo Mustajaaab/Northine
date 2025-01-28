@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import '../../App.css'
-function ShazmeenJobBar() {
+function SohailJobBar() {
     const [skillPercentages, setSkillPercentages] = useState(
-        new Array(6).fill(0) 
+        new Array(6).fill(0)
     );
 
     useEffect(() => {
@@ -32,11 +32,12 @@ function ShazmeenJobBar() {
             <div className="pt-[89px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Microsoft Excel", index: 0 },
-                        { title: "Budgeting", index: 1 },
-                        { title: "Financial Analysis", index: 2 },
-                        { title: "Accounting", index: 3 },
-                        { title: "Bookkeeping", index: 4 },
+                        { title: "Product Design", index: 0 },
+                        { title: "Visual Design", index: 1 },
+                        { title: "Web 3.0 Design", index: 2 },
+                        { title: "Project Management", index: 3 },
+                        { title: "UX Design", index: 4 },
+                        { title: "Web Design", index: 5 },
                     ].map((skill, idx) => (
                         <div key={idx} className="">
                             <h4 className="font-syne font-bold text-lg">
@@ -74,4 +75,4 @@ function ShazmeenJobBar() {
     );
 }
 
-export default ShazmeenJobBar;
+export default SohailJobBar;

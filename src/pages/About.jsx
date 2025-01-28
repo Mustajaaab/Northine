@@ -149,6 +149,12 @@ function About() {
                     Machine Learning And Artificial Intelligence
                   </p>
                 </div>
+                <div className="flex items-center gap-2 lg:mt-0 mt-1">
+                  <img src={tickk} alt="" className="w-10 h-9" />
+                  <p className="text-lg font-syne">
+                    Game Development
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center gap-10 lg:mt-5 mt-16">

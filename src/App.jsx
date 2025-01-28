@@ -4,19 +4,23 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import About from './pages/About';
 import Services from './pages/Services';
-import Casestudies from './pages/Casestudies'; // Fixed casing in import
+// import Casestudies from './pages/Casestudies'; // Fixed casing in import
 import Contact from './pages/Contact-Us';
 import Jamila from './components/OurTeam/jamila';
 import Farhan from './components/ourTeam/Farhan';
 import Ahsam from './components/OurTeam/Ahsam';
 import Irfan from './components/OurTeam/Irfan';
 import Haseena from './components/ourTeam/Haseena';
-import Kashif from './components/OurTeam/Kashif';
+import Kashif from './components/ourTeam/Kashif';
 import Shazmeen from './components/ourTeam/Shazmeen';
 import Rahat from './components/OurTeam/Rahat';
+import Afshan from './components/ourTeam/Afshan';
+import Javaid from './components/ourTeam/Javaid .jsx';
+import Sohail from './components/ourTeam/Sohail';
 import ScrollToTop from './components/ScrollToTop';
 import TermsAndConditions from './pages/TermsAndConditions'
 import PrivacyPolicy from './pages/PrivacyPolicy';
+
 import './App.css';
 
 function App() {
@@ -29,7 +33,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/case-studies" element={<Casestudies />} />
+        {/* <Route path="/case-studies" element={<Casestudies />} /> */}
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ourTeam/Jamila" element={<Jamila />} />
         <Route path="/ourTeam/Farhan" element={<Farhan />} />
@@ -39,6 +43,9 @@ function App() {
         <Route path="/ourTeam/Kashif" element={<Kashif />} />
         <Route path="/ourTeam/Shazmeen" element={<Shazmeen />} />
         <Route path="/ourTeam/Rahat" element={<Rahat />} />
+        <Route path="/ourTeam/Afshan" element={<Afshan />} />
+        <Route path="/ourTeam/Javaid" element={<Javaid />} />
+        <Route path="/ourTeam/Sohail" element={<Sohail />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>

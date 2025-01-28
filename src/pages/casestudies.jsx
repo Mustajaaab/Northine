@@ -4,6 +4,7 @@ import Navbar from '../components/navbar'
 import Sliderrr from '../components/slider-for-case-studies/slider'
 import MainFooter from '../components/Footer/mainFooter'
 
+
 function Casestudies () {
     return (
         <>

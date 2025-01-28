@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import '../../App.css'
-function ShazmeenJobBar() {
+function JavaidJobBar() {
     const [skillPercentages, setSkillPercentages] = useState(
-        new Array(6).fill(0) 
+        new Array(9).fill(0) 
     );
 
     useEffect(() => {
@@ -10,10 +10,10 @@ function ShazmeenJobBar() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     // Start animation when section is visible
-                    setSkillPercentages([88, 90, 87, 85, 89, 80]);
+                    setSkillPercentages([88, 90, 87, 85, 89, 80, 88, 91,96]);
                 } else {
                     // Reset percentages to 0 when out of view
-                    setSkillPercentages(new Array(6).fill(0));
+                    setSkillPercentages(new Array(9).fill(0));
                 }
             },
             { threshold: 0.3 }
@@ -32,14 +32,18 @@ function ShazmeenJobBar() {
             <div className="pt-[89px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { title: "Microsoft Excel", index: 0 },
-                        { title: "Budgeting", index: 1 },
-                        { title: "Financial Analysis", index: 2 },
-                        { title: "Accounting", index: 3 },
-                        { title: "Bookkeeping", index: 4 },
+                        { title: "C#", index: 0 },
+                        { title: "Python", index: 1 },
+                        { title: "C++", index: 2 },
+                        { title: "Java", index: 3 },
+                        { title: "Unity 3D", index: 4 },
+                        { title: "Blender", index: 5 },
+                        { title: "AI Animation", index: 6 },
+                        { title: "Adobe Photoshop", index: 7 },
+                        { title: "Git", index: 8 },
                     ].map((skill, idx) => (
                         <div key={idx} className="">
-                            <h4 className="font-syne font-bold text-lg">
+                            <h4 className="font-syne font-bold lg:text-md  xl:text-lg text-nowrap truncate">
                                 {skill.title}
                             </h4>
                             <div className="flex mt-[30px]">
@@ -74,4 +78,4 @@ function ShazmeenJobBar() {
     );
 }
 
-export default ShazmeenJobBar;
+export default JavaidJobBar;
