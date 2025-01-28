@@ -26,7 +26,7 @@ const Servicesfield = () => {
             title: "Bookkeeping Services",
             description: "Simplify financial management with expert support. Track finances, organize payments, and stay on top of your accounts with ease.",
             skills: ["QuickBooks", "Xero"],
-            icon: Smartphone, // Add the corresponding icon here
+            icon: Smartphone,
         }
     ];
 
@@ -61,7 +61,7 @@ const Servicesfield = () => {
                     title={service.title}
                     description={service.description}
                     skills={service.skills}
-                    icon={service.icon} // Passing the icon prop
+                    icon={service.icon}
                 />
             ))}
         </div>

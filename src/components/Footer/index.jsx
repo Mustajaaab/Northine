@@ -1,6 +1,8 @@
 import '../../App.css';
+import { Link } from 'react-router-dom';
 import No9 from "../../assets/images/no9.png";
 import FormSubmission from '../form';
+import { FaSquareFacebook, FaLinkedin, FaSquareInstagram } from "react-icons/fa6";
 
 function Footer() {
 
@@ -23,43 +25,92 @@ function Footer() {
                     Contact <span className="text-yellow">Us<br />Let&apos;s Make It </span>Happen
                 </h1>
                 <FormSubmission />
-                <div className='lg:flex lg:justify-between lg:items-center mt-32'>
+                <div className="lg:flex lg:justify-between lg:items-center mt-10">
                     <div>
-                        <img src={No9} alt="" className='w-[140px] h-[40px] mx-auto lg:mx-0 ' />
-                        <p className='text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start'> Offering top-notch services in UI/UX Designing, Web Development, <br className='hidden lg:block' />Digital Marketing, and Bookkeeping to help businesses thrive with <br className='hidden lg:block' />creativity, precision, and strategy</p>
+                        <img src={No9} alt="" className="w-[140px] h-[40px]" />
+                        <p className="text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start">
+                            Offering top-notch services in UI/UX Designing, Web Development, <br className="hidden lg:block" />
+                            Digital Marketing, and Bookkeeping to help businesses thrive with <br className="hidden lg:block" />
+                            creativity, precision, and strategy
+                        </p>
                     </div>
-
                     <div>
-                        <h1 className='text-white text-center lg:text-left font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0'>Join The <span className='text-yellow'>Northnine</span> <br />
-                            Experience</h1>
-                        <p className='font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start'>Stay updated with the latest trends in design, development, <br className='hidden lg:block' />marketing, and finance. Contact us now!</p>
+                        <h1 className="text-white font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0">
+                            Join The <span className="text-yellow">Northnine</span> <br />
+                            Experience
+                        </h1>
+                        <p className="font-syne font-normal text-[15px] leading-[25px] text-white/50 mt-[30px] text-center lg:text-start">
+                            Stay updated with the latest trends in design, development, <br className="hidden lg:block" />
+                            marketing, and finance. Contact us now!
+                        </p>
                     </div>
                 </div>
-                <div className='flex mt-[120px] pb-3 gap-1'>
-                    <div className='w-[2%] h-[2px] bg-yellow'></div>
-                    <div className='w-[96%] h-[2px] bg-[#FFFFFF]/30'></div>
-                    <div className='w-[2%] h-[2px] bg-yellow'></div>
+                <div className="flex mt-10 pb-3 gap-1">
+                    <div className="w-[2%] h-[2px] bg-yellow"></div>
+                    <div className="w-[96%] h-[2px] bg-[#FFFFFF]/30"></div>
+                    <div className="w-[2%] h-[2px] bg-yellow"></div>
                 </div>
-                <div className='lg:flex lg:justify-between lg:items-center space-y-4'>
-                    <ul className='flex gap-7 items-center lg:justify-start justify-center'>
-                        <li className='font-syne text-[15px] font-normal text-white'>FaceBook</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Instagram</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Linkedin</li>
-                        <li className='font-syne text-[15px] font-normal text-white lg:block hidden'>Youtube</li>
+                <div className="lg:flex justify-between items-center mt-5">
+                    <ul className="flex gap-7 items-center lg:justify-start justify-center">
+                        <li>
+                            <a
+                                href="https://www.facebook.com/NorthnineN9/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="Facebook"
+                            >
+                                <FaSquareFacebook />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.instagram.com/northnine.pk/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="Instagram"
+                            >
+                                <FaSquareInstagram />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/company/the-north-nine/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-[20px]"
+                                aria-label="LinkedIn"
+                            >
+                                <FaLinkedin />
+                            </a>
+                        </li>
                     </ul>
-                    <ul className='flex gap-7 items-center lg:justify-start justify-center'>
-                        <li className='font-syne text-[15px] font-normal text-white'>Terms and Conditions</li>
-                        <li className='font-syne text-[15px] font-normal text-white'>Privacy Policy</li>
+                    <ul className="flex gap-7 items-center lg:justify-start justify-center">
+                        <li>
+                            <Link
+                                to="/terms-and-conditions"
+                                className="font-syne text-[15px] font-normal text-white"
+                            >
+                                Terms and Conditions
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/privacy-policy"
+                                className="font-syne text-[15px] font-normal text-white"
+                            >
+                                Privacy Policy
+                            </Link>
+                        </li>
                     </ul>
                 </div>
-                <div className='flex items-center justify-between mt-[80px] pb-[30px]'>
-                    <p className="text-white/10 font-syne font-normal text-sm">
-                        ©Northnine {new Date().getFullYear()}.
-                    </p>
-                    <p className='text-white/10 font-syne font-normal text-sm '>All Right Reserved.</p>
+                <div className="flex items-center justify-between mt-10 pb-[30px]">
+                    <p className="text-white/10 font-syne font-normal text-[13px]">©Northnine {new Date().getFullYear()}</p>
+                    <p className="text-white/10 font-syne font-normal text-[13px]">All Rights Reserved.</p>
                 </div>
             </div>
-        </div>
+            </div>
     )
 }
 export default Footer
