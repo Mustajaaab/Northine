@@ -27,14 +27,14 @@ function Footer() {
                 <FormSubmission />
                 <div className="lg:flex lg:justify-between lg:items-center mt-10">
                     <div>
-                        <img src={No9} alt="" className="w-[140px] h-[40px]" />
+                        <img src={No9} alt="" className="w-[140px] h-[40px] mx-auto lg:mx-0" />
                         <p className="text-white/50 font-normal font-syne leading-[25px] text-[15px] mt-[38px] text-center lg:text-start">
                             Offering top-notch services in UI/UX Designing, Web Development, <br className="hidden lg:block" />
                             Digital Marketing, and Bookkeeping to help businesses thrive with <br className="hidden lg:block" />
                             creativity, precision, and strategy
                         </p>
                     </div>
-                    <div>
+                    <div className='text-center lg:text-left'>
                         <h1 className="text-white font-semibold leading-[50px] text-4xl font-syne mt-14 lg:mt-0">
                             Join The <span className="text-yellow">Northnine</span> <br />
                             Experience
