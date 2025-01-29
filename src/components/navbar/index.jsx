@@ -109,7 +109,7 @@ function Navbar() {
                         isMenuOpen ? 'block' : 'hidden'
                     )}
                 >
-                    {['/home', '/about', '/team', '/services', '/contact-us'].map(
+                    {['/home', '/about', '/team', '/services', '/contact-us' ,'case-studies'].map(
                         (path) => (
                             <Link
                                 key={path}

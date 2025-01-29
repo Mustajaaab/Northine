@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import About from './pages/About';
 import Services from './pages/Services';
-// import Casestudies from './pages/Casestudies'; // Fixed casing in import
+import Casestudies from './pages/Casestudies'; // Fixed casing in import
 import Contact from './pages/Contact-Us';
 import Jamila from './components/OurTeam/jamila';
 import Farhan from './components/ourTeam/Farhan';
@@ -33,7 +33,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/case-studies" element={<Casestudies />} /> */}
+        <Route path="/case-studies" element={<Casestudies />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ourTeam/Jamila" element={<Jamila />} />
         <Route path="/ourTeam/Farhan" element={<Farhan />} />
