@@ -5,6 +5,7 @@ import webDesign from "../../assets/images/website.png";
 import GameDev from "../../assets/images/game.webp";
 import Bookkeeping from "../../assets/images/bookkeeping1.jpeg";
 import case2 from "../../assets/images/case3.png";
+import { Link } from "react-router-dom";
 function Sliderrr() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [animationClass, setAnimationClass] = useState("slide-in");
@@ -15,9 +16,20 @@ function Sliderrr() {
             mainImg: uxui,
             mainTitle: "UI Redesign and Case Study",
             mainDesc:
-                "Payment Gateway Mobile App UI UX Case Study-Redesign",
+                " KFC Pakistan – A Seamless Mobile Ordering Experience",
             order1: "order-1",
-            order2: "order-2"
+            order2: "order-2",
+            link :"/case-studies1"
+        },
+        {
+            id: 2,
+            mainImg: uxui,
+            mainTitle: "UI Redesign and Case Study",
+            mainDesc:
+                "BaadMay – Simplifying Payments for a Better Shopping Experience",
+            order1: "order-2",
+            order2: "order-1",
+            link :"/case-studies2"
         },
        
        
@@ -27,18 +39,20 @@ function Sliderrr() {
             mainImg: case2,
             mainTitle: "Digital Marketers worked with numerous companies ",
             mainDesc:
-                "Digital Marketers worked with numerous companies ",
-            order1: "order-2",
-            order2: "order-1"
+                "Zoom Accounting – Simplifying Financial Management for Small Businesses ",
+            order1: "order-1",
+            order2: "order-2",
+            link :"/case-studies3"
         },
         {
             id: 3,
             mainImg: Bookkeeping,
             mainTitle: "The majority have suffered alteration in some form.",
             mainDesc:
-                "Android App For Shaving Products Delivery",
-            order1: "order-1",
-            order2: "order-2"
+                "ChainRaise – Simplifying Digital Asset Trading",
+            order1: "order-2",
+            order2: "order-1",
+            link :"/case-studies4"
         },
     ];
 
@@ -83,9 +97,9 @@ function Sliderrr() {
                         {items.mainDesc}
                         </p>
                         <div className="flex items-center gap-3 group mt-[20px]">
-                            <button className="font-syne border-[2px] text-[25px] border-yellow group-hover:border-[3px] duration-300 ease-in-out w-16 h-16 rounded-full flex items-center justify-center text-lg leading-none">
+                            <Link to={items.link} className="font-syne border-[2px] text-[25px] border-yellow group-hover:border-[3px] duration-300 ease-in-out w-16 h-16 rounded-full flex items-center justify-center text-lg leading-none">
                                  +
-                            </button>
+                            </Link>
                             <p className="font-syne group-hover:text-yellow duration-300 ease-in-out">See More</p>
                         </div>
                     </div>

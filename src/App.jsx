@@ -20,7 +20,10 @@ import Sohail from './components/ourTeam/Sohail';
 import ScrollToTop from './components/ScrollToTop';
 import TermsAndConditions from './pages/TermsAndConditions'
 import PrivacyPolicy from './pages/PrivacyPolicy';
-
+import CasesStudie1 from './components/casestudies/casestudies1.jsx';
+import CasesStudie2 from './components/casestudies/casestudies2.jsx';
+import CasesStudie3 from './components/casestudies/casestudies3.jsx';
+import CasesStudie4 from './components/casestudies/casestudies4.jsx';
 import './App.css';
 
 function App() {
@@ -34,6 +37,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/case-studies" element={<Casestudies />} />
+        <Route path="/case-studies1" element={< CasesStudie1/>} />
+        <Route path="/case-studies2" element={<CasesStudie2/>} />
+        <Route path="/case-studies3" element={<CasesStudie3/>} />
+        <Route path="/case-studies4" element={<CasesStudie4/>} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ourTeam/Jamila" element={<Jamila />} />
         <Route path="/ourTeam/Farhan" element={<Farhan />} />
