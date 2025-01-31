@@ -109,18 +109,16 @@ function Navbar() {
                         isMenuOpen ? 'block' : 'hidden'
                     )}
                 >
-                    {['/home', '/about', '/team', '/services', '/contact-us' ,'/case-studies'].map(
-                        (path) => (
+                     {['/home', '/about', '/team', '/services', '/case-studies', '/contact-us'].map(
+                        (path, index) => (
                             <Link
-                                key={path}
+                                key={index}
                                 to={path}
-                                className={clsx(
-                                    'block relative font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0',
-                                    getActiveClass(path)
-                                )}
+                                className={`${getActiveClass(
+                                    path
+                                )} block font-syne lg:text-base text-xl font-semibold hover:text-yellow py-2 lg:py-0`}
                             >
                                 {path.split('/')[1].replace('-', ' ').toUpperCase()}
-                                <span className="absolute -top-1 right-[-12px] w-2 h-2 border-2 border-yellow rounded-full"></span>
                             </Link>
                         )
                     )}
