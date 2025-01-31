@@ -46,7 +46,7 @@ function Contact() {
         setResult("Sending...");
 
         const formData = new FormData();
-        formData.append("access_key", "3ab5d2da-c395-40b8-9724-b184c37f573c");
+        formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
         formData.append("firstName", form.firstName);
         formData.append("lastName", form.lastName);
         formData.append("email", form.email);
@@ -143,7 +143,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="firstName"
-                                value={form.name}
+                                value={form.firstName}
                                 onChange={handleInputChange}
                                 placeholder="Alice"
                                 className="text-base mt-5 p-2 w-full h-[50px] placeholder:font-syne border-b border-gray-500 focus:outline-none "
