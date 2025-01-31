@@ -92,7 +92,7 @@ const FormSubmission = () => {
         setResult("Sending...");
 
         const formData = new FormData();
-        formData.append("access_key", "2b71940a-c83f-419b-8c8c-1fd13fd90de3");
+        formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
         formData.append("name", form.name);
         formData.append("email", form.email);
         formData.append("phone", input.value);
